@@ -79,7 +79,7 @@
             </div>
 
             <!-- Login Form -->
-            <form id="loginForm" novalidate>
+            <form id="loginForm" action = "<?=ROOT?>dashboard/" novalidate>
                 <!-- Email Field -->
                 <div class="mb-4">
                     <label for="email" class="form-label">
