@@ -16,13 +16,42 @@
 </head>
 <body>
     <!-- Animated Background -->
-    <div class="bg-animation">
+   <!-- Animated Background -->
+   <div class="bg-animation">
+        <!-- Floating Particles -->
+        <div class="particles-container">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+            <div class="particle particle-6"></div>
+            <div class="particle particle-7"></div>
+            <div class="particle particle-8"></div>
+        </div>
+        
+        <!-- Floating Orbs -->
         <div class="floating-orb orb-1"></div>
         <div class="floating-orb orb-2"></div>
         <div class="floating-orb orb-3"></div>
         <div class="floating-orb orb-4"></div>
+        <div class="floating-orb orb-5"></div>
+        
+        <!-- Geometric Shapes -->
         <div class="geometric-ring ring-1"></div>
         <div class="geometric-ring ring-2"></div>
+        <div class="geometric-ring ring-3"></div>
+        
+        <!-- Animated Lines -->
+        <div class="animated-lines">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+            <div class="line line-4"></div>
+        </div>
+        
+        Holographic Grid
+        <div class="holo-grid"></div>
     </div>
 
     <!-- Main Content -->

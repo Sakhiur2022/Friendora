@@ -400,36 +400,9 @@
     }
   }
   
-  /* Holographic Border */
-  .holo-border {
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(
-      45deg,
-      var(--cyber-primary),
-      var(--cyber-accent),
-      var(--cyber-secondary),
-      var(--cyber-tertiary),
-      var(--cyber-primary)
-    );
-    border-radius: 25px;
-    z-index: -1;
-    animation: holo-rotate 8s linear infinite;
-    filter: blur(3px);
-    opacity: 0.7;
-  }
   
-  @keyframes holo-rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+  
+ 
   
   /* Logo Container */
   .logo-container {

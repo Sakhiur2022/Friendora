@@ -49,16 +49,14 @@
             <div class="line line-4"></div>
         </div>
         
-        <!-- Holographic Grid -->
+        Holographic Grid
         <div class="holo-grid"></div>
     </div>
 
     <!-- Main Content -->
     <div class="main-container">
         <div class="login-card">
-            <!-- Holographic Border Effect -->
-            <div class="holo-border"></div>
-            
+       
             <!-- Brand Header -->
             <div class="text-center mb-4">
                 <div class="logo-container">
