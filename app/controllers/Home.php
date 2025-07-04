@@ -3,7 +3,7 @@
 class Home{
   use Controller;
   public function index(){
-    $this->loadView("home");    
+    $this->loadView("home",["title"=>"Unga Bunga"]);    
   }
 
 }
