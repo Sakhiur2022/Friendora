@@ -54,6 +54,31 @@ trait Model
         return $this->getConnection()->lastInsertId();
     }
 
+    public function getDistinct($table, $column) {
+        $sql = "SELECT DISTINCT $column FROM " . $table;
+        return $this->query($sql);
+    }
+
+    // Allows custom operators in where conditions, e.g. ['city <>' => 'Dhaka']
+    public function whereWithOperator($table, $conditions) {
+        $sql = "SELECT * FROM " . $table . " WHERE ";
+        $clauses = [];
+        $params = [];
+        foreach ($conditions as $key => $value) {
+            if (preg_match('/^(.+)\s*(=|<>|!=|<|>|<=|>=|LIKE)$/i', $key, $matches)) {
+                $column = trim($matches[1]);
+                $operator = strtoupper(trim($matches[2]));
+                $paramKey = preg_replace('/\W/', '_', $column . '_' . uniqid());
+                $clauses[] = "$column $operator :$paramKey";
+                $params[$paramKey] = $value;
+            } else {
+                $clauses[] = "$key = :$key";
+                $params[$key] = $value;
+            }
+        }
+        $sql .= implode(" AND ", $clauses);
+        return $this->query($sql, $params);
+    }
 
     public function where($table, $conditions) {
         $sql = "SELECT * FROM " . $table . " WHERE ";
@@ -64,6 +89,164 @@ trait Model
             $params[$key] = $value;
         }
         $sql .= implode(" AND ", $clauses);
+        return $this->query($sql, $params);
+    }
+
+    public function getColumnNames($table) {
+        $sql = "SHOW COLUMNS FROM " . $table;
+        $result = $this->query($sql);
+        return array_map(function($col) {
+            return $col->Field;
+        }, $result);
+    }
+
+    public function getTableNames() {
+        $sql = "SHOW TABLES";
+        $result = $this->query($sql);
+        return array_map(function($table) {
+            return array_values((array)$table)[0];
+        }, $result);
+    }
+
+    public function join($table, $joins = [], $conditions = [], $columns = '*') {
+        $sql = "SELECT $columns FROM $table";
+        foreach ($joins as $join) {
+            // $join = ['type' => 'INNER', 'table' => 'other_table', 'on' => 'table.id = other_table.fk_id']
+            $type = isset($join['type']) ? strtoupper($join['type']) : 'INNER';
+            $sql .= " $type JOIN {$join['table']} ON {$join['on']}";
+        }
+        if (!empty($conditions)) {
+            $clauses = [];
+            $params = [];
+            foreach ($conditions as $key => $value) {
+                $clauses[] = "$key = :$key";
+                $params[$key] = $value;
+            }
+            $sql .= " WHERE " . implode(" AND ", $clauses);
+            return $this->query($sql, $params);
+        }
+        return $this->query($sql);
+    }
+
+    public function groupBy($table, $groupBy, $columns = '*', $conditions = []) {
+        $sql = "SELECT $columns FROM $table";
+        $params = [];
+        if (!empty($conditions)) {
+            $clauses = [];
+            foreach ($conditions as $key => $value) {
+                $clauses[] = "$key = :$key";
+                $params[$key] = $value;
+            }
+            $sql .= " WHERE " . implode(" AND ", $clauses);
+        }
+        $sql .= " GROUP BY $groupBy";
+        return $this->query($sql, $params);
+    }
+
+    public function having($table, $groupBy, $having, $columns = '*', $conditions = []) {
+        $sql = "SELECT $columns FROM $table";
+        $params = [];
+        if (!empty($conditions)) {
+            $clauses = [];
+            foreach ($conditions as $key => $value) {
+                $clauses[] = "$key = :$key";
+                $params[$key] = $value;
+            }
+            $sql .= " WHERE " . implode(" AND ", $clauses);
+        }
+        $sql .= " GROUP BY $groupBy HAVING $having";
+        return $this->query($sql, $params);
+    }
+
+    public function orderBy($table, $orderBy, $columns = '*', $conditions = []) {
+        $sql = "SELECT $columns FROM $table";
+        $params = [];
+        if (!empty($conditions)) {
+            $clauses = [];
+            foreach ($conditions as $key => $value) {
+                $clauses[] = "$key = :$key";
+                $params[$key] = $value;
+            }
+            $sql .= " WHERE " . implode(" AND ", $clauses);
+        }
+        $sql .= " ORDER BY $orderBy";
+        return $this->query($sql, $params);
+    }
+
+    public function limit($table, $limit, $offset = 0, $columns = '*', $conditions = []) {
+        $sql = "SELECT $columns FROM $table";
+        $params = [];
+        if (!empty($conditions)) {
+            $clauses = [];
+            foreach ($conditions as $key => $value) {
+                $clauses[] = "$key = :$key";
+                $params[$key] = $value;
+            }
+            $sql .= " WHERE " . implode(" AND ", $clauses);
+        }
+        $sql .= " LIMIT :offset, :limit";
+        $params['offset'] = (int)$offset;
+        $params['limit'] = (int)$limit;
+        return $this->query($sql, $params);
+    }
+
+    
+    public function selectComplex($table, $options = []) {
+        // $options = [
+        //   'columns' => '*',
+        //   'joins' => [],
+        //   'conditions' => [],
+        //   'groupBy' => '',
+        //   'having' => '',
+        //   'orderBy' => '',
+        //   'limit' => null,
+        //   'offset' => 0
+        // ]
+        $columns = isset($options['columns']) ? $options['columns'] : '*';
+        $sql = "SELECT $columns FROM $table";
+        $params = [];
+
+        // Joins
+        if (!empty($options['joins'])) {
+            foreach ($options['joins'] as $join) {
+                $type = isset($join['type']) ? strtoupper($join['type']) : 'INNER';
+                $sql .= " $type JOIN {$join['table']} ON {$join['on']}";
+            }
+        }
+
+        // Where
+        if (!empty($options['conditions'])) {
+            $clauses = [];
+            foreach ($options['conditions'] as $key => $value) {
+                $paramKey = preg_replace('/\W/', '_', $key);
+                $clauses[] = "$key = :$paramKey";
+                $params[$paramKey] = $value;
+            }
+            $sql .= " WHERE " . implode(" AND ", $clauses);
+        }
+
+        // Group By
+        if (!empty($options['groupBy'])) {
+            $sql .= " GROUP BY {$options['groupBy']}";
+        }
+
+        // Having
+        if (!empty($options['having'])) {
+            $sql .= " HAVING {$options['having']}";
+        }
+
+        // Order By
+        if (!empty($options['orderBy'])) {
+            $sql .= " ORDER BY {$options['orderBy']}";
+        }
+
+        // Limit & Offset
+        if (isset($options['limit'])) {
+            $sql .= " LIMIT :offset, :limit";
+            $params['offset'] = isset($options['offset']) ? (int)$options['offset'] : 0;
+            $params['limit'] = (int)$options['limit'];
+        }
+
         return $this->query($sql, $params);
     }
 }
