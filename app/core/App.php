@@ -16,17 +16,17 @@ class App{
     public function loadController(){
         $url = $this->splitUrl();
         if ($url[0] === "") {
-            require_once '../app/controllers/Home.php';
+            require_once './app/controllers/Home.php';
         }
         else{
 
-            $path = "../app/controllers/".ucfirst($url[0]).".php";
+            $path = "./app/controllers/".ucfirst($url[0]).".php";
             if (file_exists($path)) {
                 require_once $path;
                 $this->controller = ucfirst($url[0]);
                 unset($url[0]);
             }else{
-                require_once "../app/controllers/_404.php";
+                require_once "./app/controllers/_404.php";
                 $this->controller = "_404";
             }
     

@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['SERVER_NAME'] === 'localhost' ) {
-    define('ROOT', 'http://localhost/Friendora/public/');
+    define('ROOT', 'http://localhost/Friendora/');
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'friendora');
     define('DB_USER', 'root');
