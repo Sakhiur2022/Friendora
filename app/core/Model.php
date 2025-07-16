@@ -4,48 +4,50 @@ trait Model
 {
     use Database;
 
-    public function getAll($table) {
-        $sql = "SELECT * FROM " . $table;
+    protected $limit = 10;
+    protected $offset = 0;
+
+    public function getAll() {
+        $sql = "SELECT * FROM " . $this->tableName;
         return $this->query($sql);
     }
 
-    public function getById($table, $id, $idColumn = 'id') {
-        $sql = "SELECT * FROM " . $table . " WHERE " . $idColumn . " = :" . $idColumn;
+    public function getById($id, $idColumn = 'id') {
+        $sql = "SELECT * FROM " . $this->tableName . " WHERE " . $idColumn . " = :" . $idColumn;
         return $this->query($sql, [$idColumn => $id]);
     }
 
-    public function insert($table, $data) {
+    public function insert($data) {
         $columns = implode(", ", array_keys($data));
         $placeholders = ":" . implode(", :", array_keys($data));
-        $sql = "INSERT INTO " . $table . " ($columns) VALUES ($placeholders)";
+        $sql = "INSERT INTO " . $this->tableName . " ($columns) VALUES ($placeholders)";
         return $this->query($sql, $data);
     }
 
-    public function update($table, $data, $id, $columnToUpdate = 'id') {
+    public function update($data, $id, $columnToUpdate = 'id') {
         $set = "";
-        foreach ($data as $key => $value) {
+        foreach (array_keys($data) as $key) {
             $set .= "$key = :$key, ";
         }
         $set = rtrim($set, ", ");
-        $sql = "UPDATE " . $table . " SET $set WHERE $columnToUpdate = :$columnToUpdate";
+        $sql = "UPDATE " . $this->tableName . " SET $set WHERE $columnToUpdate = :$columnToUpdate";
         $data[$columnToUpdate] = $id;
         return $this->query($sql, $data);
     }
-       
 
-    public function delete($table, $id, $columnToDelete = 'id') {
-        $sql = "DELETE FROM " . $table . " WHERE $columnToDelete = :$columnToDelete";
+    public function delete($id, $columnToDelete = 'id') {
+        $sql = "DELETE FROM " . $this->tableName . " WHERE $columnToDelete = :$columnToDelete";
         return $this->query($sql, [$columnToDelete => $id]);
     }
 
-    public function count($table) {
-        $sql = "SELECT COUNT(*) as count FROM " . $table;
+    public function count() {
+        $sql = "SELECT COUNT(*) as count FROM " . $this->tableName;
         $result = $this->query($sql);
         return $result ? $result[0]->count : 0;
     }
 
-    public function exists($table, $id, $idColumn = 'id') {
-        $sql = "SELECT COUNT(*) as count FROM " . $table . " WHERE " . $idColumn . " = :" . $idColumn;
+    public function exists($id, $idColumn = 'id') {
+        $sql = "SELECT COUNT(*) as count FROM " . $this->tableName . " WHERE " . $idColumn . " = :" . $idColumn;
         $result = $this->query($sql, [$idColumn => $id]);
         return $result ? $result[0]->count > 0 : false;
     }
@@ -54,14 +56,14 @@ trait Model
         return $this->getConnection()->lastInsertId();
     }
 
-    public function getDistinct($table, $column) {
-        $sql = "SELECT DISTINCT $column FROM " . $table;
+    public function getDistinct($column) {
+        $sql = "SELECT DISTINCT $column FROM " . $this->tableName;
         return $this->query($sql);
     }
 
     // Allows custom operators in where conditions, e.g. ['city <>' => 'Dhaka']
-    public function whereWithOperator($table, $conditions) {
-        $sql = "SELECT * FROM " . $table . " WHERE ";
+    public function whereWithOperator($conditions) {
+        $sql = "SELECT * FROM " . $this->tableName . " WHERE ";
         $clauses = [];
         $params = [];
         foreach ($conditions as $key => $value) {
@@ -80,8 +82,8 @@ trait Model
         return $this->query($sql, $params);
     }
 
-    public function where($table, $conditions) {
-        $sql = "SELECT * FROM " . $table . " WHERE ";
+    public function whereCondition($conditions) {
+        $sql = "SELECT * FROM " . $this->tableName . " WHERE ";
         $clauses = [];
         $params = [];
         foreach ($conditions as $key => $value) {
@@ -92,8 +94,46 @@ trait Model
         return $this->query($sql, $params);
     }
 
-    public function getColumnNames($table) {
-        $sql = "SHOW COLUMNS FROM " . $table;
+    public function where($data,$data_not=[]){
+        $keys = array_keys($data);
+        $keys_not = array_keys($data_not);
+        $sql = "SELECT * FROM " . $this->tableName . " WHERE ";
+
+        foreach ($keys as $key) {
+            $sql .= "$key = :$key AND ";
+        }
+        foreach ($keys_not as $key) {
+            $sql .= "$key <> :$key AND ";
+        }
+        $sql = rtrim($sql, ' AND ');
+        $sql .= " LIMIT $this->limit OFFSET $this->offset";
+        $data = array_merge($data, $data_not);
+        return $this->query($sql, $data);
+    }
+
+     public function first($data,$data_not=[]){
+        $keys = array_keys($data);
+        $keys_not = array_keys($data_not);
+        $sql = "SELECT * FROM " . $this->tableName . " WHERE ";
+
+        foreach ($keys as $key) {
+            $sql .= "$key = :$key AND ";
+        }
+        foreach ($keys_not as $key) {
+            $sql .= "$key <> :$key AND ";
+        }
+        $sql = rtrim($sql, ' AND ');
+        $sql .= " LIMIT $this->limit OFFSET $this->offset";
+        $data = array_merge($data, $data_not);
+        $result = $this->query($sql, $data);
+        if (is_array($result) && count($result) > 0) {
+            return $result[0]; // Return the first result
+        }
+        return false; // Return false if no results found
+    }
+
+    public function getColumnNames() {
+        $sql = "SHOW COLUMNS FROM " . $this->tableName;
         $result = $this->query($sql);
         return array_map(function($col) {
             return $col->Field;
@@ -108,8 +148,8 @@ trait Model
         }, $result);
     }
 
-    public function join($table, $joins = [], $conditions = [], $columns = '*') {
-        $sql = "SELECT $columns FROM $table";
+    public function join($joins = [], $conditions = [], $columns = '*') {
+        $sql = "SELECT $columns FROM " . $this->tableName;
         foreach ($joins as $join) {
             // $join = ['type' => 'INNER', 'table' => 'other_table', 'on' => 'table.id = other_table.fk_id']
             $type = isset($join['type']) ? strtoupper($join['type']) : 'INNER';
@@ -128,8 +168,8 @@ trait Model
         return $this->query($sql);
     }
 
-    public function groupBy($table, $groupBy, $columns = '*', $conditions = []) {
-        $sql = "SELECT $columns FROM $table";
+    public function groupBy($groupBy, $columns = '*', $conditions = []) {
+        $sql = "SELECT $columns FROM " . $this->tableName;
         $params = [];
         if (!empty($conditions)) {
             $clauses = [];
@@ -143,8 +183,8 @@ trait Model
         return $this->query($sql, $params);
     }
 
-    public function having($table, $groupBy, $having, $columns = '*', $conditions = []) {
-        $sql = "SELECT $columns FROM $table";
+    public function having($groupBy, $having, $columns = '*', $conditions = []) {
+        $sql = "SELECT $columns FROM " . $this->tableName;
         $params = [];
         if (!empty($conditions)) {
             $clauses = [];
@@ -158,8 +198,8 @@ trait Model
         return $this->query($sql, $params);
     }
 
-    public function orderBy($table, $orderBy, $columns = '*', $conditions = []) {
-        $sql = "SELECT $columns FROM $table";
+    public function orderBy($orderBy, $columns = '*', $conditions = []) {
+        $sql = "SELECT $columns FROM " . $this->tableName;
         $params = [];
         if (!empty($conditions)) {
             $clauses = [];
@@ -173,8 +213,8 @@ trait Model
         return $this->query($sql, $params);
     }
 
-    public function limit($table, $limit, $offset = 0, $columns = '*', $conditions = []) {
-        $sql = "SELECT $columns FROM $table";
+    public function limit($limit, $offset = 0, $columns = '*', $conditions = []) {
+        $sql = "SELECT $columns FROM " . $this->tableName;
         $params = [];
         if (!empty($conditions)) {
             $clauses = [];
@@ -190,8 +230,7 @@ trait Model
         return $this->query($sql, $params);
     }
 
-    
-    public function selectComplex($table, $options = []) {
+    public function selectComplex($options = []) {
         // $options = [
         //   'columns' => '*',
         //   'joins' => [],
@@ -203,7 +242,7 @@ trait Model
         //   'offset' => 0
         // ]
         $columns = isset($options['columns']) ? $options['columns'] : '*';
-        $sql = "SELECT $columns FROM $table";
+        $sql = "SELECT $columns FROM " . $this->tableName;
         $params = [];
 
         // Joins
