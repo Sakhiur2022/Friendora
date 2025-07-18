@@ -37,7 +37,7 @@
   
     <div class="container">
         <?php if (isset($user)): ?>
-            <h1>Welcome, <?= htmlspecialchars($user->name) ?>!</h1>
+            <h1>Welcome, <?= htmlspecialchars($user->fname) ?>!</h1>
             <p>Your email: <?= htmlspecialchars($user->email) ?></p>
             <?php
             if (!empty($user->DOB)) {

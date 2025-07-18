@@ -7,20 +7,19 @@ class Signup{
   public function index(){
     $data = [];
     $request = new Request;
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
-      echo "Signup page";
+    if($request->isPosted()){     
       $user = new User;
       $user->createTable();
-      if($user->validate($_POST)){
-        $dataToInsert = $_POST;
-        // if(isset($dataToInsert['pwd'])){
-        //   $dataToInsert['pwd'] = password_hash($dataToInsert['pwd'], PASSWORD_DEFAULT);
-        // }
-        $user->insert($dataToInsert);
+      if($user->validate($request->post())){
+        //hashing the password
+        // $pwd = password_hash($request->post('pwd'), PASSWORD_DEFAULT);
+        // $request->set('pwd', $pwd);
+
+        $user->insert($request->post());
         Utils::redirect("login");
       }
       $data["errors"] = $user->getErrors();
-      Utils::show("user");
+   
     }
    
     $this->loadView("signup",$data);    

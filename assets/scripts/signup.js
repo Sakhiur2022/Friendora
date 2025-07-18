@@ -1,10 +1,11 @@
+console.log("Signup script loaded successfully")
 // Form validation and interactivity
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("signupForm")
     const submitBtn = document.getElementById("submitBtn")
     const submitText = document.getElementById("submitText")
     const acceptTerms = document.getElementById("acceptTerms")
-    
+  
   
     // Form validation patterns
     const validationRules = {
@@ -178,15 +179,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return
       }
-  
-      // Get form data
-      const formData = new FormData(form)
-  
-      // Show loading state
-      submitText.textContent = "Entering Dreamscape..."
-      submitBtn.disabled = true
-      submitBtn.style.background = "linear-gradient(45deg, #666, #999)"
+      form.submit()
+    
     })
+  
+ 
   
     // Add enhanced glow effect to focused inputs
     const inputs = document.querySelectorAll(".form-control, .form-select")
@@ -240,7 +237,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize typing effect
     addTypingEffect()
   
- 
+    // Keyboard shortcuts
+    document.addEventListener("keydown", (e) => {
+      // ESC to close modal
+      if (e.key === "Escape" && successModal.classList.contains("show")) {
+        continueBtn.click()
+      }
+  
+      // Enter to submit form (if valid)
+      if (e.key === "Enter" && e.target.tagName !== "TEXTAREA" && !submitBtn.disabled) {
+        form.dispatchEvent(new Event("submit"))
+      }
+    })
   
     // Background Music Control
     const backgroundMusic = document.getElementById("backgroundMusic")
@@ -264,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
         backgroundMusic.pause()
         musicToggle.classList.remove("playing")
         musicToggle.classList.add("muted")
-        musicIcon.textContent = "🔇"
+        musicIcon.textContent = "ðŸ”‡"
         musicToggle.title = "Play Background Music"
         musicInfo.classList.remove("show")
         isMusicPlaying = false
@@ -274,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .then(() => {
             musicToggle.classList.add("playing")
             musicToggle.classList.remove("muted")
-            musicIcon.textContent = "🎵"
+            musicIcon.textContent = "ðŸŽµ"
             musicToggle.title = "Pause Background Music"
             musicInfo.classList.add("show")
             isMusicPlaying = true
@@ -322,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
               .play()
               .then(() => {
                 musicToggle.classList.add("playing")
-                musicIcon.textContent = "🎵"
+                musicIcon.textContent = "ðŸŽµ"
                 musicInfo.classList.add("show")
                 isMusicPlaying = true
   
@@ -360,12 +368,25 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   
-
+    // Restore music volume after success modal
+    continueBtn.addEventListener("click", () => {
+      if (isMusicPlaying) {
+        let currentVolume = backgroundMusic.volume
+        const fadeIn = setInterval(() => {
+          if (currentVolume < 0.25) {
+            currentVolume += 0.02
+            backgroundMusic.volume = Math.min(0.25, currentVolume)
+          } else {
+            clearInterval(fadeIn)
+          }
+        }, 50)
+      }
+    })
   
     // Music ended event (for non-looping scenarios)
     backgroundMusic.addEventListener("ended", () => {
       musicToggle.classList.remove("playing")
-      musicIcon.textContent = "🔄"
+      musicIcon.textContent = "ðŸ”„"
       musicToggle.title = "Replay Background Music"
       musicInfo.classList.remove("show")
       isMusicPlaying = false
@@ -380,9 +401,8 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Music ready to play!")
     })
   
-      backgroundMusic.addEventListener("error", (e) => {
-        console.log("Music loading error:", e)
-        musicToggle.style.display = "none"
-      })
+    backgroundMusic.addEventListener("error", (e) => {
+      console.log("Music loading error:", e)
+      musicToggle.style.display = "none"
+    })
   })
-  

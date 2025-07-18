@@ -1,3 +1,4 @@
+console.log("Login script loaded");
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("loginForm")
     const loginBtn = document.getElementById("loginBtn")
@@ -138,58 +139,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return
       }
   
-      // Get form data
-      const formData = new FormData(form)
-      const userData = Object.fromEntries(formData)
-  
-      // Show loading state
-      btnText.textContent = "Accessing Portal..."
-      loginBtn.disabled = true
-      loginBtn.style.background = "linear-gradient(45deg, #666, #999)"
-  
-      // Simulate login process
-      setTimeout(() => {
-        showLoginModal(userData)
-  
-        // Reset form after modal
-        setTimeout(() => {
-          form.reset()
-          formFields.forEach((field) => {
-            field.classList.remove("is-valid", "is-invalid")
-          })
-          btnText.textContent = "Enter Dreamscape"
-          loginBtn.disabled = false
-          loginBtn.style.background = "linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary))"
-        }, 4000)
-      }, 2000)
+     form.submit()
+    
+    
     })
   
-    // Show login success modal
-    function showLoginModal(userData) {
-      const welcomeUser = document.getElementById("welcomeUser")
-  
-      // Extract name from email (simple approach)
-      const emailName = userData.email.split("@")[0]
-      const displayName = emailName.charAt(0).toUpperCase() + emailName.slice(1)
-  
-      welcomeUser.textContent = displayName
-  
-      loginModal.classList.add("show")
-      document.body.style.overflow = "hidden"
-  
-      // Auto close modal and redirect after loading completes
-      setTimeout(() => {
-        loginModal.classList.remove("show")
-        document.body.style.overflow = "auto"
-  
-        // Simulate redirect to dashboard
-        setTimeout(() => {
-          alert("Redirecting to your Friendora dashboard...")
-          // window.location.href = '/dashboard';
-        }, 500)
-      }, 4000)
-    }
-  
+ 
     // Enhanced input focus effects
     const inputs = document.querySelectorAll(".cyber-input")
     inputs.forEach((input) => {

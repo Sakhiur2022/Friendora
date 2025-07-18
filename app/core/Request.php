@@ -5,7 +5,7 @@ class Request{
     public function method(){
         return $_SERVER['REQUEST_METHOD'];
     }
-    public function posted(){
+    public function isPosted(){
         if($this->method() === 'POST'){
             return true;
         }else{
@@ -14,7 +14,7 @@ class Request{
     }
 
     //get value from the POST variable
-    public function post($key, $default = ''){
+    public function post($key = '', $default = ''){
         if(empty($key)){
             return $_POST;
         }else if(isset($_POST[$key])){
@@ -22,6 +22,12 @@ class Request{
         }
         return $default;
     }
+
+    //put data into the POST variable
+    public function set($key,$value = ''){
+        $_POST[$key] = $value;
+    }
+
     //get value from the REQUEST variable
     public function input($key, $default = ''){
         if(isset($_REQUEST[$key])){

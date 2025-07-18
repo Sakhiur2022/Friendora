@@ -73,21 +73,39 @@
         <?php if ( !empty($errors)): ?>
             <div class="error-messages"><?=implode("<br>", $errors)?></div>
         <?php endif;?>
-        <form method="post" action="<?=ROOT?>/signup">
-            <label for="username">User Name</label>
-            <input type="text" id="username" name="name" required>
+      <form method="post" action="<?=ROOT?>/signup" novalidate>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+          <label for="minit">Middle Initial</label>
+          <input type="text" id="minit" name="minit" maxlength="1">
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="pwd" required>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" required>
 
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
 
-            <button type="submit">Sign Up</button>
-        </form>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="pwd" required>
+
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required>
+
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+           <option value="">Select Gender</option>
+           <option value="male">Male</option>
+           <option value="female">Female</option>
+          </select>
+
+          <div style="margin: 12px 0;">
+           <input type="checkbox" id="terms" name="terms" required>
+           <label for="terms" style="display:inline;">I accept the <a href="#">Terms and Conditions</a></label>
+          </div>
+
+          <button type="submit">Sign Up</button>
+      </form>
     </div>
      <div style="text-align:center; margin-top: 20px;">
       <span>Already have an account?</span>

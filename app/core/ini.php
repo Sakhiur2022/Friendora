@@ -9,7 +9,7 @@ spl_autoload_register(function ($class_name) {
     }
 });
 
-session_start();
+// session_start();
 require_once 'Session.php';
 require_once 'config.php';
 require_once 'Utils.php';

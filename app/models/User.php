@@ -8,18 +8,21 @@ class User{
     public $errors = [];
 
     protected $allowedColumns = [
-       'fname',
-       	'minit',	
-        'lname',	
-        'pwd',	
-        'DOB',	
-        'gender',	
-        'email'	
+      'fname',
+      'minit',
+       'lname',
+      'email',
+      'pwd',
+      'dob',
+      'gender'
 
     ];
 
     public function validate($data) {
         $this->errors = [];
+        // if(empty($data['name'])) {
+        //     $this->errors['name'] = 'Name is required.';
+        // }
         if (empty($data['fname'])) {
             $this->errors['fname'] = 'First Name is required.';
         }
@@ -47,7 +50,10 @@ class User{
             $this->errors['pwd'] = 'Password must be at least 6 characters.';
         }else if (!preg_match('/[A-Z]/', $data['pwd']) || !preg_match('/[a-z]/', $data['pwd']) || !preg_match('/[0-9]/', $data['pwd'])) {
             $this->errors['pwd'] = 'Password must contain at least one uppercase letter, one lowercase letter, and one number.';
+        } else if(empty($data['acceptTerms']) || $data['acceptTerms'] !== 'on') {
+            $this->errors['acceptTerms'] = 'You must accept the terms and conditions.';
         }
+
         if (empty($this->errors)) {
             return true;
         }else{

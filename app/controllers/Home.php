@@ -6,14 +6,15 @@ class Home{
   use Controller;
   public function index(){
     $data = [];
+    $ses = new Session;
     
-    if (isset($_SESSION['USER'])) {
-        $user = $_SESSION['USER'];
-        $data['user'] = $user;
-       $data['date'] = Utils::getDate(date('Y-m-d'));
-    }else{
-      Utils::redirect("signup");
+    if (!$ses->is_loggedIn()) {
+      Utils::redirect("login");
+    } else{
+      $data['user'] = $ses->user();
+      $data['date'] = date('F j, Y');
     }
+   
     $this->loadView("home",$data);    
   }
 

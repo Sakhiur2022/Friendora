@@ -13,6 +13,8 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?=ROOT?>/assets/styles/signup.css">
+
+
 </head>
 <body>
     <!-- Animated Background -->
@@ -70,11 +72,11 @@
             </div>
 
             <?php if ( !empty($errors)): ?>
-                <div class="error-messages"><?=implode("<br>", $errors)?></div>
+                <div class="alert alert-danger text-center"><?=implode("<br>", $errors)?></div>
             <?php endif;?>
 
             <!-- Signup Form -->
-            <form id="signupForm" action="<?=ROOT?>/signup" method="post">
+            <form id="signupForm" action="<?=ROOT?>/signup" method="post" novalidate>
                 <!-- Name Fields -->
                 
                 <div class="row mb-3">
@@ -132,7 +134,7 @@
                 <!-- Terms and Conditions -->
                 <div class="mb-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="acceptTerms"  required>
+                        <input class="form-check-input" type="checkbox" id="acceptTerms" name="acceptTerms" required>
                         <label class="form-check-label" for="acceptTerms">
                             I accept the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
                         </label>
@@ -141,7 +143,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-cyber" id="submitBtn">
+                <button type="submit" class="btn btn-cyber" id="submitBtn" disabled>
                     <span id="submitText">Enter Friendora</span>
                     <span style="margin-left: 10px;">→</span>
                 </button>
@@ -185,5 +187,6 @@
     
     <!-- Custom JavaScript -->
     <script src="<?=ROOT?>/assets/scripts/signup.js"></script>
+
 </body>
 </html>

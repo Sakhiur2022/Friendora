@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?=ROOT?>assets/styles/login.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/login.css">
 </head>
 <body>
     <!-- Animated Background -->
@@ -79,11 +79,11 @@
             </div>
 
             <?php if ( !empty($errors)): ?>
-                <div class="error-messages"><?=implode("<br>", $errors)?></div>
+                <div class="alert alert-danger text-center"><?=implode("<br>", $errors)?></div>
             <?php endif;?>
 
             <!-- Login Form -->
-            <form id="loginForm" action = "<?=ROOT?>dashboard/" novalidate>
+            <form id="loginForm" method="post"  action = "<?=ROOT?>/login" novalidate>
                 <!-- Email Field -->
                 <div class="mb-4">
                     <label for="email" class="form-label">
@@ -110,7 +110,7 @@
                         Password
                     </label>
                     <div class="input-container">
-                        <input type="password" class="form-control cyber-input" id="password" name="password" 
+                        <input type="password" class="form-control cyber-input" id="password" name="pwd" 
                                placeholder="Enter your password" required>
                         <button type="button" class="password-toggle" id="passwordToggle">
                             <span class="toggle-icon">👁️</span>
@@ -155,7 +155,7 @@
 
             <!-- Signup Link -->
             <div class="signup-link">
-                <p>New to Friendora? <a href="<?=ROOT?>signup">Create Account</a></p>
+                <p>New to Friendora? <a href="<?=ROOT?>/signup">Create Account</a></p>
             </div>
         </div>
 
@@ -176,29 +176,7 @@
         </div>
     </div>
 
-    <!-- Success Modal -->
-    <div class="modal-overlay" id="loginModal">
-        <div class="login-success-modal">
-            <div class="modal-glow"></div>
-            <div class="success-content">
-                <div class="success-icon">
-                    <div class="portal-ring"></div>
-                    <div class="portal-center">
-                        <span class="portal-text">✓</span>
-                    </div>
-                </div>
-                <h2 class="success-title">Access Granted!</h2>
-                <p class="success-message">
-                    <span class="welcome-text">Welcome back, <span id="welcomeUser">Dreamer</span>!</span><br>
-                    Initializing your digital presence...<br>
-                    <span class="loading-text">Loading dashboard...</span>
-                </p>
-                <div class="loading-bar">
-                    <div class="loading-progress"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+  
 
     <!-- Background Music -->
     <audio id="backgroundMusic" loop preload="auto" crossorigin="anonymous">
@@ -221,6 +199,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JavaScript -->
-    <script src="<?=ROOT?>assets/scripts/login.js"></script>
+    <script src="<?=ROOT?>/assets/scripts/login.js"></script>
 </body>
 </html>
