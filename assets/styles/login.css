@@ -47,7 +47,7 @@
     pointer-events: none;
   }
   
-  /* Enhanced Animated Background Elements */
+    /* Enhanced Animated Background Elements */
   .bg-animation {
     position: fixed;
     top: 0;
@@ -365,6 +365,15 @@
   }
   
   /* Main Content */
+  .error-messages {
+    background: #ffe6e6;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
   .main-container {
     position: relative;
     z-index: 10;

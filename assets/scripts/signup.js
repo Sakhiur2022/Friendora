@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitBtn = document.getElementById("submitBtn")
     const submitText = document.getElementById("submitText")
     const acceptTerms = document.getElementById("acceptTerms")
-    const successModal = document.getElementById("successModal")
-    const continueBtn = document.getElementById("continueBtn")
+    
   
     // Form validation patterns
     const validationRules = {
@@ -182,62 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
   
       // Get form data
       const formData = new FormData(form)
-      const userData = Object.fromEntries(formData)
   
       // Show loading state
       submitText.textContent = "Entering Dreamscape..."
       submitBtn.disabled = true
       submitBtn.style.background = "linear-gradient(45deg, #666, #999)"
-  
-      // Simulate form submission
-      setTimeout(() => {
-        showSuccessModal(userData)
-  
-        // Reset form
-        form.reset()
-        formFields.forEach((field) => {
-          field.classList.remove("is-valid", "is-invalid")
-        })
-        submitText.textContent = "Enter Friendora"
-        submitBtn.disabled = true
-        submitBtn.style.background = "linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary))"
-      }, 2000)
-    })
-  
-    // Show success modal
-    function showSuccessModal(userData) {
-      const welcomeName = document.getElementById("welcomeName")
-      const confirmEmail = document.getElementById("confirmEmail")
-  
-      welcomeName.textContent = userData.firstName
-      confirmEmail.textContent = userData.email
-  
-      successModal.classList.add("show")
-      document.body.style.overflow = "hidden"
-  
-      // Add entrance animation delay for better effect
-      setTimeout(() => {
-        successModal.querySelector(".success-modal").style.transform = "scale(1) translateY(0)"
-      }, 100)
-    }
-  
-    // Close modal and continue
-    continueBtn.addEventListener("click", () => {
-      successModal.classList.remove("show")
-      document.body.style.overflow = "auto"
-  
-      // Simulate redirect to dashboard
-      setTimeout(() => {
-        alert("Redirecting to your Friendora dashboard...")
-        // window.location.href = '/dashboard';
-      }, 500)
-    })
-  
-    // Close modal on overlay click
-    successModal.addEventListener("click", (e) => {
-      if (e.target === successModal) {
-        continueBtn.click()
-      }
     })
   
     // Add enhanced glow effect to focused inputs
@@ -292,18 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize typing effect
     addTypingEffect()
   
-    // Keyboard shortcuts
-    document.addEventListener("keydown", (e) => {
-      // ESC to close modal
-      if (e.key === "Escape" && successModal.classList.contains("show")) {
-        continueBtn.click()
-      }
-  
-      // Enter to submit form (if valid)
-      if (e.key === "Enter" && e.target.tagName !== "TEXTAREA" && !submitBtn.disabled) {
-        form.dispatchEvent(new Event("submit"))
-      }
-    })
+ 
   
     // Background Music Control
     const backgroundMusic = document.getElementById("backgroundMusic")
@@ -423,20 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   
-    // Restore music volume after success modal
-    continueBtn.addEventListener("click", () => {
-      if (isMusicPlaying) {
-        let currentVolume = backgroundMusic.volume
-        const fadeIn = setInterval(() => {
-          if (currentVolume < 0.25) {
-            currentVolume += 0.02
-            backgroundMusic.volume = Math.min(0.25, currentVolume)
-          } else {
-            clearInterval(fadeIn)
-          }
-        }, 50)
-      }
-    })
+
   
     // Music ended event (for non-looping scenarios)
     backgroundMusic.addEventListener("ended", () => {
@@ -456,9 +380,9 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Music ready to play!")
     })
   
-    backgroundMusic.addEventListener("error", (e) => {
-      console.log("Music loading error:", e)
-      musicToggle.style.display = "none"
-    })
+      backgroundMusic.addEventListener("error", (e) => {
+        console.log("Music loading error:", e)
+        musicToggle.style.display = "none"
+      })
   })
   

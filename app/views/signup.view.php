@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?=ROOT?>assets/styles/signup.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/signup.css">
 </head>
 <body>
     <!-- Animated Background -->
@@ -69,22 +69,27 @@
                 <p class="section-subtitle">Create your digital identity</p>
             </div>
 
+            <?php if ( !empty($errors)): ?>
+                <div class="error-messages"><?=implode("<br>", $errors)?></div>
+            <?php endif;?>
+
             <!-- Signup Form -->
-            <form id="signupForm" novalidate>
+            <form id="signupForm" action="<?=ROOT?>/signup" method="post">
                 <!-- Name Fields -->
+                
                 <div class="row mb-3">
                     <div class="col-5">
                         <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required>
+                        <input type="text" class="form-control" id="firstName" name="fname" placeholder="Enter first name" required>
                         <div class="invalid-feedback">Please enter your first name.</div>
                     </div>
                     <div class="col-2">
                         <label for="middleInitial" class="form-label">M.I.</label>
-                        <input type="text" class="form-control text-center" id="middleInitial" name="middleInitial" placeholder="M" maxlength="1">
+                        <input type="text" class="form-control text-center" id="middleInitial" name="minit" placeholder="M" maxlength="1">
                     </div>
                     <div class="col-5">
                         <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required>
+                        <input type="text" class="form-control" id="lastName" name="lname" placeholder="Enter last name" required>
                         <div class="invalid-feedback">Please enter your last name.</div>
                     </div>
                 </div>
@@ -99,7 +104,7 @@
                 <!-- Password -->
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Create a secure password" required minlength="8">
+                    <input type="password" class="form-control" id="password" name="pwd" placeholder="Create a secure password" required minlength="8">
                     <div class="invalid-feedback">Password must be at least 8 characters long.</div>
                     <div class="form-text">Password must contain at least 8 characters with letters and numbers.</div>
                 </div>
@@ -107,7 +112,7 @@
                 <!-- Date of Birth -->
                 <div class="mb-3">
                     <label for="dateOfBirth" class="form-label">Date of Birth</label>
-                    <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                    <input type="date" class="form-control" id="dateOfBirth" name="dob" required>
                     <div class="invalid-feedback">Please enter your date of birth.</div>
                 </div>
 
@@ -127,7 +132,7 @@
                 <!-- Terms and Conditions -->
                 <div class="mb-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                        <input class="form-check-input" type="checkbox" id="acceptTerms"  required>
                         <label class="form-check-label" for="acceptTerms">
                             I accept the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
                         </label>
@@ -136,58 +141,21 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-cyber" id="submitBtn" disabled>
+                <button type="submit" class="btn btn-cyber" id="submitBtn">
                     <span id="submitText">Enter Friendora</span>
                     <span style="margin-left: 10px;">→</span>
                 </button>
+        
             </form>
 
             <!-- Login Link -->
             <div class="login-link">
-                <p>Already have an account? <a href="<?=ROOT?>home">Sign In</a></p>
+                <p>Already have an account? <a href="<?=ROOT?>/login">Sign In</a></p>
             </div>
         </div>
     </div>
 
-    <!-- Success Modal -->
-    <div class="modal-overlay" id="successModal">
-        <div class="success-modal">
-            <div class="modal-glow"></div>
-            <div class="success-content">
-                <div class="success-icon">
-                    <div class="checkmark">
-                        <div class="checkmark-circle"></div>
-                        <div class="checkmark-stem"></div>
-                        <div class="checkmark-kick"></div>
-                    </div>
-                </div>
-                <h2 class="success-title">Welcome to Friendora!</h2>
-                <p class="success-message">
-                    <span class="welcome-text">Hello, <span id="welcomeName"></span>!</span><br>
-                    Your digital identity has been successfully created.<br>
-                    <span class="email-confirmation">A confirmation email has been sent to <span id="confirmEmail"></span></span>
-                </p>
-                <div class="success-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Connections Await</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Digital Presence</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Possibilities</div>
-                    </div>
-                </div>
-                <button class="btn-continue" id="continueBtn">
-                    <span>Continue to Dashboard</span>
-                    <span class="arrow">→</span>
-                </button>
-            </div>
-        </div>
-    </div>
+  
 
     <!-- Background Music -->
     <audio id="backgroundMusic" loop preload="auto" crossorigin="anonymous">
@@ -216,6 +184,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JavaScript -->
-    <script src="<?=ROOT?>assets/scripts/signup.js"></script>
+    <script src="<?=ROOT?>/assets/scripts/signup.js"></script>
 </body>
 </html>

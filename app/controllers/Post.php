@@ -1,10 +1,11 @@
 <?php
 
+
 defined('ROOT_PATH') OR exit('Access denied you hacker!');
 
-class _404{
+class Post{
     use Controller;
     public function index(){
-       $this->loadView("404");
+       $this->loadView("post");
     }
 }

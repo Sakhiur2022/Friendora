@@ -1,5 +1,5 @@
 <?php
-
+defined('ROOT_PATH') OR exit('Access denied you hacker!');
 class App{
 
     private $controller = "Home";
@@ -9,7 +9,7 @@ class App{
     }
 
     public function splitUrl(){
-        $url = explode("/",$_GET["url"] ?? "");
+        $url = explode("/",$_GET["url"] ?? "home");
         return $url;
     }
 

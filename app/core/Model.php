@@ -1,5 +1,5 @@
 <?php
-
+defined('ROOT_PATH') OR exit('Access denied you hacker!');
 trait Model
 {
     use Database;
@@ -18,6 +18,14 @@ trait Model
     }
 
     public function insert($data) {
+        // Ensure only allowed columns are inserted
+        if(!empty($this->allowedColumns)) {
+           foreach ($data as $key => $value) {
+                if (!in_array($key, $this->allowedColumns)) {
+                    unset($data[$key]);
+                }
+            }
+        }
         $columns = implode(", ", array_keys($data));
         $placeholders = ":" . implode(", :", array_keys($data));
         $sql = "INSERT INTO " . $this->tableName . " ($columns) VALUES ($placeholders)";
@@ -25,6 +33,14 @@ trait Model
     }
 
     public function update($data, $id, $columnToUpdate = 'id') {
+        // Ensure only allowed columns are inserted
+        if(!empty($this->allowedColumns)) {
+           foreach ($data as $key => $value) {
+                if (!in_array($key, $this->allowedColumns)) {
+                    unset($data[$key]);
+                }
+            }
+        }
         $set = "";
         foreach (array_keys($data) as $key) {
             $set .= "$key = :$key, ";

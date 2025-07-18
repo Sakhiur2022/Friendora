@@ -1,5 +1,7 @@
 <?php
 
+defined('ROOT_PATH') OR exit('Access denied you hacker!');
+
 Trait Database {
     private $connection;   
 

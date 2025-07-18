@@ -1,10 +1,13 @@
 <?php
 
+defined('ROOT_PATH') OR exit('Access denied you hacker!');
+
 class Login{
   use Controller;
   public function index(){
     $data = [];
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $request = new Request;
+    if($request->posted()){
        $user = new User;
       $data['email'] = $_POST['email'];
      
@@ -23,7 +26,7 @@ class Login{
     }
   
    
-    $this->loadView("login_test",$data);    
+    $this->loadView("login",$data);    
   }
 
 }

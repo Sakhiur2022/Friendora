@@ -38,15 +38,16 @@
     <div class="container">
         <?php if (isset($user)): ?>
             <h1>Welcome, <?= htmlspecialchars($user->name) ?>!</h1>
-            <p>Your Email: <?= htmlspecialchars($user->email) ?></p>
+            <p>Your email: <?= htmlspecialchars($user->email) ?></p>
             <?php
             if (!empty($user->DOB)) {
                 $dob = new DateTime($user->DOB);
                 $now = new DateTime();
                 $age = $now->diff($dob)->y;
-                echo "<p>Your Age: " . htmlspecialchars($age) . "</p>";
+                echo "<p>Your age: " . htmlspecialchars($age) . "</p>";
             }
             ?>
+            <p>Current Date: <?= htmlspecialchars($date) ?></p>
 
 
             <h2>Your Posts</h2>

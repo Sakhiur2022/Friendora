@@ -1,9 +1,9 @@
 <?php
-
+defined('ROOT_PATH') OR exit('Access denied you hacker!');
 if ($_SERVER['SERVER_NAME'] === 'localhost' ) {
     define('ROOT', 'http://localhost/Friendora');
     define('DB_HOST', 'localhost');
-    define('DB_NAME', 'test');
+    define('DB_NAME', 'friendora');
     define('DB_USER', 'root');
     define('DB_PASS', '');
     define('DB_DRIVER', 'mysql');
@@ -34,3 +34,6 @@ if (DEBUG) {
     ini_set('display_startup_errors', 0);
     error_reporting(0);
 }
+
+
+

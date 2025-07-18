@@ -78,6 +78,10 @@
                 <p class="section-subtitle">Enter your credentials to continue your journey</p>
             </div>
 
+            <?php if ( !empty($errors)): ?>
+                <div class="error-messages"><?=implode("<br>", $errors)?></div>
+            <?php endif;?>
+
             <!-- Login Form -->
             <form id="loginForm" action = "<?=ROOT?>dashboard/" novalidate>
                 <!-- Email Field -->

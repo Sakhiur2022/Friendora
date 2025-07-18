@@ -8,16 +8,28 @@ class User{
     public $errors = [];
 
     protected $allowedColumns = [
-       'name',
-       'DOB',
-       'email',
-       'pwd'
+       'fname',
+       	'minit',	
+        'lname',	
+        'pwd',	
+        'DOB',	
+        'gender',	
+        'email'	
+
     ];
 
     public function validate($data) {
         $this->errors = [];
-        if (empty($data['name'])) {
-            $this->errors['name'] = 'Name is required.';
+        if (empty($data['fname'])) {
+            $this->errors['fname'] = 'First Name is required.';
+        }
+        
+        if (isset($data['minit']) && strlen($data['minit']) > 1) {
+            $this->errors['minit'] = 'Middle initial must be a single character.';
+        }
+        
+        if (empty($data['lname'])) {
+            $this->errors['lname'] = 'Last name is required.';
         }
         if (empty($data['dob'])) {
             $this->errors['dob'] = 'Date of Birth is required.';
@@ -45,5 +57,28 @@ class User{
 
     public function getErrors() {
         return $this->errors;
+    }
+
+    public function createTable() {
+        $sql = "
+            CREATE TABLE IF NOT EXISTS `users` (
+                `id` int(10) NOT NULL AUTO_INCREMENT,
+                `fname` varchar(50) NOT NULL,
+                `minit` varchar(1) DEFAULT NULL,
+                `lname` varchar(50) NOT NULL,
+                `pwd` varchar(50) NOT NULL,
+                `DOB` date NOT NULL,
+                `gender` enum('male','female','non-binary','prefer not to say') NOT NULL DEFAULT 'prefer not to say',
+                `email` varchar(50) NOT NULL,
+                PRIMARY KEY (`id`),
+                KEY `fname` (`fname`),
+                KEY `minit` (`minit`),
+                KEY `lname` (`lname`),
+                KEY `DOB` (`DOB`),
+                KEY `gender` (`gender`),
+                KEY `email` (`email`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+        ";
+        $this->query($sql);
     }
 }
