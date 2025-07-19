@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/svg+xml" href="<?=ROOT?>/assets/images/favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
@@ -36,12 +37,12 @@
 <body>
   
     <div class="container">
-        <?php if (isset($user)): ?>
-            <h1>Welcome, <?= htmlspecialchars($user->fname) ?>!</h1>
-            <p>Your email: <?= htmlspecialchars($user->email) ?></p>
+        <?php if ( Utils::user()!== null): ?>
+            <h1>Welcome, <?= htmlspecialchars(Utils::user('fname')) ?>!</h1>
+            <p>Your email: <?= htmlspecialchars(Utils::user('email')) ?></p>
             <?php
-            if (!empty($user->DOB)) {
-                $dob = new DateTime($user->DOB);
+            if (!empty(Utils::user('DOB'))) {
+                $dob = new DateTime(Utils::user('DOB'));
                 $now = new DateTime();
                 $age = $now->diff($dob)->y;
                 echo "<p>Your age: " . htmlspecialchars($age) . "</p>";

@@ -10,8 +10,7 @@ class Home{
     
     if (!$ses->is_loggedIn()) {
       Utils::redirect("login");
-    } else{
-      $data['user'] = $ses->user();
+    } else {
       $data['date'] = date('F j, Y');
     }
    

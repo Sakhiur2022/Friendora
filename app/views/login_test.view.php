@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/svg+xml" href="<?=ROOT?>/assets/images/favicon.svg">
     <meta charset="UTF-8">
     <title>Login - Friendora</title>
     <style>
