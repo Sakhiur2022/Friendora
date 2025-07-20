@@ -194,7 +194,7 @@ public static function URL($key){
 }
 
 //get user from session
-public static function user($key = '', $default = ''){
+public static function user($key = ''){
     $session = new Session();
     $row = $session->user();
     if(isset($row->$key)){
