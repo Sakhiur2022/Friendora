@@ -40,19 +40,19 @@ class Session
         $this->startSession();
         if (is_array($keyOrArray)) {
             foreach ($keyOrArray as $key => $value) {
-                $_SESSION[$this->mainKey][$key] = $value;
+                $_SESSION[$key] = $value;
             }
             return 1;
         } else {
-            $_SESSION[$this->mainKey][$keyOrArray] = $value;
+            $_SESSION[$keyOrArray] = $value;
             return 1;
         }
     }
 
     public function get($key, $default = ''){
         $this->startSession();
-        if (isset($_SESSION[$this->mainKey][$key])) {
-            return $_SESSION[$this->mainKey][$key];
+        if (isset($_SESSION[$key])) {
+            return $_SESSION[$key];
         }
         return $default;
     }
@@ -91,9 +91,9 @@ class Session
     //returns data from a key and deletes it from the session
     public function pop($key, $default = ''){
         $this->startSession();
-        if (isset($_SESSION[$this->mainKey][$key])) {
-            $value = $_SESSION[$this->mainKey][$key];
-            unset($_SESSION[$this->mainKey][$key]);
+        if (isset($_SESSION[$key])) {
+            $value = $_SESSION[$key];
+            unset($_SESSION[$key]);
             return $value;
         }
         return $default;
@@ -107,8 +107,8 @@ class Session
 
     public function remove($key){
         $this->startSession();
-        if (isset($_SESSION[$this->mainKey][$key])) {
-            unset($_SESSION[$this->mainKey][$key]);
+        if (isset($_SESSION[$key])) {
+            unset($_SESSION[$key]);
             return true;
         }
         return false;   

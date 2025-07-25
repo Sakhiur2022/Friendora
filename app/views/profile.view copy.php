@@ -6,186 +6,253 @@
     <title>Profile - Friendora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/style.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/nav.css">
     <link rel="stylesheet" href="<?=ROOT?>/assets/styles/profile.css">
-    <link rel="shortcut icon" href="<?=ROOT?>/assets/images/favicon.svg" type="image/x-icon">
+    
+    <link rel="icon" type="image/svg+xml" href="<?=ROOT?>/assets/images/favicon.svg">
 </head>
 <body>
     <!-- Background Music -->
-    <audio id="bgMusic" loop>
+    <audio id="bgMusic" loop preload="auto">
+       
+      
+        <!-- Fallback: Use a local file if available -->
         <source src="<?=ROOT?>/assets/musics/profile-music.mp3" type="audio/mpeg">
+        <source src="<?=ROOT?>/assets/musics/profile-music.wav" type="audio/wav">
+        <source src="<?=ROOT?>/assets/musics/profile-music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
     </audio>
 
-    <!-- Enhanced Navigation Bar -->
-<nav class="navbar navbar-expand-lg fixed-top cyber-nav">
-    <div class="container-fluid">
-        <!-- Mobile Hamburger Button -->
-        <button class="navbar-toggler cyber-hamburger d-lg-none" type="button" onclick="toggleMobileMenu()">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top cyber-nav">
+      <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand cyber-logo" href="#">
-            <i class="bi bi-hexagon-fill me-2"></i>
-            Friendora
+          <i class="bi bi-hexagon-fill me-2"></i>
+          Friendora
         </a>
-
-        <!-- Desktop Search Bar -->
-        <div class="search-container mx-3 flex-grow-1 d-none d-lg-block">
+        
+        <!-- Mobile Search Bar (visible only on mobile) -->
+        <div class="mobile-search-container d-lg-none flex-grow-1 mx-3">
+          <div class="input-group position-relative">
+            <span class="input-group-text cyber-search-icon">
+              <i class="bi bi-search"></i>
+            </span>
+            <input type="text" class="form-control cyber-search" placeholder="Search..." id="mobileSearchInput" autocomplete="off">
+            <button class="btn cyber-btn-ghost advanced-search-btn" type="button" onclick="openAdvancedSearch()" title="Advanced Search">
+              <i class="bi bi-three-dots"></i>
+            </button>
+            <div class="search-suggestions" id="mobileSearchSuggestions"></div>
+          </div>
+        </div>
+        
+        <!-- Hamburger for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Desktop Nav -->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+          <div class="search-container mx-3 flex-grow-1">
             <div class="input-group position-relative">
-                <span class="input-group-text cyber-search-icon">
-                    <i class="bi bi-search"></i>
-                </span>
-                <input type="text" class="form-control cyber-search" placeholder="Search Friendora..." id="searchInput" autocomplete="off">
-                <button class="btn cyber-btn-ghost advanced-search-btn" type="button" onclick="openAdvancedSearch()" title="Advanced Search">
-                    <i class="bi bi-three-dots"></i>
+              <span class="input-group-text cyber-search-icon">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="text" class="form-control cyber-search" placeholder="Search Friendora..." id="searchInput" autocomplete="off">
+              <button class="btn cyber-btn-ghost advanced-search-btn" type="button" onclick="openAdvancedSearch()" title="Advanced Search">
+                <i class="bi bi-three-dots"></i>
+              </button>
+              <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+          </div>
+          <div class="navbar-nav flex-row align-items-center ms-auto">
+            <a class="nav-link cyber-nav-icon" href="#" title="Home">
+              <i class="bi bi-house-fill"></i>
+            </a>
+            <a class="nav-link cyber-nav-icon" href="#" title="Groups">
+              <i class="bi bi-people-fill"></i>
+            </a>
+            <a class="nav-link cyber-nav-icon position-relative" href="#" id="messagesIcon" title="Messages">
+              <i class="bi bi-chat-dots-fill"></i>
+              <span class="notification-badge">3</span>
+            </a>
+            <!-- Notification Dropdown -->
+            <div class="nav-item dropdown">
+              <a class="nav-link cyber-nav-icon dropdown-toggle" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+                <i class="bi bi-bell-fill"></i>
+                <span class="notification-badge" id="notificationCount">7</span>
+              </a>
+              <ul class="dropdown-menu cyber-dropdown notification-dropdown dropdown-menu-end" aria-labelledby="notificationDropdown">
+                <li class="dropdown-header d-flex justify-content-between align-items-center">
+                  <span>Notifications</span>
+                  <button class="btn btn-sm cyber-btn-ghost ms-2" onclick="markAllAsRead()">Mark all as read</button>
+                </li>
+                <div id="notificationsList">
+                  <!-- Example notification -->
+                  <li class="notification-item unread">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="notification-avatar">
+                    <div class="notification-content">
+                      <p>John Doe sent you a friend request.</p>
+                      <small>2 min ago</small>
+                    </div>
+                  </li>
+                  <li class="notification-item">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="notification-avatar">
+                    <div class="notification-content">
+                      <p>Jane Smith liked your post.</p>
+                      <small>10 min ago</small>
+                    </div>
+                  </li>
+                </div>
+                <li class="dropdown-footer">
+                  <a href="#" class="btn cyber-btn-ghost w-100">See All Notifications</a>
+                </li>
+              </ul>
+            </div>
+            <!-- User Profile Dropdown -->
+            <div class="nav-item dropdown ms-2">
+              <a class="nav-link p-0" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" class="profile-pic-nav" alt="Profile">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end cyber-dropdown" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle me-2"></i>View Profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Offcanvas Mobile Nav -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileNavLabel">Friendora</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- User Profile Section at top -->
+            <div class="user-profile-mobile mb-4">
+              <div class="d-flex align-items-center p-3 rounded" style="background: linear-gradient(145deg, rgba(0, 212, 255, 0.1), rgba(131, 56, 236, 0.1)); border: 1px solid rgba(0, 212, 255, 0.2);">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face" class="profile-pic-mobile me-3" alt="Profile" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--cyber-primary);">
+                <div class="flex-grow-1">
+                  <h6 class="mb-0" style="color: var(--cyber-text);"><?= Utils::escape(Utils::User('fname')." ".Utils::User('minit')." ".Utils::User('lname'))  ?? 'Alexandra Chen' ?></h6>
+                  <small style="color: var(--cyber-text-muted);">View your profile</small>
+                </div>
+                <!-- User Profile Dropdown Toggle -->
+                <button class="btn btn-sm cyber-btn-ghost" type="button" data-bs-toggle="collapse" data-bs-target="#mobileUserOptions" aria-expanded="false" style="border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-three-dots-vertical" style="color: var(--cyber-primary);"></i>
                 </button>
-                
-                <!-- Autosuggestion Dropdown -->
-                <div class="search-suggestions" id="searchSuggestions">
-                    <!-- Search suggestions will be populated here -->
+              </div>
+              
+              <!-- User Profile Options Dropdown -->
+              <div class="collapse mt-3" id="mobileUserOptions">
+                <div class="d-flex flex-column gap-2 p-3 rounded" style="background: var(--cyber-glass); border: 1px solid var(--cyber-glass-border);">
+                  <a class="nav-link cyber-nav-icon d-flex align-items-center" href="#" onclick="openEditProfileModal()">
+                    <i class="bi bi-person-circle me-2" style="color: var(--cyber-primary);"></i>
+                    <span>View Profile</span>
+                  </a>
+                  <a class="nav-link cyber-nav-icon d-flex align-items-center" href="#" onclick="openEditProfileModal()">
+                    <i class="bi bi-gear me-2" style="color: var(--cyber-primary);"></i>
+                    <span>Settings & Privacy</span>
+                  </a>
+                  <a class="nav-link cyber-nav-icon d-flex align-items-center" href="#" onclick="toggleBackgroundMusic()">
+                    <i class="bi bi-music-note me-2" style="color: var(--cyber-primary);"></i>
+                    <span>Toggle Music</span>
+                  </a>
+                  <hr style="border-color: var(--cyber-glass-border); margin: 0.5rem 0;">
+                  <a class="nav-link cyber-nav-icon d-flex align-items-center text-danger" href="<?=ROOT?>/logout" onclick="confirmLogout(event)">
+                    <i class="bi bi-box-arrow-right me-2"></i>
+                    <span>Logout</span>
+                  </a>
                 </div>
-            </div>
-        </div>
-
-        <!-- Desktop Navigation Icons -->
-        <div class="navbar-nav flex-row d-none d-lg-flex">
-            <a class="nav-link cyber-nav-icon" href="<?=ROOT?>/home" title="Home">
-                <i class="bi bi-house-fill"></i>
-            </a>
-            <a class="nav-link cyber-nav-icon" href="#" title="Friends">
-                <i class="bi bi-person-fill"></i>
-            </a>
-            <a class="nav-link cyber-nav-icon" href="#" title="Messages">
-                <i class="bi bi-chat-dots-fill"></i>
-                <span class="notification-badge">3</span>
-            </a>
-            
-            <!-- Enhanced Notification Dropdown -->
-            <div class="nav-item dropdown">
-                <a class="nav-link cyber-nav-icon dropdown-toggle" href="#" id="notificationDropdown" role="button" onclick="toggleNotificationDropdown()" title="Notifications">
-                    <i class="bi bi-bell-fill"></i>
-                    <span class="notification-badge" id="notificationCount">7</span>
-                </a>
-                <div class="notification-dropdown-container" id="notificationDropdownContainer">
-                    <div class="notification-dropdown">
-                        <div class="notification-header">
-                            <h6>Notifications</h6>
-                            <button class="btn btn-sm cyber-btn-ghost" onclick="markAllAsRead()">Mark all as read</button>
-                        </div>
-                        <div class="notification-list" id="notificationsList">
-                            <!-- Notifications will be populated here -->
-                        </div>
-                        <div class="notification-footer">
-                            <a href="notifications.php" class="btn cyber-btn-ghost w-100">See All Notifications</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
             
-            <!-- User Dropdown -->
-            <div class="nav-item dropdown">
-                <a class="nav-link user-dropdown-toggle" href="#" id="userDropdown" role="button" onclick="toggleUserDropdown()">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" 
-                         class="profile-pic-nav" alt="Profile">
+            <!-- Main Navigation Menu -->
+            <div class="mobile-nav-section">
+              <h6 class="mobile-nav-header">Main Menu</h6>
+              <div class="d-flex flex-column gap-3">
+                <a class="nav-link cyber-nav-icon d-flex align-items-center" href="#">
+                  <i class="bi bi-house-fill me-3"></i>
+                  <span>Home</span>
                 </a>
-                <div class="user-dropdown-container" id="userDropdownContainer">
-                    <div class="user-dropdown">
-                        <div class="user-dropdown-header">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" 
-                                 class="user-dropdown-avatar" alt="Profile">
-                            <div class="user-dropdown-info">
-                                <h6><?php echo Utils::user('fname') . " " . Utils::user('lname'); ?></h6>
-                                <p>See your profile</p>
-                            </div>
-                        </div>
-                        <hr class="dropdown-divider">
-                        <a class="user-dropdown-item" href="settings.php">
-                            <i class="bi bi-gear-fill"></i>
-                            <span>Settings & Privacy</span>
-                        </a>
-                        <a class="user-dropdown-item" href="help.php">
-                            <i class="bi bi-question-circle-fill"></i>
-                            <span>Help & Support</span>
-                        </a>
-                        <a class="user-dropdown-item" href="display.php">
-                            <i class="bi bi-moon-fill"></i>
-                            <span>Display & Accessibility</span>
-                        </a>
-                        <hr class="dropdown-divider">
-                        <a class="user-dropdown-item logout-item" href="<?=ROOT?>/logout" onclick="handleLogout()">
-                            <i class="bi bi-box-arrow-right"></i>
-                            <span>Log Out</span>
-                        </a>
-                    </div>
-                </div>
+                <a class="nav-link cyber-nav-icon d-flex align-items-center" href="#">
+                  <i class="bi bi-people-fill me-3"></i>
+                  <span>Groups</span>
+                </a>
+              
+              </div>
             </div>
-        </div>
-
-        <!-- Mobile User Icon -->
-        <div class="d-lg-none">
-            <a class="nav-link user-dropdown-toggle" href="#" onclick="toggleUserDropdown()">
-                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" 
-                     class="profile-pic-nav" alt="Profile">
-            </a>
-        </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <!-- Mobile Search -->
-            <div class="mobile-search-section">
-                <div class="input-group position-relative">
-                    <span class="input-group-text cyber-search-icon">
-                        <i class="bi bi-search"></i>
-                    </span>
-                    <input type="text" class="form-control cyber-search" placeholder="Search Friendora..." id="mobileSearchInput" autocomplete="off">
-                    <button class="btn cyber-btn-ghost advanced-search-btn" type="button" onclick="openAdvancedSearch()" title="Advanced Search">
-                        <i class="bi bi-three-dots"></i>
-                    </button>
-                </div>
-                <div class="search-suggestions" id="mobileSearchSuggestions">
-                    <!-- Mobile search suggestions -->
-                </div>
-            </div>
-
-            <!-- Mobile Navigation Links -->
-            <div class="mobile-nav-links">
-                <a class="mobile-nav-item" href="<?=ROOT?>/home">
-                    <i class="bi bi-house-fill"></i>
-                    <span>Home</span>
-                </a>
-                <a class="mobile-nav-item" href="#">
-                    <i class="bi bi-person-fill"></i>
-                    <span>Friends</span>
-                </a>
-                <a class="mobile-nav-item" href="#">
-                    <i class="bi bi-chat-dots-fill"></i>
+            
+          
+            <!-- Quick Actions Section -->
+            <div class="mobile-nav-section">
+              <h6 class="mobile-nav-header">Quick Actions</h6>
+              <div class="d-flex flex-column gap-3">
+                <!-- Messages with count -->
+                <a class="nav-link cyber-nav-icon d-flex align-items-center justify-content-between" href="#" id="mobileMessagesLink">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-chat-dots-fill me-3"></i>
                     <span>Messages</span>
-                    <span class="notification-badge">3</span>
+                  </div>
+                  <span class="notification-badge mobile-count-badge" id="mobileMessageCount">3</span>
                 </a>
-                <a class="mobile-nav-item" href="#" onclick="toggleMobileNotifications()">
-                    <i class="bi bi-bell-fill"></i>
-                    <span>Notifications</span>
-                    <span class="notification-badge" id="mobileNotificationCount">7</span>
-                </a>
-            </div>
-
-            <!-- Mobile Notifications Section -->
-            <div class="mobile-notifications-section" id="mobileNotificationsSection" style="display: none;">
-                <div class="mobile-notifications-header">
-                    <h6>Notifications</h6>
-                    <button class="btn btn-sm cyber-btn-ghost" onclick="markAllAsRead()">Mark all as read</button>
+                
+                <!-- Notifications - Always Expanded for Better Accessibility -->
+                <div class="mobile-notifications-section">
+                  <a class="nav-link cyber-nav-icon d-flex align-items-center justify-content-between" href="#" data-bs-toggle="collapse" data-bs-target="#mobileNotifications" aria-expanded="true">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-bell-fill me-3"></i>
+                      <span>Notifications</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="notification-badge mobile-count-badge" id="mobileNotificationCount">7</span>
+                      <i class="bi bi-chevron-down collapse-indicator"></i>
+                    </div>
+                  </a>
+                  
+                  <!-- Notifications List - More Accessible -->
+                    <div class="collapse show" id="mobileNotifications">
+                    <div class="mobile-notifications-container mt-3">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                      <small class="text-muted">Recent Notifications</small>
+                      <button class="btn btn-sm cyber-btn-ghost" onclick="markAllAsRead()" style="font-size: 0.8rem; padding: 0.25rem 0.5rem;">
+                        Mark all read
+                      </button>
+                      </div>
+                      <div id="mobileNotificationsList" class="mobile-notifications-list">
+                      <div class="mobile-notification-item unread">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="notification-avatar" alt="User">
+                        <div class="notification-content">
+                        <p>Marcus Tech sent you a friend request.</p>
+                        <small>2 min ago</small>
+                        </div>
+                      </div>
+                      
+                      <div class="mobile-notification-item">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=40&h=40&fit=crop&crop=face" class="notification-avatar" alt="User">
+                        <div class="notification-content">
+                        <p>Luna Digital liked your post.</p>
+                        <small>10 min ago</small>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="#" class="btn cyber-btn-ghost btn-sm w-100">See All Notifications</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="mobile-notifications-list" id="mobileNotificationsList">
-                    <!-- Mobile notifications will be populated here -->
-                </div>
+              </div>
             </div>
+          
+            
+          </div>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
     <!-- Main Content -->
     <div class="container-fluid main-content">
@@ -197,9 +264,7 @@
                     <div class="cover-photo">
                         <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=400&fit=crop" 
                              alt="Cover Photo" class="cover-img" id="coverPhoto">
-                        <!-- PHP: Dynamic cover photo loading -->
-                        <!-- <?php echo "<img src='" . $user->$cover_photo . "' alt='Cover Photo' class='cover-img'>"; ?>
-                         -->
+                        
                         <div class="cover-overlay">
                             <button class="btn cyber-btn-secondary edit-cover-btn" onclick="openCoverPhotoModal()">
                                 <i class="bi bi-camera-fill me-2"></i>Edit Cover
@@ -212,8 +277,6 @@
                         <div class="profile-pic-container">
                             <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" 
                                  alt="Profile Picture" class="profile-pic-main" id="profilePic">
-                            <!-- PHP: Dynamic profile picture -->
-                            <!-- <?php echo "<img src='" . $user['profile_picture'] . "' alt='Profile Picture' class='profile-pic-main'>"; ?> -->
                             
                             <button class="btn cyber-btn-primary edit-pic-btn" onclick="openProfilePhotoModal()">
                                 <i class="bi bi-camera-fill"></i>
@@ -221,13 +284,10 @@
                         </div>
 
                         <div class="profile-info">
-                            <!-- PHP: Dynamic user name -->
-                            <?php echo "<h1 class='profile-name'>" . Utils::user('fname') .  " " . Utils::user('minit') . " " . Utils::user('lname') . "</h1>"; ?>
-                            
-                            <p class="profile-bio" id="userBio">Digital artist exploring the boundaries between reality and dreams ✨</p>
-                            <!-- PHP: Dynamic bio -->
-                            <!-- <?php echo "<p class='profile-bio'>" . $user['bio'] . "</p>"; ?> -->
-                            
+                            <h1 class="profile-name"><?= Utils::escape(Utils::User('fname')." ".Utils::User('minit')." ".Utils::User('lname'))  ?? 'Alexandra Chen' ?></h1>
+
+                            <p class="profile-bio"><?= $data['Bio'] ?? 'Digital artist exploring the boundaries between reality and dreams ✨' ?></p>
+
                             <div class="profile-stats">
                                 <span class="stat-item">
                                     <strong>1.2K</strong> Friends
@@ -235,8 +295,6 @@
                                 <span class="stat-item">
                                     <strong>847</strong> Following
                                 </span>
-                                <!-- PHP: Dynamic stats -->
-                                <!-- <?php echo "<strong>" . $user['friend_count'] . "</strong> Friends"; ?> -->
                             </div>
                         </div>
 
@@ -263,41 +321,47 @@
                     </div>
                 </div>
 
-                <!-- Profile Content -->
-                <div class="row mt-4">
-                    <!-- Left Column - About -->
+                <!-- Profile Content - Facebook Style Layout -->
+                <div class="row mt-3">
+                    <!-- Left Sidebar - About & Photos (Facebook style) -->
                     <div class="col-lg-5">
-                        <div class="cyber-card about-card">
+                        <!-- About Section -->
+                        <div class="cyber-card about-card mb-3">
                             <div class="card-header">
                                 <h5><i class="bi bi-person-circle me-2"></i>About</h5>
-                                <button class="btn btn-sm cyber-btn-ghost" id= "editAboutBtn" onclick="openEditProfileModal()">
+                                <button class="btn btn-sm cyber-btn-ghost" id="editAboutBtn" onclick="openEditProfileModal()">
                                     <i class="bi bi-pencil"></i>
                                 </button>
                             </div>
                             <div class="card-body">
                                 <div class="about-grid" id="aboutSection">
-                                    <!-- These will be populated by JavaScript with dummy data -->
-                                    <!-- PHP: Loop through user details -->
-                                    <!-- <?php foreach($user_details as $detail): ?> -->
-                                    <!-- <div class="about-item">...</div> -->
-                                    <!-- <?php endforeach; ?> -->
+                                    <!-- Will be populated by JavaScript -->
                                 </div>
                             </div>
                         </div>
 
                         <!-- Photos Section -->
-                        <div class="cyber-card photos-card mt-3">
+                        <div class="cyber-card photos-card mb-3">
                             <div class="card-header">
                                 <h5><i class="bi bi-images me-2"></i>Photos</h5>
-                                <a href="#" class="text-decoration-none" onclick="openPhotoGallery()">See All</a>
+                                <a href="#" class="see-all-link" onclick="openPhotoGallery()">See All</a>
                             </div>
                             <div class="card-body">
                                 <div class="photos-grid" id="photosGrid">
-                                    <!-- Photos will be populated by JavaScript -->
-                                    <!-- PHP: Loop through user photos -->
-                                    <!-- <?php foreach($user_photos as $photo): ?> -->
-                                    <!-- <img src="<?php echo $photo['url']; ?>" class="photo-item"> -->
-                                    <!-- <?php endforeach; ?> -->
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Friends Section -->
+                        <div class="cyber-card friends-card">
+                            <div class="card-header">
+                                <h5><i class="bi bi-people me-2"></i>Friends</h5>
+                                <a href="#" class="see-all-link" onclick="openFriendsModal()">See All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="friends-preview" id="friendsPreview">
+                                    <!-- Will be populated by JavaScript -->
                                 </div>
                             </div>
                         </div>
@@ -311,7 +375,7 @@
                                 <div class="d-flex align-items-center mb-3">
                                     <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" 
                                          class="profile-pic-small me-3" alt="Your Profile">
-                                    <input type="text" class="form-control cyber-input" placeholder="<?php echo "What's on your mind, " . Utils::user('fname') . "?"; ?>" id="postInput" name = "content">
+                                    <input type="text" class="form-control create-post-input" placeholder="What's on your mind, <?= Utils::escape(Utils::User('fname'))  ?? 'Alexandra Chen' ?>?" id="postInput">
                                 </div>
                                 <div class="post-actions">
                                     <button class="btn cyber-btn-ghost">
@@ -329,11 +393,7 @@
 
                         <!-- Posts Feed -->
                         <div id="postsContainer">
-                            <!-- Posts will be populated by JavaScript -->
-                            <!-- PHP: Loop through user posts -->
-                            <!-- <?php foreach($user_posts as $post): ?> -->
-                            <!-- Include post template -->
-                            <!-- <?php endforeach; ?> -->
+                            <!-- Will be populated by JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -414,7 +474,7 @@
                 <div class="modal-body">
                     <div class="photo-gallery-container">
                         <div class="gallery-main">
-                            <img id="galleryMainImage" src="<?=ROOT?>/assets/images/placeholder.svg" alt="Gallery Image" class="gallery-main-img">
+                            <img id="galleryMainImage" src="/placeholder.svg" alt="Gallery Image" class="gallery-main-img">
                             <button class="gallery-nav-btn gallery-prev" onclick="previousPhoto()">
                                 <i class="bi bi-chevron-left"></i>
                             </button>
@@ -439,24 +499,41 @@
             </div>
         </div>
     </div>
+      
 
     <!-- Edit Profile Modal -->
+    <?php
+    if (isset($_POST['religion'])) {
+      echo '<div class="container my-3">';
+      echo '<div class="alert alert-info">';
+      echo '<h5>Submitted Profile Data:</h5>';
+      echo '<pre>';
+      print_r($_POST);
+      echo '</pre>';
+      echo '</div>';
+      echo '</div>';
+    }
+    ?>
     <div class="modal fade" id="editProfileModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content cyber-modal">
+              
                 <div class="modal-header">
                     <h5 class="modal-title">Edit Profile</h5>
                     <button type="button" class="btn-close cyber-close" data-bs-dismiss="modal"></button>
                 </div>
+                
                 <div class="modal-body">
-                    <form id="editProfileForm">
+
+                    <form id="editProfileForm" action="" method="POST">
                         <!-- PHP: Form will submit to update_profile.php -->
                         <!-- <form action="update_profile.php" method="POST"> -->
                         
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Current City</label>
-                                <input type="text" class="form-control cyber-input" id="currentCity" name="city">
+                                <input type="text" class="form-control cyber-input" id="currentCity" name="
+                                city">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Hometown</label>
@@ -469,11 +546,11 @@
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Gender</label>
                                 <select class="form-select cyber-input" id="gender" name="gender">
-                                    <option value="">Select Gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="non-binary">Non-binary</option>
-                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                      <option value="">Select your gender</option>
+                                      <option value="male">Male</option>
+                                      <option value="female">Female</option>
+                                      <option value="non-binary">Non-binary</option>
+                                      <option value="prefer-not-to-say">Prefer not to say</option>
                                 </select>
                             </div>
                             <div class="col-12 mb-3">
@@ -535,6 +612,7 @@
                     <button type="button" class="btn cyber-btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn cyber-btn-primary" id="saveProfileBtn">Save Changes</button>
                 </div>
+               
             </div>
         </div>
     </div>
@@ -546,45 +624,11 @@
         </button>
     </div>
 
-    <!-- Enhanced Notification System -->
-<div class="notification-system" id="notificationSystem">
-    <!-- Notifications will be dynamically added here -->
-</div>
-
-<!-- User Dropdown (for mobile) -->
-<div class="user-dropdown-container mobile-user-dropdown" id="mobileUserDropdownContainer">
-    <div class="user-dropdown">
-        <div class="user-dropdown-header">
-            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" 
-                 class="user-dropdown-avatar" alt="Profile">
-            <div class="user-dropdown-info">
-                <h6><?php echo Utils::user('fname') . " " . Utils::user('lname'); ?></h6>
-                <p>See your profile</p>
-            </div>
-        </div>
-        <hr class="dropdown-divider">
-        <a class="user-dropdown-item" href="settings.php">
-            <i class="bi bi-gear-fill"></i>
-            <span>Settings & Privacy</span>
-        </a>
-        <a class="user-dropdown-item" href="help.php">
-            <i class="bi bi-question-circle-fill"></i>
-            <span>Help & Support</span>
-        </a>
-        <a class="user-dropdown-item" href="display.php">
-            <i class="bi bi-moon-fill"></i>
-            <span>Display & Accessibility</span>
-        </a>
-        <hr class="dropdown-divider">
-        <a class="user-dropdown-item logout-item" href="<?=ROOT?>/logout" onclick="handleLogout()">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Log Out</span>
-        </a>
-    </div>
-</div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Modular JavaScript Files -->
+    <script src="<?=ROOT?>/assets/scripts/main.js"></script>
+    <script src="<?=ROOT?>/assets/scripts/nav.js"></script>
     <script src="<?=ROOT?>/assets/scripts/profile.js"></script>
 </body>
 </html>

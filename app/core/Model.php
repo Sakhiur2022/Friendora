@@ -51,10 +51,57 @@ trait Model
         return $this->query($sql, $data);
     }
 
+    public function updateAll($data, $id, $idColumn = 'id') {
+        if (!empty($this->allowedColumns)) {
+            foreach ($data as $key => $value) {
+                if (!in_array($key, $this->allowedColumns)) {
+                    unset($data[$key]);
+                }
+            }
+        }
+        $set = "";
+        foreach (array_keys($data) as $key) {
+            $set .= "$key = :$key, ";
+        }
+        $set = rtrim($set, ", ");
+        $sql = "UPDATE " . $this->tableName . " SET $set WHERE $idColumn = :$idColumn";
+        $data[$idColumn] = $id;
+        return $this->query($sql, $data);
+    }
+
     public function delete($id, $columnToDelete = 'id') {
         $sql = "DELETE FROM " . $this->tableName . " WHERE $columnToDelete = :$columnToDelete";
         return $this->query($sql, [$columnToDelete => $id]);
     }
+// Example usage:
+// $model->deleteWhere(['status' => 'inactive', 'role' => ['admin', 'editor']]);
+// This will generate SQL:
+// DELETE FROM tableName WHERE status = :status AND role IN (:role_0,:role_1)
+
+public function deleteWhere($conditions) {
+    $sql = "DELETE FROM " . $this->tableName . " WHERE ";
+    $clauses = [];
+    $params = [];
+
+    foreach ($conditions as $key => $value) {
+        if (is_array($value)) {
+            // Use IN clause for arrays
+            $inParams = [];
+            foreach ($value as $i => $v) {
+                $paramKey = $key . '_' . $i;
+                $inParams[] = ':' . $paramKey;
+                $params[$paramKey] = $v;
+            }
+            $clauses[] = "$key IN (" . implode(',', $inParams) . ")";
+        } else {
+            $clauses[] = "$key = :$key";
+            $params[$key] = $value;
+        }
+    }
+
+    $sql .= implode(" AND ", $clauses);
+    return $this->query($sql, $params);
+}
 
     public function count() {
         $sql = "SELECT COUNT(*) as count FROM " . $this->tableName;

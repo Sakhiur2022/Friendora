@@ -239,11 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Keyboard shortcuts
     document.addEventListener("keydown", (e) => {
-      // ESC to close modal
-      if (e.key === "Escape" && successModal.classList.contains("show")) {
-        continueBtn.click()
-      }
-  
+     
       // Enter to submit form (if valid)
       if (e.key === "Enter" && e.target.tagName !== "TEXTAREA" && !submitBtn.disabled) {
         form.dispatchEvent(new Event("submit"))
@@ -272,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
         backgroundMusic.pause()
         musicToggle.classList.remove("playing")
         musicToggle.classList.add("muted")
-        musicIcon.textContent = "ðŸ”‡"
+        musicIcon.textContent = "🔇"
         musicToggle.title = "Play Background Music"
         musicInfo.classList.remove("show")
         isMusicPlaying = false
@@ -282,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .then(() => {
             musicToggle.classList.add("playing")
             musicToggle.classList.remove("muted")
-            musicIcon.textContent = "ðŸŽµ"
+            musicIcon.textContent = "🎵"
             musicToggle.title = "Pause Background Music"
             musicInfo.classList.add("show")
             isMusicPlaying = true
@@ -330,7 +326,7 @@ document.addEventListener("DOMContentLoaded", () => {
               .play()
               .then(() => {
                 musicToggle.classList.add("playing")
-                musicIcon.textContent = "ðŸŽµ"
+                musicIcon.textContent = "🎵"
                 musicInfo.classList.add("show")
                 isMusicPlaying = true
   
@@ -368,25 +364,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   
-    // Restore music volume after success modal
-    continueBtn.addEventListener("click", () => {
-      if (isMusicPlaying) {
-        let currentVolume = backgroundMusic.volume
-        const fadeIn = setInterval(() => {
-          if (currentVolume < 0.25) {
-            currentVolume += 0.02
-            backgroundMusic.volume = Math.min(0.25, currentVolume)
-          } else {
-            clearInterval(fadeIn)
-          }
-        }, 50)
-      }
-    })
+   
+
   
     // Music ended event (for non-looping scenarios)
     backgroundMusic.addEventListener("ended", () => {
       musicToggle.classList.remove("playing")
-      musicIcon.textContent = "ðŸ”„"
+      musicIcon.textContent = "🎵"
       musicToggle.title = "Replay Background Music"
       musicInfo.classList.remove("show")
       isMusicPlaying = false

@@ -40,6 +40,7 @@
         <?php if ( Utils::user()!== null): ?>
             <h1>Welcome, <?= htmlspecialchars(Utils::user('fname')) ?>!</h1>
             <p>Your email: <?= htmlspecialchars(Utils::user('email')) ?></p>
+            <p>Your full name: <?= Utils::escape(Utils::User('fname')." ".Utils::User('minit')." ".Utils::User('lname')) ?></p>
             <?php
             if (!empty(Utils::user('DOB'))) {
                 $dob = new DateTime(Utils::user('DOB'));
@@ -49,6 +50,7 @@
             }
             ?>
             <p>Current Date: <?= htmlspecialchars($date) ?></p>
+            
 
 
             <h2>Your Posts</h2>
@@ -67,6 +69,11 @@
         <form action="<?=ROOT?>/logout" method="post" style="margin-top: 24px; text-align: right;">
             <button type="submit" style="background: #e74c3c; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">
             Logout
+            </button>
+        </form>
+        <form action="<?=ROOT?>/profile" method="post" style="margin-top: 12px; text-align: right;">
+            <button type="submit" style="background: #3498db; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">
+                Go to Profile
             </button>
         </form>
     </div>

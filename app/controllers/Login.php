@@ -19,11 +19,10 @@ class Login{
           //   $session->auth($userInfo);
           //   Utils::redirect("home");
           // }
-            // Debug: log both passwords to a file
-            file_put_contents(__DIR__.'/../../debug_login.txt',
-              'POST: '.trim($request->post('pwd'))."\nDB: ".trim($userInfo->pwd)."\n", FILE_APPEND);
+           
             if(trim($request->post('pwd')) === trim($userInfo->pwd)){
               $session->auth($userInfo);
+           
               Utils::redirect("home");
             }
             else{
