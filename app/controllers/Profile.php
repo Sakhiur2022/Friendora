@@ -34,7 +34,7 @@ class Profile {
       $links = $data['website'] ?? [];
       $links = is_array($links) ? $links : [$links];
 
-      $user->update(['gender' => $gender, 'dob' => $dob], $data['user_id'], 'id');
+      $user->update(['gender' => $gender, 'DOB' => $dob], $data['user_id'], 'id');
 
       if (!$user_profile->exists($data['user_id'], 'user_id')) {
         $user_profile->insert($data);
@@ -83,8 +83,8 @@ class Profile {
       ]);
       return; // ❗ prevents loading full HTML view
     }
-    $profileData = $user_profile->first(['user_id' => Utils::user('id')]);
+    // $profileData = $user_profile->first(['user_id' => Utils::user('id')]);
     
-    $this->loadView("profile", $profileData);
+    $this->loadView("profile", $data);
   }
 }

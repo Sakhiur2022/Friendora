@@ -1,0 +1,29 @@
+[25-Jul-2025 16:10:29 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'college' in 'field list' in C:\xampp\htdocs\Friendora\app\core\Database.php:27
+Stack trace:
+#0 C:\xampp\htdocs\Friendora\app\core\Database.php(27): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Friendora\app\core\Model.php(32): Profiles->query('INSERT INTO pro...', Array)
+#2 C:\xampp\htdocs\Friendora\app\controllers\Profile.php(40): Profiles->insert(Array)
+#3 C:\xampp\htdocs\Friendora\app\core\App.php(43): Profile->index()
+#4 C:\xampp\htdocs\Friendora\app\core\App.php(8): App->loadController()
+#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\Friendora\app\core\Database.php on line 27
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 201
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $cover_photo in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 201
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Attempt to read property "" on null in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 201
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 216
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 216
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 229
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 229
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 239
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 239
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 246
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $profile_user_id in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 246
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user_details in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 281
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 281
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user_photos in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 298
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 298
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user_posts in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 334
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 334
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $all_user_photos in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 427
+[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 427

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2025 at 03:57 PM
+-- Generation Time: Jul 25, 2025 at 04:12 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `friendora_test`
+-- Database: `friendora`
 --
 
 -- --------------------------------------------------------
@@ -235,10 +235,18 @@ CREATE TABLE `profile` (
   `professional` text DEFAULT NULL,
   `work` text DEFAULT NULL,
   `highschool` text DEFAULT NULL,
+  `college` varchar(50) DEFAULT NULL,
   `university` text DEFAULT NULL,
   `coverpic` text DEFAULT NULL,
   `user_id` int(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `profile`
+--
+
+INSERT INTO `profile` (`id`, `hometown`, `shortBio`, `city`, `pfp`, `aboutYou`, `relationship`, `socialQuote`, `lifeEvent`, `religion`, `polViews`, `lang`, `professional`, `work`, `highschool`, `college`, `university`, `coverpic`, `user_id`) VALUES
+(1, 'Cyber City', NULL, 'Neo Tokyo', NULL, NULL, NULL, 'In the digital realm, we are all architects of our own reality.', 'Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)', 'Digital Spiritualism', 'Progressive Futurist', 'English, Japanese, Binary', NULL, 'DreamScape Studios', 'Digital Arts Academy', 'Cyber Tech Institute', 'Virtual Reality University', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -294,6 +302,13 @@ CREATE TABLE `users` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `fname`, `minit`, `lname`, `pwd`, `DOB`, `gender`, `email`, `created_at`) VALUES
+(1, 'Kafka', 'S', 'Rahman', 'HNkukc.t2n:RgD!', '1981-01-25', 'male', 'kafka@gmail.com', '2025-07-25 20:08:05');
+
 -- --------------------------------------------------------
 
 --
@@ -304,6 +319,13 @@ CREATE TABLE `websites` (
   `profile_id` int(3) NOT NULL,
   `url` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `websites`
+--
+
+INSERT INTO `websites` (`profile_id`, `url`) VALUES
+(1, 'https://alexandra-dreams.cyber');
 
 --
 -- Indexes for dumped tables
@@ -503,7 +525,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tokens`
@@ -515,7 +537,7 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

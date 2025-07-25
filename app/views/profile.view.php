@@ -478,7 +478,7 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="form-label">Bio</label>
-                                <textarea class="form-control cyber-input" rows="3" id="bioInput" name="Bio"></textarea>
+                                <textarea class="form-control cyber-input" rows="3" id="bioInput" name="shortBio"></textarea>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">High School</label>
