@@ -343,11 +343,11 @@ public function deleteWhere($conditions) {
         }
 
         // Limit & Offset
-        if (isset($options['limit'])) {
-            $sql .= " LIMIT :offset, :limit";
-            $params['offset'] = isset($options['offset']) ? (int)$options['offset'] : 0;
-            $params['limit'] = (int)$options['limit'];
-        }
+       if (isset($options['limit'])) {
+    $offset = isset($options['offset']) ? (int)$options['offset'] : 0;
+    $limit = (int)$options['limit'];
+    $sql .= " LIMIT $offset, $limit";
+}
 
         return $this->query($sql, $params);
     }

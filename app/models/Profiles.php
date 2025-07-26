@@ -9,10 +9,12 @@ class Profiles{
 
     protected $allowedColumns = [
       'hometown',
-      'Bio',
+      'shortBio',
        'city',
       'pfp',
       'socialQuote',
+      'country',
+      'professional',
       'lifeEvent',
       'religion',
         'polViews',

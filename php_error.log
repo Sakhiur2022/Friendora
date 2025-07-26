@@ -1,29 +1,432 @@
-[25-Jul-2025 16:10:29 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'college' in 'field list' in C:\xampp\htdocs\Friendora\app\core\Database.php:27
-Stack trace:
-#0 C:\xampp\htdocs\Friendora\app\core\Database.php(27): PDOStatement->execute(Array)
-#1 C:\xampp\htdocs\Friendora\app\core\Model.php(32): Profiles->query('INSERT INTO pro...', Array)
-#2 C:\xampp\htdocs\Friendora\app\controllers\Profile.php(40): Profiles->insert(Array)
-#3 C:\xampp\htdocs\Friendora\app\core\App.php(43): Profile->index()
-#4 C:\xampp\htdocs\Friendora\app\core\App.php(8): App->loadController()
-#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
-#6 {main}
-  thrown in C:\xampp\htdocs\Friendora\app\core\Database.php on line 27
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 201
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $cover_photo in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 201
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Attempt to read property "" on null in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 201
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 216
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 216
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 229
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 229
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 239
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 239
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 246
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $profile_user_id in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 246
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user_details in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 281
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 281
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user_photos in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 298
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 298
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $user_posts in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 334
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 334
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  Undefined variable $all_user_photos in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 427
-[25-Jul-2025 16:11:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 427
+[26-Jul-2025 17:37:54 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:37:54 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:37:54 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:37:54 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 0
+    [Cache-Control] => max-age=0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [sec-ch-ua-mobile] => ?0
+    [sec-ch-ua-platform] => "Windows"
+    [Upgrade-Insecure-Requests] => 1
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [Origin] => http://localhost
+    [Content-Type] => application/x-www-form-urlencoded
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => navigate
+    [Sec-Fetch-User] => ?1
+    [Sec-Fetch-Dest] => document
+    [Referer] => http://localhost/Friendora/home
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:40:17 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:40:17 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:40:17 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:40:17 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 0
+    [Cache-Control] => max-age=0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [sec-ch-ua-mobile] => ?0
+    [sec-ch-ua-platform] => "Windows"
+    [Upgrade-Insecure-Requests] => 1
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [Origin] => http://localhost
+    [Content-Type] => application/x-www-form-urlencoded
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => navigate
+    [Sec-Fetch-User] => ?1
+    [Sec-Fetch-Dest] => document
+    [Referer] => http://localhost/Friendora/home
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:42:18 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:42:18 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:42:18 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:42:18 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 0
+    [Cache-Control] => max-age=0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [sec-ch-ua-mobile] => ?0
+    [sec-ch-ua-platform] => "Windows"
+    [Origin] => http://localhost
+    [Content-Type] => application/x-www-form-urlencoded
+    [Upgrade-Insecure-Requests] => 1
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => navigate
+    [Sec-Fetch-User] => ?1
+    [Sec-Fetch-Dest] => document
+    [Referer] => http://localhost/Friendora/
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:42:46 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:42:46 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:42:46 Europe/Berlin] FILES data: Array
+(
+    [cover_photo] => Array
+        (
+            [name] => pic.png
+            [full_path] => pic.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpEB24.tmp
+            [error] => 0
+            [size] => 4456265
+        )
+
+)
+
+[26-Jul-2025 17:42:46 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 4456452
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [Content-Type] => multipart/form-data; boundary=----WebKitFormBoundaryVfdn0HXEGHxiEcIP
+    [sec-ch-ua-mobile] => ?0
+    [Accept] => */*
+    [Origin] => http://localhost
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:42:57 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:42:57 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:42:57 Europe/Berlin] FILES data: Array
+(
+    [cover_photo] => Array
+        (
+            [name] => pic.png
+            [full_path] => pic.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php14D5.tmp
+            [error] => 0
+            [size] => 4456265
+        )
+
+)
+
+[26-Jul-2025 17:42:57 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 4456452
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [Content-Type] => multipart/form-data; boundary=----WebKitFormBoundaryIrcPgFKLjvAfFdDI
+    [sec-ch-ua-mobile] => ?0
+    [Accept] => */*
+    [Origin] => http://localhost
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:43:07 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:43:07 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:43:07 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:43:07 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 0
+    [Cache-Control] => max-age=0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [sec-ch-ua-mobile] => ?0
+    [sec-ch-ua-platform] => "Windows"
+    [Origin] => http://localhost
+    [Content-Type] => application/x-www-form-urlencoded
+    [Upgrade-Insecure-Requests] => 1
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => navigate
+    [Sec-Fetch-User] => ?1
+    [Sec-Fetch-Dest] => document
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:43:42 Europe/Berlin] POST request detected. AJAX: yes
+[26-Jul-2025 17:43:42 Europe/Berlin] POST data: Array
+(
+    [city] => Dhaka
+    [hometown] => Dhaka
+    [birthday] => 1981-01-25
+    [gender] => male
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [work] => DreamScape Studios
+    [polViews] => Progressive Futurist
+    [religion] => Digital Spiritualism
+    [country] => Bangladesh
+    [website] => https://alexandra-dreams.cyber
+    [lang] => English, Japanese, Binary
+    [professional] => Cybertech
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+)
+
+[26-Jul-2025 17:43:42 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:43:42 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 2092
+    [sec-ch-ua-platform] => "Windows"
+    [X-Requested-With] => XMLHttpRequest
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [Content-Type] => multipart/form-data; boundary=----WebKitFormBoundaryCuoh7D6YTVuSWfAK
+    [sec-ch-ua-mobile] => ?0
+    [Accept] => */*
+    [Origin] => http://localhost
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:43:49 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:43:49 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:43:49 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:43:49 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 0
+    [Cache-Control] => max-age=0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [sec-ch-ua-mobile] => ?0
+    [sec-ch-ua-platform] => "Windows"
+    [Upgrade-Insecure-Requests] => 1
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [Origin] => http://localhost
+    [Content-Type] => application/x-www-form-urlencoded
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => navigate
+    [Sec-Fetch-User] => ?1
+    [Sec-Fetch-Dest] => document
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:44:14 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:44:14 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:44:14 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:44:14 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 0
+    [Cache-Control] => max-age=0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [sec-ch-ua-mobile] => ?0
+    [sec-ch-ua-platform] => "Windows"
+    [Upgrade-Insecure-Requests] => 1
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [Origin] => http://localhost
+    [Content-Type] => application/x-www-form-urlencoded
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => navigate
+    [Sec-Fetch-User] => ?1
+    [Sec-Fetch-Dest] => document
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:46:29 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:46:29 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:46:29 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:46:29 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 0
+    [Cache-Control] => max-age=0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [sec-ch-ua-mobile] => ?0
+    [sec-ch-ua-platform] => "Windows"
+    [Upgrade-Insecure-Requests] => 1
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [Origin] => http://localhost
+    [Content-Type] => application/x-www-form-urlencoded
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => navigate
+    [Sec-Fetch-User] => ?1
+    [Sec-Fetch-Dest] => document
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:46:57 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:46:57 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:46:57 Europe/Berlin] FILES data: Array
+(
+    [profile_photo] => Array
+        (
+            [name] => photo3.jpg
+            [full_path] => photo3.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC106.tmp
+            [error] => 0
+            [size] => 118607
+        )
+
+)
+
+[26-Jul-2025 17:46:57 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 118800
+    [sec-ch-ua-platform] => "Windows"
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [Content-Type] => multipart/form-data; boundary=----WebKitFormBoundaryCa01IdeCC7VEOcet
+    [sec-ch-ua-mobile] => ?0
+    [Accept] => */*
+    [Origin] => http://localhost
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => cors
+    [Sec-Fetch-Dest] => empty
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
+[26-Jul-2025 17:46:58 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 17:46:58 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 17:46:58 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 17:46:58 Europe/Berlin] Headers: Array
+(
+    [Host] => localhost
+    [Connection] => keep-alive
+    [Content-Length] => 0
+    [Cache-Control] => max-age=0
+    [sec-ch-ua] => "Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"
+    [sec-ch-ua-mobile] => ?0
+    [sec-ch-ua-platform] => "Windows"
+    [Origin] => http://localhost
+    [Content-Type] => application/x-www-form-urlencoded
+    [Upgrade-Insecure-Requests] => 1
+    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+    [Accept] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [Sec-Fetch-Site] => same-origin
+    [Sec-Fetch-Mode] => navigate
+    [Sec-Fetch-User] => ?1
+    [Sec-Fetch-Dest] => document
+    [Referer] => http://localhost/Friendora/profile
+    [Accept-Encoding] => gzip, deflate, br, zstd
+    [Accept-Language] => en-US,en;q=0.9,hi;q=0.8,bn-IN;q=0.7,bn;q=0.6
+    [Cookie] => FBID=cd0165785b8c7c0560ff44657ea1bba602c5fdf6e6f6fc36a114ea6501ad6207dc412c4d308aa4d85d37e585a174a3027e2de1cc5dbfa4e7f5b48032718cf840; PHPSESSID=v9298n0jd832bgjkmapl5jv1n3
+)
+
