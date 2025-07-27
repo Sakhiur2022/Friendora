@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2025 at 04:15 PM
+-- Generation Time: Jul 27, 2025 at 04:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -709,14 +709,14 @@ ALTER TABLE `user_delete_log`
 -- Constraints for table `badge`
 --
 ALTER TABLE `badge`
-  ADD CONSTRAINT `badge_ibfk_1` FOREIGN KEY (`badge_desc_id`) REFERENCES `badge_description` (`id`);
+  ADD CONSTRAINT `badge_ibfk_1` FOREIGN KEY (`badge_desc_id`) REFERENCES `badge_description` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `block`
 --
 ALTER TABLE `block`
-  ADD CONSTRAINT `block_ibfk_1` FOREIGN KEY (`blocker_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `block_ibfk_2` FOREIGN KEY (`blocked_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `block_ibfk_1` FOREIGN KEY (`blocker_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `block_ibfk_2` FOREIGN KEY (`blocked_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `comment`
@@ -729,8 +729,8 @@ ALTER TABLE `comment`
 -- Constraints for table `earns`
 --
 ALTER TABLE `earns`
-  ADD CONSTRAINT `earns_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `earns_ibfk_2` FOREIGN KEY (`badge_id`) REFERENCES `badge` (`id`);
+  ADD CONSTRAINT `earns_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `earns_ibfk_2` FOREIGN KEY (`badge_id`) REFERENCES `badge` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `friend_requests`
@@ -743,14 +743,14 @@ ALTER TABLE `friend_requests`
 -- Constraints for table `group`
 --
 ALTER TABLE `group`
-  ADD CONSTRAINT `group_ibfk_1` FOREIGN KEY (`creator_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `group_ibfk_1` FOREIGN KEY (`creator_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `joins`
 --
 ALTER TABLE `joins`
-  ADD CONSTRAINT `joins_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `joins_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
+  ADD CONSTRAINT `joins_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `joins_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `media`
@@ -762,8 +762,8 @@ ALTER TABLE `media`
 -- Constraints for table `membership`
 --
 ALTER TABLE `membership`
-  ADD CONSTRAINT `membership_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `membership_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`);
+  ADD CONSTRAINT `membership_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `membership_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `mentions`
@@ -783,7 +783,7 @@ ALTER TABLE `messages`
 -- Constraints for table `notification`
 --
 ALTER TABLE `notification`
-  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `photos`
@@ -808,14 +808,14 @@ ALTER TABLE `profile`
 -- Constraints for table `reacts`
 --
 ALTER TABLE `reacts`
-  ADD CONSTRAINT `reacts_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `reacts_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `shares`
 --
 ALTER TABLE `shares`
-  ADD CONSTRAINT `shares_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `shares_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`);
+  ADD CONSTRAINT `shares_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `shares_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tokens`
