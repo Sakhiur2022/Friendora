@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2025 at 04:00 PM
+-- Generation Time: Jul 27, 2025 at 04:15 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -399,6 +399,16 @@ INSERT INTO `users` (`id`, `fname`, `minit`, `lname`, `pwd`, `DOB`, `gender`, `e
 (4, 'Sakhiur', '', 'Rahman', 'HNkukc.t2n:RgD!', '2002-11-13', 'male', 'sakhiur2020@gmail.com', '2025-07-27 01:03:04'),
 (5, 'Ozaman', 'Y', 'Taker', 'Checker@gmail.com56', '2009-05-17', 'male', 'checker@gmail.com', '2025-07-27 17:45:43');
 
+--
+-- Triggers `users`
+--
+DELIMITER $$
+CREATE TRIGGER `user_delete_log` BEFORE DELETE ON `users` FOR EACH ROW BEGIN
+	INSERT INTO user_delete_log (fname,email) VALUES(OLD.fname,OLD.email);
+END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -410,6 +420,26 @@ CREATE TABLE `users_basic` (
 ,`Full_Name` varchar(152)
 ,`profile_photo` text
 );
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_delete_log`
+--
+
+CREATE TABLE `user_delete_log` (
+  `log_id` int(5) NOT NULL,
+  `fname` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `deleted_at` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_delete_log`
+--
+
+INSERT INTO `user_delete_log` (`log_id`, `fname`, `email`, `deleted_at`) VALUES
+(1, 'Alex', 'alex@gmail.com', '2025-07-27 20:14:28');
 
 -- --------------------------------------------------------
 
@@ -584,6 +614,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user_delete_log`
+--
+ALTER TABLE `user_delete_log`
+  ADD PRIMARY KEY (`log_id`);
+
+--
 -- Indexes for table `websites`
 --
 ALTER TABLE `websites`
@@ -657,7 +693,13 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `user_delete_log`
+--
+ALTER TABLE `user_delete_log`
+  MODIFY `log_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
