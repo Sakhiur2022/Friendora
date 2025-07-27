@@ -4990,3 +4990,2612 @@
 )
 
 [27-Jul-2025 14:41:27 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:39:37 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:39:37 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:39:37 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:39:37 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:39:37 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:39:37 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:39:37 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 15:39:37 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 15:39:37 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 15:39:37 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:39:37 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:39:37 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:39:37 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:39:37 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:39:37 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:39:37 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:39:37 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:39:37 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:39:37 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:39:37 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:39:37 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:39:47 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:39:47 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:39:47 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:39:47 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:39:47 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:39:47 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:39:47 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:39:47 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:39:47 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:39:47 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:39:47 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:39:47 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:39:47 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:39:47 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:39:47 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:39:47 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:39:47 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:39:47 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:39:47 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:39:47 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:39:47 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:39:47 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:39:47 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:39:47 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:39:47 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:39:47 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:39:47 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:39:47 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:39:50 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:39:50 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:39:50 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 15:39:50 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:39:50 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:39:50 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:39:50 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:39:50 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:39:50 Europe/Berlin] Profile ID: 2
+[27-Jul-2025 15:39:50 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:39:50 Europe/Berlin] Photos query result: 4 photos found
+[27-Jul-2025 15:39:50 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:39:50 Europe/Berlin] Posts query result: 4 posts found
+[27-Jul-2025 15:39:50 Europe/Berlin] Post 28 has 0 media items
+[27-Jul-2025 15:39:50 Europe/Berlin] Post 21 has 1 media items
+[27-Jul-2025 15:39:50 Europe/Berlin] Post 12 has 0 media items
+[27-Jul-2025 15:39:50 Europe/Berlin] Post 10 has 0 media items
+[27-Jul-2025 15:39:50 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:39:50 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[27-Jul-2025 15:39:50 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[27-Jul-2025 15:39:50 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 15:39:50 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:40:34 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:40:34 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:40:34 Europe/Berlin] Profile User ID: 4
+[27-Jul-2025 15:40:34 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:40:34 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:40:34 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:40:34 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:40:34 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:40:34 Europe/Berlin] Profile ID: 4
+[27-Jul-2025 15:40:34 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:40:34 Europe/Berlin] Photos query result: 3 photos found
+[27-Jul-2025 15:40:34 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:40:34 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 15:40:34 Europe/Berlin] Post 23 has 1 media items
+[27-Jul-2025 15:40:34 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:40:34 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+)
+
+[27-Jul-2025 15:40:34 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[27-Jul-2025 15:40:34 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[27-Jul-2025 15:40:34 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:40:57 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:40:57 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:40:57 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:40:57 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:40:57 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:40:57 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:40:57 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:40:57 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:40:57 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:40:57 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:40:57 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:40:57 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:40:57 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:40:57 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:40:57 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:40:57 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:40:57 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:40:57 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:41:19 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:41:19 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:41:19 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:41:19 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:41:19 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:41:19 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:41:19 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:41:19 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:41:19 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:41:19 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:41:19 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:41:19 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:41:19 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:41:19 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:41:19 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:41:19 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:41:19 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:41:19 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:41:28 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:41:28 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:41:28 Europe/Berlin] Profile User ID: 4
+[27-Jul-2025 15:41:28 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:41:28 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:41:28 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:41:28 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:41:28 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:41:28 Europe/Berlin] Profile ID: 4
+[27-Jul-2025 15:41:28 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:41:28 Europe/Berlin] Photos query result: 3 photos found
+[27-Jul-2025 15:41:28 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:41:28 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 15:41:28 Europe/Berlin] Post 23 has 1 media items
+[27-Jul-2025 15:41:28 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:41:28 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+)
+
+[27-Jul-2025 15:41:28 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[27-Jul-2025 15:41:28 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[27-Jul-2025 15:41:28 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:41:36 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:41:36 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:41:36 Europe/Berlin] Profile User ID: 3
+[27-Jul-2025 15:41:36 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:41:36 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:41:36 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:41:36 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:41:36 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:41:36 Europe/Berlin] Profile ID: 3
+[27-Jul-2025 15:41:36 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:41:36 Europe/Berlin] Photos query result: 3 photos found
+[27-Jul-2025 15:41:36 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:41:36 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 15:41:36 Europe/Berlin] Post 24 has 1 media items
+[27-Jul-2025 15:41:36 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:41:36 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+)
+
+[27-Jul-2025 15:41:36 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[27-Jul-2025 15:41:36 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 15:41:36 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:42:00 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:42:00 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:42:00 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 15:42:00 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:42:00 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:42:00 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:42:00 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:42:00 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:42:00 Europe/Berlin] Profile ID: 2
+[27-Jul-2025 15:42:00 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:42:00 Europe/Berlin] Photos query result: 4 photos found
+[27-Jul-2025 15:42:00 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:42:00 Europe/Berlin] Posts query result: 4 posts found
+[27-Jul-2025 15:42:00 Europe/Berlin] Post 28 has 0 media items
+[27-Jul-2025 15:42:00 Europe/Berlin] Post 21 has 1 media items
+[27-Jul-2025 15:42:00 Europe/Berlin] Post 12 has 0 media items
+[27-Jul-2025 15:42:00 Europe/Berlin] Post 10 has 0 media items
+[27-Jul-2025 15:42:00 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:42:00 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[27-Jul-2025 15:42:00 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[27-Jul-2025 15:42:00 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 15:42:00 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:42:06 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:42:06 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:42:06 Europe/Berlin] Profile User ID: 4
+[27-Jul-2025 15:42:06 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:42:06 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:42:06 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:42:06 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:42:06 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:42:06 Europe/Berlin] Profile ID: 4
+[27-Jul-2025 15:42:06 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:42:06 Europe/Berlin] Photos query result: 3 photos found
+[27-Jul-2025 15:42:06 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:42:06 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 15:42:06 Europe/Berlin] Post 23 has 1 media items
+[27-Jul-2025 15:42:06 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:42:06 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+)
+
+[27-Jul-2025 15:42:06 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[27-Jul-2025 15:42:06 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[27-Jul-2025 15:42:06 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:42:11 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:42:11 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:42:11 Europe/Berlin] Profile User ID: 3
+[27-Jul-2025 15:42:11 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:42:11 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:42:11 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:42:11 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:42:11 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:42:11 Europe/Berlin] Profile ID: 3
+[27-Jul-2025 15:42:11 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:42:11 Europe/Berlin] Photos query result: 3 photos found
+[27-Jul-2025 15:42:11 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:42:11 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 15:42:11 Europe/Berlin] Post 24 has 1 media items
+[27-Jul-2025 15:42:11 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:42:11 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+)
+
+[27-Jul-2025 15:42:11 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[27-Jul-2025 15:42:11 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 15:42:11 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:42:21 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:42:21 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:42:21 Europe/Berlin] Profile User ID: 3
+[27-Jul-2025 15:42:21 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:42:21 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:42:21 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:42:21 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:42:21 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:42:21 Europe/Berlin] Profile ID: 3
+[27-Jul-2025 15:42:21 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:42:21 Europe/Berlin] Photos query result: 3 photos found
+[27-Jul-2025 15:42:21 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:42:21 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 15:42:21 Europe/Berlin] Post 24 has 1 media items
+[27-Jul-2025 15:42:21 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:42:21 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+)
+
+[27-Jul-2025 15:42:21 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[27-Jul-2025 15:42:21 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 15:42:21 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:42:27 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:42:27 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:42:27 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:42:27 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:42:27 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:42:27 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:42:27 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:42:27 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:42:27 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:42:27 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:42:27 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:42:27 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:42:27 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:42:27 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:42:27 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:42:27 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:42:27 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:42:27 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:42:31 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:42:31 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:42:31 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:42:31 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:42:31 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:42:31 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:42:31 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:42:31 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:42:31 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:42:31 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:42:31 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:42:31 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:42:31 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:42:31 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:42:31 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:42:31 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:42:31 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:42:31 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:42:31 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:42:31 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:42:31 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:42:31 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:42:31 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:42:31 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:42:31 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:42:31 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:43:15 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:43:15 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:43:15 Europe/Berlin] Profile User ID: 4
+[27-Jul-2025 15:43:15 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:43:15 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:43:15 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:43:15 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:43:15 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:43:15 Europe/Berlin] Profile ID: 4
+[27-Jul-2025 15:43:15 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:43:15 Europe/Berlin] Photos query result: 3 photos found
+[27-Jul-2025 15:43:15 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:43:15 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 15:43:15 Europe/Berlin] Post 23 has 1 media items
+[27-Jul-2025 15:43:15 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:43:15 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+)
+
+[27-Jul-2025 15:43:15 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[27-Jul-2025 15:43:15 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[27-Jul-2025 15:43:15 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:47:34 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:47:34 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:47:34 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 15:47:34 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:47:34 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:47:34 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:47:34 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:47:34 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:47:34 Europe/Berlin] Profile ID: 2
+[27-Jul-2025 15:47:34 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:47:34 Europe/Berlin] Photos query result: 4 photos found
+[27-Jul-2025 15:47:34 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:47:34 Europe/Berlin] Posts query result: 4 posts found
+[27-Jul-2025 15:47:34 Europe/Berlin] Post 28 has 0 media items
+[27-Jul-2025 15:47:34 Europe/Berlin] Post 21 has 1 media items
+[27-Jul-2025 15:47:34 Europe/Berlin] Post 12 has 0 media items
+[27-Jul-2025 15:47:34 Europe/Berlin] Post 10 has 0 media items
+[27-Jul-2025 15:47:34 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:47:34 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[27-Jul-2025 15:47:34 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[27-Jul-2025 15:47:34 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 15:47:34 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:49:12 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:49:12 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:49:12 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:49:12 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:49:12 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:49:12 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:49:12 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:49:12 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:51:16 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:16 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:16 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:51:16 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:51:16 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:16 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:16 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 15:51:16 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 15:51:16 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 15:51:16 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:16 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:51:16 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:51:16 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:51:16 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:51:16 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:51:16 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:51:16 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:51:16 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:51:16 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:51:16 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:51:16 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:51:24 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:24 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:24 Europe/Berlin] Profile User ID: 4
+[27-Jul-2025 15:51:24 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:51:24 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:24 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:24 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:24 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:51:24 Europe/Berlin] Profile ID: 4
+[27-Jul-2025 15:51:24 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:51:24 Europe/Berlin] Photos query result: 3 photos found
+[27-Jul-2025 15:51:24 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:51:24 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 15:51:24 Europe/Berlin] Post 23 has 1 media items
+[27-Jul-2025 15:51:24 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:51:24 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+)
+
+[27-Jul-2025 15:51:24 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[27-Jul-2025 15:51:24 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[27-Jul-2025 15:51:24 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:51:28 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:28 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:28 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:51:28 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:51:28 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:28 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:28 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:28 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:51:28 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:51:28 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:51:28 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:51:28 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:51:28 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:51:29 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:51:29 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:51:29 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:51:29 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:51:29 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:51:29 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:29 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:29 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:51:29 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:51:29 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:29 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:29 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:29 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:51:29 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:29 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:29 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:51:29 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:51:29 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:29 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:29 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:29 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:51:47 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:47 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:47 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:51:47 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:51:47 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:47 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:47 Europe/Berlin] POST request detected. AJAX: yes
+[27-Jul-2025 15:51:47 Europe/Berlin] POST data: Array
+(
+    [city] => Dhaka
+    [hometown] => Barishal
+    [DOB] => 1981-01-31
+    [gender] => male
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [work] => DreamScape Studios
+    [polViews] => Progressive Futurist
+    [religion] => Digital Spiritualism
+    [country] => Bangladesh
+    [website] => https://alexandra-dreams.cyber, https://sakhiur.com
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+)
+
+[27-Jul-2025 15:51:47 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 15:51:47 Europe/Berlin] === PROFILE UPDATE REQUEST ===
+[27-Jul-2025 15:51:47 Europe/Berlin] Raw POST data: Array
+(
+    [city] => Dhaka
+    [hometown] => Barishal
+    [DOB] => 1981-01-31
+    [gender] => male
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [work] => DreamScape Studios
+    [polViews] => Progressive Futurist
+    [religion] => Digital Spiritualism
+    [country] => Bangladesh
+    [website] => https://alexandra-dreams.cyber, https://sakhiur.com
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+)
+
+[27-Jul-2025 15:51:47 Europe/Berlin] Form data received - Gender: male, DOB: 1981-01-31
+[27-Jul-2025 15:51:47 Europe/Berlin] User table update result: success
+[27-Jul-2025 15:51:47 Europe/Berlin] Session updated with new user data - Gender: male, DOB: 1981-01-31
+[27-Jul-2025 15:51:51 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:51 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:51 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 15:51:51 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 15:51:51 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:51 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => male
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:51 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:51 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 15:51:51 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 15:51:51 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 15:51:51 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 15:51:51 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 15:51:51 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 15:51:51 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 15:51:51 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 15:51:51 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 15:51:51 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 15:51:51 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 15:51:52 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:52 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:52 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:51:52 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:51:52 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:52 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => male
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:52 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:52 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:51:52 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:52 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:52 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:51:52 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:51:52 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:52 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => male
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:52 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:52 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 15:51:52 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 15:51:52 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 15:51:52 Europe/Berlin] Profile User ID: 0
+[27-Jul-2025 15:51:52 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 15:51:52 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 15:51:52 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753623566
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => male
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 15:51:52 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 15:51:52 Europe/Berlin] Profile query result: No profile found

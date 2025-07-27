@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2025 at 01:42 PM
+-- Generation Time: Jul 27, 2025 at 04:00 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -89,7 +89,11 @@ INSERT INTO `comment` (`id`, `content`, `created_at`, `user_id`, `post_id`) VALU
 (14, 'Hi', '2025-07-27 02:24:41', 1, 10),
 (15, 'Great', '2025-07-27 02:26:41', 1, 24),
 (16, 'Hello', '2025-07-27 02:28:54', 4, 24),
-(17, 'Hi my friend', '2025-07-27 02:30:17', 2, 24);
+(17, 'Hi my friend', '2025-07-27 02:30:17', 2, 24),
+(18, 'What things??', '2025-07-27 18:16:36', 2, 27),
+(19, 'ho ho', '2025-07-27 18:19:32', 1, 27),
+(20, 'hello', '2025-07-27 19:39:57', 1, 28),
+(21, 'Cool', '2025-07-27 19:41:13', 1, 23);
 
 -- --------------------------------------------------------
 
@@ -251,7 +255,9 @@ INSERT INTO `photos` (`id`, `url`, `caption`, `user_id`) VALUES
 (19, 'http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg', 'Profile Picture', 4),
 (20, 'http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg', 'Cover Photo', 4),
 (21, 'http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg', 'Post image', 4),
-(22, 'http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg', 'Post image', 3);
+(22, 'http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg', 'Post image', 3),
+(24, 'http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg', 'Profile Picture', 5),
+(25, 'http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg', 'Cover Photo', 5);
 
 -- --------------------------------------------------------
 
@@ -285,7 +291,10 @@ INSERT INTO `post` (`id`, `content`, `created_at`, `creator_id`, `group_id`) VAL
 (19, 'Night scenario', '2025-07-26 23:35:02', 1, NULL),
 (21, 'Sunshine', '2025-07-27 00:15:54', 2, NULL),
 (23, 'Hi guys, chilling on nature', '2025-07-27 01:10:00', 4, NULL),
-(24, 'Enjoying sunlight', '2025-07-27 02:08:06', 3, NULL);
+(24, 'Enjoying sunlight', '2025-07-27 02:08:06', 3, NULL),
+(26, 'Feeling great', '2025-07-27 18:02:32', 5, NULL),
+(27, 'Checking things', '2025-07-27 18:04:07', 5, NULL),
+(28, 'Hey guys', '2025-07-27 18:15:25', 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -320,9 +329,10 @@ CREATE TABLE `profile` (
 
 INSERT INTO `profile` (`id`, `hometown`, `country`, `shortBio`, `city`, `pfp`, `socialQuote`, `lifeEvent`, `religion`, `polViews`, `lang`, `professional`, `work`, `highschool`, `college`, `university`, `coverpic`, `user_id`) VALUES
 (1, 'Barishal', 'Bangladesh', 'Ok this is my bio, I love watching anime and reading webtoons', 'Dhaka', 'http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg', 'In the digital realm, we are all architects of our own reality.', 'Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)', 'Digital Spiritualism', 'Progressive Futurist', 'English, Japanese, Bangla', 'Cybertech', 'DreamScape Studios', 'Digital Arts Academy', 'Cyber Tech Institute', 'Virtual Reality University', 'http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg', 1),
-(2, 'Japan', '', 'Anime fan', 'Jakarta', 'http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg', '', '', '', '', '', '', '', '', '', '', 'http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg', 2),
+(2, 'Nippon', '', 'Anime fan and webtoon reader', 'Jakarta', 'http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg', '', '', '', '', '', '', '', '', '', '', 'http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg', 2),
 (3, NULL, NULL, NULL, NULL, 'http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg', 3),
-(4, 'Dhaka', 'Bangladesh', 'A young soul trying to find peace', 'Dhaka', 'http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg', 'Discipline isn\'t built on comfort—it\'s forged in silence, when no one’s watching, and quitting whispers loudest.', 'Born, Taken dinner, Watched anime', 'Islam', 'Dr. Yunus all the way', 'English, Bangla', 'Sleeper', 'Home', 'Faizur Rahman', 'City College', 'North South University', 'http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg', 4);
+(4, 'Dhaka', 'Bangladesh', 'A young soul trying to find peace', 'Dhaka', 'http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg', 'Discipline isn\'t built on comfort—it\'s forged in silence, when no one’s watching, and quitting whispers loudest.', 'Born, Taken dinner, Watched anime', 'Islam', 'Dr. Yunus all the way', 'English, Bangla', 'Sleeper', 'Home', 'Faizur Rahman', 'City College', 'North South University', 'http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg', 4),
+(5, 'Corus', 'Arkland', 'Loves to drink', 'Tokyo', 'http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg', 'Do or Die', 'Born, live, first mission', 'Christianity', 'Hit', 'English', 'Hitman, Agent', 'Reinhafer', 'Porayan Cultural School', 'Edward College', 'Grandall', 'http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg', 5);
 
 -- --------------------------------------------------------
 
@@ -383,10 +393,23 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fname`, `minit`, `lname`, `pwd`, `DOB`, `gender`, `email`, `created_at`) VALUES
-(1, 'Kafka', 'S', 'Rahman', 'HNkukc.t2n:RgD!', '1981-01-31', 'female', 'kafka@gmail.com', '2025-07-25 20:08:05'),
+(1, 'Kafka', 'S', 'Rahman', 'HNkukc.t2n:RgD!', '1981-01-31', 'male', 'kafka@gmail.com', '2025-07-25 20:08:05'),
 (2, 'Ken', 'G', 'Kaneki', 'HNkukc.t2n:RgD!', '1983-05-26', 'male', 'ken@gmail.com', '2025-07-26 21:50:51'),
 (3, 'Raymond', 'T', 'Creed', 'HTUKDiii65%%%6', '1997-02-06', 'male', 'raymond@gmail.com', '2025-07-27 00:57:02'),
-(4, 'Sakhiur', '', 'Rahman', 'HNkukc.t2n:RgD!', '2002-11-13', 'male', 'sakhiur2020@gmail.com', '2025-07-27 01:03:04');
+(4, 'Sakhiur', '', 'Rahman', 'HNkukc.t2n:RgD!', '2002-11-13', 'male', 'sakhiur2020@gmail.com', '2025-07-27 01:03:04'),
+(5, 'Ozaman', 'Y', 'Taker', 'Checker@gmail.com56', '2009-05-17', 'male', 'checker@gmail.com', '2025-07-27 17:45:43');
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `users_basic`
+-- (See below for the actual view)
+--
+CREATE TABLE `users_basic` (
+`user_id` int(3)
+,`Full_Name` varchar(152)
+,`profile_photo` text
+);
 
 -- --------------------------------------------------------
 
@@ -405,7 +428,17 @@ CREATE TABLE `websites` (
 
 INSERT INTO `websites` (`profile_id`, `url`) VALUES
 (1, 'https://alexandra-dreams.cyber, https://sakhiur.com'),
-(4, 'www.kubernaticaina.com');
+(4, 'www.kubernaticaina.com'),
+(5, 'www.checker.com');
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `users_basic`
+--
+DROP TABLE IF EXISTS `users_basic`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `users_basic`  AS SELECT `users`.`id` AS `user_id`, concat_ws(' ',trim(`users`.`fname`),trim(coalesce(`users`.`minit`,'')),trim(`users`.`lname`)) AS `Full_Name`, `profile`.`pfp` AS `profile_photo` FROM (`users` join `profile` on(`users`.`id` = `profile`.`user_id`)) ;
 
 --
 -- Indexes for dumped tables
@@ -576,7 +609,7 @@ ALTER TABLE `badge_description`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `group`
@@ -600,19 +633,19 @@ ALTER TABLE `notification`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tokens`
@@ -624,7 +657,7 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
