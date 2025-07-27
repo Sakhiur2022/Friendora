@@ -27,9 +27,13 @@ Trait Database {
         $check = $statement->execute($data);
         
         if ($check) {
-            $result = $statement->fetchAll(PDO::FETCH_OBJ);
-            if (is_array($result) && count($result) > 0) {
-                return $result;
+            // For SELECT queries, return the results
+            if (stripos(trim($sql), 'SELECT') === 0) {
+                $result = $statement->fetchAll(PDO::FETCH_OBJ);
+                return is_array($result) && count($result) > 0 ? $result : [];
+            } else {
+                // For INSERT, UPDATE, DELETE queries, return true on success
+                return true;
             }
         } else {
             return false;

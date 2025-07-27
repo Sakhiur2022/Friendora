@@ -19,6 +19,24 @@ const photosData = window.photosData || []
 const currentUserId = window.currentUserId || 1
 const isOwnProfile = window.isOwnProfile || true
 
+// Debug data (keeping for verification)
+console.log("Profile Data Loaded:", profileData)
+console.log("Photos Data Loaded:", photosData.length, "photos")
+console.log("Current User ID:", currentUserId)
+console.log("Website Data:", websiteData)
+
+// Check what specific properties the profile data has
+if (profileData && typeof profileData === 'object') {
+  console.log("Profile data keys:", Object.keys(profileData))
+  console.log("Profile pfp:", profileData.pfp)
+}
+
+// Check photos data structure
+if (photosData && Array.isArray(photosData) && photosData.length > 0) {
+  console.log("First photo object:", photosData[0])
+  console.log("Photo object keys:", Object.keys(photosData[0]))
+}
+
 // Enhanced dummy user data (fallback if no PHP data)
 const userData = {
   id: currentUserId,
@@ -555,11 +573,80 @@ function openEditProfileModal() {
   modal.show()
 }
 
+// Transform raw posts data from PHP to match expected format
+function transformPostsData(rawPosts) {
+  if (!rawPosts || !Array.isArray(rawPosts)) {
+    console.log("No posts data available");
+    return [];
+  }
+  
+  console.log("Transforming posts data:", rawPosts.length, "posts");
+  console.log("Profile user:", window.profileUser);
+  console.log("Current user:", window.currentUser);
+  
+  return rawPosts.map(post => {
+    // Calculate time ago
+    const postDate = new Date(post.created_at);
+    const now = new Date();
+    const diffInMs = now - postDate;
+    const diffInHours = Math.floor(diffInMs / (1000 * 60 * 60));
+    const diffInDays = Math.floor(diffInHours / 24);
+    
+    let timeAgo;
+    if (diffInDays > 0) {
+      timeAgo = `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
+    } else if (diffInHours > 0) {
+      timeAgo = `${diffInHours} hour${diffInHours > 1 ? 's' : ''} ago`;
+    } else {
+      const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
+      timeAgo = diffInMinutes > 0 ? `${diffInMinutes} min ago` : 'Just now';
+    }
+    
+    // Get author info - use profile user data
+    const authorName = `${window.profileUser.fname} ${window.profileUser.lname}`;
+    const authorAvatar = window.profileData.pfp || 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face';
+    
+    // Transform media data
+    const media = post.media ? post.media.map(mediaItem => ({
+      url: mediaItem.media_url,
+      type: mediaItem.media_type
+    })) : [];
+    
+    return {
+      id: post.id,
+      content: post.content,
+      creator_id: post.creator_id,
+      author_name: authorName,
+      author_avatar: authorAvatar,
+      time_ago: timeAgo,
+      media: media,
+      created_at: post.created_at
+    };
+  });
+}
+
 // Post Functions
 function loadPosts() {
+  console.log("loadPosts() called");
   const postsContainer = document.getElementById("postsContainer");
-  if (!postsContainer) return;
+  if (!postsContainer) {
+    console.log("postsContainer not found");
+    return;
+  }
   
+  console.log("Posts data available:", window.postsData);
+  
+  // Use posts data from PHP instead of fetching
+  if (window.postsData && Array.isArray(window.postsData)) {
+    console.log("Loading posts from PHP data:", window.postsData);
+    // Transform the raw posts data to match the expected format
+    const transformedPosts = transformPostsData(window.postsData);
+    console.log("Transformed posts:", transformedPosts);
+    displayPosts(transformedPosts);
+    return;
+  }
+  
+  console.log("No PHP posts data, fetching from server");
   // Add loading indicator
   postsContainer.innerHTML = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>';
   
@@ -571,7 +658,7 @@ function loadPosts() {
       "Content-Type": "application/x-www-form-urlencoded",
       "X-Requested-With": "XMLHttpRequest",
     },
-    body: "action=get_posts",
+    body: `action=get_posts&user_id=${window.profileUserId}`,
   })
     .then((response) => {
       if (!response.ok) {
@@ -606,14 +693,20 @@ function loadPosts() {
 }
 
 function displayPosts(posts) {
+  console.log("displayPosts() called with:", posts);
   const postsContainer = document.getElementById("postsContainer")
-  if (!postsContainer) return
+  if (!postsContainer) {
+    console.log("postsContainer element not found");
+    return;
+  }
 
   if (!posts || posts.length === 0) {
+    console.log("No posts to display");
     postsContainer.innerHTML = '<p class="text-center text-muted">No posts yet</p>'
     return
   }
 
+  console.log("Creating HTML for", posts.length, "posts");
   postsContainer.innerHTML = posts.map((post) => createPostHTML(post)).join("")
 
   // Add event listeners to post elements
@@ -660,7 +753,7 @@ function displayPosts(posts) {
 }
 
 function createPostHTML(post) {
-  const isOwnPost = post.creator_id == currentUserId
+  const isOwnPost = post.creator_id == window.currentUserId
   const mediaHTML =
     post.media && post.media.length > 0
       ? `<div class="post-media mb-3">
@@ -718,7 +811,7 @@ function createPostHTML(post) {
           </div>
           
           <div class="add-comment-form d-flex align-items-center">
-            <img src="${profileData.pfp || "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face"}" 
+            <img src="${window.currentUserProfilePic}" 
                  class="comment-avatar me-2" alt="Your Profile">
             <div class="flex-grow-1">
               <input type="text" class="form-control cyber-input comment-input" placeholder="Write a comment...">
@@ -778,7 +871,7 @@ function createPost() {
   formData.append("action", "create_post")
   formData.append("content", content)
 
-  if (imageInput.files[0]) {
+  if (imageInput && imageInput.files[0]) {
     formData.append("post_image", imageInput.files[0])
   }
 
@@ -798,6 +891,10 @@ function createPost() {
       return response.text();
     })
     .then((text) => {
+      if (!text || text.trim() === '') {
+        throw new Error("Empty response from server");
+      }
+      
       // Clean backticks from response if present
       let cleanedText = text;
       if (text.startsWith('`')) {
@@ -1017,14 +1114,16 @@ function displayComments(postId, comments) {
   const commentsList = document.getElementById(`commentsList${postId}`)
   if (!commentsList) return
 
+  console.log("Displaying comments:", comments); // Debug log
+
   commentsList.innerHTML = comments
     .map(
       (comment) => `
     <div class="comment-item d-flex align-items-start mb-2" data-comment-id="${comment.id}">
-      <img src="${comment.user_avatar}" class="comment-avatar me-2" alt="${comment.user_name}">
+      <img src="${comment.user_avatar || 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face'}" class="comment-avatar me-2" alt="${comment.user_name || 'User'}">
       <div class="comment-content flex-grow-1">
         <div class="comment-bubble">
-          <strong class="comment-author">${comment.user_name}</strong>
+          <strong class="comment-author">${comment.user_name || 'Unknown User'}</strong>
           <p class="comment-text mb-1">${comment.content}</p>
         </div>
         <div class="comment-actions">
@@ -1124,14 +1223,21 @@ function loadPhotosGrid() {
   const photosGrid = document.getElementById("photosGrid")
   if (!photosGrid) return
 
+  console.log("Loading photos grid. Photos data:", photosData); // Debug log
+
   // Use PHP photos data if available
   if (photosData && photosData.length > 0) {
     const displayPhotos = photosData.slice(0, 6)
     photosGrid.innerHTML = displayPhotos
       .map(
-        (photo, index) => `
-          <img src="${photo.url}" alt="Photo" class="photo-item" onclick="openPhotoModal('${photo.url}', ${index})">
-      `,
+        (photo, index) => {
+          // Handle different possible URL field names
+          const photoUrl = photo.url || photo.photo_url || photo.image_url || 'https://via.placeholder.com/150';
+          console.log("Photo object:", photo, "Using URL:", photoUrl); // Debug log
+          return `
+          <img src="${photoUrl}" alt="Photo" class="photo-item" onclick="openPhotoModal('${photoUrl}', ${index})">
+          `;
+        }
       )
       .join("")
   } else {
@@ -1434,27 +1540,35 @@ function loadPhotoGallery() {
   const thumbnails = document.getElementById("galleryThumbnails")
   const counter = document.getElementById("photoCounter")
 
+  console.log("Loading photo gallery. Current index:", currentPhotoIndex, "Photos:", photosData); // Debug log
+
   if (mainImg && thumbnails && counter) {
     const photos = photosData.length > 0 ? photosData : []
 
     if (photos.length > 0) {
-      mainImg.src = photos[currentPhotoIndex]?.url || photos[0].url
+      const currentPhoto = photos[currentPhotoIndex] || photos[0];
+      const photoUrl = currentPhoto.url || currentPhoto.photo_url || currentPhoto.image_url || 'https://via.placeholder.com/800';
+      
+      mainImg.src = photoUrl
       currentPhotoIndex = Math.min(currentPhotoIndex, photos.length - 1)
 
       thumbnails.innerHTML = photos
         .map(
-          (photo, index) => `
-              <img src="${photo.url}" 
+          (photo, index) => {
+            const thumbUrl = photo.url || photo.photo_url || photo.image_url || 'https://via.placeholder.com/150';
+            return `
+              <img src="${thumbUrl}" 
                    class="gallery-thumbnail ${index === currentPhotoIndex ? "active" : ""}" 
                    onclick="selectPhoto(${index})"
                    alt="Photo ${index + 1}">
-          `,
+            `;
+          }
         )
         .join("")
 
       counter.textContent = `${currentPhotoIndex + 1} of ${photos.length}`
     } else {
-      mainImg.src = "assets/images/placeholder.svg"
+      mainImg.src = "https://via.placeholder.com/800x600?text=No+Photos"
       thumbnails.innerHTML = '<p class="text-muted">No photos available</p>'
       counter.textContent = "0 of 0"
     }

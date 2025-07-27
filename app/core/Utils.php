@@ -203,4 +203,11 @@ public static function user($key = ''){
     return $row;
 }
 
+    public static function profileUrl($user_id = null) {
+        if ($user_id === null) {
+            return ROOT . '/profile';
+        }
+        return ROOT . '/profile/' . $user_id;
+    }
+
 }

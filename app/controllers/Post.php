@@ -6,7 +6,7 @@ defined('ROOT_PATH') OR exit('Access denied you hacker!');
 
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/../../php_error.log');
+ini_set('error_log', __DIR__ . '/../../debug_post.txt');
 
 
 class Post {
@@ -35,17 +35,15 @@ class Post {
         }
         
         // Handle AJAX requests
-        if ($request->isAjax()) {
+        if ($request->isAjax() && $request->isPosted()) {
             header("Content-Type: application/json");
             
             $action = $request->post('action');
-            
+
             switch ($action) {
                 case 'create_post':
                     echo json_encode($this->createPost($request, $posts, $media, $photos, $image));
-                    return;
-                    
-                case 'edit_post':
+                    return;                case 'edit_post':
                     echo json_encode($this->editPost($request, $posts));
                     return;
                     
@@ -82,20 +80,27 @@ class Post {
             return ['success' => false, 'message' => 'Post content cannot be empty'];
         }
         
+        if (!$userId) {
+            return ['success' => false, 'message' => 'User not logged in'];
+        }
+
         // Insert post
         $postData = [
             'content' => $content,
             'creator_id' => $userId,
             'group_id' => null
         ];
-        
+
         $result = $posts->insert($postData);
         if (!$result) {
-            return ['success' => false, 'message' => 'Failed to create post'];
+            return ['success' => false, 'message' => 'Failed to create post - database error'];
         }
-        
+
         $postId = $posts->getLastInsertId();
-        
+        if (!$postId) {
+            return ['success' => false, 'message' => 'Failed to get post ID'];
+        }
+
         // Handle image upload if present
         if (isset($_FILES['post_image']) && $_FILES['post_image']['error'] === UPLOAD_ERR_OK) {
             $uploadResult = $this->handlePostImageUpload($_FILES['post_image'], $postId, $userId, $media, $photos, $image);
@@ -105,18 +110,16 @@ class Post {
                 return $uploadResult;
             }
         }
-        
+
         // Get the created post with user info
         $postInfo = $this->getPostById($postId, $posts, new User, new Profiles, $media);
-        
+
         return [
             'success' => true,
             'message' => 'Post created successfully',
             'post' => $postInfo
         ];
-    }
-    
-    private function editPost($request, $posts) {
+    }    private function editPost($request, $posts) {
         $postId = $request->post('post_id');
         $content = trim($request->post('content'));
         $userId = Utils::user('id');
@@ -143,26 +146,66 @@ class Post {
         $postId = $request->post('post_id');
         $userId = Utils::user('id');
         
+        error_log("=== POST DELETE DEBUG START ===");
+        error_log("Post ID: " . $postId);
+        error_log("User ID: " . $userId);
+        
         // Check if user owns the post
         $post = $posts->first(['id' => $postId]);
         if (!$post || $post->creator_id != $userId) {
+            error_log("Authorization failed - Post not found or user doesn't own it");
             return ['success' => false, 'message' => 'Unauthorized to delete this post'];
         }
         
-        // Delete associated media files
+        error_log("Post found and authorized for deletion");
+        
+        // Delete associated media files and corresponding photos
         $postMedia = $media->where(['post_id' => $postId]);
+        error_log("Found " . (is_array($postMedia) ? count($postMedia) : 0) . " media items for post");
+        
         if ($postMedia) {
             foreach ($postMedia as $mediaItem) {
+                error_log("Processing media item: " . $mediaItem->media_url);
                 $filePath = str_replace(ROOT . '/', '', $mediaItem->media_url);
+                
+                // Delete physical file
                 if (file_exists($filePath)) {
                     unlink($filePath);
+                    error_log("Deleted physical file: " . $filePath);
+                } else {
+                    error_log("Physical file not found: " . $filePath);
+                }
+                
+                // Delete from Photos table by matching URL
+                // The photo URL might be stored with or without ROOT prefix
+                $photoUrl1 = $mediaItem->media_url; // With ROOT prefix
+                $photoUrl2 = str_replace(ROOT . '/', '', $mediaItem->media_url); // Without ROOT prefix
+                
+                error_log("Searching for photo with URL: " . $photoUrl1 . " or " . $photoUrl2);
+                
+                // Try to find and delete matching photo record
+                $photoRecord = $photos->first(['url' => $photoUrl1]);
+                if (!$photoRecord) {
+                    $photoRecord = $photos->first(['url' => $photoUrl2]);
+                }
+                
+                if ($photoRecord) {
+                    $deleteResult = $photos->delete($photoRecord->id);
+                    error_log("Deleted photo record with ID: " . $photoRecord->id . " and URL: " . $photoRecord->url . " (Result: " . ($deleteResult ? "success" : "failed") . ")");
+                } else {
+                    error_log("No matching photo record found for URL: " . $photoUrl1 . " or " . $photoUrl2);
                 }
             }
-            $media->deleteWhere(['post_id' => $postId]);
+            
+            // Delete media records
+            $mediaDeleteResult = $media->delete($postId, 'post_id');
+            error_log("Media records deletion result: " . ($mediaDeleteResult ? "success" : "failed"));
         }
         
         // Delete the post
         $result = $posts->delete($postId);
+        error_log("Post deletion result: " . ($result ? "success" : "failed"));
+        error_log("=== POST DELETE DEBUG END ===");
         
         return [
             'success' => $result !== false,
@@ -295,45 +338,49 @@ class Post {
         if ($file['error'] !== UPLOAD_ERR_OK) {
             return ['success' => false, 'message' => 'Upload error occurred'];
         }
-        
+
         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
         $fileType = mime_content_type($file['tmp_name']);
-        
+
         if (!in_array($fileType, $allowedTypes)) {
             return ['success' => false, 'message' => 'Invalid file type'];
         }
-        
+
         if ($file['size'] > 10 * 1024 * 1024) { // 10MB max
             return ['success' => false, 'message' => 'File too large'];
         }
-        
+
         // Create upload directory
         $uploadDir = 'uploads/posts/';
         if (!file_exists($uploadDir)) {
             mkdir($uploadDir, 0777, true);
             file_put_contents($uploadDir . 'index.php', '<?php // Silence is golden ?>');
         }
-        
+
         // Generate unique filename
         $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
         $filename = 'post_' . $postId . '_' . time() . '.' . $extension;
         $filepath = $uploadDir . $filename;
-        
+
         if (move_uploaded_file($file['tmp_name'], $filepath)) {
             // Resize image
-            $image->resize($filepath, 1200);
-            
+            try {
+                $image->resize($filepath, 1200);
+            } catch (Exception $e) {
+                // Continue even if resize fails
+            }
+
             $fullUrl = ROOT . '/' . $filepath;
-            
+
             // Save to media table
             $mediaData = [
                 'post_id' => $postId,
                 'media_url' => $fullUrl,
                 'media_type' => 'image',
-                'profile_id' => $userId
+               
             ];
             $media->insert($mediaData);
-            
+
             // Also save to photos table for user gallery
             $photoData = [
                 'url' => $fullUrl,
@@ -341,14 +388,12 @@ class Post {
                 'user_id' => $userId
             ];
             $photos->insert($photoData);
-            
+
             return ['success' => true, 'url' => $fullUrl];
         }
-        
+
         return ['success' => false, 'message' => 'Failed to save file'];
-    }
-    
-    private function timeAgo($datetime) {
+    }    private function timeAgo($datetime) {
         $time = time() - strtotime($datetime);
         
         if ($time < 60) return 'just now';

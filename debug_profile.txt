@@ -1,0 +1,3050 @@
+[26-Jul-2025 22:28:36 Europe/Berlin] === PROFILE DEBUG START ===
+[26-Jul-2025 22:28:36 Europe/Berlin] Current User ID: 4
+[26-Jul-2025 22:28:36 Europe/Berlin] Profile User ID: 4
+[26-Jul-2025 22:28:36 Europe/Berlin] Is Own Profile: yes
+[26-Jul-2025 22:28:36 Europe/Berlin] Current User Email: sakhiur2020@gmail.com
+[26-Jul-2025 22:28:36 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753561650
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[26-Jul-2025 22:28:36 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 22:28:36 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 22:28:36 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 22:28:36 Europe/Berlin] === GETTING PROFILE DATA ===
+[26-Jul-2025 22:28:36 Europe/Berlin] Profile query result: Found profile
+[26-Jul-2025 22:28:36 Europe/Berlin] Profile ID: 4
+[26-Jul-2025 22:28:36 Europe/Berlin] === GETTING PHOTOS DATA ===
+[26-Jul-2025 22:28:36 Europe/Berlin] Photos query result: 3 photos found
+[26-Jul-2025 22:28:36 Europe/Berlin] === GETTING POSTS DATA ===
+[26-Jul-2025 22:28:36 Europe/Berlin] Posts query result: 1 posts found
+[26-Jul-2025 22:28:36 Europe/Berlin] Post 23 has 1 media items
+[26-Jul-2025 22:28:36 Europe/Berlin] === FINAL DATA ===
+[26-Jul-2025 22:28:36 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+)
+
+[26-Jul-2025 22:28:36 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[26-Jul-2025 22:28:36 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[26-Jul-2025 22:28:36 Europe/Berlin] === PROFILE DEBUG END ===
+[26-Jul-2025 22:28:44 Europe/Berlin] === PROFILE DEBUG START ===
+[26-Jul-2025 22:28:44 Europe/Berlin] Current User ID: 4
+[26-Jul-2025 22:28:44 Europe/Berlin] Profile User ID: 3
+[26-Jul-2025 22:28:44 Europe/Berlin] Is Own Profile: no
+[26-Jul-2025 22:28:44 Europe/Berlin] Current User Email: sakhiur2020@gmail.com
+[26-Jul-2025 22:28:44 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753561650
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[26-Jul-2025 22:28:44 Europe/Berlin] === GETTING PROFILE DATA ===
+[26-Jul-2025 22:28:44 Europe/Berlin] Profile query result: Found profile
+[26-Jul-2025 22:28:44 Europe/Berlin] Profile ID: 3
+[26-Jul-2025 22:28:44 Europe/Berlin] === GETTING PHOTOS DATA ===
+[26-Jul-2025 22:28:44 Europe/Berlin] Photos query result: 3 photos found
+[26-Jul-2025 22:28:44 Europe/Berlin] === GETTING POSTS DATA ===
+[26-Jul-2025 22:28:44 Europe/Berlin] Posts query result: 1 posts found
+[26-Jul-2025 22:28:44 Europe/Berlin] Post 24 has 1 media items
+[26-Jul-2025 22:28:44 Europe/Berlin] === FINAL DATA ===
+[26-Jul-2025 22:28:44 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+)
+
+[26-Jul-2025 22:28:44 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[26-Jul-2025 22:28:44 Europe/Berlin] Websites Data: Array
+(
+)
+
+[26-Jul-2025 22:28:44 Europe/Berlin] === PROFILE DEBUG END ===
+[26-Jul-2025 22:29:52 Europe/Berlin] === PROFILE DEBUG START ===
+[26-Jul-2025 22:29:52 Europe/Berlin] Current User ID: 2
+[26-Jul-2025 22:29:52 Europe/Berlin] Profile User ID: 2
+[26-Jul-2025 22:29:52 Europe/Berlin] Is Own Profile: yes
+[26-Jul-2025 22:29:52 Europe/Berlin] Current User Email: ken@gmail.com
+[26-Jul-2025 22:29:52 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753561650
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[26-Jul-2025 22:29:52 Europe/Berlin] POST request detected. AJAX: no
+[26-Jul-2025 22:29:52 Europe/Berlin] POST data: Array
+(
+)
+
+[26-Jul-2025 22:29:52 Europe/Berlin] FILES data: Array
+(
+)
+
+[26-Jul-2025 22:29:52 Europe/Berlin] === GETTING PROFILE DATA ===
+[26-Jul-2025 22:29:52 Europe/Berlin] Profile query result: Found profile
+[26-Jul-2025 22:29:52 Europe/Berlin] Profile ID: 2
+[26-Jul-2025 22:29:52 Europe/Berlin] === GETTING PHOTOS DATA ===
+[26-Jul-2025 22:29:52 Europe/Berlin] Photos query result: 4 photos found
+[26-Jul-2025 22:29:52 Europe/Berlin] === GETTING POSTS DATA ===
+[26-Jul-2025 22:29:52 Europe/Berlin] Posts query result: 3 posts found
+[26-Jul-2025 22:29:52 Europe/Berlin] Post 21 has 1 media items
+[26-Jul-2025 22:29:52 Europe/Berlin] Post 12 has 0 media items
+[26-Jul-2025 22:29:52 Europe/Berlin] Post 10 has 0 media items
+[26-Jul-2025 22:29:52 Europe/Berlin] === FINAL DATA ===
+[26-Jul-2025 22:29:52 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Japan
+    [country] => 
+    [shortBio] => Anime fan
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[26-Jul-2025 22:29:52 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[26-Jul-2025 22:29:52 Europe/Berlin] Websites Data: Array
+(
+)
+
+[26-Jul-2025 22:29:52 Europe/Berlin] === PROFILE DEBUG END ===
+[26-Jul-2025 22:30:02 Europe/Berlin] === PROFILE DEBUG START ===
+[26-Jul-2025 22:30:02 Europe/Berlin] Current User ID: 2
+[26-Jul-2025 22:30:02 Europe/Berlin] Profile User ID: 3
+[26-Jul-2025 22:30:02 Europe/Berlin] Is Own Profile: no
+[26-Jul-2025 22:30:02 Europe/Berlin] Current User Email: ken@gmail.com
+[26-Jul-2025 22:30:02 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753561650
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[26-Jul-2025 22:30:02 Europe/Berlin] === GETTING PROFILE DATA ===
+[26-Jul-2025 22:30:02 Europe/Berlin] Profile query result: Found profile
+[26-Jul-2025 22:30:02 Europe/Berlin] Profile ID: 3
+[26-Jul-2025 22:30:02 Europe/Berlin] === GETTING PHOTOS DATA ===
+[26-Jul-2025 22:30:02 Europe/Berlin] Photos query result: 3 photos found
+[26-Jul-2025 22:30:02 Europe/Berlin] === GETTING POSTS DATA ===
+[26-Jul-2025 22:30:02 Europe/Berlin] Posts query result: 1 posts found
+[26-Jul-2025 22:30:02 Europe/Berlin] Post 24 has 1 media items
+[26-Jul-2025 22:30:02 Europe/Berlin] === FINAL DATA ===
+[26-Jul-2025 22:30:02 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+)
+
+[26-Jul-2025 22:30:02 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[26-Jul-2025 22:30:02 Europe/Berlin] Websites Data: Array
+(
+)
+
+[26-Jul-2025 22:30:02 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:47:41 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:47:41 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:47:41 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:47:41 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:47:41 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:47:41 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:47:41 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 13:47:41 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 13:47:41 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 13:47:41 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:47:41 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 13:47:41 Europe/Berlin] No profile found, skipping website data
+[27-Jul-2025 13:47:41 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:47:41 Europe/Berlin] Photos query result: 0 photos found
+[27-Jul-2025 13:47:41 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:47:41 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:47:41 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:47:41 Europe/Berlin] Profile Data: 
+[27-Jul-2025 13:47:41 Europe/Berlin] Photos Data: Array
+(
+)
+
+[27-Jul-2025 13:47:41 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 13:47:41 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:48:06 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:48:06 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:48:06 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:48:06 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:48:06 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:48:06 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:48:06 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:48:06 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 13:48:06 Europe/Berlin] No profile found, skipping website data
+[27-Jul-2025 13:48:06 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:48:06 Europe/Berlin] Photos query result: 0 photos found
+[27-Jul-2025 13:48:06 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:48:06 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:48:06 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:48:06 Europe/Berlin] Profile Data: 
+[27-Jul-2025 13:48:06 Europe/Berlin] Photos Data: Array
+(
+)
+
+[27-Jul-2025 13:48:06 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 13:48:06 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:48:43 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:48:43 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:48:43 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:48:43 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:48:43 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:48:43 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:48:43 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:48:43 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 13:48:43 Europe/Berlin] No profile found, skipping website data
+[27-Jul-2025 13:48:43 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:48:43 Europe/Berlin] Photos query result: 0 photos found
+[27-Jul-2025 13:48:43 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:48:43 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:48:43 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:48:43 Europe/Berlin] Profile Data: 
+[27-Jul-2025 13:48:43 Europe/Berlin] Photos Data: Array
+(
+)
+
+[27-Jul-2025 13:48:43 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 13:48:43 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:48:53 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:48:53 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:48:53 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:48:53 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:48:53 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:48:53 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:48:53 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:48:53 Europe/Berlin] Profile query result: No profile found
+[27-Jul-2025 13:48:53 Europe/Berlin] No profile found, skipping website data
+[27-Jul-2025 13:48:53 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:48:53 Europe/Berlin] Photos query result: 0 photos found
+[27-Jul-2025 13:48:53 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:48:53 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:48:53 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:48:53 Europe/Berlin] Profile Data: 
+[27-Jul-2025 13:48:53 Europe/Berlin] Photos Data: Array
+(
+)
+
+[27-Jul-2025 13:48:53 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 13:48:53 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:51:19 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:51:19 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:51:19 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:51:19 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:51:19 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:51:19 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:51:19 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 13:51:19 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 13:51:19 Europe/Berlin] FILES data: Array
+(
+    [profile_photo] => Array
+        (
+            [name] => download.jpeg
+            [full_path] => download.jpeg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php632F.tmp
+            [error] => 0
+            [size] => 81352
+        )
+
+)
+
+[27-Jul-2025 13:51:19 Europe/Berlin] === PROFILE PHOTO UPLOAD DETECTED ===
+[27-Jul-2025 13:51:19 Europe/Berlin] Added new profile photo to Photos table: http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+[27-Jul-2025 13:51:20 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:51:20 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:51:20 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:51:20 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:51:20 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:51:20 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:51:20 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:51:20 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 13:51:20 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 13:51:20 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:51:20 Europe/Berlin] Photos query result: 1 photos found
+[27-Jul-2025 13:51:20 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:51:20 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:51:20 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:51:20 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => 
+    [user_id] => 5
+)
+
+[27-Jul-2025 13:51:20 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 13:51:20 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 13:51:20 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:52:44 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:52:44 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:52:44 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:52:44 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:52:44 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:52:44 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:52:44 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 13:52:44 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 13:52:44 Europe/Berlin] FILES data: Array
+(
+    [cover_photo] => Array
+        (
+            [name] => download (1).jpeg
+            [full_path] => download (1).jpeg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA8FF.tmp
+            [error] => 0
+            [size] => 40334
+        )
+
+)
+
+[27-Jul-2025 13:52:44 Europe/Berlin] === COVER PHOTO UPLOAD DETECTED ===
+[27-Jul-2025 13:52:44 Europe/Berlin] Added new cover photo to Photos table: http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+[27-Jul-2025 13:52:45 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:52:45 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:52:45 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:52:45 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:52:45 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:52:45 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:52:45 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:52:45 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 13:52:45 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 13:52:45 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:52:45 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 13:52:45 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:52:45 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:52:45 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:52:45 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 13:52:45 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 13:52:45 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 13:52:45 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:56:04 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:56:04 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:56:04 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:56:04 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:56:04 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:56:04 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:56:04 Europe/Berlin] POST request detected. AJAX: yes
+[27-Jul-2025 13:56:04 Europe/Berlin] POST data: Array
+(
+    [city] => Tokyo
+    [hometown] => Corus
+    [DOB] => 2009-05-17
+    [gender] => male
+    [shortBio] => Loves to drink
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [work] => Reinhafer
+    [polViews] => Hit
+    [religion] => Christianity
+    [country] => Arkland
+    [website] => www.checker.com
+    [lang] => English
+    [professional] => Hitman, Agent
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+)
+
+[27-Jul-2025 13:56:04 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 13:56:04 Europe/Berlin] === PROFILE UPDATE REQUEST ===
+[27-Jul-2025 13:56:04 Europe/Berlin] Raw POST data: Array
+(
+    [city] => Tokyo
+    [hometown] => Corus
+    [DOB] => 2009-05-17
+    [gender] => male
+    [shortBio] => Loves to drink
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [work] => Reinhafer
+    [polViews] => Hit
+    [religion] => Christianity
+    [country] => Arkland
+    [website] => www.checker.com
+    [lang] => English
+    [professional] => Hitman, Agent
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+)
+
+[27-Jul-2025 13:56:04 Europe/Berlin] Form data received - Gender: male, DOB: 2009-05-17
+[27-Jul-2025 13:56:04 Europe/Berlin] User table update result: success
+[27-Jul-2025 13:56:04 Europe/Berlin] Session updated with new user data - Gender: male, DOB: 2009-05-17
+[27-Jul-2025 13:56:11 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:56:11 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:56:11 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:56:11 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:56:11 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:56:11 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:56:11 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:56:11 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 13:56:11 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 13:56:11 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:56:11 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 13:56:11 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:56:11 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:56:11 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:56:11 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 13:56:11 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 13:56:11 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 13:56:11 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:56:43 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:56:43 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:56:43 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:56:43 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:56:43 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:56:43 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:56:43 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:56:43 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 13:56:43 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 13:56:43 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:56:43 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 13:56:43 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:56:43 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:56:43 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:56:43 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 13:56:43 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 13:56:43 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 13:56:43 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:56:44 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:56:44 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:56:44 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:56:44 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:56:44 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:56:44 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:56:44 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:56:44 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 13:56:44 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 13:56:44 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:56:44 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 13:56:44 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:56:44 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:56:44 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:56:44 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 13:56:44 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 13:56:44 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 13:56:44 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:56:45 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:56:45 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:56:45 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:56:45 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:56:45 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:56:45 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:56:45 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:56:45 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 13:56:45 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 13:56:45 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:56:45 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 13:56:45 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:56:45 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:56:45 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:56:45 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 13:56:45 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 13:56:45 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 13:56:45 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:56:47 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:56:47 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:56:47 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:56:47 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:56:47 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:56:47 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:56:47 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:56:47 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 13:56:47 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 13:56:47 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:56:47 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 13:56:47 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:56:47 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:56:47 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:56:47 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 13:56:47 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 13:56:47 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 13:56:47 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 13:57:00 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 13:57:00 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 13:57:00 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 13:57:00 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 13:57:00 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 13:57:00 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 13:57:00 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 13:57:00 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 13:57:00 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 13:57:00 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 13:57:00 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 13:57:00 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 13:57:00 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 13:57:00 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 13:57:00 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 13:57:00 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 13:57:00 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 13:57:00 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 13:57:00 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 13:57:00 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 13:57:00 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:01:12 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:01:12 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 14:01:12 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:01:12 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:01:12 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 14:01:12 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 14:01:12 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:01:12 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:01:12 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:01:12 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:01:12 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:01:12 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:01:12 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:01:12 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:01:12 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:01:12 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 14:01:12 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:01:12 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:01:12 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:01:12 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:01:12 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:02:18 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:02:18 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 14:02:18 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:02:18 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:02:18 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 14:02:18 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 14:02:18 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:02:18 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:02:18 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:02:18 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:02:18 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:02:18 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:02:18 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:02:18 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:02:18 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:02:18 Europe/Berlin] Posts query result: 0 posts found
+[27-Jul-2025 14:02:18 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:02:18 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:02:18 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:02:18 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:02:18 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:02:35 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:02:35 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 14:02:35 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:02:35 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:02:35 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 14:02:35 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 14:02:35 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:02:35 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:02:35 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:02:35 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:02:35 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:02:35 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:02:35 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:02:35 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:02:35 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:02:35 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 14:02:35 Europe/Berlin] Post 26 has 0 media items
+[27-Jul-2025 14:02:35 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:02:35 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:02:35 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:02:35 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:02:35 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:03:36 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:03:36 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 14:03:36 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:03:36 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:03:36 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 14:03:36 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 14:03:36 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:03:36 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:03:36 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:03:36 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:03:36 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:03:36 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:03:36 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:03:36 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:03:36 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:03:36 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 14:03:36 Europe/Berlin] Post 26 has 0 media items
+[27-Jul-2025 14:03:36 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:03:36 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:03:36 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:03:36 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:03:36 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:03:50 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:03:50 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 14:03:50 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:03:50 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:03:50 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 14:03:50 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 14:03:50 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:03:50 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:03:50 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:03:50 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:03:50 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:03:50 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:03:50 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:03:50 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:03:50 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:03:50 Europe/Berlin] Posts query result: 1 posts found
+[27-Jul-2025 14:03:50 Europe/Berlin] Post 26 has 0 media items
+[27-Jul-2025 14:03:50 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:03:50 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:03:50 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:03:50 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:03:50 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:04:12 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:04:12 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 14:04:12 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:04:12 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:04:12 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 14:04:12 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 14:04:12 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:04:12 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:04:12 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:04:12 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:04:12 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:04:12 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:04:12 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:04:12 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:04:12 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:04:12 Europe/Berlin] Posts query result: 2 posts found
+[27-Jul-2025 14:04:12 Europe/Berlin] Post 27 has 0 media items
+[27-Jul-2025 14:04:12 Europe/Berlin] Post 26 has 0 media items
+[27-Jul-2025 14:04:12 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:04:12 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:04:12 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:04:12 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:04:12 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:05:45 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:05:45 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 14:05:45 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:05:45 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:05:45 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 14:05:45 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 14:05:45 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:05:45 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:05:45 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:05:45 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:05:45 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:05:45 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:05:45 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:05:45 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:05:45 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:05:45 Europe/Berlin] Posts query result: 2 posts found
+[27-Jul-2025 14:05:45 Europe/Berlin] Post 27 has 0 media items
+[27-Jul-2025 14:05:45 Europe/Berlin] Post 26 has 0 media items
+[27-Jul-2025 14:05:45 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:05:45 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:05:45 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:05:45 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:05:45 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:06:08 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:06:08 Europe/Berlin] Current User ID: 5
+[27-Jul-2025 14:06:08 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:06:08 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:06:08 Europe/Berlin] Current User Email: checker@gmail.com
+[27-Jul-2025 14:06:08 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753616595
+    [USER] => stdClass Object
+        (
+            [id] => 5
+            [fname] => Ozaman
+            [minit] => Y
+            [lname] => Taker
+            [pwd] => Checker@gmail.com56
+            [DOB] => 2009-05-17
+            [gender] => male
+            [email] => checker@gmail.com
+            [created_at] => 2025-07-27 17:45:43
+        )
+
+)
+
+[27-Jul-2025 14:06:08 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:06:08 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:06:08 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:06:08 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:06:08 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:06:08 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:06:08 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:06:08 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:06:08 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:06:08 Europe/Berlin] Posts query result: 2 posts found
+[27-Jul-2025 14:06:08 Europe/Berlin] Post 27 has 0 media items
+[27-Jul-2025 14:06:08 Europe/Berlin] Post 26 has 0 media items
+[27-Jul-2025 14:06:08 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:06:08 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:06:08 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:06:08 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:06:08 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:14:06 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:14:06 Europe/Berlin] Current User ID: 2
+[27-Jul-2025 14:14:06 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 14:14:06 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:14:06 Europe/Berlin] Current User Email: ken@gmail.com
+[27-Jul-2025 14:14:06 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[27-Jul-2025 14:14:06 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:14:06 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:14:06 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:14:06 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:14:06 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:14:06 Europe/Berlin] Profile ID: 2
+[27-Jul-2025 14:14:06 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:14:06 Europe/Berlin] Photos query result: 4 photos found
+[27-Jul-2025 14:14:06 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:14:06 Europe/Berlin] Posts query result: 3 posts found
+[27-Jul-2025 14:14:06 Europe/Berlin] Post 21 has 1 media items
+[27-Jul-2025 14:14:06 Europe/Berlin] Post 12 has 0 media items
+[27-Jul-2025 14:14:06 Europe/Berlin] Post 10 has 0 media items
+[27-Jul-2025 14:14:06 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:14:06 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Japan
+    [country] => 
+    [shortBio] => Anime fan
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[27-Jul-2025 14:14:06 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[27-Jul-2025 14:14:06 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 14:14:06 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:14:26 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:14:26 Europe/Berlin] Current User ID: 2
+[27-Jul-2025 14:14:26 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 14:14:26 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:14:26 Europe/Berlin] Current User Email: ken@gmail.com
+[27-Jul-2025 14:14:26 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[27-Jul-2025 14:14:26 Europe/Berlin] POST request detected. AJAX: yes
+[27-Jul-2025 14:14:26 Europe/Berlin] POST data: Array
+(
+    [city] => Jakarta
+    [hometown] => Nippon
+    [DOB] => 1983-05-26
+    [gender] => male
+    [shortBio] => Anime fan and webtoon reader
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [work] => 
+    [polViews] => 
+    [religion] => 
+    [country] => 
+    [website] => 
+    [lang] => 
+    [professional] => 
+    [socialQuote] => 
+    [lifeEvent] => 
+)
+
+[27-Jul-2025 14:14:26 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:14:26 Europe/Berlin] === PROFILE UPDATE REQUEST ===
+[27-Jul-2025 14:14:26 Europe/Berlin] Raw POST data: Array
+(
+    [city] => Jakarta
+    [hometown] => Nippon
+    [DOB] => 1983-05-26
+    [gender] => male
+    [shortBio] => Anime fan and webtoon reader
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [work] => 
+    [polViews] => 
+    [religion] => 
+    [country] => 
+    [website] => 
+    [lang] => 
+    [professional] => 
+    [socialQuote] => 
+    [lifeEvent] => 
+)
+
+[27-Jul-2025 14:14:26 Europe/Berlin] Form data received - Gender: male, DOB: 1983-05-26
+[27-Jul-2025 14:14:26 Europe/Berlin] User table update result: success
+[27-Jul-2025 14:14:26 Europe/Berlin] Session updated with new user data - Gender: male, DOB: 1983-05-26
+[27-Jul-2025 14:14:34 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:14:34 Europe/Berlin] Current User ID: 2
+[27-Jul-2025 14:14:34 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 14:14:34 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:14:34 Europe/Berlin] Current User Email: ken@gmail.com
+[27-Jul-2025 14:14:34 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[27-Jul-2025 14:14:34 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:14:34 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:14:34 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:14:34 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:14:34 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:14:34 Europe/Berlin] Profile ID: 2
+[27-Jul-2025 14:14:34 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:14:34 Europe/Berlin] Photos query result: 4 photos found
+[27-Jul-2025 14:14:34 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:14:34 Europe/Berlin] Posts query result: 3 posts found
+[27-Jul-2025 14:14:34 Europe/Berlin] Post 21 has 1 media items
+[27-Jul-2025 14:14:34 Europe/Berlin] Post 12 has 0 media items
+[27-Jul-2025 14:14:34 Europe/Berlin] Post 10 has 0 media items
+[27-Jul-2025 14:14:34 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:14:34 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[27-Jul-2025 14:14:34 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[27-Jul-2025 14:14:34 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 14:14:34 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:14:46 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:14:46 Europe/Berlin] Current User ID: 2
+[27-Jul-2025 14:14:46 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 14:14:46 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:14:46 Europe/Berlin] Current User Email: ken@gmail.com
+[27-Jul-2025 14:14:46 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[27-Jul-2025 14:14:46 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:14:46 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:14:46 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:14:46 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:14:46 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:14:46 Europe/Berlin] Profile ID: 2
+[27-Jul-2025 14:14:46 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:14:46 Europe/Berlin] Photos query result: 4 photos found
+[27-Jul-2025 14:14:46 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:14:46 Europe/Berlin] Posts query result: 3 posts found
+[27-Jul-2025 14:14:46 Europe/Berlin] Post 21 has 1 media items
+[27-Jul-2025 14:14:46 Europe/Berlin] Post 12 has 0 media items
+[27-Jul-2025 14:14:46 Europe/Berlin] Post 10 has 0 media items
+[27-Jul-2025 14:14:46 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:14:46 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[27-Jul-2025 14:14:46 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[27-Jul-2025 14:14:46 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 14:14:46 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:15:13 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:15:13 Europe/Berlin] Current User ID: 2
+[27-Jul-2025 14:15:13 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 14:15:13 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:15:13 Europe/Berlin] Current User Email: ken@gmail.com
+[27-Jul-2025 14:15:13 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[27-Jul-2025 14:15:13 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:15:13 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:15:13 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:15:13 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:15:13 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:15:13 Europe/Berlin] Profile ID: 2
+[27-Jul-2025 14:15:13 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:15:13 Europe/Berlin] Photos query result: 4 photos found
+[27-Jul-2025 14:15:13 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:15:13 Europe/Berlin] Posts query result: 3 posts found
+[27-Jul-2025 14:15:13 Europe/Berlin] Post 21 has 1 media items
+[27-Jul-2025 14:15:13 Europe/Berlin] Post 12 has 0 media items
+[27-Jul-2025 14:15:13 Europe/Berlin] Post 10 has 0 media items
+[27-Jul-2025 14:15:13 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:15:13 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[27-Jul-2025 14:15:13 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[27-Jul-2025 14:15:13 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 14:15:13 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:15:45 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:15:45 Europe/Berlin] Current User ID: 2
+[27-Jul-2025 14:15:45 Europe/Berlin] Profile User ID: 2
+[27-Jul-2025 14:15:45 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:15:45 Europe/Berlin] Current User Email: ken@gmail.com
+[27-Jul-2025 14:15:45 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[27-Jul-2025 14:15:45 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:15:45 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:15:45 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:15:45 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:15:45 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:15:45 Europe/Berlin] Profile ID: 2
+[27-Jul-2025 14:15:45 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:15:45 Europe/Berlin] Photos query result: 4 photos found
+[27-Jul-2025 14:15:45 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:15:45 Europe/Berlin] Posts query result: 4 posts found
+[27-Jul-2025 14:15:45 Europe/Berlin] Post 28 has 0 media items
+[27-Jul-2025 14:15:45 Europe/Berlin] Post 21 has 1 media items
+[27-Jul-2025 14:15:45 Europe/Berlin] Post 12 has 0 media items
+[27-Jul-2025 14:15:45 Europe/Berlin] Post 10 has 0 media items
+[27-Jul-2025 14:15:45 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:15:45 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+)
+
+[27-Jul-2025 14:15:45 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[27-Jul-2025 14:15:45 Europe/Berlin] Websites Data: Array
+(
+)
+
+[27-Jul-2025 14:15:45 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:16:11 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:16:11 Europe/Berlin] Current User ID: 2
+[27-Jul-2025 14:16:11 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:16:11 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 14:16:11 Europe/Berlin] Current User Email: ken@gmail.com
+[27-Jul-2025 14:16:11 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1983-05-26
+            [gender] => male
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[27-Jul-2025 14:16:11 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:16:11 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:16:11 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:16:11 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:16:11 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:16:11 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:16:11 Europe/Berlin] Posts query result: 2 posts found
+[27-Jul-2025 14:16:11 Europe/Berlin] Post 27 has 0 media items
+[27-Jul-2025 14:16:11 Europe/Berlin] Post 26 has 0 media items
+[27-Jul-2025 14:16:11 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:16:11 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:16:11 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:16:11 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:16:11 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:18:13 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:18:13 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 14:18:13 Europe/Berlin] Profile User ID: 1
+[27-Jul-2025 14:18:13 Europe/Berlin] Is Own Profile: yes
+[27-Jul-2025 14:18:13 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 14:18:13 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 14:18:13 Europe/Berlin] POST request detected. AJAX: no
+[27-Jul-2025 14:18:13 Europe/Berlin] POST data: Array
+(
+)
+
+[27-Jul-2025 14:18:13 Europe/Berlin] FILES data: Array
+(
+)
+
+[27-Jul-2025 14:18:13 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:18:13 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:18:13 Europe/Berlin] Profile ID: 1
+[27-Jul-2025 14:18:13 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:18:13 Europe/Berlin] Photos query result: 7 photos found
+[27-Jul-2025 14:18:13 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:18:13 Europe/Berlin] Posts query result: 9 posts found
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 19 has 1 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 18 has 0 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 17 has 0 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 15 has 0 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 14 has 0 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 13 has 0 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 8 has 0 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 4 has 0 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] Post 1 has 0 media items
+[27-Jul-2025 14:18:13 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:18:13 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[27-Jul-2025 14:18:13 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[27-Jul-2025 14:18:13 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[27-Jul-2025 14:18:13 Europe/Berlin] === PROFILE DEBUG END ===
+[27-Jul-2025 14:19:26 Europe/Berlin] === PROFILE DEBUG START ===
+[27-Jul-2025 14:19:26 Europe/Berlin] Current User ID: 1
+[27-Jul-2025 14:19:26 Europe/Berlin] Profile User ID: 5
+[27-Jul-2025 14:19:26 Europe/Berlin] Is Own Profile: no
+[27-Jul-2025 14:19:26 Europe/Berlin] Current User Email: kafka@gmail.com
+[27-Jul-2025 14:19:26 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753618441
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1981-01-31
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[27-Jul-2025 14:19:26 Europe/Berlin] === GETTING PROFILE DATA ===
+[27-Jul-2025 14:19:26 Europe/Berlin] Profile query result: Found profile
+[27-Jul-2025 14:19:26 Europe/Berlin] Profile ID: 5
+[27-Jul-2025 14:19:26 Europe/Berlin] === GETTING PHOTOS DATA ===
+[27-Jul-2025 14:19:26 Europe/Berlin] Photos query result: 2 photos found
+[27-Jul-2025 14:19:26 Europe/Berlin] === GETTING POSTS DATA ===
+[27-Jul-2025 14:19:26 Europe/Berlin] Posts query result: 2 posts found
+[27-Jul-2025 14:19:26 Europe/Berlin] Post 27 has 0 media items
+[27-Jul-2025 14:19:26 Europe/Berlin] Post 26 has 0 media items
+[27-Jul-2025 14:19:26 Europe/Berlin] === FINAL DATA ===
+[27-Jul-2025 14:19:26 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 5
+    [hometown] => Corus
+    [country] => Arkland
+    [shortBio] => Loves to drink
+    [city] => Tokyo
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+    [socialQuote] => Do or Die
+    [lifeEvent] => Born, live, first mission
+    [religion] => Christianity
+    [polViews] => Hit
+    [lang] => English
+    [professional] => Hitman, Agent
+    [work] => Reinhafer
+    [highschool] => Porayan Cultural School
+    [college] => Edward College
+    [university] => Grandall
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+    [user_id] => 5
+)
+
+[27-Jul-2025 14:19:26 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 24
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg
+            [caption] => Profile Picture
+            [user_id] => 5
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 25
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg
+            [caption] => Cover Photo
+            [user_id] => 5
+        )
+
+)
+
+[27-Jul-2025 14:19:26 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 5
+            [url] => www.checker.com
+        )
+
+)
+
+[27-Jul-2025 14:19:26 Europe/Berlin] === PROFILE DEBUG END ===

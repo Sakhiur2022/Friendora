@@ -73,6 +73,11 @@ trait Model
         $sql = "DELETE FROM " . $this->tableName . " WHERE $columnToDelete = :$columnToDelete";
         return $this->query($sql, [$columnToDelete => $id]);
     }
+
+// Example usage:
+// $mediaModel->delete($postId, 'post_id');
+// This will generate SQL:
+// DELETE FROM media WHERE post_id = :post_id
 // Example usage:
 // $model->deleteWhere(['status' => 'inactive', 'role' => ['admin', 'editor']]);
 // This will generate SQL:

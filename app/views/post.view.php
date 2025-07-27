@@ -1,18 +1,18 @@
 <!-- Posts Section -->
 <div class="posts-section">
     <!-- Create Post Card -->
-    <?php if(Utils::user('id') == Utils::user('id')): // Only show on own profile ?>
+    <?php if($data['is_own_profile']): // Only show on own profile ?>
     <div class="cyber-card create-post-card mb-4">
         <div class="card-body">
             <form id="createPostForm" enctype="multipart/form-data">
                 <div class="d-flex align-items-start mb-3">
                     <?php
-                    $userAvatar = $profile->pfp ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face';
+                    $userAvatar = $data['profile']->pfp ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face';
                     ?>
                     <img src="<?php echo $userAvatar; ?>" class="profile-pic-small me-3" alt="Your Profile">
                     <div class="flex-grow-1">
                         <textarea class="form-control cyber-input post-textarea" 
-                                placeholder="What's on your mind, <?php echo Utils::user('fname'); ?>?" 
+                                placeholder="What's on your mind, <?php echo $data['current_user']->fname; ?>?" 
                                 id="postContent" 
                                 name="content" 
                                 rows="3"></textarea>
@@ -116,7 +116,7 @@
                 
                 <!-- Add Comment Form -->
                 <div class="add-comment-form d-flex align-items-center">
-                    <img src="<?php echo $userAvatar ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face'; ?>" 
+                    <img src="<?php echo $profilePic ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face'; ?>" 
                          class="comment-avatar me-2" alt="Your Profile">
                     <div class="flex-grow-1">
                         <input type="text" class="form-control cyber-input comment-input" placeholder="Write a comment...">

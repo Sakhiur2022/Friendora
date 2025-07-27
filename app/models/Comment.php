@@ -11,11 +11,10 @@ class  Comment
     public $errors = [];
 
     protected $allowedColumns = [
-        'profile_id',
+       
         'content',
-        'created_at',
-        'comment_id',
-        'post_id'        
+        'user_id',
+        'post_id'
     ];
 
     public function getErrors()
@@ -27,15 +26,17 @@ class  Comment
     {
         $sql = "
             CREATE TABLE IF NOT EXISTS `comment` (
-  `profile_id` int(3) NOT NULL,
+  `id` int(3) NOT NULL AUTO_INCREMENT,
   `content` text DEFAULT NULL,
   `created_at` datetime DEFAULT current_timestamp(),
-  `comment_id` int(3) DEFAULT NULL,
+  `user_id` int(3) DEFAULT NULL,
   `post_id` int(3) DEFAULT NULL,
-  PRIMARY KEY (`profile_id`),
-  KEY `user_id` (`comment_id`),
-  KEY `post_id` (`post_id`)
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `post_id` (`post_id`),
+  CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
         ";
         $this->query($sql);
     }

@@ -9,9 +9,7 @@ class Posts
     public $errors = [];
 
     protected $allowedColumns = [
-        'id',
         'content',
-        'created_at',
         'creator_id',
         'group_id',
     ];
@@ -25,7 +23,7 @@ class Posts
     {
         $sql = "
             CREATE TABLE IF NOT EXISTS `post` (
-                `id` int(3) NOT NULL,
+                `id` int(3) NOT NULL AUTO_INCREMENT,
                 `content` text DEFAULT NULL,
                 `created_at` datetime DEFAULT current_timestamp(),
                 `creator_id` int(3) DEFAULT NULL,

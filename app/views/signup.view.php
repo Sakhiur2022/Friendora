@@ -115,7 +115,7 @@
                 <!-- Date of Birth -->
                 <div class="mb-3">
                     <label for="dateOfBirth" class="form-label">Date of Birth</label>
-                    <input type="date" class="form-control" id="dateOfBirth" name="dob" required>
+                    <input type="date" class="form-control" id="dateOfBirth" name="DOB" required>
                     <div class="invalid-feedback">Please enter your date of birth.</div>
                 </div>
 

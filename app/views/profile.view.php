@@ -88,17 +88,27 @@
             <div class="nav-item dropdown">
                 <a class="nav-link user-dropdown-toggle" href="#" id="userDropdown" role="button" onclick="toggleUserDropdown()">
                     <?php
-                    $profilePic = $profile->pfp ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face';
+                    // Use current user's profile pic for navbar, not the profile being viewed
+                    $currentUserProfile = $data['current_user'];
+                    $currentUserProfileData = null;
+                    if (isset($data['profile']) && $data['is_own_profile']) {
+                        $currentUserProfileData = $data['profile'];
+                    } else {
+                        // Fetch current user's profile data for navbar
+                        $user_profile_temp = new Profiles;
+                        $currentUserProfileData = $user_profile_temp->first(['user_id' => $data['current_user']->id]);
+                    }
+                    $navbarProfilePic = $currentUserProfileData->pfp ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face';
                     ?>
-                    <img src="<?php echo $profilePic; ?>" class="profile-pic-nav" alt="Profile">
+                    <img src="<?php echo $navbarProfilePic; ?>" class="profile-pic-nav" alt="Profile">
                 </a>
                 <div class="user-dropdown-container" id="userDropdownContainer">
                     <div class="user-dropdown">
                         <div class="user-dropdown-header">
-                            <img src="<?php echo $profilePic; ?>" class="user-dropdown-avatar" alt="Profile">
+                            <img src="<?php echo $navbarProfilePic; ?>" class="user-dropdown-avatar" alt="Profile">
                             <div class="user-dropdown-info">
-                                <h6><?php echo Utils::user('fname') . " " . Utils::user('lname'); ?></h6>
-                                <p>See your profile</p>
+                                <h6><?php echo $data['current_user']->fname . " " . $data['current_user']->lname; ?></h6>
+                                <p><a href="<?= Utils::profileUrl(); ?>" style="color: inherit; text-decoration: none;">See your profile</a></p>
                             </div>
                         </div>
                         <hr class="dropdown-divider">
@@ -127,7 +137,7 @@
         <!-- Mobile User Icon -->
         <div class="d-lg-none">
             <a class="nav-link user-dropdown-toggle" href="#" onclick="toggleUserDropdown()">
-                <img src="<?php echo $profilePic; ?>" class="profile-pic-nav" alt="Profile">
+                <img src="<?php echo  $navbarProfilePic; ?>" class="profile-pic-nav" alt="Profile">
             </a>
         </div>
     </div>
@@ -201,7 +211,7 @@
                         <img src="<?php echo $coverPhoto; ?>" alt="Cover Photo" class="cover-img" id="coverPhoto">
                         
                         <div class="cover-overlay">
-                            <?php if(Utils::user('id') == Utils::user('id')): // Check if own profile ?>
+                            <?php if($data['is_own_profile']): // Check if own profile ?>
                             <button class="btn cyber-btn-secondary edit-cover-btn" onclick="openCoverPhotoModal()">
                                 <i class="bi bi-camera-fill me-2"></i>Edit Cover
                             </button>
@@ -217,7 +227,7 @@
                             ?>
                             <img src="<?php echo $profilePicMain; ?>" alt="Profile Picture" class="profile-pic-main" id="profilePic">
                             
-                            <?php if(Utils::user('id') == Utils::user('id')): // Check if own profile ?>
+                            <?php if($data['is_own_profile']): // Check if own profile ?>
                             <button class="btn cyber-btn-primary edit-pic-btn" onclick="openProfilePhotoModal()">
                                 <i class="bi bi-camera-fill"></i>
                             </button>
@@ -225,7 +235,7 @@
                         </div>
 
                         <div class="profile-info">
-                            <h1 class="profile-name"><?php echo Utils::user('fname') . " " . Utils::user('minit') . " " . Utils::user('lname'); ?></h1>
+                            <h1 class="profile-name"><?php echo $data['profile_user']->fname . " " . $data['profile_user']->minit . " " . $data['profile_user']->lname; ?></h1>
                             
                             <p class="profile-bio" ><?php echo $profile->shortBio ?? 'Digital artist exploring the boundaries between reality and dreams ✨'; ?></p>
                             
@@ -241,7 +251,7 @@
 
                         <!-- Conditional Profile Actions -->
                         <div class="profile-actions">
-                            <?php if(Utils::user('id') == Utils::user('id')): // Own profile ?>
+                            <?php if($data['is_own_profile']): // Own profile ?>
                             <button class="btn cyber-btn-primary" id="ownProfileActions" style="display: block;">
                                 <i class="bi bi-plus-circle me-2"></i>Add Story
                             </button>
@@ -268,7 +278,7 @@
                         <div class="cyber-card about-card">
                             <div class="card-header">
                                 <h5><i class="bi bi-person-circle me-2"></i>About</h5>
-                                <?php if(Utils::user('id') == Utils::user('id')): ?>
+                                <?php if($data['is_own_profile']): ?>
                                 <button class="btn btn-sm cyber-btn-ghost" id="editAboutBtn" onclick="openEditProfileModal()">
                                     <i class="bi bi-pencil"></i>
                                 </button>
@@ -290,12 +300,12 @@
                                     <div class="about-item">
                                         <i class="bi bi-calendar-fill"></i>
                                         <span class="about-label">Born:</span>
-                                        <span class="about-value"><?php echo Utils::user('DOB') ? Utils::getDate(Utils::user('DOB')) : 'Not specified'; ?></span>
+                                        <span class="about-value"><?php echo $data['profile_user']->DOB ? Utils::getDate($data['profile_user']->DOB) : 'Not specified'; ?></span>
                                     </div>
                                     <div class="about-item">
                                         <i class="bi bi-gender-ambiguous"></i>
                                         <span class="about-label">Gender:</span>
-                                        <span class="about-value"><?php echo Utils::user('gender') ?? 'Not specified'; ?></span>
+                                        <span class="about-value"><?php echo $data['profile_user']->gender ?? 'Not specified'; ?></span>
                                     </div>
                                     <div class="about-item">
                                         <i class="bi bi-mortarboard-fill"></i>
@@ -360,7 +370,7 @@
 
                     <!-- Right Column - Posts -->
                     <div class="col-lg-7">
-                        <?php include 'post.view.php'; ?>
+                       <?php include 'post.view.php'; ?>
                     </div>
                 </div>
             </div>
@@ -473,53 +483,53 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Current City</label>
-                                <input type="text" class="form-control cyber-input" id="currentCity" name="city" value="<?php echo $profile->city ?? ''; ?>">
+                                <input type="text" class="form-control cyber-input" id="currentCity" name="city" value="<?php echo isset($profile->city) ? $profile->city : ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Hometown</label>
-                                <input type="text" class="form-control cyber-input" id="hometown" name="hometown" value="<?php echo $profile->hometown ?? ''; ?>">
+                                <input type="text" class="form-control cyber-input" id="hometown" name="hometown" value="<?php echo isset($profile->hometown) ? $profile->hometown : ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Birthday</label>
-                                <input type="date" class="form-control cyber-input" id="birthday" name="birthday" value="<?php echo Utils::user('DOB') ?? ''; ?>">
+                                <input type="date" class="form-control cyber-input" id="birthday" name="DOB" value="<?php echo $data['current_user']->DOB ?? ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Gender</label>
                                 <select class="form-select cyber-input" id="gender" name="gender">
                                     <option value="">Select Gender</option>
-                                    <option value="male" <?php echo Utils::user('gender') == 'male' ? 'selected' : ''; ?>>Male</option>
-                                    <option value="female" <?php echo Utils::user('gender') == 'female' ? 'selected' : ''; ?>>Female</option>
-                                    <option value="non-binary" <?php echo Utils::user('gender') == 'non-binary' ? 'selected' : ''; ?>>Non-binary</option>
-                                    <option value="prefer-not-to-say" <?php echo Utils::user('gender') == 'prefer-not-to-say' ? 'selected' : ''; ?>>Prefer not to say</option>
+                                    <option value="male" <?php echo $data['current_user']->gender == 'male' ? 'selected' : ''; ?>>Male</option>
+                                    <option value="female" <?php echo $data['current_user']->gender == 'female' ? 'selected' : ''; ?>>Female</option>
+                                    <option value="non-binary" <?php echo $data['current_user']->gender == 'non-binary' ? 'selected' : ''; ?>>Non-binary</option>
+                                    <option value="prefer-not-to-say" <?php echo $data['current_user']->gender == 'prefer-not-to-say' ? 'selected' : ''; ?>>Prefer not to say</option>
                                 </select>
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="form-label">Bio</label>
-                                <textarea class="form-control cyber-input" rows="3" id="bioInput" name="shortBio"><?php echo $profile->shortBio ?? ''; ?></textarea>
+                                <textarea class="form-control cyber-input" rows="3" id="bioInput" name="shortBio"><?php echo isset($profile->shortBio) ? $profile->shortBio : ''; ?></textarea>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">High School</label>
-                                <input type="text" class="form-control cyber-input" id="highSchool" name="highschool" value="<?php echo $profile->highschool ?? ''; ?>">
+                                <input type="text" class="form-control cyber-input" id="highSchool" name="highschool" value="<?php echo isset($profile->highschool) ? $profile->highschool : ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">College</label>
-                                <input type="text" class="form-control cyber-input" id="college" name="college" value="<?php echo $profile->college ?? ''; ?>">
+                                <input type="text" class="form-control cyber-input" id="college" name="college" value="<?php echo isset($profile->college) ? $profile->college : ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">University</label>
-                                <input type="text" class="form-control cyber-input" id="university" name="university" value="<?php echo $profile->university ?? ''; ?>">
+                                <input type="text" class="form-control cyber-input" id="university" name="university" value="<?php echo isset($profile->university) ? $profile->university : ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Workplace</label>
-                                <input type="text" class="form-control cyber-input" id="workplace" name="work" value="<?php echo $profile->work ?? ''; ?>">
+                                <input type="text" class="form-control cyber-input" id="workplace" name="work" value="<?php echo isset($profile->work) ? $profile->work : ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Political Views</label>
-                                <input type="text" class="form-control cyber-input" id="politicalViews" name="polViews" value="<?php echo $profile->polViews ?? ''; ?>">
+                                <input type="text" class="form-control cyber-input" id="politicalViews" name="polViews" value="<?php echo isset($profile->polViews) ? $profile->polViews : ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Religion</label>
-                                <input type="text" class="form-control cyber-input" id="religion" name="religion" value="<?php echo $profile->religion ?? ''; ?>">
+                                <input type="text" class="form-control cyber-input" id="religion" name="religion" value="<?php echo isset($profile->religion) ? $profile->religion : ''; ?>">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Country</label>
@@ -572,7 +582,7 @@
 <div class="user-dropdown-container mobile-user-dropdown" id="mobileUserDropdownContainer">
     <div class="user-dropdown">
         <div class="user-dropdown-header">
-            <img src="<?php echo $profilePic; ?>" class="user-dropdown-avatar" alt="Profile">
+            <img src="<?php echo  $navbarProfilePic; ?>" class="user-dropdown-avatar" alt="Profile">
             <div class="user-dropdown-info">
                 <h6><?php echo Utils::user('fname') . " " . Utils::user('lname'); ?></h6>
                 <p>See your profile</p>
@@ -600,17 +610,26 @@
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?=ROOT?>/assets/scripts/profile.js"></script>
-
-    <!-- Pass PHP data to JavaScript -->
+    
+    <!-- Pass PHP data to JavaScript BEFORE loading profile.js -->
     <script>
+        // Debug PHP variables in view
+     
+        
         // Pass profile data to JavaScript
         window.profileData = <?php echo json_encode($profile ?? new stdClass()); ?>;
+        window.profileUser = <?php echo json_encode($data['profile_user'] ?? new stdClass()); ?>;
+        window.currentUser = <?php echo json_encode($data['current_user'] ?? new stdClass()); ?>;
         window.websiteData = <?php echo json_encode($websites ?? []); ?>;
         window.photosData = <?php echo json_encode($photos ?? []); ?>;
-        window.currentUserId = <?php echo Utils::user('id'); ?>;
-        window.isOwnProfile = <?php echo json_encode(Utils::user('id') == Utils::user('id')); ?>;
+        window.postsData = <?php echo json_encode($posts ?? []); ?>;
+        window.currentUserId = <?php echo $data['current_user']->id ?? 0; ?>;
+        window.profileUserId = <?php echo $data['profile_user']->id ?? 0; ?>;
+        window.isOwnProfile = <?php echo json_encode($data['is_own_profile'] ?? false); ?>;
+        window.currentUserProfilePic = "<?= $navbarProfilePic ?>";
         window.ROOT = "<?=ROOT?>";
     </script>
+    
+    <script src="<?=ROOT?>/assets/scripts/profile.js"></script>
 </body>
 </html>

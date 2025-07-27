@@ -13,7 +13,7 @@ class User{
        'lname',
       'email',
       'pwd',
-      'dob',
+      'DOB',
       'gender'
 
     ];
@@ -34,8 +34,8 @@ class User{
         if (empty($data['lname'])) {
             $this->errors['lname'] = 'Last name is required.';
         }
-        if (empty($data['dob'])) {
-            $this->errors['dob'] = 'Date of Birth is required.';
+        if (empty($data['DOB'])) {
+            $this->errors['DOB'] = 'Date of Birth is required.';
         }  
         if (empty($data['email'])) {
             $this->errors['email'] = 'Email is required.';
