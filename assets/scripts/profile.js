@@ -68,6 +68,7 @@ const notificationsData = [
   {
     id: 1,
     userId: 2,
+    userName: "Marcus Tech",
     userAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
     message: "Marcus Tech liked your post",
     time: "5 minutes ago",
@@ -77,6 +78,7 @@ const notificationsData = [
   {
     id: 2,
     userId: 3,
+    userName: "Luna Digital",
     userAvatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
     message: "Luna Digital commented on your photo",
     time: "1 hour ago",
@@ -86,6 +88,7 @@ const notificationsData = [
   {
     id: 3,
     userId: 4,
+    userName: "Cyber Explorer",
     userAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
     message: "Cyber Explorer started following you",
     time: "2 hours ago",
@@ -118,6 +121,29 @@ const searchSuggestions = [
 
 let currentPhotoIndex = 0
 let allPosts = []
+
+// Helper function to create user profile links
+function createUserLink(userId, userName, className = '') {
+  const baseUrl = window.ROOT || '';
+  const classAttr = className ? ` class="${className}"` : '';
+  return `<a href="${baseUrl}/profile/${userId}"${classAttr}>${userName}</a>`;
+}
+
+// Helper function to generate notification messages with user links
+function generateNotificationMessage(notification) {
+  const userLink = createUserLink(notification.userId, notification.userName);
+  
+  switch(notification.type) {
+    case 'like':
+      return `${userLink} liked your post`;
+    case 'comment':
+      return `${userLink} commented on your photo`;
+    case 'follow':
+      return `${userLink} started following you`;
+    default:
+      return notification.message;
+  }
+}
 
 function initializePage() {
   // Add loading animation
@@ -767,7 +793,7 @@ function createPostHTML(post) {
         <div class="post-header d-flex align-items-center mb-3">
           <img src="${post.author_avatar}" alt="${post.author_name}" class="post-author-pic me-3">
           <div class="flex-grow-1">
-            <h6 class="mb-0 post-author-name">${post.author_name}</h6>
+            <h6 class="mb-0 post-author-name">${createUserLink(post.creator_id, post.author_name)}</h6>
             <small class=" post-time">${post.time_ago}</small>
           </div>
           ${
@@ -1123,7 +1149,7 @@ function displayComments(postId, comments) {
       <img src="${comment.user_avatar || 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face'}" class="comment-avatar me-2" alt="${comment.user_name || 'User'}">
       <div class="comment-content flex-grow-1">
         <div class="comment-bubble">
-          <strong class="comment-author">${comment.user_name || 'Unknown User'}</strong>
+          <strong class="comment-author">${createUserLink(comment.user_id || comment.id, comment.user_name || 'Unknown User')}</strong>
           <p class="comment-text mb-1">${comment.content}</p>
         </div>
         <div class="comment-actions">
@@ -1210,7 +1236,7 @@ function loadNotifications() {
         <li class="notification-item ${!notification.isRead ? "unread" : ""}" onclick="handleNotificationClick(${notification.id})">
             <img src="${notification.userAvatar}" class="notification-avatar" alt="User">
             <div class="notification-content">
-                <p>${notification.message}</p>
+                <p>${generateNotificationMessage(notification)}</p>
                 <small>${notification.time}</small>
             </div>
         </li>
@@ -1361,7 +1387,7 @@ function showMobileSearchSuggestions(query) {
         <div class="suggestion-item" onclick="selectSuggestion('${suggestion.type}', '${suggestion.id}')">
             <img src="${suggestion.avatar}" class="suggestion-avatar" alt="${suggestion.name}">
             <div class="suggestion-info">
-                <div class="suggestion-name">${suggestion.name}</div>
+                <div class="suggestion-name">${suggestion.type === 'Person' ? createUserLink(suggestion.id, suggestion.name) : suggestion.name}</div>
                 <div class="suggestion-type">${suggestion.type}</div>
             </div>
         </div>
@@ -1461,7 +1487,7 @@ function loadSearchSuggestions() {
         <div class="suggestion-item" onclick="selectSuggestion('${suggestion.type}', '${suggestion.id}')">
             <img src="${suggestion.avatar}" class="suggestion-avatar" alt="${suggestion.name}">
             <div class="suggestion-info">
-                <div class="suggestion-name">${suggestion.name}</div>
+                <div class="suggestion-name">${suggestion.type === 'Person' ? createUserLink(suggestion.id, suggestion.name) : suggestion.name}</div>
                 <div class="suggestion-type">${suggestion.type}</div>
             </div>
         </div>
@@ -1483,7 +1509,7 @@ function filterSearchSuggestions(query) {
             <div class="suggestion-item" onclick="selectSuggestion('${suggestion.type}', '${suggestion.id}')">
                 <img src="${suggestion.avatar}" class="suggestion-avatar" alt="${suggestion.name}">
                 <div class="suggestion-info">
-                    <div class="suggestion-name">${suggestion.name}</div>
+                    <div class="suggestion-name">${suggestion.type === 'Person' ? createUserLink(suggestion.id, suggestion.name) : suggestion.name}</div>
                     <div class="suggestion-type">${suggestion.type}</div>
                 </div>
             </div>
@@ -1672,7 +1698,7 @@ function loadMobileNotifications() {
         <div class="notification-item ${!notification.isRead ? "unread" : ""}" onclick="handleNotificationClick(${notification.id})">
             <img src="${notification.userAvatar}" class="notification-avatar" alt="User">
             <div class="notification-content">
-                <p>${notification.message}</p>
+                <p>${generateNotificationMessage(notification)}</p>
                 <small>${notification.time}</small>
             </div>
         </div>
