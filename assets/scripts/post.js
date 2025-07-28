@@ -3,6 +3,122 @@
 
 let allPosts = []
 
+// Function to generate Create Post HTML
+function generateCreatePostHTML(userAvatar, userName) {
+  return `
+    <div class="cyber-card create-post-card mb-4">
+      <div class="card-body">
+        <form id="createPostForm" enctype="multipart/form-data">
+          <div class="d-flex align-items-start mb-3">
+            <img src="${userAvatar}" class="profile-pic-small me-3" alt="Your Profile">
+            <div class="flex-grow-1">
+              <textarea class="form-control cyber-input post-textarea" 
+                      placeholder="What's on your mind, ${userName}?" 
+                      id="postContent" 
+                      name="content" 
+                      rows="3"></textarea>
+              
+              <!-- Image Preview Container -->
+              <div id="imagePreviewContainer" class="mt-3" style="display: none;">
+                <div class="position-relative d-inline-block">
+                  <img id="imagePreview" src="${window.ROOT || ''}/assets/images/placeholder.svg" alt="Preview" class="img-fluid rounded" style="max-height: 200px;">
+                  <button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0 m-1" onclick="removeImagePreview()">
+                    <i class="bi bi-x"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="post-actions d-flex justify-content-between align-items-center">
+            <div class="post-options">
+              <input type="file" id="postImageInput" name="post_image" accept="image/*" style="display: none;" onchange="handlePostImageSelect(event)">
+              <button type="button" class="btn cyber-btn-ghost me-2" onclick="document.getElementById('postImageInput').click()">
+                <i class="bi bi-image me-2"></i>Photo
+              </button>
+              <button type="button" class="btn cyber-btn-ghost me-2">
+                <i class="bi bi-emoji-smile me-2"></i>Feeling
+              </button>
+              <button type="button" class="btn cyber-btn-ghost me-2">
+                <i class="bi bi-geo-alt me-2"></i>Location
+              </button>
+            </div>
+            <div class="post-submit">
+              <button type="button" class="btn cyber-btn-primary" id="sharePostBtn" onclick="createPost()">
+                <i class="bi bi-send me-2"></i>Share
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  `;
+}
+
+// Function to generate Edit Post Modal HTML
+function generateEditPostModalHTML() {
+  return `
+    <div class="modal fade" id="editPostModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content cyber-modal">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Post</h5>
+            <button type="button" class="btn-close cyber-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="editPostForm">
+              <input type="hidden" id="editPostId" name="post_id">
+              <div class="mb-3">
+                <label class="form-label">Post Content</label>
+                <textarea class="form-control cyber-input" id="editPostContent" name="content" rows="4"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn cyber-btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn cyber-btn-primary" onclick="savePostEdit()">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Function to initialize create post form (if user is on their own profile)
+function initializeCreatePostForm(isOwnProfile, userAvatar, userName) {
+  if (!isOwnProfile) return;
+  
+  const createPostContainer = document.getElementById('create-post-container');
+  if (createPostContainer) {
+    createPostContainer.innerHTML = generateCreatePostHTML(userAvatar, userName);
+  }
+}
+
+// Function to initialize edit post modal
+function initializeEditPostModal() {
+  // Check if modal already exists
+  if (document.getElementById('editPostModal')) return;
+  
+  // Add modal to document body
+  document.body.insertAdjacentHTML('beforeend', generateEditPostModalHTML());
+}
+
+// Main initialization function for post functionality
+function initializePostFunctionality(isOwnProfile, userAvatar, userName, userId) {
+  console.log("Initializing post functionality for userId:", userId);
+  
+  // Initialize create post form if this is the user's own profile
+  initializeCreatePostForm(isOwnProfile, userAvatar, userName);
+  
+  // Initialize edit post modal
+  initializeEditPostModal();
+  
+  // Load posts for the profile
+  if (userId) {
+    loadUserPosts(userId);
+  }
+}
+
 // Helper functions for reactions
 function getReactionIcon(reactionType) {
   const icons = {
@@ -30,7 +146,13 @@ function createUserLink(userId, userName, className = '') {
   return `<a href="${baseUrl}/profile/${userId}" class="user-link ${className}">${userName}</a>`;
 }
 
-// Main function to load user posts via AJAX
+// Helper function to reload posts for current profile
+function reloadCurrentUserPosts() {
+  const userId = window.profileUserId || window.currentUserId;
+  if (userId && typeof loadUserPosts === 'function') {
+    loadUserPosts(userId);
+  }
+}
 function loadUserPosts(userId) {
   console.log("loadUserPosts() called for userId:", userId);
   const postsContainer = document.getElementById("post-container");
@@ -499,7 +621,7 @@ function createPost() {
         removeImagePreview()
 
         // Reload posts
-        loadPosts()
+        reloadCurrentUserPosts()
       } else {
         showNotification("Error creating post: " + data.message, "error")
       }
@@ -572,7 +694,7 @@ function savePostEdit() {
         }
 
         // Reload posts
-        loadPosts()
+        reloadCurrentUserPosts()
       } else {
         showNotification("Error updating post: " + data.message, "error")
       }
@@ -820,7 +942,7 @@ function sharePost(postId) {
         if (data.counts) {
           updatePostReactionCounts(postId, data.counts);
         } else {
-          loadPosts();
+          reloadCurrentUserPosts();
         }
       } else {
         showNotification("Unable to share in the dreamscape: " + data.message, "error")
@@ -923,7 +1045,7 @@ function reactToPost(postId, reactionType) {
         if (data.counts) {
           updatePostReactionCounts(postId, data.counts);
         } else {
-          loadPosts();
+          reloadCurrentUserPosts();
         }
       } else {
         showNotification("Unable to sync emotions: " + data.message, "error")

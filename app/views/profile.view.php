@@ -370,6 +370,9 @@
 
                     <!-- Right Column - Posts -->
                     <div class="col-lg-7">
+                        <!-- Create Post Container - Will be populated by post.js if own profile -->
+                        <div id="create-post-container"></div>
+
                         <!-- Posts Container - This is where posts will be loaded via AJAX -->
                         <div id="post-container" data-userid="<?= $data['profile_user']->id ?? 0 ?>">
                             <!-- Posts will be loaded here by post.js -->
@@ -638,12 +641,16 @@
         window.currentUserProfilePic = "<?= $navbarProfilePic ?>";
         window.ROOT = "<?=ROOT?>";
     </script>
-    
+
     <!-- Load JavaScript modules in correct order -->
-    <!-- 1. Load post.js first (contains post-related functions) -->
+  
+    <!-- 1. Load utils.js (contains utility functions used across modules) -->
+    <script src="<?=ROOT?>/assets/scripts/utils.js"></script>
+
+    <!-- 2. Load post.js (contains post-related functions) -->
     <script src="<?=ROOT?>/assets/scripts/post.js"></script>
-    
-    <!-- 2. Load profile.js second (contains profile-specific functions and calls post.js functions) -->
+
+    <!-- 3. Load profile.js (contains profile-specific functions and calls post.js functions) -->
     <script src="<?=ROOT?>/assets/scripts/profile.js"></script>
 </body>
 </html>
