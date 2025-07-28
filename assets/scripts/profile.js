@@ -262,8 +262,15 @@ function loadDummyData() {
 }
 
 function loadAboutSection(user) {
+  console.log("🔍 DEBUG: loadAboutSection() called with user:", user);
+  
   const aboutSection = document.getElementById("aboutSection")
-  if (!aboutSection) return;
+  if (!aboutSection) {
+    console.log("🔍 DEBUG: aboutSection element not found");
+    return;
+  }
+  
+  console.log("🔍 DEBUG: aboutSection element found:", aboutSection);
 
   const aboutItems = [
     { icon: "bi-geo-alt-fill", label: "Lives in", value: user.city },
@@ -277,6 +284,8 @@ function loadAboutSection(user) {
     { icon: "bi-quote", label: "Favorite Quote", value: user.quotes },
   ]
 
+  console.log("🔍 DEBUG: Generated about items:", aboutItems);
+
   aboutSection.innerHTML = aboutItems
     .map(
       (item) => `
@@ -289,18 +298,37 @@ function loadAboutSection(user) {
     )
     .join("")
 
+  console.log("🔍 DEBUG: aboutSection HTML updated");
+
   // Add animation delay to each item
   const items = aboutSection.querySelectorAll(".about-item")
+  console.log("🔍 DEBUG: Found", items.length, "about items for animation");
   items.forEach((item, index) => {
     item.style.animationDelay = `${index * 0.1}s`
   })
 }
 
 function saveProfile() {
-  const formData = new FormData(document.getElementById("editProfileForm"))
-  formData.append("action", "update_profile")
+  console.log("🔍 DEBUG: saveProfile() function called");
+  
+  const form = document.getElementById("editProfileForm");
+  if (!form) {
+    console.log("🔍 DEBUG: Edit profile form not found");
+    showNotification("Edit profile form not found", "error");
+    return;
+  }
+  
+  const formData = new FormData(form);
+  formData.append("action", "update_profile");
+
+  console.log("🔍 DEBUG: FormData created for profile save");
+  console.log("🔍 DEBUG: FormData entries:");
+  for (let pair of formData.entries()) {
+    console.log("🔍 DEBUG: -", pair[0], ":", pair[1]);
+  }
 
   const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
+  console.log("🔍 DEBUG: Profile URL for save:", profileUrl);
 
   fetch(profileUrl, {
     method: "POST",
@@ -310,12 +338,16 @@ function saveProfile() {
     },
   })
     .then((response) => {
+      console.log("🔍 DEBUG: Profile save response status:", response.status);
+      console.log("🔍 DEBUG: Profile save response headers:", response.headers);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       return response.text();
     })
     .then((text) => {
+      console.log("🔍 DEBUG: Raw profile save response text:", text);
+      
       // Clean backticks from response if present
       let cleanedText = text;
       if (text.startsWith('`')) {
@@ -325,9 +357,12 @@ function saveProfile() {
         }
       }
       
+      console.log("🔍 DEBUG: Cleaned profile save response text:", cleanedText);
       const data = JSON.parse(cleanedText);
+      console.log("🔍 DEBUG: Parsed profile save response data:", data);
       
       if (data.success) {
+        console.log("🔍 DEBUG: Profile save successful");
         updateProfileDisplay(data.user)
         showNotification("Profile updated successfully!", "success")
         // Close modal
@@ -341,11 +376,12 @@ function saveProfile() {
           window.location.reload()
         }, 1000)
       } else {
+        console.log("🔍 DEBUG: Profile save failed:", data.message);
         showNotification("Error updating profile: " + data.message, "error")
       }
     })
     .catch((error) => {
-      console.error("Error:", error)
+      console.error("🔍 DEBUG: Profile save error:", error);
       showNotification("Error saving profile", "error")
     })
 }
@@ -472,19 +508,34 @@ function removeProfilePreview() {
 }
 
 function uploadCoverPhoto() {
+  console.log("🔍 DEBUG: uploadCoverPhoto() function called");
+  
   const input = document.getElementById("coverPhotoInput")
   const file = input.files[0]
 
   if (!file) {
+    console.log("🔍 DEBUG: No file selected for cover photo upload");
     showNotification("Please select a file first", "error")
     return
   }
+
+  console.log("🔍 DEBUG: Selected cover photo file:", file);
+  console.log("🔍 DEBUG: File name:", file.name);
+  console.log("🔍 DEBUG: File size:", file.size);
+  console.log("🔍 DEBUG: File type:", file.type);
 
   const formData = new FormData()
   formData.append("cover_photo", file)
   formData.append("action", "upload_cover")
 
+  console.log("🔍 DEBUG: FormData created for cover photo");
+  console.log("🔍 DEBUG: FormData entries:");
+  for (let pair of formData.entries()) {
+    console.log("🔍 DEBUG: -", pair[0], ":", pair[1]);
+  }
+
   const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
+  console.log("🔍 DEBUG: Profile URL for cover upload:", profileUrl);
 
   fetch(profileUrl, {
     method: "POST",
@@ -494,12 +545,16 @@ function uploadCoverPhoto() {
     body: formData,
   })
     .then((response) => {
+      console.log("🔍 DEBUG: Cover upload response status:", response.status);
+      console.log("🔍 DEBUG: Cover upload response headers:", response.headers);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       return response.text();
     })
     .then((text) => {
+      console.log("🔍 DEBUG: Raw cover upload response text:", text);
+
       // Clean backticks from response if present
       let cleanedText = text;
       if (text.startsWith('`')) {
@@ -508,47 +563,72 @@ function uploadCoverPhoto() {
           cleanedText = cleanedText.slice(0, -1);
         }
       }
-      
+
+      console.log("🔍 DEBUG: Cleaned cover upload response text:", cleanedText);
       const data = JSON.parse(cleanedText);
-      
+      console.log("🔍 DEBUG: Parsed cover upload response data:", data);
+
       if (data.success) {
+        console.log("🔍 DEBUG: Cover photo upload successful");
         showNotification("Cover photo uploaded successfully!", "success")
         removeCoverPreview()
         // Update the cover photo display
         const coverImg = document.getElementById("coverPhoto")
         if (coverImg && data.cover_url) {
+          console.log("🔍 DEBUG: Updating cover photo URL to:", data.cover_url);
           coverImg.src = data.cover_url
+        } else if (!coverImg) {
+          console.log("🔍 DEBUG: Cover photo element not found");
+        } else if (!data.cover_url) {
+          console.log("🔍 DEBUG: No cover_url in response data");
         }
         
         // Close modal
         const modal = window.bootstrap.Modal.getInstance(document.getElementById("coverPhotoModal"))
         if (modal) {
+          console.log("🔍 DEBUG: Closing cover photo modal");
           modal.hide()
         }
       } else {
+        console.log("🔍 DEBUG: Cover photo upload failed:", data.message);
         showNotification("Error uploading cover photo: " + data.message, "error")
       }
     })
     .catch((error) => {
-      console.error("Error:", error)
+      console.error("🔍 DEBUG: Cover photo upload error:", error);
       showNotification("Upload failed", "error")
     })
 }
 
 function uploadProfilePhoto() {
+  console.log("🔍 DEBUG: uploadProfilePhoto() function called");
+  
   const input = document.getElementById("profilePhotoInput")
   const file = input.files[0]
 
   if (!file) {
+    console.log("🔍 DEBUG: No file selected for profile photo upload");
     showNotification("Please select a file first", "error")
     return
   }
+
+  console.log("🔍 DEBUG: Selected profile photo file:", file);
+  console.log("🔍 DEBUG: File name:", file.name);
+  console.log("🔍 DEBUG: File size:", file.size);
+  console.log("🔍 DEBUG: File type:", file.type);
 
   const formData = new FormData()
   formData.append("profile_photo", file)
   formData.append("action", "upload_profile")
 
+  console.log("🔍 DEBUG: FormData created for profile photo");
+  console.log("🔍 DEBUG: FormData entries:");
+  for (let pair of formData.entries()) {
+    console.log("🔍 DEBUG: -", pair[0], ":", pair[1]);
+  }
+
   const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
+  console.log("🔍 DEBUG: Profile URL for profile upload:", profileUrl);
 
   fetch(profileUrl, {
     method: "POST",
@@ -558,12 +638,16 @@ function uploadProfilePhoto() {
     body: formData,
   })
     .then((response) => {
+      console.log("🔍 DEBUG: Profile upload response status:", response.status);
+      console.log("🔍 DEBUG: Profile upload response headers:", response.headers);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       return response.text();
     })
     .then((text) => {
+      console.log("🔍 DEBUG: Raw profile upload response text:", text);
+      
       // Clean backticks from response if present
       let cleanedText = text;
       if (text.startsWith('`')) {
@@ -573,16 +657,21 @@ function uploadProfilePhoto() {
         }
       }
       
+      console.log("🔍 DEBUG: Cleaned profile upload response text:", cleanedText);
       const data = JSON.parse(cleanedText);
+      console.log("🔍 DEBUG: Parsed profile upload response data:", data);
       
       if (data.success) {
+        console.log("🔍 DEBUG: Profile photo upload successful");
         showNotification("Profile photo updated successfully!", "success")
         removeProfilePreview()
         
         // Update all profile images on the page
         const profileImages = document.querySelectorAll("#profilePic, .profile-pic-nav, .user-dropdown-avatar")
-        profileImages.forEach((img) => {
+        console.log("🔍 DEBUG: Found", profileImages.length, "profile images to update");
+        profileImages.forEach((img, index) => {
           if (data.profile_url) {
+            console.log(`🔍 DEBUG: Updating profile image ${index + 1} URL to:`, data.profile_url);
             img.src = data.profile_url
           }
         })
@@ -593,11 +682,12 @@ function uploadProfilePhoto() {
           modal.hide()
         }
       } else {
+        console.log("🔍 DEBUG: Profile photo upload failed:", data.message);
         showNotification("Error uploading profile photo: " + data.message, "error")
       }
     })
     .catch((error) => {
-      console.error("Error:", error)
+      console.error("🔍 DEBUG: Profile photo upload error:", error);
       showNotification("Upload failed", "error")
     })
 }

@@ -51,6 +51,7 @@ class Profile {
             error_log("POST request detected. AJAX: " . ($request->isAjax() ? 'yes' : 'no'));
             error_log("POST data: " . print_r($_POST, true));
             error_log("FILES data: " . print_r($_FILES, true));
+            error_log("Action parameter: " . ($_POST['action'] ?? 'not set'));
             
             // Check if it's a photo upload
             if (isset($_FILES['cover_photo'])) {
@@ -59,10 +60,32 @@ class Profile {
             if (isset($_FILES['profile_photo'])) {
                 error_log("=== PROFILE PHOTO UPLOAD DETECTED ===");
             }
+            
+            // Log which condition will be matched
+            if ($request->isAjax() && $is_own_profile && 
+                !isset($_FILES['cover_photo']) && !isset($_FILES['profile_photo']) && 
+                isset($_POST['action']) && $_POST['action'] === 'update_profile') {
+                error_log("=== WILL PROCESS AS PROFILE UPDATE ===");
+            } else if (isset($_FILES['cover_photo']) && $is_own_profile && 
+                       isset($_POST['action']) && $_POST['action'] === 'upload_cover') {
+                error_log("=== WILL PROCESS AS COVER PHOTO UPLOAD ===");
+            } else if (isset($_FILES['profile_photo']) && $is_own_profile && 
+                       isset($_POST['action']) && $_POST['action'] === 'upload_profile') {
+                error_log("=== WILL PROCESS AS PROFILE PHOTO UPLOAD ===");
+            } else {
+                error_log("=== NO MATCHING CONDITION FOUND ===");
+                error_log("Request conditions: AJAX=" . ($request->isAjax() ? 'true' : 'false') . 
+                         ", is_own_profile=" . ($is_own_profile ? 'true' : 'false') . 
+                         ", has_cover_photo=" . (isset($_FILES['cover_photo']) ? 'true' : 'false') . 
+                         ", has_profile_photo=" . (isset($_FILES['profile_photo']) ? 'true' : 'false') . 
+                         ", action=" . ($_POST['action'] ?? 'not set'));
+            }
         }
 
-        // Handle AJAX Profile Update (only allowed for own profile)
-        if ($request->isPosted() && $request->isAjax() && $is_own_profile) {
+        // Handle AJAX Profile Update (only allowed for own profile and not file uploads)
+        if ($request->isPosted() && $request->isAjax() && $is_own_profile && 
+            !isset($_FILES['cover_photo']) && !isset($_FILES['profile_photo']) && 
+            isset($_POST['action']) && $_POST['action'] === 'update_profile') {
             // Clean any previous output
             if (ob_get_level()) {
                 ob_clean();
@@ -150,7 +173,17 @@ class Profile {
         }
 
         // Handle Cover Photo Upload (only allowed for own profile)
-        if ($request->isPosted() && isset($_FILES['cover_photo']) && $is_own_profile) {
+        if ($request->isPosted() && isset($_FILES['cover_photo']) && $is_own_profile && 
+            isset($_POST['action']) && $_POST['action'] === 'upload_cover') {
+            error_log("=== COVER PHOTO UPLOAD REQUEST ===");
+            error_log("POST action parameter: " . ($_POST['action'] ?? 'not set'));
+            error_log("Cover photo file details: " . print_r($_FILES['cover_photo'], true));
+            
+            // Check if action parameter matches expected value
+            if (isset($_POST['action']) && $_POST['action'] !== 'upload_cover') {
+                error_log("Action mismatch. Expected 'upload_cover', got: " . $_POST['action']);
+            }
+            
             // Clean any previous output
             if (ob_get_level()) {
                 ob_clean();
@@ -160,9 +193,12 @@ class Profile {
             header("Cache-Control: no-cache, must-revalidate");
             
             try {
+                error_log("Calling handleImageUpload for cover photo");
                 $uploadResult = $this->handleImageUpload($_FILES['cover_photo'], 'cover');
+                error_log("Cover photo upload result: " . print_r($uploadResult, true));
                 
                 if ($uploadResult['success']) {
+                    error_log("Cover photo upload successful, updating database");
                     // Delete old cover photo if exists (both file and Photos table record)
                     $profileData = $user_profile->first(['user_id' => Utils::user('id')]);
                     if ($profileData && $profileData->coverpic) {
@@ -191,27 +227,34 @@ class Profile {
 
                     // Update profile with new cover photo
                     if ($profileData) {
-                        $user_profile->updateAll(['coverpic' => $uploadResult['url']], Utils::user('id'), 'user_id');
+                        $updateResult = $user_profile->updateAll(['coverpic' => $uploadResult['url']], Utils::user('id'), 'user_id');
+                        error_log("Profile cover photo update result: " . ($updateResult ? "success" : "failed"));
                     } else {
-                        $user_profile->insert([
+                        $insertResult = $user_profile->insert([
                             'user_id' => Utils::user('id'),
                             'coverpic' => $uploadResult['url']
                         ]);
+                        error_log("Profile cover photo insert result: " . ($insertResult ? "success" : "failed"));
                     }
 
                     // Add new cover photo to Photos table
-                    $photos->insert([
+                    $photoInsertResult = $photos->insert([
                         'url' => $uploadResult['url'],
                         'caption' => 'Cover Photo',
                         'user_id' => Utils::user('id')
                     ]);
-                    error_log("Added new cover photo to Photos table: " . $uploadResult['url']);
+                    error_log("Cover photo added to Photos table. Result: " . ($photoInsertResult ? "success" : "failed"));
+                    
+                    // Add cover_url to response for frontend
+                    $uploadResult['cover_url'] = $uploadResult['url'];
                 }
                 
+                error_log("Final cover photo response: " . json_encode($uploadResult));
                 echo json_encode($uploadResult);
                 exit();
                 
             } catch (Exception $e) {
+                error_log("Cover photo upload exception: " . $e->getMessage());
                 echo json_encode([
                     'success' => false,
                     'message' => 'Upload error: ' . $e->getMessage()
@@ -221,7 +264,17 @@ class Profile {
         }
 
         // Handle Profile Photo Upload (only allowed for own profile)
-        if ($request->isPosted() && isset($_FILES['profile_photo']) && $is_own_profile) {
+        if ($request->isPosted() && isset($_FILES['profile_photo']) && $is_own_profile && 
+            isset($_POST['action']) && $_POST['action'] === 'upload_profile') {
+            error_log("=== PROFILE PHOTO UPLOAD REQUEST ===");
+            error_log("POST action parameter: " . ($_POST['action'] ?? 'not set'));
+            error_log("Profile photo file details: " . print_r($_FILES['profile_photo'], true));
+            
+            // Check if action parameter matches expected value
+            if (isset($_POST['action']) && $_POST['action'] !== 'upload_profile') {
+                error_log("Action mismatch. Expected 'upload_profile', got: " . $_POST['action']);
+            }
+            
             // Clean any previous output
             if (ob_get_level()) {
                 ob_clean();
@@ -231,9 +284,12 @@ class Profile {
             header("Cache-Control: no-cache, must-revalidate");
             
             try {
+                error_log("Calling handleImageUpload for profile photo");
                 $uploadResult = $this->handleImageUpload($_FILES['profile_photo'], 'profile');
+                error_log("Profile photo upload result: " . print_r($uploadResult, true));
                 
                 if ($uploadResult['success']) {
+                    error_log("Profile photo upload successful, updating database");
                     // Delete old profile photo if exists (both file and Photos table record)
                     $profileData = $user_profile->first(['user_id' => Utils::user('id')]);
                     if ($profileData && $profileData->pfp) {
@@ -262,27 +318,34 @@ class Profile {
 
                     // Update profile with new profile photo
                     if ($profileData) {
-                        $user_profile->updateAll(['pfp' => $uploadResult['url']], Utils::user('id'), 'user_id');
+                        $updateResult = $user_profile->updateAll(['pfp' => $uploadResult['url']], Utils::user('id'), 'user_id');
+                        error_log("Profile photo update result: " . ($updateResult ? "success" : "failed"));
                     } else {
-                        $user_profile->insert([
+                        $insertResult = $user_profile->insert([
                             'user_id' => Utils::user('id'),
                             'pfp' => $uploadResult['url']
                         ]);
+                        error_log("Profile photo insert result: " . ($insertResult ? "success" : "failed"));
                     }
 
                     // Add new profile photo to Photos table
-                    $photos->insert([
+                    $photoInsertResult = $photos->insert([
                         'url' => $uploadResult['url'],
                         'caption' => 'Profile Picture',
                         'user_id' => Utils::user('id')
                     ]);
-                    error_log("Added new profile photo to Photos table: " . $uploadResult['url']);
+                    error_log("Profile photo added to Photos table. Result: " . ($photoInsertResult ? "success" : "failed"));
+                    
+                    // Add profile_url to response for frontend
+                    $uploadResult['profile_url'] = $uploadResult['url'];
                 }
                 
+                error_log("Final profile photo response: " . json_encode($uploadResult));
                 echo json_encode($uploadResult);
                 exit();
                 
             } catch (Exception $e) {
+                error_log("Profile photo upload exception: " . $e->getMessage());
                 echo json_encode([
                     'success' => false,
                     'message' => 'Upload error: ' . $e->getMessage()
@@ -370,38 +433,58 @@ class Profile {
     }
 
     private function handleImageUpload($file, $type) {
+        error_log("=== HANDLE IMAGE UPLOAD START ===");
+        error_log("Upload type: " . $type);
+        error_log("File details: " . print_r($file, true));
+        
         $image = new Image;
 
         // Validate file
         if ($file['error'] !== UPLOAD_ERR_OK) {
+            error_log("File upload error: " . $file['error']);
             return [
                 'success' => false,
-                'message' => 'Upload error occurred'
+                'message' => 'Upload error occurred: ' . $file['error']
             ];
         }
+        
+        error_log("File validation passed - no upload errors");
 
         // Check file type
         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
         $fileType = mime_content_type($file['tmp_name']);
+        error_log("Detected file type: " . $fileType);
 
         if (!in_array($fileType, $allowedTypes)) {
+            error_log("Invalid file type rejected: " . $fileType);
             return [
                 'success' => false,
                 'message' => 'Invalid file type. Only JPEG, PNG, GIF, and WebP are allowed.'
             ];
         }
+        
+        error_log("File type validation passed");
 
         // Check file size (5MB max)
+        $fileSizeMB = $file['size'] / (1024 * 1024);
+        error_log("File size: " . round($fileSizeMB, 2) . " MB");
+        
         if ($file['size'] > 5 * 1024 * 1024) {
+            error_log("File size too large: " . round($fileSizeMB, 2) . " MB");
             return [
                 'success' => false,
                 'message' => 'File size too large. Maximum 5MB allowed.'
             ];
         }
+        
+        error_log("File size validation passed");
 
         // Create upload directory
         $uploadDir = 'uploads/' . $type . '_photos/';
+        error_log("Upload directory: " . $uploadDir);
+        
         if (!file_exists($uploadDir)) {
+            error_log("Creating upload directory: " . $uploadDir);
             mkdir($uploadDir, 0777, true);
             file_put_contents($uploadDir . 'index.php', '<?php // Silence is golden ?>');
         }
@@ -410,25 +493,37 @@ class Profile {
         $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
         $filename = $type . '_' . Utils::user('id') . '_' . time() . '.' . $extension;
         $filepath = $uploadDir . $filename;
+        error_log("Generated filename: " . $filename);
+        error_log("Full filepath: " . $filepath);
 
         // Note: Old file deletion is now handled in the main upload sections above
         // to ensure both file and Photos table record are deleted together
 
         // Move uploaded file
+        error_log("Attempting to move uploaded file from: " . $file['tmp_name'] . " to: " . $filepath);
+        
         if (move_uploaded_file($file['tmp_name'], $filepath)) {
+            error_log("File move successful");
+            
             // Resize image based on type
             if ($type === 'cover') {
+                error_log("Resizing cover photo to max width 1200px");
                 $image->resize($filepath, 1200); // Cover photos: max width 1200px
             } else {
+                error_log("Resizing profile photo to max width 400px");
                 $image->resize($filepath, 400); // Profile photos: max width 400px
             }
 
+            $finalUrl = ROOT . '/' . $filepath;
+            error_log("Upload successful. Final URL: " . $finalUrl);
+            
             return [
                 'success' => true,
                 'message' => ucfirst($type) . ' photo uploaded successfully',
-                'url' => ROOT . '/' . $filepath
+                'url' => $finalUrl
             ];
         } else {
+            error_log("Failed to move uploaded file");
             return [
                 'success' => false,
                 'message' => 'Failed to save uploaded file'
