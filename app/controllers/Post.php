@@ -638,14 +638,27 @@ class Post {
         }
     }
     
-    private function timeAgo($datetime) {
-        $time = time() - strtotime($datetime);
-        
-        if ($time < 60) return 'just now';
-        if ($time < 3600) return floor($time/60) . ' minutes ago';
-        if ($time < 86400) return floor($time/3600) . ' hours ago';
-        if ($time < 2592000) return floor($time/86400) . ' days ago';
-        if ($time < 31536000) return floor($time/2592000) . ' months ago';
-        return floor($time/31536000) . ' years ago';
-    }
+   private function timeAgo($datetime) {
+  
+
+    $time = time() - strtotime($datetime);
+
+    $minutes = floor($time / 60);
+    $hours = floor($time / 3600);
+    $days = floor($time / 86400);
+    $months = floor($time / 2592000);
+    $years = floor($time / 31536000);
+
+   
+
+    if ($time < 60) return 'just now';
+    if ($minutes < 60) return $minutes . ' ' . ($minutes == 1 ? 'minute' : 'minutes') . ' ago';
+    if ($hours < 24) return $hours . ' ' . ($hours == 1 ? 'hour' : 'hours') . ' ago';
+    if ($days < 30) return $days . ' ' . ($days == 1 ? 'day' : 'days') . ' ago';
+    if ($months < 12) return $months . ' ' . ($months == 1 ? 'month' : 'months') . ' ago';
+
+    return $years . ' ' . ($years == 1 ? 'year' : 'years') . ' ago';
+}
+
+
 }

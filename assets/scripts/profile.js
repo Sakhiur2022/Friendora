@@ -31,6 +31,9 @@ const photosData = window.photosData || []
 const currentUserId = window.currentUserId || 1
 const isOwnProfile = window.isOwnProfile || true
 
+// 🔍 DEBUG: Log received data from PHP
+
+
 // Profile data
 const profileUser = {
   name: `${profileData.fname || "Alexandra"} ${profileData.lname || "Neon"}`,
@@ -67,7 +70,9 @@ const profileUser = {
     profileData.lifeEvent ||
     "Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)",
   isOwnProfile: isOwnProfile,
+  city: profileData.city || "Neo Tokyo", // Add city field for about section
 }
+
 
 // Dummy notifications data
 const notificationsData = [
@@ -226,6 +231,18 @@ function setupEventListeners() {
     })
   })
 
+  // Save profile button
+  const saveProfileBtn = document.getElementById("saveProfileBtn")
+  if (saveProfileBtn) {
+    saveProfileBtn.addEventListener("click", saveProfile)
+  }
+
+  // Edit profile button  
+  const editProfileBtn = document.getElementById("editProfileBtn")
+  if (editProfileBtn) {
+    editProfileBtn.addEventListener("click", openEditProfileModal)
+  }
+
   // About section
   const aboutSection = document.getElementById("aboutSection")
   if (aboutSection) {
@@ -281,24 +298,51 @@ function loadAboutSection(user) {
 
 function saveProfile() {
   const formData = new FormData(document.getElementById("editProfileForm"))
+  formData.append("action", "update_profile")
 
-  fetch("", {
+  const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
+
+  fetch(profileUrl, {
     method: "POST",
     body: formData,
     headers: {
       "X-Requested-With": "XMLHttpRequest",
     },
   })
-    .then(async (response) => {
-      const text = await response.text()
-      let data
-      try {
-        data = JSON.parse(text)
-      } catch (e) {
-        console.error("Invalid JSON response:", text)
-        throw new Error("Invalid server response")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return data
+      return response.text();
+    })
+    .then((text) => {
+      // Clean backticks from response if present
+      let cleanedText = text;
+      if (text.startsWith('`')) {
+        cleanedText = text.slice(1);
+        if (cleanedText.endsWith('`')) {
+          cleanedText = cleanedText.slice(0, -1);
+        }
+      }
+      
+      const data = JSON.parse(cleanedText);
+      
+      if (data.success) {
+        updateProfileDisplay(data.user)
+        showNotification("Profile updated successfully!", "success")
+        // Close modal
+        const modal = window.bootstrap.Modal.getInstance(document.getElementById("editProfileModal"))
+        if (modal) {
+          modal.hide()
+        }
+        
+        // Reload page to show updated data
+        setTimeout(() => {
+          window.location.reload()
+        }, 1000)
+      } else {
+        showNotification("Error updating profile: " + data.message, "error")
+      }
     })
     .catch((error) => {
       console.error("Error:", error)
@@ -335,6 +379,7 @@ function setupUploadAreas() {
   if (coverUploadArea && coverPhotoInput) {
     coverUploadArea.addEventListener("dragover", handleDragOver)
     coverUploadArea.addEventListener("drop", (e) => handleDrop(e, "cover"))
+    coverUploadArea.addEventListener("click", () => coverPhotoInput.click())
     coverPhotoInput.addEventListener("change", (e) => handleFileSelect(e, "cover"))
   }
 
@@ -345,6 +390,7 @@ function setupUploadAreas() {
   if (profileUploadArea && profilePhotoInput) {
     profileUploadArea.addEventListener("dragover", handleDragOver)
     profileUploadArea.addEventListener("drop", (e) => handleDrop(e, "profile"))
+    profileUploadArea.addEventListener("click", () => profilePhotoInput.click())
     profilePhotoInput.addEventListener("change", (e) => handleFileSelect(e, "profile"))
   }
 }
@@ -380,17 +426,19 @@ function previewImage(file, type) {
   reader.onload = (e) => {
     if (type === "cover") {
       const preview = document.getElementById("coverPreview")
+      const previewImg = document.getElementById("coverPreviewImg")
       const placeholder = document.querySelector("#coverUploadArea .upload-placeholder")
-      if (preview && placeholder) {
-        preview.src = e.target.result
+      if (preview && previewImg && placeholder) {
+        previewImg.src = e.target.result
         preview.style.display = "block"
         placeholder.style.display = "none"
       }
     } else {
       const preview = document.getElementById("profilePreview")
+      const previewImg = document.getElementById("profilePreviewImg")
       const placeholder = document.querySelector("#profileUploadArea .upload-placeholder")
-      if (preview && placeholder) {
-        preview.src = e.target.result
+      if (preview && previewImg && placeholder) {
+        previewImg.src = e.target.result
         preview.style.display = "block"
         placeholder.style.display = "none"
       }
@@ -434,9 +482,15 @@ function uploadCoverPhoto() {
 
   const formData = new FormData()
   formData.append("cover_photo", file)
+  formData.append("action", "upload_cover")
 
-  fetch("", {
+  const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
+
+  fetch(profileUrl, {
     method: "POST",
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+    },
     body: formData,
   })
     .then((response) => {
@@ -446,14 +500,30 @@ function uploadCoverPhoto() {
       return response.text();
     })
     .then((text) => {
+      // Clean backticks from response if present
+      let cleanedText = text;
+      if (text.startsWith('`')) {
+        cleanedText = text.slice(1);
+        if (cleanedText.endsWith('`')) {
+          cleanedText = cleanedText.slice(0, -1);
+        }
+      }
+      
+      const data = JSON.parse(cleanedText);
       
       if (data.success) {
         showNotification("Cover photo uploaded successfully!", "success")
         removeCoverPreview()
         // Update the cover photo display
-        const coverImg = document.querySelector(".profile-cover")
+        const coverImg = document.getElementById("coverPhoto")
         if (coverImg && data.cover_url) {
-          coverImg.style.backgroundImage = `url(${data.cover_url})`
+          coverImg.src = data.cover_url
+        }
+        
+        // Close modal
+        const modal = window.bootstrap.Modal.getInstance(document.getElementById("coverPhotoModal"))
+        if (modal) {
+          modal.hide()
         }
       } else {
         showNotification("Error uploading cover photo: " + data.message, "error")
@@ -476,9 +546,15 @@ function uploadProfilePhoto() {
 
   const formData = new FormData()
   formData.append("profile_photo", file)
+  formData.append("action", "upload_profile")
 
-  fetch("", {
+  const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
+
+  fetch(profileUrl, {
     method: "POST",
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+    },
     body: formData,
   })
     .then((response) => {
@@ -504,12 +580,18 @@ function uploadProfilePhoto() {
         removeProfilePreview()
         
         // Update all profile images on the page
-        const profileImages = document.querySelectorAll(".profile-pic, .user-avatar")
+        const profileImages = document.querySelectorAll("#profilePic, .profile-pic-nav, .user-dropdown-avatar")
         profileImages.forEach((img) => {
           if (data.profile_url) {
             img.src = data.profile_url
           }
         })
+        
+        // Close modal
+        const modal = window.bootstrap.Modal.getInstance(document.getElementById("profilePhotoModal"))
+        if (modal) {
+          modal.hide()
+        }
       } else {
         showNotification("Error uploading profile photo: " + data.message, "error")
       }
