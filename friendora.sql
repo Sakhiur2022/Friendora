@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2025 at 10:05 AM
+-- Generation Time: Jul 28, 2025 at 07:08 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -94,7 +94,8 @@ INSERT INTO `comment` (`id`, `content`, `created_at`, `user_id`, `post_id`) VALU
 (19, 'ho ho', '2025-07-27 18:19:32', 1, 27),
 (20, 'hello', '2025-07-27 19:39:57', 1, 28),
 (21, 'Cool', '2025-07-27 19:41:13', 1, 23),
-(22, 'Hello', '2025-07-28 12:50:29', 1, 29);
+(22, 'Hello', '2025-07-28 12:50:29', 1, 29),
+(23, 'hoho', '2025-07-28 20:40:24', 3, 29);
 
 -- --------------------------------------------------------
 
@@ -300,7 +301,8 @@ INSERT INTO `post` (`id`, `content`, `created_at`, `creator_id`, `group_id`) VAL
 (26, 'Feeling great', '2025-07-27 18:02:32', 5, NULL),
 (27, 'Checking things', '2025-07-27 18:04:07', 5, NULL),
 (28, 'Hey guys', '2025-07-27 18:15:25', 2, NULL),
-(29, 'Hi', '2025-07-28 12:48:25', 1, NULL);
+(29, 'Hi', '2025-07-28 12:48:25', 1, NULL),
+(30, 'Hey guys, how are you', '2025-07-28 21:11:09', 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -370,6 +372,17 @@ CREATE TABLE `reacts` (
   `reacted_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `reacts`
+--
+
+INSERT INTO `reacts` (`id`, `uid`, `post_id`, `type`, `reacted_at`) VALUES
+(2, 1, 29, 'angry', '2025-07-28 14:42:38'),
+(3, 1, 19, 'wow', '2025-07-28 14:52:20'),
+(4, 2, 29, 'like', '2025-07-28 16:38:56'),
+(5, 3, 29, 'wow', '2025-07-28 16:39:26'),
+(6, 3, 24, 'like', '2025-07-28 19:58:50');
+
 -- --------------------------------------------------------
 
 --
@@ -382,6 +395,13 @@ CREATE TABLE `shares` (
   `post_id` int(11) NOT NULL,
   `shared_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `shares`
+--
+
+INSERT INTO `shares` (`id`, `uid`, `post_id`, `shared_at`) VALUES
+(1, 1, 29, '2025-07-28 14:33:28');
 
 -- --------------------------------------------------------
 
@@ -630,7 +650,8 @@ ALTER TABLE `profile`
 --
 ALTER TABLE `reacts`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `reacts_ibfk_1` (`uid`);
+  ADD KEY `reacts_ibfk_1` (`uid`),
+  ADD KEY `post_id` (`post_id`);
 
 --
 -- Indexes for table `shares`
@@ -685,7 +706,7 @@ ALTER TABLE `badge_description`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `group`
@@ -715,7 +736,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `profile`
@@ -727,7 +748,13 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `reacts`
 --
 ALTER TABLE `reacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `shares`
+--
+ALTER TABLE `shares`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tokens`
@@ -855,7 +882,8 @@ ALTER TABLE `profile`
 -- Constraints for table `reacts`
 --
 ALTER TABLE `reacts`
-  ADD CONSTRAINT `reacts_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `reacts_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reacts_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `shares`
