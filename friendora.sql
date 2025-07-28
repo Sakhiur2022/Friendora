@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2025 at 04:19 PM
+-- Generation Time: Jul 28, 2025 at 10:05 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -66,7 +66,7 @@ CREATE TABLE `block` (
 --
 
 CREATE TABLE `comment` (
-  `id` int(3) NOT NULL,
+  `id` int(11) NOT NULL,
   `content` text DEFAULT NULL,
   `created_at` datetime DEFAULT current_timestamp(),
   `user_id` int(3) DEFAULT NULL,
@@ -93,7 +93,8 @@ INSERT INTO `comment` (`id`, `content`, `created_at`, `user_id`, `post_id`) VALU
 (18, 'What things??', '2025-07-27 18:16:36', 2, 27),
 (19, 'ho ho', '2025-07-27 18:19:32', 1, 27),
 (20, 'hello', '2025-07-27 19:39:57', 1, 28),
-(21, 'Cool', '2025-07-27 19:41:13', 1, 23);
+(21, 'Cool', '2025-07-27 19:41:13', 1, 23),
+(22, 'Hello', '2025-07-28 12:50:29', 1, 29);
 
 -- --------------------------------------------------------
 
@@ -151,7 +152,7 @@ CREATE TABLE `joins` (
 --
 
 CREATE TABLE `media` (
-  `id` int(3) NOT NULL,
+  `id` int(11) NOT NULL,
   `post_id` int(3) NOT NULL,
   `media_type` varchar(100) NOT NULL,
   `media_url` text NOT NULL,
@@ -209,16 +210,20 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `notification`
+-- Table structure for table `notifications`
 --
 
-CREATE TABLE `notification` (
-  `id` int(3) NOT NULL,
-  `content` text DEFAULT NULL,
-  `created_at` datetime DEFAULT current_timestamp(),
+CREATE TABLE `notifications` (
+  `notification_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `action_by` int(11) DEFAULT NULL,
+  `type` varchar(50) DEFAULT 'general',
+  `content` text NOT NULL,
+  `related_post_id` int(11) DEFAULT NULL,
+  `related_comment_id` int(11) DEFAULT NULL,
   `is_read` tinyint(1) DEFAULT 0,
-  `type` varchar(50) DEFAULT NULL,
-  `uid` int(3) DEFAULT NULL
+  `created_at` datetime DEFAULT current_timestamp(),
+  `read_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -228,7 +233,7 @@ CREATE TABLE `notification` (
 --
 
 CREATE TABLE `photos` (
-  `id` int(3) NOT NULL,
+  `id` int(11) NOT NULL,
   `url` text DEFAULT NULL,
   `caption` text DEFAULT NULL,
   `user_id` int(3) DEFAULT NULL
@@ -266,7 +271,7 @@ INSERT INTO `photos` (`id`, `url`, `caption`, `user_id`) VALUES
 --
 
 CREATE TABLE `post` (
-  `id` int(3) NOT NULL,
+  `id` int(11) NOT NULL,
   `content` text DEFAULT NULL,
   `created_at` datetime DEFAULT current_timestamp(),
   `creator_id` int(3) DEFAULT NULL,
@@ -294,7 +299,24 @@ INSERT INTO `post` (`id`, `content`, `created_at`, `creator_id`, `group_id`) VAL
 (24, 'Enjoying sunlight', '2025-07-27 02:08:06', 3, NULL),
 (26, 'Feeling great', '2025-07-27 18:02:32', 5, NULL),
 (27, 'Checking things', '2025-07-27 18:04:07', 5, NULL),
-(28, 'Hey guys', '2025-07-27 18:15:25', 2, NULL);
+(28, 'Hey guys', '2025-07-27 18:15:25', 2, NULL),
+(29, 'Hi', '2025-07-28 12:48:25', 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `posts_counter`
+-- (See below for the actual view)
+--
+CREATE TABLE `posts_counter` (
+`post_id` int(11)
+,`comment_count` bigint(21)
+,`like_count` bigint(21)
+,`haha_count` bigint(21)
+,`angry_count` bigint(21)
+,`wow_count` bigint(21)
+,`share_count` bigint(21)
+);
 
 -- --------------------------------------------------------
 
@@ -341,10 +363,11 @@ INSERT INTO `profile` (`id`, `hometown`, `country`, `shortBio`, `city`, `pfp`, `
 --
 
 CREATE TABLE `reacts` (
+  `id` int(11) NOT NULL,
   `uid` int(3) NOT NULL,
   `post_id` int(3) NOT NULL,
   `type` varchar(50) DEFAULT NULL,
-  `icon_url` text DEFAULT NULL
+  `reacted_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -354,8 +377,10 @@ CREATE TABLE `reacts` (
 --
 
 CREATE TABLE `shares` (
-  `uid` int(3) NOT NULL,
-  `post_id` int(3) NOT NULL
+  `id` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `shared_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -377,7 +402,7 @@ CREATE TABLE `tokens` (
 --
 
 CREATE TABLE `users` (
-  `id` int(3) NOT NULL,
+  `id` int(11) NOT NULL,
   `fname` varchar(50) DEFAULT NULL,
   `minit` varchar(50) DEFAULT NULL,
   `lname` varchar(50) DEFAULT NULL,
@@ -416,9 +441,10 @@ DELIMITER ;
 -- (See below for the actual view)
 --
 CREATE TABLE `users_basic` (
-`user_id` int(3)
+`user_id` int(11)
 ,`Full_Name` varchar(152)
 ,`profile_photo` text
+,`age` bigint(21)
 );
 
 -- --------------------------------------------------------
@@ -464,11 +490,20 @@ INSERT INTO `websites` (`profile_id`, `url`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure for view `posts_counter`
+--
+DROP TABLE IF EXISTS `posts_counter`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `posts_counter`  AS SELECT `post`.`id` AS `post_id`, count(distinct `comment`.`id`) AS `comment_count`, count(distinct case when `reacts`.`type` = 'like' then `reacts`.`id` end) AS `like_count`, count(distinct case when `reacts`.`type` = 'haha' then `reacts`.`id` end) AS `haha_count`, count(distinct case when `reacts`.`type` = 'angry' then `reacts`.`id` end) AS `angry_count`, count(distinct case when `reacts`.`type` = 'wow' then `reacts`.`id` end) AS `wow_count`, count(distinct `shares`.`id`) AS `share_count` FROM (((`post` left join `comment` on(`comment`.`post_id` = `post`.`id`)) left join `reacts` on(`reacts`.`post_id` = `post`.`id`)) left join `shares` on(`shares`.`post_id` = `post`.`id`)) GROUP BY `post`.`id` ;
+
+-- --------------------------------------------------------
+
+--
 -- Structure for view `users_basic`
 --
 DROP TABLE IF EXISTS `users_basic`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `users_basic`  AS SELECT `users`.`id` AS `user_id`, concat_ws(' ',trim(`users`.`fname`),trim(coalesce(`users`.`minit`,'')),trim(`users`.`lname`)) AS `Full_Name`, `profile`.`pfp` AS `profile_photo` FROM (`users` join `profile` on(`users`.`id` = `profile`.`user_id`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `users_basic`  AS SELECT `users`.`id` AS `user_id`, concat_ws(' ',trim(`users`.`fname`),trim(coalesce(`users`.`minit`,'')),trim(`users`.`lname`)) AS `Full_Name`, `profile`.`pfp` AS `profile_photo`, timestampdiff(YEAR,`users`.`DOB`,curdate()) AS `age` FROM (`users` join `profile` on(`users`.`id` = `profile`.`user_id`)) ;
 
 --
 -- Indexes for dumped tables
@@ -559,11 +594,14 @@ ALTER TABLE `messages`
   ADD KEY `receiver_id` (`receiver_id`);
 
 --
--- Indexes for table `notification`
+-- Indexes for table `notifications`
 --
-ALTER TABLE `notification`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `uid` (`uid`);
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`notification_id`),
+  ADD KEY `idx_user_id` (`user_id`),
+  ADD KEY `idx_type` (`type`),
+  ADD KEY `idx_is_read` (`is_read`),
+  ADD KEY `action_by` (`action_by`);
 
 --
 -- Indexes for table `photos`
@@ -591,14 +629,16 @@ ALTER TABLE `profile`
 -- Indexes for table `reacts`
 --
 ALTER TABLE `reacts`
-  ADD PRIMARY KEY (`uid`,`post_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `reacts_ibfk_1` (`uid`);
 
 --
 -- Indexes for table `shares`
 --
 ALTER TABLE `shares`
-  ADD PRIMARY KEY (`uid`,`post_id`),
-  ADD KEY `post_id` (`post_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `post_id` (`post_id`),
+  ADD KEY `shares_ibfk_1` (`uid`);
 
 --
 -- Indexes for table `tokens`
@@ -645,7 +685,7 @@ ALTER TABLE `badge_description`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `group`
@@ -657,31 +697,37 @@ ALTER TABLE `group`
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `notification`
+-- AUTO_INCREMENT for table `notifications`
 --
-ALTER TABLE `notification`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `notifications`
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `reacts`
+--
+ALTER TABLE `reacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tokens`
@@ -693,7 +739,7 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_delete_log`
@@ -780,10 +826,11 @@ ALTER TABLE `messages`
   ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`receiver_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `notification`
+-- Constraints for table `notifications`
 --
-ALTER TABLE `notification`
-  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `notifications`
+  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notifications_ibfk_2` FOREIGN KEY (`action_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `photos`
