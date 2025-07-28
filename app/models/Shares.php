@@ -10,7 +10,7 @@ class  Shares
     protected $allowedColumns = [
         'uid',
         'post_id',
-
+        'shared_at'
     ];
 
     public function getErrors()
@@ -21,8 +21,8 @@ class  Shares
     public function createTable()
     {
         $sql = "
-          CREATE IF NOT EXISTS TABLE `shares` (
-  `id` int(11) NOT NULL,
+          CREATE TABLE IF NOT EXISTS `shares` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   `shared_at` datetime NOT NULL DEFAULT current_timestamp(),

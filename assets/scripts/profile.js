@@ -145,6 +145,27 @@ function generateNotificationMessage(notification) {
   }
 }
 
+// Helper functions for reactions
+function getReactionIcon(reactionType) {
+  const icons = {
+    'like': 'bi-heart-fill',
+    'haha': 'bi-emoji-laughing-fill',
+    'wow': 'bi-emoji-surprise-fill',
+    'angry': 'bi-emoji-angry-fill'
+  };
+  return icons[reactionType] || 'bi-heart';
+}
+
+function getReactionText(reactionType) {
+  const texts = {
+    'like': 'Like',
+    'haha': 'Haha',
+    'wow': 'Wow',
+    'angry': 'Angry'
+  };
+  return texts[reactionType] || 'Like';
+}
+
 function initializePage() {
   // Add loading animation
   document.body.classList.add("loading")
@@ -646,7 +667,13 @@ function transformPostsData(rawPosts) {
       author_avatar: authorAvatar,
       time_ago: timeAgo,
       media: media,
-      created_at: post.created_at
+      created_at: post.created_at,
+      like_count: parseInt(post.like_count) || 0,
+      haha_count: parseInt(post.haha_count) || 0,
+      wow_count: parseInt(post.wow_count) || 0,
+      angry_count: parseInt(post.angry_count) || 0,
+      share_count: parseInt(post.share_count) || 0,
+      comment_count: parseInt(post.comment_count) || 0
     };
   });
 }
@@ -732,6 +759,24 @@ function displayPosts(posts) {
     return
   }
 
+  // Process posts to ensure proper reaction count structure
+  posts.forEach(post => {
+    // Ensure reactions structure exists with proper counts from PHP
+    if (!post.reactions) {
+      post.reactions = {
+        like: parseInt(post.like_count) || 0,
+        haha: parseInt(post.haha_count) || 0,
+        wow: parseInt(post.wow_count) || 0,
+        angry: parseInt(post.angry_count) || 0
+      };
+    }
+    
+    // Ensure share_count is properly set
+    post.share_count = parseInt(post.share_count) || 0;
+    
+    console.log(`Post ${post.id} reaction counts:`, post.reactions, `shares: ${post.share_count}`);
+  });
+
   console.log("Creating HTML for", posts.length, "posts");
   postsContainer.innerHTML = posts.map((post) => createPostHTML(post)).join("")
 
@@ -757,13 +802,7 @@ function displayPosts(posts) {
         })
       }
 
-      // Comment button
-      const commentBtn = postElement.querySelector(".comment-btn")
-      if (commentBtn) {
-        commentBtn.addEventListener("click", () => toggleComments(post.id))
-      }
-
-      // Comment submit
+      // Comment submit (the comment button now uses onclick in HTML)
       const commentSubmitBtn = postElement.querySelector(".comment-submit-btn")
       const commentInput = postElement.querySelector(".comment-input")
       if (commentSubmitBtn && commentInput) {
@@ -819,15 +858,70 @@ function createPostHTML(post) {
         
         ${mediaHTML}
         
-        <div class="post-actions d-flex justify-content-between align-items-center py-2 border-top">
-          <button class="btn cyber-btn-ghost like-btn">
-            <i class="bi bi-heart me-2"></i>Like
+        <!-- Cyberpunk Reaction System -->
+        <div class="post-reactions-container mb-3">
+          <div class="reaction-counts d-flex align-items-center gap-3">
+            <span class="reaction-count ${(post.reactions?.like || 0) > 0 ? 'has-reactions' : ''}" data-type="like">
+              <i class="bi bi-heart-fill cyber-heart"></i>
+              <span class="count-number">${post.reactions?.like || 0}</span>
+            </span>
+            <span class="reaction-count ${(post.reactions?.haha || 0) > 0 ? 'has-reactions' : ''}" data-type="haha">
+              <i class="bi bi-emoji-laughing-fill cyber-laugh"></i>
+              <span class="count-number">${post.reactions?.haha || 0}</span>
+            </span>
+            <span class="reaction-count ${(post.reactions?.wow || 0) > 0 ? 'has-reactions' : ''}" data-type="wow">
+              <i class="bi bi-emoji-surprise-fill cyber-wow"></i>
+              <span class="count-number">${post.reactions?.wow || 0}</span>
+            </span>
+            <span class="reaction-count ${(post.reactions?.angry || 0) > 0 ? 'has-reactions' : ''}" data-type="angry">
+              <i class="bi bi-emoji-angry-fill cyber-angry"></i>
+              <span class="count-number">${post.reactions?.angry || 0}</span>
+            </span>
+            ${(post.share_count || 0) > 0 ? `
+              <span class="reaction-count has-reactions">
+                <i class="bi bi-share-fill cyber-share"></i>
+                <span class="count-number">${post.share_count || 0}</span>
+              </span>
+            ` : ''}
+          </div>
+        </div>
+        
+        <!-- Dreamy Action Buttons -->
+        <div class="post-actions cyber-actions-grid">
+          <div class="reaction-selector">
+            <button class="btn cyber-btn-ghost main-reaction-btn ${post.user_reaction ? 'reacted' : ''}" 
+                    data-reaction="${post.user_reaction || 'like'}" onclick="toggleReactionSelector(${post.id})">
+              <i class="bi ${getReactionIcon(post.user_reaction || 'like')} me-2 reaction-icon"></i>
+              <span class="reaction-text">${getReactionText(post.user_reaction || 'like')}</span>
+            </button>
+            <div class="reaction-dropdown cyber-dropdown" id="reactionDropdown${post.id}">
+              <button class="reaction-option" onclick="reactToPost(${post.id}, 'like')">
+                <i class="bi bi-heart-fill cyber-heart"></i>
+                <span>Like</span>
+              </button>
+              <button class="reaction-option" onclick="reactToPost(${post.id}, 'haha')">
+                <i class="bi bi-emoji-laughing-fill cyber-laugh"></i>
+                <span>Haha</span>
+              </button>
+              <button class="reaction-option" onclick="reactToPost(${post.id}, 'wow')">
+                <i class="bi bi-emoji-surprise-fill cyber-wow"></i>
+                <span>Wow</span>
+              </button>
+              <button class="reaction-option" onclick="reactToPost(${post.id}, 'angry')">
+                <i class="bi bi-emoji-angry-fill cyber-angry"></i>
+                <span>Angry</span>
+              </button>
+            </div>
+          </div>
+          
+          <button class="btn cyber-btn-ghost comment-btn" onclick="toggleComments(${post.id})">
+            <i class="bi bi-chat-dots-fill me-2 cyber-comment"></i>
+            <span>Comment</span>
           </button>
-          <button class="btn cyber-btn-ghost comment-btn">
-            <i class="bi bi-chat me-2"></i>Comment
-          </button>
-          <button class="btn cyber-btn-ghost share-btn">
-            <i class="bi bi-share me-2"></i>Share
+          
+          <button class="btn cyber-btn-ghost share-btn" onclick="sharePost(${post.id})">
+            <i class="bi bi-share-fill me-2 cyber-share"></i>
+            <span>Share</span>
           </button>
         </div>
         
@@ -1724,6 +1818,14 @@ function handleOutsideClick(e) {
     closeAllDropdowns()
   }
 
+  // Close reaction dropdowns when clicking outside
+  if (!e.target.closest(".reaction-selector")) {
+    const reactionDropdowns = document.querySelectorAll(".reaction-dropdown.show")
+    reactionDropdowns.forEach(dropdown => {
+      dropdown.classList.remove("show")
+    })
+  }
+
   if (!e.target.closest(".mobile-menu") && !e.target.closest(".cyber-hamburger")) {
     const mobileMenu = document.getElementById("mobileMenu")
     const hamburger = document.querySelector(".cyber-hamburger")
@@ -1736,7 +1838,202 @@ function handleOutsideClick(e) {
 }
 
 function sharePost(postId) {
-  showNotification("Post shared!", "success")
+  const formData = new FormData()
+  formData.append("action", "share_post")
+  formData.append("post_id", postId)
+
+  const postUrl = window.ROOT ? `${window.ROOT}/post` : './post';
+
+  fetch(postUrl, {
+    method: "POST",
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+    },
+    body: formData,
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((text) => {
+      // Clean backticks from response if present
+      let cleanedText = text;
+      if (text.startsWith('`')) {
+        cleanedText = text.slice(1);
+        if (cleanedText.endsWith('`')) {
+          cleanedText = cleanedText.slice(0, -1);
+        }
+      }
+      
+      const data = JSON.parse(cleanedText);
+      
+      if (data.success) {
+        showNotification("✨ Post shared in the digital dreamscape! ✨", "success")
+        // Add dreamy share animation
+        const shareBtn = document.querySelector(`[data-post-id="${postId}"] .share-btn`);
+        if (shareBtn) {
+          shareBtn.classList.add('cyber-pulse');
+          setTimeout(() => shareBtn.classList.remove('cyber-pulse'), 1000);
+        }
+        // Update share counts if provided
+        if (data.counts) {
+          updatePostReactionCounts(postId, data.counts);
+        } else {
+          loadPosts();
+        }
+      } else {
+        showNotification("Unable to share in the dreamscape: " + data.message, "error")
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error)
+      showNotification("Network interference in the dream realm", "error")
+    })
+}
+
+// Dreamy Reaction Functions
+function toggleReactionSelector(postId) {
+  const dropdown = document.getElementById(`reactionDropdown${postId}`);
+  const allDropdowns = document.querySelectorAll('.reaction-dropdown');
+  
+  // Close all other dropdowns
+  allDropdowns.forEach(dd => {
+    if (dd.id !== `reactionDropdown${postId}`) {
+      dd.classList.remove('show');
+    }
+  });
+  
+  // Toggle current dropdown with dreamy animation
+  dropdown.classList.toggle('show');
+  
+  // Add cyberpunk glow effect
+  if (dropdown.classList.contains('show')) {
+    dropdown.style.animation = 'cyber-glow-in 0.3s ease-out';
+  }
+}
+
+function reactToPost(postId, reactionType) {
+  const formData = new FormData()
+  formData.append("action", "react_post")
+  formData.append("post_id", postId)
+  formData.append("reaction_type", reactionType)
+
+  const postUrl = window.ROOT ? `${window.ROOT}/post` : './post';
+
+  fetch(postUrl, {
+    method: "POST",
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+    },
+    body: formData,
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((text) => {
+      // Clean backticks from response if present
+      let cleanedText = text;
+      if (text.startsWith('`')) {
+        cleanedText = text.slice(1);
+        if (cleanedText.endsWith('`')) {
+          cleanedText = cleanedText.slice(0, -1);
+        }
+      }
+      
+      const data = JSON.parse(cleanedText);
+      
+      if (data.success) {
+        // Close reaction dropdown
+        const dropdown = document.getElementById(`reactionDropdown${postId}`);
+        if (dropdown) dropdown.classList.remove('show');
+        
+        // Update reaction button with dreamy feedback
+        const reactionBtn = document.querySelector(`[data-post-id="${postId}"] .main-reaction-btn`);
+        if (reactionBtn) {
+          if (data.action === 'removed') {
+            reactionBtn.classList.remove('reacted');
+            reactionBtn.setAttribute('data-reaction', 'like');
+            reactionBtn.innerHTML = `<i class="bi bi-heart me-2 reaction-icon"></i><span class="reaction-text">Like</span>`;
+            showNotification("🌙 Reaction dissolved into the dream...", "info");
+          } else {
+            reactionBtn.classList.add('reacted');
+            reactionBtn.setAttribute('data-reaction', reactionType);
+            reactionBtn.innerHTML = `<i class="bi ${getReactionIcon(reactionType)} me-2 reaction-icon"></i><span class="reaction-text">${getReactionText(reactionType)}</span>`;
+            
+            // Add dreamy reaction feedback
+            const reactionEmojis = {
+              'like': '💖',
+              'haha': '😂',
+              'wow': '😮',
+              'angry': '😠'
+            };
+            showNotification(`${reactionEmojis[reactionType]} Emotion resonates through the dreamscape!`, "success");
+            
+            // Add cyber pulse effect
+            reactionBtn.classList.add('cyber-pulse');
+            setTimeout(() => reactionBtn.classList.remove('cyber-pulse'), 800);
+          }
+        }
+        
+        // Reload posts to show updated counts
+        if (data.counts) {
+          updatePostReactionCounts(postId, data.counts);
+        } else {
+          loadPosts();
+        }
+      } else {
+        showNotification("Unable to sync emotions: " + data.message, "error")
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error)
+      showNotification("Emotional interference detected", "error")
+    })
+}
+
+function updatePostReactionCounts(postId, counts) {
+  console.log(`Updating reaction counts for post ${postId}:`, counts);
+  
+  // Update individual reaction counts
+  const reactionTypes = ['like', 'haha', 'wow', 'angry'];
+  reactionTypes.forEach(type => {
+    const countElement = document.querySelector(`[data-post-id="${postId}"] .reaction-count[data-type="${type}"] .count-number`);
+    if (countElement && counts[type + '_count'] !== undefined) {
+      countElement.textContent = counts[type + '_count'] || 0;
+      
+      // Add/remove has-reactions class based on count
+      const reactionCountElement = countElement.closest('.reaction-count');
+      if (reactionCountElement) {
+        if (counts[type + '_count'] > 0) {
+          reactionCountElement.classList.add('has-reactions');
+        } else {
+          reactionCountElement.classList.remove('has-reactions');
+        }
+      }
+    }
+  });
+  
+  // Update share count if provided
+  if (counts.share_count !== undefined) {
+    const shareCountElement = document.querySelector(`[data-post-id="${postId}"] .share-count .count-number`);
+    if (shareCountElement) {
+      shareCountElement.textContent = counts.share_count || 0;
+      
+      const shareCountContainer = shareCountElement.closest('.share-count');
+      if (shareCountContainer) {
+        if (counts.share_count > 0) {
+          shareCountContainer.classList.add('has-reactions');
+        } else {
+          shareCountContainer.classList.remove('has-reactions');
+        }
+      }
+    }
+  }
 }
 
 function handleNavbarScroll() {

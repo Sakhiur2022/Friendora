@@ -21,12 +21,19 @@ class Post {
         $user = new User;
         $profiles = new Profiles;
         $image = new Image;
+        $reacts = new Reacts;
+        $shares = new Shares;
+        $postCounter = new Post_counter;
+        $postCounter = new Post_counter;
         
         // Create tables
         $posts->createTable();
         $comment->createTable();
         $media->createTable();
         $photos->createTable();
+        $reacts->createTable();
+        $shares->createTable();
+        $postCounter->createTable();
         
         if (!$ses->is_loggedIn()) {
             Utils::redirect("login");
@@ -40,8 +47,10 @@ class Post {
 
             switch ($action) {
                 case 'create_post':
-                    echo json_encode($this->createPost($request, $posts, $media, $photos, $image));
-                    return;                case 'edit_post':
+                    echo json_encode($this->createPost($request, $posts, $media, $photos, $image, $reacts, $shares));
+                    return;
+                    
+                case 'edit_post':
                     echo json_encode($this->editPost($request, $posts));
                     return;
                     
@@ -54,11 +63,23 @@ class Post {
                     return;
                     
                 case 'get_posts':
-                    echo json_encode($this->getPosts($posts, $user, $profiles, $media));
+                    echo json_encode($this->getPosts($posts, $user, $profiles, $media, $reacts, $shares));
                     return;
                     
                 case 'get_comments':
                     echo json_encode($this->getComments($request, $comment, $user, $profiles));
+                    return;
+                    
+                case 'react_post':
+                    echo json_encode($this->reactToPost($request, $reacts));
+                    return;
+                    
+                case 'share_post':
+                    echo json_encode($this->sharePost($request, $shares));
+                    return;
+                    
+                case 'get_post_stats':
+                    echo json_encode($this->getPostStats($request, $postCounter));
                     return;
                     
                 default:
@@ -70,7 +91,7 @@ class Post {
         $this->loadView("post", $data);
     }
     
-    private function createPost($request, $posts, $media, $photos, $image) {
+    private function createPost($request, $posts, $media, $photos, $image, $reacts, $shares) {
         $content = trim($request->post('content'));
         $userId = Utils::user('id');
         
@@ -110,7 +131,7 @@ class Post {
         }
 
         // Get the created post with user info
-        $postInfo = $this->getPostById($postId, $posts, new User, new Profiles, $media);
+        $postInfo = $this->getPostById($postId, $posts, new User, new Profiles, $media, $reacts, $shares);
 
         return [
             'success' => true,
@@ -254,7 +275,7 @@ class Post {
         return ['success' => false, 'message' => 'Failed to add comment'];
     }
     
-    private function getPosts($posts, $user, $profiles, $media) {
+    private function getPosts($posts, $user, $profiles, $media, $reacts, $shares) {
         $userId = Utils::user('id');
         
         // Get posts by current user, ordered by creation date
@@ -268,7 +289,7 @@ class Post {
         
         if ($userPosts) {
             foreach ($userPosts as $post) {
-                $postDetails = $this->getPostById($post->id, $posts, $user, $profiles, $media);
+                $postDetails = $this->getPostById($post->id, $posts, $user, $profiles, $media, $reacts, $shares);
                 if ($postDetails) {
                     $postsWithDetails[] = $postDetails;
                 }
@@ -313,13 +334,39 @@ class Post {
         ];
     }
     
-    private function getPostById($postId, $posts, $user, $profiles, $media) {
+    private function getPostById($postId, $posts, $user, $profiles, $media, $reacts = null, $shares = null) {
         $post = $posts->first(['id' => $postId]);
         if (!$post) return null;
         
         $userInfo = $user->first(['id' => $post->creator_id]);
         $profileInfo = $profiles->first(['user_id' => $post->creator_id]);
         $postMedia = $media->where(['post_id' => $postId]);
+        
+        // Get reaction counts if reacts model is available
+        $reactions = ['like' => 0, 'haha' => 0, 'angry' => 0, 'wow' => 0];
+        $userReaction = null;
+        $shareCount = 0;
+        
+        if ($reacts) {
+            // Get all reactions for this post
+            $postReacts = $reacts->where(['post_id' => $postId]);
+            if ($postReacts) {
+                foreach ($postReacts as $react) {
+                    if (isset($reactions[$react->type])) {
+                        $reactions[$react->type]++;
+                    }
+                    // Check if current user has reacted
+                    if ($react->uid == Utils::user('id')) {
+                        $userReaction = $react->type;
+                    }
+                }
+            }
+        }
+        
+        if ($shares) {
+            $postShares = $shares->where(['post_id' => $postId]);
+            $shareCount = $postShares ? count($postShares) : 0;
+        }
         
         return [
             'id' => $post->id,
@@ -329,7 +376,10 @@ class Post {
             'author_name' => $userInfo ? $userInfo->fname . ' ' . $userInfo->lname : 'Unknown User',
             'author_avatar' => $profileInfo->pfp ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=45&h=45&fit=crop&crop=face',
             'media' => $postMedia ? array_map(function($m) { return ['url' => $m->media_url, 'type' => $m->media_type]; }, $postMedia) : [],
-            'time_ago' => $this->timeAgo($post->created_at)
+            'time_ago' => $this->timeAgo($post->created_at),
+            'reactions' => $reactions,
+            'user_reaction' => $userReaction,
+            'share_count' => $shareCount
         ];
     }
     
@@ -393,6 +443,141 @@ class Post {
         }
 
         return ['success' => false, 'message' => 'Failed to save file'];
+    }
+    
+    private function reactToPost($request, $reacts) {
+        $postId = $request->post('post_id');
+        $reactionType = $request->post('reaction_type'); // like, haha, angry, wow
+        $userId = Utils::user('id');
+        
+        if (!in_array($reactionType, ['like', 'haha', 'angry', 'wow'])) {
+            return ['success' => false, 'message' => 'Invalid reaction type'];
+        }
+        
+        // Check if user already reacted to this post
+        $existingReaction = $reacts->first(['uid' => $userId, 'post_id' => $postId]);
+        
+        $result = false;
+        $action = '';
+        $message = '';
+        
+        if ($existingReaction) {
+            if ($existingReaction->type === $reactionType) {
+                // Remove reaction if same type
+                $result = $reacts->delete($existingReaction->id);
+                $action = 'removed';
+                $message = $result !== false ? 'Reaction removed' : 'Failed to remove reaction';
+            } else {
+                // Update reaction type
+                $result = $reacts->update(['type' => $reactionType], $existingReaction->id);
+                $action = 'updated';
+                $message = $result !== false ? 'Reaction updated' : 'Failed to update reaction';
+            }
+        } else {
+            // Add new reaction
+            $reactionData = [
+                'uid' => $userId,
+                'post_id' => $postId,
+                'type' => $reactionType
+            ];
+            
+            $result = $reacts->insert($reactionData);
+            $action = 'added';
+            $message = $result !== false ? 'Reaction added' : 'Failed to add reaction';
+        }
+        
+        // Get updated counts from posts_counter view
+        $counts = [];
+        if ($result !== false) {
+            $postCounter = new Post_counter();
+            $counterData = $postCounter->first(['post_id' => $postId]);
+            if ($counterData) {
+                $counts = [
+                    'like_count' => $counterData->like_count ?? 0,
+                    'haha_count' => $counterData->haha_count ?? 0,
+                    'wow_count' => $counterData->wow_count ?? 0,
+                    'angry_count' => $counterData->angry_count ?? 0,
+                    'share_count' => $counterData->share_count ?? 0,
+                    'comment_count' => $counterData->comment_count ?? 0
+                ];
+            }
+        }
+        
+        return [
+            'success' => $result !== false,
+            'message' => $message,
+            'action' => $action,
+            'reaction_type' => $reactionType,
+            'counts' => $counts
+        ];
+    }
+    
+    private function sharePost($request, $shares) {
+        $postId = $request->post('post_id');
+        $userId = Utils::user('id');
+        
+        // Check if user already shared this post
+        $existingShare = $shares->first(['uid' => $userId, 'post_id' => $postId]);
+        
+        if ($existingShare) {
+            return ['success' => false, 'message' => 'Post already shared'];
+        }
+        
+        $shareData = [
+            'uid' => $userId,
+            'post_id' => $postId
+        ];
+        
+        $result = $shares->insert($shareData);
+        
+        // Get updated counts from posts_counter view
+        $counts = [];
+        if ($result !== false) {
+            $postCounter = new Post_counter();
+            $counterData = $postCounter->first(['post_id' => $postId]);
+            if ($counterData) {
+                $counts = [
+                    'like_count' => $counterData->like_count ?? 0,
+                    'haha_count' => $counterData->haha_count ?? 0,
+                    'wow_count' => $counterData->wow_count ?? 0,
+                    'angry_count' => $counterData->angry_count ?? 0,
+                    'share_count' => $counterData->share_count ?? 0,
+                    'comment_count' => $counterData->comment_count ?? 0
+                ];
+            }
+        }
+        
+        return [
+            'success' => $result !== false,
+            'message' => $result !== false ? 'Post shared successfully' : 'Failed to share post',
+            'counts' => $counts
+        ];
+    }
+    
+    private function getPostStats($request, $postCounter) {
+        $postId = $request->post('post_id');
+        
+        // Get stats from the posts_counter view
+        $stats = $postCounter->first(['post_id' => $postId]);
+        
+        if ($stats) {
+            return [
+                'success' => true,
+                'stats' => [
+                    'comment_count' => $stats->comment_count ?? 0,
+                    'like_count' => $stats->like_count ?? 0,
+                    'haha_count' => $stats->haha_count ?? 0,
+                    'angry_count' => $stats->angry_count ?? 0,
+                    'wow_count' => $stats->wow_count ?? 0,
+                    'share_count' => $stats->share_count ?? 0
+                ]
+            ];
+        }
+        
+        return [
+            'success' => false,
+            'message' => 'Post not found'
+        ];
     }    private function timeAgo($datetime) {
         $time = time() - strtotime($datetime);
         

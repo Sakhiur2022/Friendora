@@ -20,9 +20,11 @@ class Profile {
         $posts = new Posts;
         $media = new Media;
         $image = new Image;
+        $post_counter = new Post_counter;
 
         $user_profile->createTable();
         $websites->createTable();
+        $post_counter->createTable();
         $photos->createTable();
         $posts->createTable();
         $media->createTable();
@@ -314,17 +316,38 @@ class Profile {
         $userPhotos = $photos->where(['user_id' => $profile_user_id]);
         error_log("Photos query result: " . (is_array($userPhotos) ? count($userPhotos) . " photos found" : "No photos or error"));
         
-        // Get user posts from Posts table
+        // Get user posts from Posts table with reaction counts
         error_log("=== GETTING POSTS DATA ===");
         $userPosts = $posts->orderBy('created_at DESC', '*', ['creator_id' => $profile_user_id]);
         error_log("Posts query result: " . (is_array($userPosts) ? count($userPosts) . " posts found" : "No posts or error"));
         
-        // Get media for posts
+        // Get media and reaction counts for posts
         if (is_array($userPosts) && !empty($userPosts)) {
+            $post_counter = new Post_counter();
             foreach ($userPosts as $key => $post) {
                 $postMedia = $media->where(['post_id' => $post->id]);
                 $userPosts[$key]->media = $postMedia ?: [];
-                error_log("Post {$post->id} has " . count($userPosts[$key]->media) . " media items");
+                
+                // Get reaction counts from posts_counter view
+                $counters = $post_counter->first(['post_id' => $post->id]);
+                if ($counters) {
+                    $userPosts[$key]->like_count = $counters->like_count ?? 0;
+                    $userPosts[$key]->haha_count = $counters->haha_count ?? 0;
+                    $userPosts[$key]->wow_count = $counters->wow_count ?? 0;
+                    $userPosts[$key]->angry_count = $counters->angry_count ?? 0;
+                    $userPosts[$key]->share_count = $counters->share_count ?? 0;
+                    $userPosts[$key]->comment_count = $counters->comment_count ?? 0;
+                } else {
+                    // Set default counts if no data found
+                    $userPosts[$key]->like_count = 0;
+                    $userPosts[$key]->haha_count = 0;
+                    $userPosts[$key]->wow_count = 0;
+                    $userPosts[$key]->angry_count = 0;
+                    $userPosts[$key]->share_count = 0;
+                    $userPosts[$key]->comment_count = 0;
+                }
+                
+                error_log("Post {$post->id} has " . count($userPosts[$key]->media) . " media items and reaction counts: like={$userPosts[$key]->like_count}, haha={$userPosts[$key]->haha_count}, wow={$userPosts[$key]->wow_count}, angry={$userPosts[$key]->angry_count}");
             }
         }
         
