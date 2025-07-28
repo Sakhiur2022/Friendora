@@ -370,7 +370,16 @@
 
                     <!-- Right Column - Posts -->
                     <div class="col-lg-7">
-                       <?php include 'post.view.php'; ?>
+                        <!-- Posts Container - This is where posts will be loaded via AJAX -->
+                        <div id="post-container" data-userid="<?= $data['profile_user']->id ?? 0 ?>">
+                            <!-- Posts will be loaded here by post.js -->
+                            <div class="text-center py-4">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading posts...</span>
+                                </div>
+                                <div class="mt-2 text-muted">Loading posts...</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -630,6 +639,11 @@
         window.ROOT = "<?=ROOT?>";
     </script>
     
+    <!-- Load JavaScript modules in correct order -->
+    <!-- 1. Load post.js first (contains post-related functions) -->
+    <script src="<?=ROOT?>/assets/scripts/post.js"></script>
+    
+    <!-- 2. Load profile.js second (contains profile-specific functions and calls post.js functions) -->
     <script src="<?=ROOT?>/assets/scripts/profile.js"></script>
 </body>
 </html>

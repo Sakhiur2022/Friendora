@@ -11438,3 +11438,1011 @@
 
 [28-Jul-2025 12:40:43 Europe/Berlin] === GETTING PROFILE DATA ===
 [28-Jul-2025 12:40:43 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:39:27 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:39:27 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:39:27 Europe/Berlin] Profile User ID: 3
+[28-Jul-2025 16:39:27 Europe/Berlin] Is Own Profile: yes
+[28-Jul-2025 16:39:27 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:39:27 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:39:27 Europe/Berlin] POST request detected. AJAX: no
+[28-Jul-2025 16:39:27 Europe/Berlin] POST data: Array
+(
+)
+
+[28-Jul-2025 16:39:27 Europe/Berlin] FILES data: Array
+(
+)
+
+[28-Jul-2025 16:39:27 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:39:27 Europe/Berlin] Profile query result: Found profile
+[28-Jul-2025 16:39:27 Europe/Berlin] Profile ID: 3
+[28-Jul-2025 16:39:27 Europe/Berlin] === GETTING PHOTOS DATA ===
+[28-Jul-2025 16:39:27 Europe/Berlin] Photos query result: 3 photos found
+[28-Jul-2025 16:39:27 Europe/Berlin] === GETTING POSTS DATA ===
+[28-Jul-2025 16:39:27 Europe/Berlin] Posts query result: 1 posts found
+[28-Jul-2025 16:39:27 Europe/Berlin] Post 24 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:27 Europe/Berlin] === FINAL DATA ===
+[28-Jul-2025 16:39:27 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+)
+
+[28-Jul-2025 16:39:27 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[28-Jul-2025 16:39:27 Europe/Berlin] Websites Data: Array
+(
+)
+
+[28-Jul-2025 16:39:27 Europe/Berlin] === PROFILE DEBUG END ===
+[28-Jul-2025 16:39:43 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile User ID: 1
+[28-Jul-2025 16:39:43 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:39:43 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:39:43 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:39:43 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile query result: Found profile
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile ID: 1
+[28-Jul-2025 16:39:43 Europe/Berlin] === GETTING PHOTOS DATA ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Photos query result: 7 photos found
+[28-Jul-2025 16:39:43 Europe/Berlin] === GETTING POSTS DATA ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Posts query result: 10 posts found
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=0, angry=1
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:39:43 Europe/Berlin] === FINAL DATA ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[28-Jul-2025 16:39:43 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[28-Jul-2025 16:39:43 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[28-Jul-2025 16:39:43 Europe/Berlin] === PROFILE DEBUG END ===
+[28-Jul-2025 16:39:43 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:39:43 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:39:43 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:39:43 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:39:43 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:39:43 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:39:43 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:39:43 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:39:43 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:39:43 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:39:43 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:39:43 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:39:43 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:39:43 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:39:43 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:39:43 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:40:03 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile User ID: 1
+[28-Jul-2025 16:40:03 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:03 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:03 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile query result: Found profile
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile ID: 1
+[28-Jul-2025 16:40:03 Europe/Berlin] === GETTING PHOTOS DATA ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Photos query result: 7 photos found
+[28-Jul-2025 16:40:03 Europe/Berlin] === GETTING POSTS DATA ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Posts query result: 10 posts found
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 29 has 0 media items and reaction counts: like=1, haha=0, wow=1, angry=1
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:03 Europe/Berlin] === FINAL DATA ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[28-Jul-2025 16:40:03 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[28-Jul-2025 16:40:03 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[28-Jul-2025 16:40:03 Europe/Berlin] === PROFILE DEBUG END ===
+[28-Jul-2025 16:40:03 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:40:03 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:03 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:03 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:40:03 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:40:03 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:03 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:03 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:40:03 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:40:03 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:03 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:03 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:40:03 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:40:03 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:03 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:03 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:03 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:03 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:40:27 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:27 Europe/Berlin] Profile User ID: 1
+[28-Jul-2025 16:40:27 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:27 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:27 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:27 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Profile query result: Found profile
+[28-Jul-2025 16:40:27 Europe/Berlin] Profile ID: 1
+[28-Jul-2025 16:40:27 Europe/Berlin] === GETTING PHOTOS DATA ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Photos query result: 7 photos found
+[28-Jul-2025 16:40:27 Europe/Berlin] === GETTING POSTS DATA ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Posts query result: 10 posts found
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 29 has 0 media items and reaction counts: like=1, haha=0, wow=1, angry=1
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:27 Europe/Berlin] === FINAL DATA ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality.
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+    [user_id] => 1
+)
+
+[28-Jul-2025 16:40:27 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 16
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+)
+
+[28-Jul-2025 16:40:27 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[28-Jul-2025 16:40:27 Europe/Berlin] === PROFILE DEBUG END ===
+[28-Jul-2025 16:40:27 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:27 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:40:27 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:27 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:27 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:27 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:40:27 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:27 Europe/Berlin] Profile User ID: 0
+[28-Jul-2025 16:40:27 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:27 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:27 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:27 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:27 Europe/Berlin] Profile query result: No profile found
+[28-Jul-2025 16:40:34 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:40:34 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:40:34 Europe/Berlin] Profile User ID: 4
+[28-Jul-2025 16:40:34 Europe/Berlin] Is Own Profile: no
+[28-Jul-2025 16:40:34 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:40:34 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:40:34 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:40:34 Europe/Berlin] Profile query result: Found profile
+[28-Jul-2025 16:40:34 Europe/Berlin] Profile ID: 4
+[28-Jul-2025 16:40:34 Europe/Berlin] === GETTING PHOTOS DATA ===
+[28-Jul-2025 16:40:34 Europe/Berlin] Photos query result: 3 photos found
+[28-Jul-2025 16:40:34 Europe/Berlin] === GETTING POSTS DATA ===
+[28-Jul-2025 16:40:34 Europe/Berlin] Posts query result: 1 posts found
+[28-Jul-2025 16:40:34 Europe/Berlin] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[28-Jul-2025 16:40:34 Europe/Berlin] === FINAL DATA ===
+[28-Jul-2025 16:40:34 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+)
+
+[28-Jul-2025 16:40:34 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[28-Jul-2025 16:40:34 Europe/Berlin] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[28-Jul-2025 16:40:34 Europe/Berlin] === PROFILE DEBUG END ===
+[28-Jul-2025 16:41:32 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:41:32 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:41:32 Europe/Berlin] Profile User ID: 3
+[28-Jul-2025 16:41:32 Europe/Berlin] Is Own Profile: yes
+[28-Jul-2025 16:41:32 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:41:32 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:41:32 Europe/Berlin] POST request detected. AJAX: no
+[28-Jul-2025 16:41:32 Europe/Berlin] POST data: Array
+(
+)
+
+[28-Jul-2025 16:41:32 Europe/Berlin] FILES data: Array
+(
+)
+
+[28-Jul-2025 16:41:32 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:41:32 Europe/Berlin] Profile query result: Found profile
+[28-Jul-2025 16:41:32 Europe/Berlin] Profile ID: 3
+[28-Jul-2025 16:41:32 Europe/Berlin] === GETTING PHOTOS DATA ===
+[28-Jul-2025 16:41:32 Europe/Berlin] Photos query result: 3 photos found
+[28-Jul-2025 16:41:32 Europe/Berlin] === GETTING POSTS DATA ===
+[28-Jul-2025 16:41:32 Europe/Berlin] Posts query result: 1 posts found
+[28-Jul-2025 16:41:32 Europe/Berlin] Post 24 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[28-Jul-2025 16:41:32 Europe/Berlin] === FINAL DATA ===
+[28-Jul-2025 16:41:32 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+)
+
+[28-Jul-2025 16:41:32 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[28-Jul-2025 16:41:32 Europe/Berlin] Websites Data: Array
+(
+)
+
+[28-Jul-2025 16:41:32 Europe/Berlin] === PROFILE DEBUG END ===
+[28-Jul-2025 16:42:07 Europe/Berlin] === PROFILE DEBUG START ===
+[28-Jul-2025 16:42:07 Europe/Berlin] Current User ID: 3
+[28-Jul-2025 16:42:07 Europe/Berlin] Profile User ID: 3
+[28-Jul-2025 16:42:07 Europe/Berlin] Is Own Profile: yes
+[28-Jul-2025 16:42:07 Europe/Berlin] Current User Email: raymond@gmail.com
+[28-Jul-2025 16:42:07 Europe/Berlin] Session data: Array
+(
+    [last_regeneration] => 1753713564
+    [USER] => stdClass Object
+        (
+            [id] => 3
+            [fname] => Raymond
+            [minit] => T
+            [lname] => Creed
+            [pwd] => HTUKDiii65%%%6
+            [DOB] => 1997-02-06
+            [gender] => male
+            [email] => raymond@gmail.com
+            [created_at] => 2025-07-27 00:57:02
+        )
+
+)
+
+[28-Jul-2025 16:42:07 Europe/Berlin] POST request detected. AJAX: no
+[28-Jul-2025 16:42:07 Europe/Berlin] POST data: Array
+(
+)
+
+[28-Jul-2025 16:42:07 Europe/Berlin] FILES data: Array
+(
+)
+
+[28-Jul-2025 16:42:07 Europe/Berlin] === GETTING PROFILE DATA ===
+[28-Jul-2025 16:42:07 Europe/Berlin] Profile query result: Found profile
+[28-Jul-2025 16:42:07 Europe/Berlin] Profile ID: 3
+[28-Jul-2025 16:42:07 Europe/Berlin] === GETTING PHOTOS DATA ===
+[28-Jul-2025 16:42:07 Europe/Berlin] Photos query result: 3 photos found
+[28-Jul-2025 16:42:07 Europe/Berlin] === GETTING POSTS DATA ===
+[28-Jul-2025 16:42:07 Europe/Berlin] Posts query result: 1 posts found
+[28-Jul-2025 16:42:07 Europe/Berlin] Post 24 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[28-Jul-2025 16:42:07 Europe/Berlin] === FINAL DATA ===
+[28-Jul-2025 16:42:07 Europe/Berlin] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+)
+
+[28-Jul-2025 16:42:07 Europe/Berlin] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[28-Jul-2025 16:42:07 Europe/Berlin] Websites Data: Array
+(
+)
+
+[28-Jul-2025 16:42:07 Europe/Berlin] === PROFILE DEBUG END ===

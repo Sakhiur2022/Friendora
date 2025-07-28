@@ -578,7 +578,67 @@ class Post {
             'success' => false,
             'message' => 'Post not found'
         ];
-    }    private function timeAgo($datetime) {
+    }
+
+    // New method to handle getUserPosts AJAX requests
+    public function getUserPosts($userId = null) {
+        // Ensure this is an AJAX request
+        if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || 
+            strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {
+            http_response_code(400);
+            echo json_encode(['success' => false, 'message' => 'Invalid request']);
+            return;
+        }
+
+        if (!$userId) {
+            echo json_encode(['success' => false, 'message' => 'User ID is required']);
+            return;
+        }
+
+        try {
+            // Initialize models
+            $posts = new Posts;
+            $user = new User;
+            $profiles = new Profiles;
+            $media = new Media;
+            $reacts = new Reacts;
+            $shares = new Shares;
+            
+            // Get posts for the specified user
+            $userPosts = $posts->selectComplex([
+                'conditions' => ['creator_id' => $userId],
+                'orderBy' => 'created_at DESC',
+                'limit' => 20
+            ]);
+            
+            $postsWithDetails = [];
+            
+            if ($userPosts) {
+                foreach ($userPosts as $post) {
+                    $postDetails = $this->getPostById($post->id, $posts, $user, $profiles, $media, $reacts, $shares);
+                    if ($postDetails) {
+                        $postsWithDetails[] = $postDetails;
+                    }
+                }
+            }
+            
+            header("Content-Type: application/json");
+            echo json_encode([
+                'success' => true,
+                'posts' => $postsWithDetails,
+                'message' => 'Posts loaded successfully'
+            ]);
+            
+        } catch (Exception $e) {
+            header("Content-Type: application/json");
+            echo json_encode([
+                'success' => false,
+                'message' => 'Error loading posts: ' . $e->getMessage()
+            ]);
+        }
+    }
+    
+    private function timeAgo($datetime) {
         $time = time() - strtotime($datetime);
         
         if ($time < 60) return 'just now';
