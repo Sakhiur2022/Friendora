@@ -2,8 +2,6 @@
 
 defined('ROOT_PATH') OR exit('Access denied you hacker!');
 
-
-
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/../../debug_post.txt');
@@ -119,7 +117,9 @@ class Post {
             'message' => 'Post created successfully',
             'post' => $postInfo
         ];
-    }    private function editPost($request, $posts) {
+    }
+
+    private function editPost($request, $posts) {
         $postId = $request->post('post_id');
         $content = trim($request->post('content'));
         $userId = Utils::user('id');

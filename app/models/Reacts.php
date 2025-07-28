@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 class  Reacts
 {
     use Model;
@@ -15,10 +11,8 @@ class  Reacts
     protected $allowedColumns = [
         'uid',
         'post_id',
-        'react_type',
-        'created_at',
-        'icon_url',
-        'react_id',
+        'type',
+        'reacted_at'
     ];
 
     public function getErrors()
@@ -29,19 +23,16 @@ class  Reacts
     public function createTable()
     {
         $sql = "
-            CREATE TABLE IF NOT EXISTS `reacts` (
-                 `uid` int(3) NOT NULL,
+          CREATE TABLE IF NOT EXISTS `reacts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(3) NOT NULL,
   `post_id` int(3) NOT NULL,
-  `react_type` varchar(50) DEFAULT NULL,
-  `react_id` int(3) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `icon_url` text DEFAULT NULL,
-  PRIMARY KEY (`uid`,`post_id`)
-
-    KEY `post_id` (`post_id`),
-    CONSTRAINT `fk_reacts_user` FOREIGN KEY (`uid`) REFERENCES `users`(`userid`) ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT `fk_reacts_post` FOREIGN KEY (`post_id`) REFERENCES `posts`(`postid`) ON DELETE CASCADE ON UPDATE CASCADE
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+  `type` varchar(50) DEFAULT NULL,
+  `reacted_at` datetime NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `reacts_ibfk_1` (`uid`),
+  CONSTRAINT `reacts_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
         ";
         $this->query($sql);
     }

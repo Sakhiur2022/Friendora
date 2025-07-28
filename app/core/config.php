@@ -9,11 +9,11 @@ if ($_SERVER['SERVER_NAME'] === 'localhost' ) {
     define('DB_DRIVER', 'mysql');
 } 
 else {
-    define('ROOT', 'https://my-production-url.com');
-    define('DB_HOST', 'production-db-host');
-    define('DB_NAME', 'production_database_name');
-    define('DB_USER', 'production_db_user');
-    define('DB_PASS', 'production_db_password');
+    define('ROOT', 'http://friendora.atwebpages.com');
+    define('DB_HOST', 'fdb1034.awardspace.net');
+    define('DB_NAME', '4664450_friendora');
+    define('DB_USER', '4664450_friendora');
+    define('DB_PASS', '%Sakhiur^6');
     define('DB_DRIVER', 'mysql');
 }
 

@@ -53,7 +53,7 @@
     </div>
     <?php endif; ?>
 
-    <!-- Posts Feed Container -->
+<!-- Posts Feed Container -->
     <div id="postsContainer">
         <!-- Posts will be loaded here dynamically -->
         <div class="text-center py-4">
