@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error('initializePostFunctionality function not available. Make sure post.js is loaded.');
   }
+
+
+  
 })
 
 // Get data from PHP
@@ -46,7 +49,7 @@ const profileUser = {
   following: 458,
   posts: 142,
   badge: "VR Pioneer",
-  birthday: profileData.birthday || "1995-03-15",
+  birthday: profileData.DOB || "1995-03-15",
   email: profileData.email || "alexandra@dreamscape.cyber",
   phone: profileData.tel || "+81-90-1234-5678",
   joinDate: "2019-08-12",
@@ -72,6 +75,8 @@ const profileUser = {
   isOwnProfile: isOwnProfile,
   city: profileData.city || "Neo Tokyo", // Add city field for about section
 }
+
+console.log("🔍 DEBUG: Profile User Data:", profileUser);
 
 
 // Dummy notifications data
@@ -221,6 +226,9 @@ function setupEventListeners() {
 
   // Hover effects
   addCardHoverEffects()
+
+  // Setup search functionality for both desktop and mobile
+  setupSearchFunctionality()
 
   // Profile navigation
   document.querySelectorAll(".profile-nav-item").forEach((item) => {
@@ -842,50 +850,77 @@ function toggleMobileMenu() {
       mobileMenu.classList.add("show")
       hamburger.classList.add("active")
       document.body.style.overflow = "hidden"
-      setupMobileSearch()
+      // Setup mobile search when menu opens
+      setupMobileSearchEvents()
     }
   }
 }
 
-function setupMobileSearch() {
+// Setup comprehensive search functionality
+function setupSearchFunctionality() {
+  // Setup desktop search
+  const desktopSearchInput = document.getElementById("searchInput")
+  const desktopSuggestions = document.getElementById("searchSuggestions")
+  
+  if (desktopSearchInput && desktopSuggestions) {
+    desktopSearchInput.addEventListener("input", (e) => handleSearchInput(e, 'desktop'))
+    desktopSearchInput.addEventListener("keydown", (e) => handleSearchKeydown(e, 'desktop'))
+    desktopSearchInput.addEventListener("focus", () => showSearchSuggestions('desktop'))
+    desktopSearchInput.addEventListener("blur", () => hideSearchSuggestions('desktop'))
+  }
+  
+  // Setup mobile search (will be called when mobile menu opens)
+  setupMobileSearchEvents()
+}
+
+function setupMobileSearchEvents() {
   const mobileSearchInput = document.getElementById("mobileSearchInput")
   const mobileSuggestions = document.getElementById("mobileSearchSuggestions")
-
+  
   if (mobileSearchInput && mobileSuggestions) {
-    mobileSearchInput.addEventListener("input", (e) => {
-      const query = e.target.value.toLowerCase()
-      if (query.length > 0) {
-        showMobileSearchSuggestions(query)
-      } else {
-        mobileSuggestions.style.display = "none"
-      }
-    })
+    // Remove existing listeners to prevent duplicates
+    mobileSearchInput.removeEventListener("input", handleMobileInput)
+    mobileSearchInput.removeEventListener("keydown", handleMobileKeydown)
+    mobileSearchInput.removeEventListener("focus", handleMobileFocus)
+    mobileSearchInput.removeEventListener("blur", handleMobileBlur)
+    
+    // Add new listeners
+    mobileSearchInput.addEventListener("input", handleMobileInput)
+    mobileSearchInput.addEventListener("keydown", handleMobileKeydown)
+    mobileSearchInput.addEventListener("focus", handleMobileFocus)
+    mobileSearchInput.addEventListener("blur", handleMobileBlur)
   }
 }
 
-function showMobileSearchSuggestions(query) {
-  const mobileSuggestions = document.getElementById("mobileSearchSuggestions")
-  if (!mobileSuggestions) return
+// Mobile search event handlers
+function handleMobileInput(e) {
+  const query = e.target.value.toLowerCase()
+  if (query.length > 0) {
+    showSearchSuggestions('mobile')
+    filterSearchSuggestions(query, 'mobile')
+  } else {
+    hideSearchSuggestions('mobile')
+  }
+}
 
-  const filteredSuggestions = searchSuggestions.filter(
-    (s) => s.name.toLowerCase().includes(query) || s.type.toLowerCase().includes(query),
-  )
+function handleMobileKeydown(e) {
+  if (e.key === "Enter") {
+    const query = e.target.value.toLowerCase()
+    performSearch(query)
+    hideSearchSuggestions('mobile')
+  }
+}
 
-  mobileSuggestions.innerHTML = filteredSuggestions
-    .map(
-      (suggestion) => `
-        <div class="suggestion-item" onclick="selectSuggestion('${suggestion.type}', '${suggestion.id}')">
-            <img src="${suggestion.avatar}" class="suggestion-avatar" alt="${suggestion.name}">
-            <div class="suggestion-info">
-                <div class="suggestion-name">${suggestion.type === 'Person' ? createUserLink(suggestion.id, suggestion.name) : suggestion.name}</div>
-                <div class="suggestion-type">${suggestion.type}</div>
-            </div>
-        </div>
-    `,
-    )
-    .join("")
+function handleMobileFocus() {
+  const query = document.getElementById("mobileSearchInput").value.toLowerCase()
+  if (query.length > 0) {
+    showSearchSuggestions('mobile')
+    filterSearchSuggestions(query, 'mobile')
+  }
+}
 
-  mobileSuggestions.style.display = "block"
+function handleMobileBlur() {
+  hideSearchSuggestions('mobile')
 }
 
 // User Dropdown Functions
@@ -939,36 +974,47 @@ function handleLogout() {
   }
 }
 
-// Search Functions
-function handleSearchInput(e) {
+// Updated Search Functions to handle both desktop and mobile
+function handleSearchInput(e, type = 'desktop') {
   const query = e.target.value.toLowerCase()
   if (query.length > 0) {
-    showSearchSuggestions()
-    filterSearchSuggestions(query)
+    showSearchSuggestions(type)
+    filterSearchSuggestions(query, type)
   } else {
-    hideSearchSuggestions()
+    hideSearchSuggestions(type)
   }
 }
 
-function showSearchSuggestions() {
-  const suggestions = document.getElementById("searchSuggestions")
+function handleSearchKeydown(e, type = 'desktop') {
+  if (e.key === "Enter") {
+    const query = e.target.value.toLowerCase()
+    performSearch(query)
+    hideSearchSuggestions(type)
+  }
+}
+
+function showSearchSuggestions(type = 'desktop') {
+  const suggestionsId = type === 'mobile' ? 'mobileSearchSuggestions' : 'searchSuggestions'
+  const suggestions = document.getElementById(suggestionsId)
   if (suggestions) {
     suggestions.style.display = "block"
-    loadSearchSuggestions()
+    loadSearchSuggestions(type)
   }
 }
 
-function hideSearchSuggestions() {
+function hideSearchSuggestions(type = 'desktop') {
   setTimeout(() => {
-    const suggestions = document.getElementById("searchSuggestions")
+    const suggestionsId = type === 'mobile' ? 'mobileSearchSuggestions' : 'searchSuggestions'
+    const suggestions = document.getElementById(suggestionsId)
     if (suggestions) {
       suggestions.style.display = "none"
     }
   }, 200)
 }
 
-function loadSearchSuggestions() {
-  const suggestions = document.getElementById("searchSuggestions")
+function loadSearchSuggestions(type = 'desktop') {
+  const suggestionsId = type === 'mobile' ? 'mobileSearchSuggestions' : 'searchSuggestions'
+  const suggestions = document.getElementById(suggestionsId)
   if (!suggestions) return
 
   suggestions.innerHTML = searchSuggestions
@@ -986,12 +1032,13 @@ function loadSearchSuggestions() {
     .join("")
 }
 
-function filterSearchSuggestions(query) {
+function filterSearchSuggestions(query, type = 'desktop') {
   const filteredSuggestions = searchSuggestions.filter(
     (s) => s.name.toLowerCase().includes(query) || s.type.toLowerCase().includes(query),
   )
 
-  const suggestions = document.getElementById("searchSuggestions")
+  const suggestionsId = type === 'mobile' ? 'mobileSearchSuggestions' : 'searchSuggestions'
+  const suggestions = document.getElementById(suggestionsId)
   if (suggestions) {
     suggestions.innerHTML = filteredSuggestions
       .map(

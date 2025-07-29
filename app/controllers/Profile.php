@@ -413,7 +413,13 @@ class Profile {
                 error_log("Post {$post->id} has " . count($userPosts[$key]->media) . " media items and reaction counts: like={$userPosts[$key]->like_count}, haha={$userPosts[$key]->haha_count}, wow={$userPosts[$key]->wow_count}, angry={$userPosts[$key]->angry_count}");
             }
         }
-        
+
+        //sete DOB and gender for profileData
+        if ($profileData) {
+            $profileData->DOB = Utils::user('DOB') ?? '';    
+            $profileData->gender = Utils::user('gender') ?? '';
+        }
+
         // Debug logging
         error_log("=== FINAL DATA ===");
         error_log("Profile Data: " . print_r($profileData, true));

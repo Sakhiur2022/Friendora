@@ -37,7 +37,13 @@
                 <span class="input-group-text cyber-search-icon">
                     <i class="bi bi-search"></i>
                 </span>
-                <input type="text" class="form-control cyber-search" placeholder="Search Friendora..." id="searchInput" autocomplete="off">
+                <input
+                    type="text"
+                    class="form-control cyber-search"
+                    placeholder="Search Friendora..."
+                    id="searchInput"
+                    autocomplete="off"
+                />
                 <button class="btn cyber-btn-ghost advanced-search-btn" type="button" onclick="openAdvancedSearch()" title="Advanced Search">
                     <i class="bi bi-three-dots"></i>
                 </button>
@@ -151,7 +157,12 @@
                     <span class="input-group-text cyber-search-icon">
                         <i class="bi bi-search"></i>
                     </span>
-                    <input type="text" class="form-control cyber-search" placeholder="Search Friendora..." id="mobileSearchInput" autocomplete="off">
+                    <input 
+                        type="text" 
+                        class="form-control cyber-search" 
+                        placeholder="Search Friendora..." 
+                        id="mobileSearchInput" 
+                        autocomplete="off" />
                     <button class="btn cyber-btn-ghost advanced-search-btn" type="button" onclick="openAdvancedSearch()" title="Advanced Search">
                         <i class="bi bi-three-dots"></i>
                     </button>
