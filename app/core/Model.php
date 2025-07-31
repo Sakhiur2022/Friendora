@@ -356,4 +356,35 @@ public function deleteWhere($conditions) {
 
         return $this->query($sql, $params);
     }
+    /**
+     * Searches the database table for rows matching the given search term.
+     *
+     * @param string $searchTerm The term to search for in the specified columns.
+     * @param string $columns A comma-separated string of column names to search in. Defaults to '*'.
+     *                        If '*', all columns will be searched.
+     * @return array|false The result set as an array of rows, or false on failure.
+     *
+     * Example SQL Output:
+     * If $searchTerm = 'John' and $columns = 'name,email':
+     * The generated SQL would be:
+     * SELECT name, email FROM tableName WHERE name LIKE :name OR email LIKE :email
+     * With bound parameters:
+     * :name => '%John%'
+     * :email => '%John%'
+     */
+    public function search($searchTerm, $columns = '*') {
+        // Assuming $columns is a string of comma-separated column names
+        $columns = empty($columns) ? '*' : $columns;
+        $sql = "SELECT $columns FROM " . $this->tableName . " WHERE ";
+        $clauses = [];
+        $params = [];
+        foreach (explode(',', $columns) as $column) {
+            $paramKey = preg_replace('/\W/', '_', trim($column));
+            $clauses[] = "$column LIKE :$paramKey";
+            $params[$paramKey] = '%' . $searchTerm . '%';
+        }
+        $sql .= implode(" OR ", $clauses);
+        return $this->query($sql, $params);
+    }
 }
+

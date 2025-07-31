@@ -657,11 +657,14 @@
   
     <!-- 1. Load utils.js (contains utility functions used across modules) -->
     <script src="<?=ROOT?>/assets/scripts/utils.js"></script>
-
+    
+    <script src="<?=ROOT?>/assets/scripts/search.js"></script>
+    
     <!-- 2. Load post.js (contains post-related functions) -->
     <script src="<?=ROOT?>/assets/scripts/post.js"></script>
 
     <!-- 3. Load profile.js (contains profile-specific functions and calls post.js functions) -->
     <script src="<?=ROOT?>/assets/scripts/profile.js"></script>
+
 </body>
 </html>
