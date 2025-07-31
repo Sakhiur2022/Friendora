@@ -124,3 +124,87 @@ function createFloatingParticles() {
     particleContainer.appendChild(particle)
   }
 }
+
+
+// Enhanced Notification System
+function showNotification(message, type = "info", title = null) {
+  const notificationSystem = document.getElementById("notificationSystem")
+  if (!notificationSystem) return
+
+  const notificationId = "notification_" + Date.now()
+  const titles = {
+    success: title || "Success!",
+    error: title || "Error!",
+    warning: title || "Warning!",
+    info: title || "Info",
+  }
+
+  const icons = {
+    success: "bi-check-circle-fill",
+    error: "bi-exclamation-triangle-fill",
+    warning: "bi-exclamation-circle-fill",
+    info: "bi-info-circle-fill",
+  }
+
+  const notification = document.createElement("div")
+  notification.className = `system-notification ${type}`
+  notification.id = notificationId
+  notification.innerHTML = `
+        <div class="notification-content-wrapper">
+            <i class="bi ${icons[type]} notification-icon"></i>
+            <div class="notification-text">
+                <div class="notification-title">${titles[type]}</div>
+                <div class="notification-message">${message}</div>
+            </div>
+        </div>
+        <button class="notification-close" onclick="closeNotification('${notificationId}')">
+            <i class="bi bi-x"></i>
+        </button>
+        <div class="notification-progress"></div>
+    `
+
+  notificationSystem.appendChild(notification)
+
+  // Show animation
+  setTimeout(() => {
+    notification.classList.add("show")
+  }, 100)
+
+  // Auto remove after 1 second
+  setTimeout(() => {
+    closeNotification(notificationId)
+  }, 1000)
+}
+
+function closeNotification(notificationId) {
+  const notification = document.getElementById(notificationId)
+  if (notification) {
+    notification.classList.remove("show")
+    setTimeout(() => {
+      notification.remove()
+    }, 400)
+  }
+}
+
+// Helper function to create user profile links (kept for profile-specific usage)
+function createUserLink(userId, userName, className = '') {
+  const baseUrl = window.ROOT || '';
+  return `<a href="${baseUrl}/profile/${userId}" class="user-link ${className}">${userName}</a>`;
+}
+
+// Helper function to generate notification messages with user links
+function generateNotificationMessage(notification) {
+  const userLink = createUserLink(notification.userId, notification.userName);
+  return notification.message.replace(notification.userName, userLink);
+}
+
+// Helper functions for reactions (kept for compatibility with existing UI)
+function getReactionIcon(reactionType) {
+  const icons = {
+    like: 'bi-heart-fill',
+    haha: 'bi-emoji-laughing-fill', 
+    wow: 'bi-emoji-surprise-fill',
+    angry: 'bi-emoji-angry-fill'
+  };
+  return icons[reactionType] || 'bi-heart-fill';
+}

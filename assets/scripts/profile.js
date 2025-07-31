@@ -113,53 +113,10 @@ const notificationsData = [
   },
 ]
 
-// Search suggestions data
-const searchSuggestions = [
-  {
-    id: 1,
-    name: "Marcus Tech",
-    type: "Person",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=35&h=35&fit=crop&crop=face",
-  },
-  {
-    id: 2,
-    name: "Luna Digital",
-    type: "Person",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=35&h=35&fit=crop&crop=face",
-  },
-  {
-    id: 3,
-    name: "VR Artists Community",
-    type: "Group",
-    avatar: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=35&h=35&fit=crop",
-  },
-]
 
 let currentPhotoIndex = 0
 
-// Helper function to create user profile links (kept for profile-specific usage)
-function createUserLink(userId, userName, className = '') {
-  const baseUrl = window.ROOT || '';
-  const classAttr = className ? ` class="${className}"` : '';
-  return `<a href="${baseUrl}/profile/${userId}"${classAttr}>${userName}</a>`;
-}
 
-// Helper function to generate notification messages with user links
-function generateNotificationMessage(notification) {
-  const userLink = createUserLink(notification.userId, notification.userName);
-  return notification.message.replace(notification.userName, userLink);
-}
-
-// Helper functions for reactions (kept for compatibility with existing UI)
-function getReactionIcon(reactionType) {
-  const icons = {
-    like: 'bi-heart-fill',
-    haha: 'bi-emoji-laughing-fill', 
-    wow: 'bi-emoji-surprise-fill',
-    angry: 'bi-emoji-angry-fill'
-  };
-  return icons[reactionType] || 'bi-heart-fill';
-}
 
 function getReactionText(reactionType) {
   const texts = {
@@ -774,65 +731,7 @@ function populateEditForm() {
   // This function can be used for additional JavaScript-based population if needed
 }
 
-// Enhanced Notification System
-function showNotification(message, type = "info", title = null) {
-  const notificationSystem = document.getElementById("notificationSystem")
-  if (!notificationSystem) return
 
-  const notificationId = "notification_" + Date.now()
-  const titles = {
-    success: title || "Success!",
-    error: title || "Error!",
-    warning: title || "Warning!",
-    info: title || "Info",
-  }
-
-  const icons = {
-    success: "bi-check-circle-fill",
-    error: "bi-exclamation-triangle-fill",
-    warning: "bi-exclamation-circle-fill",
-    info: "bi-info-circle-fill",
-  }
-
-  const notification = document.createElement("div")
-  notification.className = `system-notification ${type}`
-  notification.id = notificationId
-  notification.innerHTML = `
-        <div class="notification-content-wrapper">
-            <i class="bi ${icons[type]} notification-icon"></i>
-            <div class="notification-text">
-                <div class="notification-title">${titles[type]}</div>
-                <div class="notification-message">${message}</div>
-            </div>
-        </div>
-        <button class="notification-close" onclick="closeNotification('${notificationId}')">
-            <i class="bi bi-x"></i>
-        </button>
-        <div class="notification-progress"></div>
-    `
-
-  notificationSystem.appendChild(notification)
-
-  // Show animation
-  setTimeout(() => {
-    notification.classList.add("show")
-  }, 100)
-
-  // Auto remove after 5 seconds
-  setTimeout(() => {
-    closeNotification(notificationId)
-  }, 5000)
-}
-
-function closeNotification(notificationId) {
-  const notification = document.getElementById(notificationId)
-  if (notification) {
-    notification.classList.remove("show")
-    setTimeout(() => {
-      notification.remove()
-    }, 400)
-  }
-}
 
 // Mobile Menu Functions
 function toggleMobileMenu() {
@@ -854,73 +753,6 @@ function toggleMobileMenu() {
       setupMobileSearchEvents()
     }
   }
-}
-
-// Setup comprehensive search functionality
-function setupSearchFunctionality() {
-  // Setup desktop search
-  const desktopSearchInput = document.getElementById("searchInput")
-  const desktopSuggestions = document.getElementById("searchSuggestions")
-  
-  if (desktopSearchInput && desktopSuggestions) {
-    desktopSearchInput.addEventListener("input", (e) => handleSearchInput(e, 'desktop'))
-    desktopSearchInput.addEventListener("keydown", (e) => handleSearchKeydown(e, 'desktop'))
-    desktopSearchInput.addEventListener("focus", () => showSearchSuggestions('desktop'))
-    desktopSearchInput.addEventListener("blur", () => hideSearchSuggestions('desktop'))
-  }
-  
-  // Setup mobile search (will be called when mobile menu opens)
-  setupMobileSearchEvents()
-}
-
-function setupMobileSearchEvents() {
-  const mobileSearchInput = document.getElementById("mobileSearchInput")
-  const mobileSuggestions = document.getElementById("mobileSearchSuggestions")
-  
-  if (mobileSearchInput && mobileSuggestions) {
-    // Remove existing listeners to prevent duplicates
-    mobileSearchInput.removeEventListener("input", handleMobileInput)
-    mobileSearchInput.removeEventListener("keydown", handleMobileKeydown)
-    mobileSearchInput.removeEventListener("focus", handleMobileFocus)
-    mobileSearchInput.removeEventListener("blur", handleMobileBlur)
-    
-    // Add new listeners
-    mobileSearchInput.addEventListener("input", handleMobileInput)
-    mobileSearchInput.addEventListener("keydown", handleMobileKeydown)
-    mobileSearchInput.addEventListener("focus", handleMobileFocus)
-    mobileSearchInput.addEventListener("blur", handleMobileBlur)
-  }
-}
-
-// Mobile search event handlers
-function handleMobileInput(e) {
-  const query = e.target.value.toLowerCase()
-  if (query.length > 0) {
-    showSearchSuggestions('mobile')
-    filterSearchSuggestions(query, 'mobile')
-  } else {
-    hideSearchSuggestions('mobile')
-  }
-}
-
-function handleMobileKeydown(e) {
-  if (e.key === "Enter") {
-    const query = e.target.value.toLowerCase()
-    performSearch(query)
-    hideSearchSuggestions('mobile')
-  }
-}
-
-function handleMobileFocus() {
-  const query = document.getElementById("mobileSearchInput").value.toLowerCase()
-  if (query.length > 0) {
-    showSearchSuggestions('mobile')
-    filterSearchSuggestions(query, 'mobile')
-  }
-}
-
-function handleMobileBlur() {
-  hideSearchSuggestions('mobile')
 }
 
 // User Dropdown Functions
@@ -975,99 +807,7 @@ function handleLogout() {
 }
 
 // Updated Search Functions to handle both desktop and mobile
-function handleSearchInput(e, type = 'desktop') {
-  const query = e.target.value.toLowerCase()
-  if (query.length > 0) {
-    showSearchSuggestions(type)
-    filterSearchSuggestions(query, type)
-  } else {
-    hideSearchSuggestions(type)
-  }
-}
-
-function handleSearchKeydown(e, type = 'desktop') {
-  if (e.key === "Enter") {
-    const query = e.target.value.toLowerCase()
-    performSearch(query)
-    hideSearchSuggestions(type)
-  }
-}
-
-function showSearchSuggestions(type = 'desktop') {
-  const suggestionsId = type === 'mobile' ? 'mobileSearchSuggestions' : 'searchSuggestions'
-  const suggestions = document.getElementById(suggestionsId)
-  if (suggestions) {
-    suggestions.style.display = "block"
-    loadSearchSuggestions(type)
-  }
-}
-
-function hideSearchSuggestions(type = 'desktop') {
-  setTimeout(() => {
-    const suggestionsId = type === 'mobile' ? 'mobileSearchSuggestions' : 'searchSuggestions'
-    const suggestions = document.getElementById(suggestionsId)
-    if (suggestions) {
-      suggestions.style.display = "none"
-    }
-  }, 200)
-}
-
-function loadSearchSuggestions(type = 'desktop') {
-  const suggestionsId = type === 'mobile' ? 'mobileSearchSuggestions' : 'searchSuggestions'
-  const suggestions = document.getElementById(suggestionsId)
-  if (!suggestions) return
-
-  suggestions.innerHTML = searchSuggestions
-    .map(
-      (suggestion) => `
-        <div class="suggestion-item" onclick="selectSuggestion('${suggestion.type}', '${suggestion.id}')">
-            <img src="${suggestion.avatar}" class="suggestion-avatar" alt="${suggestion.name}">
-            <div class="suggestion-info">
-                <div class="suggestion-name">${suggestion.type === 'Person' ? createUserLink(suggestion.id, suggestion.name) : suggestion.name}</div>
-                <div class="suggestion-type">${suggestion.type}</div>
-            </div>
-        </div>
-    `,
-    )
-    .join("")
-}
-
-function filterSearchSuggestions(query, type = 'desktop') {
-  const filteredSuggestions = searchSuggestions.filter(
-    (s) => s.name.toLowerCase().includes(query) || s.type.toLowerCase().includes(query),
-  )
-
-  const suggestionsId = type === 'mobile' ? 'mobileSearchSuggestions' : 'searchSuggestions'
-  const suggestions = document.getElementById(suggestionsId)
-  if (suggestions) {
-    suggestions.innerHTML = filteredSuggestions
-      .map(
-        (suggestion) => `
-            <div class="suggestion-item" onclick="selectSuggestion('${suggestion.type}', '${suggestion.id}')">
-                <img src="${suggestion.avatar}" class="suggestion-avatar" alt="${suggestion.name}">
-                <div class="suggestion-info">
-                    <div class="suggestion-name">${suggestion.type === 'Person' ? createUserLink(suggestion.id, suggestion.name) : suggestion.name}</div>
-                    <div class="suggestion-type">${suggestion.type}</div>
-                </div>
-            </div>
-        `,
-      )
-      .join("")
-  }
-}
-
-function selectSuggestion(type, id) {
-  showNotification(`Selected ${type}: ${id}`, "info")
-  hideSearchSuggestions()
-}
-
-function openAdvancedSearch() {
-  showNotification("Advanced Search - Navigator page coming soon!", "info")
-}
-
-function performSearch(query) {
-  showNotification(`Searching for ${query}...`, "info")
-}
+// now the code is in search.js
 
 // Profile Action Functions
 function followUser() {

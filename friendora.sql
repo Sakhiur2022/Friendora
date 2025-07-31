@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2025 at 07:08 PM
+-- Generation Time: Jul 31, 2025 at 05:14 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -168,7 +168,8 @@ INSERT INTO `media` (`id`, `post_id`, `media_type`, `media_url`, `created_at`) V
 (1, 19, 'image', 'http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg', '2025-07-26 23:35:02'),
 (3, 21, 'image', 'http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg', '2025-07-27 00:15:54'),
 (5, 23, 'image', 'http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg', '2025-07-27 01:10:00'),
-(6, 24, 'image', 'http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg', '2025-07-27 02:08:06');
+(6, 24, 'image', 'http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg', '2025-07-27 02:08:06'),
+(8, 32, 'image', 'http://localhost/Friendora/uploads/posts/post_32_1753727194.jpeg', '2025-07-29 00:26:34');
 
 -- --------------------------------------------------------
 
@@ -249,13 +250,11 @@ INSERT INTO `photos` (`id`, `url`, `caption`, `user_id`) VALUES
 (2, 'uploads/covers/cover_1_1753524901.jpeg', 'Cover photo', 1),
 (3, 'http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png', 'Cover Photo', 1),
 (4, 'http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png', 'Cover Photo', 1),
-(5, 'http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg', 'Profile Picture', 1),
 (6, 'http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg', 'Profile Picture', 2),
 (7, 'http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg', 'Cover Photo', 2),
 (9, 'http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg', 'Post image', 1),
 (13, 'http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg', 'Post image', 2),
 (14, 'http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg', 'Cover Photo', 2),
-(16, 'http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg', 'Cover Photo', 1),
 (17, 'http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg', 'Profile Picture', 3),
 (18, 'http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg', 'Cover Photo', 3),
 (19, 'http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg', 'Profile Picture', 4),
@@ -263,7 +262,10 @@ INSERT INTO `photos` (`id`, `url`, `caption`, `user_id`) VALUES
 (21, 'http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg', 'Post image', 4),
 (22, 'http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg', 'Post image', 3),
 (24, 'http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg', 'Profile Picture', 5),
-(25, 'http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg', 'Cover Photo', 5);
+(25, 'http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg', 'Cover Photo', 5),
+(26, 'http://localhost/Friendora/uploads/posts/post_32_1753727194.jpeg', 'Post image', 3),
+(27, 'http://localhost/Friendora/uploads/profile_photos/profile_1_1753729855.jpeg', 'Profile Picture', 1),
+(28, 'http://localhost/Friendora/uploads/cover_photos/cover_1_1753729976.jpeg', 'Cover Photo', 1);
 
 -- --------------------------------------------------------
 
@@ -302,7 +304,8 @@ INSERT INTO `post` (`id`, `content`, `created_at`, `creator_id`, `group_id`) VAL
 (27, 'Checking things', '2025-07-27 18:04:07', 5, NULL),
 (28, 'Hey guys', '2025-07-27 18:15:25', 2, NULL),
 (29, 'Hi', '2025-07-28 12:48:25', 1, NULL),
-(30, 'Hey guys, how are you', '2025-07-28 21:11:09', 3, NULL);
+(30, 'Hey guys, how are you', '2025-07-28 21:11:09', 3, NULL),
+(32, 'Pure Aura', '2025-07-29 00:26:34', 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -352,9 +355,9 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `hometown`, `country`, `shortBio`, `city`, `pfp`, `socialQuote`, `lifeEvent`, `religion`, `polViews`, `lang`, `professional`, `work`, `highschool`, `college`, `university`, `coverpic`, `user_id`) VALUES
-(1, 'Barishal', 'Bangladesh', 'Ok this is my bio, I love watching anime and reading webtoons', 'Dhaka', 'http://localhost/Friendora/uploads/profile_photos/profile_1_1753544817.jpg', 'In the digital realm, we are all architects of our own reality.', 'Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)', 'Digital Spiritualism', 'Progressive Futurist', 'English, Japanese, Bangla', 'Cybertech', 'DreamScape Studios', 'Digital Arts Academy', 'Cyber Tech Institute', 'Virtual Reality University', 'http://localhost/Friendora/uploads/cover_photos/cover_1_1753554824.jpeg', 1),
+(1, 'Barishal', 'Bangladesh', 'Ok this is my bio, I love watching anime and reading webtoons', 'Dhaka', 'http://localhost/Friendora/uploads/profile_photos/profile_1_1753729855.jpeg', 'In the digital realm, we are all architects of our own reality.', 'Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)', 'Digital Spiritualism', 'Progressive Futurist', 'English, Japanese, Bangla', 'Cybertech', 'DreamScape Studios', 'Digital Arts Academy', 'Cyber Tech Institute', 'Virtual Reality University', 'http://localhost/Friendora/uploads/cover_photos/cover_1_1753729976.jpeg', 1),
 (2, 'Nippon', '', 'Anime fan and webtoon reader', 'Jakarta', 'http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg', '', '', '', '', '', '', '', '', '', '', 'http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg', 2),
-(3, NULL, NULL, NULL, NULL, 'http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg', 3),
+(3, 'Dhaka', 'Bangladesh', '', 'Dhaka', 'http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg', '', '', '', '', '', '', '', '', '', '', 'http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg', 3),
 (4, 'Dhaka', 'Bangladesh', 'A young soul trying to find peace', 'Dhaka', 'http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg', 'Discipline isn\'t built on comfort—it\'s forged in silence, when no one’s watching, and quitting whispers loudest.', 'Born, Taken dinner, Watched anime', 'Islam', 'Dr. Yunus all the way', 'English, Bangla', 'Sleeper', 'Home', 'Faizur Rahman', 'City College', 'North South University', 'http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg', 4),
 (5, 'Corus', 'Arkland', 'Loves to drink', 'Tokyo', 'http://localhost/Friendora/uploads/profile_photos/profile_5_1753617079.jpeg', 'Do or Die', 'Born, live, first mission', 'Christianity', 'Hit', 'English', 'Hitman, Agent', 'Reinhafer', 'Porayan Cultural School', 'Edward College', 'Grandall', 'http://localhost/Friendora/uploads/cover_photos/cover_5_1753617164.jpeg', 5);
 
@@ -381,7 +384,9 @@ INSERT INTO `reacts` (`id`, `uid`, `post_id`, `type`, `reacted_at`) VALUES
 (3, 1, 19, 'wow', '2025-07-28 14:52:20'),
 (4, 2, 29, 'like', '2025-07-28 16:38:56'),
 (5, 3, 29, 'wow', '2025-07-28 16:39:26'),
-(6, 3, 24, 'like', '2025-07-28 19:58:50');
+(6, 3, 24, 'like', '2025-07-28 19:58:50'),
+(7, 3, 30, 'haha', '2025-07-29 00:10:21'),
+(8, 3, 32, 'like', '2025-07-29 00:27:01');
 
 -- --------------------------------------------------------
 
@@ -401,7 +406,8 @@ CREATE TABLE `shares` (
 --
 
 INSERT INTO `shares` (`id`, `uid`, `post_id`, `shared_at`) VALUES
-(1, 1, 29, '2025-07-28 14:33:28');
+(1, 1, 29, '2025-07-28 14:33:28'),
+(2, 1, 19, '2025-07-29 18:18:49');
 
 -- --------------------------------------------------------
 
@@ -438,9 +444,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fname`, `minit`, `lname`, `pwd`, `DOB`, `gender`, `email`, `created_at`) VALUES
-(1, 'Kafka', 'S', 'Rahman', 'HNkukc.t2n:RgD!', '1981-01-31', 'male', 'kafka@gmail.com', '2025-07-25 20:08:05'),
-(2, 'Ken', 'G', 'Kaneki', 'HNkukc.t2n:RgD!', '1983-05-26', 'male', 'ken@gmail.com', '2025-07-26 21:50:51'),
-(3, 'Raymond', 'T', 'Creed', 'HTUKDiii65%%%6', '1997-02-06', 'male', 'raymond@gmail.com', '2025-07-27 00:57:02'),
+(1, 'Kafka', 'S', 'Rahman', 'HNkukc.t2n:RgD!', '1995-07-07', 'female', 'kafka@gmail.com', '2025-07-25 20:08:05'),
+(2, 'Ken', 'G', 'Kaneki', 'HNkukc.t2n:RgD!', NULL, NULL, 'ken@gmail.com', '2025-07-26 21:50:51'),
+(3, 'Raymond', 'T', 'Creed', 'HTUKDiii65%%%6', NULL, NULL, 'raymond@gmail.com', '2025-07-27 00:57:02'),
 (4, 'Sakhiur', '', 'Rahman', 'HNkukc.t2n:RgD!', '2002-11-13', 'male', 'sakhiur2020@gmail.com', '2025-07-27 01:03:04'),
 (5, 'Ozaman', 'Y', 'Taker', 'Checker@gmail.com56', '2009-05-17', 'male', 'checker@gmail.com', '2025-07-27 17:45:43');
 
@@ -718,7 +724,7 @@ ALTER TABLE `group`
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `notifications`
@@ -730,13 +736,13 @@ ALTER TABLE `notifications`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `profile`
@@ -748,13 +754,13 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `reacts`
 --
 ALTER TABLE `reacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `shares`
 --
 ALTER TABLE `shares`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tokens`
