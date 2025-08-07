@@ -8174,3 +8174,3432 @@
 )
 
 [01-Aug-2025 23:21:50 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:31:36 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:31:36 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:31:36 Asia/Dhaka] Profile User ID: 7
+[07-Aug-2025 18:31:36 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 18:31:36 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:31:36 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:31:36 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 18:31:36 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 18:31:36 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 18:31:36 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 18:31:36 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 18:31:36 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 18:31:36 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:31:36 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:31:36 Asia/Dhaka] Profile ID: 6
+[07-Aug-2025 18:31:36 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:31:36 Asia/Dhaka] Photos query result: 0 photos found
+[07-Aug-2025 18:31:36 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:31:36 Asia/Dhaka] Posts query result: 0 posts found
+[07-Aug-2025 18:31:36 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:31:36 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 6
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/assets/images/default_pfp.png
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => 
+    [user_id] => 7
+    [DOB] => 1997-01-01
+    [gender] => male
+)
+
+[07-Aug-2025 18:31:36 Asia/Dhaka] Photos Data: Array
+(
+)
+
+[07-Aug-2025 18:31:36 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[07-Aug-2025 18:31:36 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:31:45 Asia/Dhaka] Profile User ID: 1
+[07-Aug-2025 18:31:45 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:31:45 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:31:45 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:31:45 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:31:45 Asia/Dhaka] Profile ID: 1
+[07-Aug-2025 18:31:45 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Photos query result: 7 photos found
+[07-Aug-2025 18:31:45 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Posts query result: 10 posts found
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:31:45 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[07-Aug-2025 18:31:45 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 30
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[07-Aug-2025 18:31:45 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[07-Aug-2025 18:31:45 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:31:45 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:31:45 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:31:45 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:31:45 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:31:45 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:31:45 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:31:45 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:31:45 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:31:45 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:31:45 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:31:45 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:31:46 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:31:46 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:31:46 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:31:46 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:31:46 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:31:46 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:31:46 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:31:46 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:31:46 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:31:46 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:31:46 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:31:46 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:31:46 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:31:46 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:31:46 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:31:46 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:32:08 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:32:08 Asia/Dhaka] Profile User ID: 1
+[07-Aug-2025 18:32:08 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:32:08 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:32:08 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:32:08 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:32:08 Asia/Dhaka] Profile ID: 1
+[07-Aug-2025 18:32:08 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Photos query result: 7 photos found
+[07-Aug-2025 18:32:08 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Posts query result: 10 posts found
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:08 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[07-Aug-2025 18:32:08 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 30
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[07-Aug-2025 18:32:08 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[07-Aug-2025 18:32:08 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:32:08 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:32:08 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:32:08 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:32:08 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:32:08 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Current User ID: 7
+[07-Aug-2025 18:32:08 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:32:08 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:32:08 Asia/Dhaka] Current User Email: nox@gmail.com
+[07-Aug-2025 18:32:08 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 7
+            [fname] => Nox
+            [minit] => V
+            [lname] => Reinhafur
+            [pwd] => Nox@2077
+            [DOB] => 1997-01-01
+            [gender] => male
+            [email] => nox@gmail.com
+            [created_at] => 2025-08-01 22:35:56
+        )
+
+)
+
+[07-Aug-2025 18:32:08 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:08 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:32:34 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:34 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:32:34 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 18:32:34 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 18:32:34 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:32:34 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:32:34 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 18:32:34 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 18:32:34 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 18:32:34 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 18:32:34 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 18:32:34 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 18:32:34 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:34 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:32:34 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 18:32:34 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:32:34 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 18:32:34 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:32:34 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 18:32:34 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:34 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:32:34 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 18:32:34 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 18:32:34 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 18:32:34 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:32:39 Asia/Dhaka] Profile User ID: 1
+[07-Aug-2025 18:32:39 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:32:39 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:32:39 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:32:39 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:32:39 Asia/Dhaka] Profile ID: 1
+[07-Aug-2025 18:32:39 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Photos query result: 7 photos found
+[07-Aug-2025 18:32:39 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Posts query result: 10 posts found
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:32:39 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[07-Aug-2025 18:32:39 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 30
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[07-Aug-2025 18:32:39 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[07-Aug-2025 18:32:39 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:32:39 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:32:39 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:32:39 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:32:39 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:32:39 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:32:39 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:32:39 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:32:39 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:32:39 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:32:39 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:39 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:32:40 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:40 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:32:40 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:32:40 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:32:40 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:32:40 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:32:40 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:40 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:32:40 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:32:40 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:32:40 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:32:40 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:32:40 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:32:40 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:32:40 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:32:40 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:33:02 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:33:02 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:33:02 Asia/Dhaka] Profile User ID: 2
+[07-Aug-2025 18:33:02 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:33:02 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:33:02 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:33:02 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:33:02 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:33:02 Asia/Dhaka] Profile ID: 2
+[07-Aug-2025 18:33:02 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:33:02 Asia/Dhaka] Photos query result: 4 photos found
+[07-Aug-2025 18:33:02 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:33:02 Asia/Dhaka] Posts query result: 4 posts found
+[07-Aug-2025 18:33:02 Asia/Dhaka] Post 28 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:02 Asia/Dhaka] Post 21 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:02 Asia/Dhaka] Post 12 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:02 Asia/Dhaka] Post 10 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:02 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:33:02 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+    [DOB] => 
+    [gender] => 
+)
+
+[07-Aug-2025 18:33:02 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[07-Aug-2025 18:33:02 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[07-Aug-2025 18:33:02 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:33:05 Asia/Dhaka] Profile User ID: 1
+[07-Aug-2025 18:33:05 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:33:05 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:33:05 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:33:05 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:33:05 Asia/Dhaka] Profile ID: 1
+[07-Aug-2025 18:33:05 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Photos query result: 7 photos found
+[07-Aug-2025 18:33:05 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Posts query result: 10 posts found
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:33:05 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[07-Aug-2025 18:33:05 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 30
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[07-Aug-2025 18:33:05 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[07-Aug-2025 18:33:05 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:33:05 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:33:05 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:33:05 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:33:05 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:33:05 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:33:05 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:33:05 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:33:05 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:33:05 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:33:05 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:33:05 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:36:53 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:36:53 Asia/Dhaka] Profile User ID: 1
+[07-Aug-2025 18:36:53 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:36:53 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:36:53 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:36:53 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:36:53 Asia/Dhaka] Profile ID: 1
+[07-Aug-2025 18:36:53 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Photos query result: 7 photos found
+[07-Aug-2025 18:36:53 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Posts query result: 10 posts found
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:36:53 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[07-Aug-2025 18:36:53 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 30
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[07-Aug-2025 18:36:53 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[07-Aug-2025 18:36:53 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 388
+[07-Aug-2025 18:36:53 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:36:53 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:36:53 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:36:53 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:36:53 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:36:53 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:36:53 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:36:53 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:36:53 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:36:53 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:36:53 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:36:53 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:37:47 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile User ID: 1
+[07-Aug-2025 18:37:47 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:37:47 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:37:47 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile ID: 1
+[07-Aug-2025 18:37:47 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Photos query result: 7 photos found
+[07-Aug-2025 18:37:47 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Posts query result: 10 posts found
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 18:37:47 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[07-Aug-2025 18:37:47 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 30
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[07-Aug-2025 18:37:47 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[07-Aug-2025 18:37:47 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 18:37:47 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 18:37:47 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 18:37:47 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 18:37:47 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\profile.view.php on line 388
+[07-Aug-2025 18:37:47 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:37:47 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:37:47 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:37:47 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:37:47 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:37:47 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:37:47 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:37:47 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:37:47 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 18:37:47 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 18:37:47 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 18:37:47 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 18:37:47 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754569861
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 18:37:47 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 18:37:47 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 19:01:12 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:01:12 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:01:12 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:01:12 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:01:12 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:01:12 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:01:12 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:01:12 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:01:12 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:01:12 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:01:12 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:01:12 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:01:12 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:01:12 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:01:12 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:01:12 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:01:12 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:01:12 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:01:12 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:01:12 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:01:12 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:01:12 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:01:12 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:01:12 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:01:12 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:01:12 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:01:12 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:01:12 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:01:12 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:01:12 Asia/Dhaka] PHP Warning:  require_once(./app/views/footer.view.view.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:01:12 Asia/Dhaka] PHP Fatal error:  Uncaught Error: Failed opening required './app/views/footer.view.view.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Friendora\app\core\Controller.php:8
+Stack trace:
+#0 C:\xampp\htdocs\Friendora\app\views\profile.view.php(388): Profile->loadView('footer.view', Array)
+#1 C:\xampp\htdocs\Friendora\app\core\Controller.php(8): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Friendora\app\controllers\Profile.php(457): Profile->loadView('profile', Array)
+#3 C:\xampp\htdocs\Friendora\app\core\App.php(48): Profile->index()
+#4 C:\xampp\htdocs\Friendora\app\core\App.php(15): App->loadController()
+#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:05:08 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:05:08 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:05:08 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:05:08 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:05:08 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:05:08 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:05:08 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:05:08 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:05:08 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:05:08 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:05:08 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:05:08 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:05:08 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:05:08 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:05:08 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:05:08 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:05:08 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:05:08 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:05:08 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:05:08 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:05:08 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:05:08 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:05:08 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:05:08 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:05:08 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:05:08 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:05:08 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:05:08 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:05:08 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:05:08 Asia/Dhaka] PHP Warning:  require_once(./app/views/footer.view.view.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:05:08 Asia/Dhaka] PHP Fatal error:  Uncaught Error: Failed opening required './app/views/footer.view.view.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Friendora\app\core\Controller.php:8
+Stack trace:
+#0 C:\xampp\htdocs\Friendora\app\views\profile.view.php(400): Profile->loadView('footer.view', Array)
+#1 C:\xampp\htdocs\Friendora\app\core\Controller.php(8): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Friendora\app\controllers\Profile.php(457): Profile->loadView('profile', Array)
+#3 C:\xampp\htdocs\Friendora\app\core\App.php(48): Profile->index()
+#4 C:\xampp\htdocs\Friendora\app\core\App.php(15): App->loadController()
+#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:07:31 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:07:31 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:07:31 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:07:31 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:07:31 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:07:31 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:07:31 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:07:31 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:07:31 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:07:31 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:07:31 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:07:31 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:07:31 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:07:31 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:07:31 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:07:31 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:07:31 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:07:31 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:07:31 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:07:31 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:07:31 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:07:31 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:07:31 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:07:31 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:07:31 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:07:31 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:07:31 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:07:31 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:07:31 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:07:31 Asia/Dhaka] PHP Warning:  require_once(./app/views/footer.view.view.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:07:31 Asia/Dhaka] PHP Fatal error:  Uncaught Error: Failed opening required './app/views/footer.view.view.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Friendora\app\core\Controller.php:8
+Stack trace:
+#0 C:\xampp\htdocs\Friendora\app\views\profile.view.php(391): Profile->loadView('footer.view', Array)
+#1 C:\xampp\htdocs\Friendora\app\core\Controller.php(8): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Friendora\app\controllers\Profile.php(457): Profile->loadView('profile', Array)
+#3 C:\xampp\htdocs\Friendora\app\core\App.php(48): Profile->index()
+#4 C:\xampp\htdocs\Friendora\app\core\App.php(15): App->loadController()
+#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:07:35 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:07:35 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:07:35 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:07:35 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:07:35 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:07:35 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:07:35 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:07:35 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:07:35 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:07:35 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:07:35 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:07:35 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:07:35 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:07:35 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:07:35 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:07:35 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:07:35 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:07:35 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:07:35 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:07:35 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:07:35 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:07:35 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:07:35 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:07:35 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:07:35 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:07:35 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:07:35 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:07:35 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:07:35 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:07:35 Asia/Dhaka] PHP Warning:  require_once(./app/views/footer.view.view.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:07:35 Asia/Dhaka] PHP Fatal error:  Uncaught Error: Failed opening required './app/views/footer.view.view.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Friendora\app\core\Controller.php:8
+Stack trace:
+#0 C:\xampp\htdocs\Friendora\app\views\profile.view.php(391): Profile->loadView('footer.view', Array)
+#1 C:\xampp\htdocs\Friendora\app\core\Controller.php(8): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Friendora\app\controllers\Profile.php(457): Profile->loadView('profile', Array)
+#3 C:\xampp\htdocs\Friendora\app\core\App.php(48): Profile->index()
+#4 C:\xampp\htdocs\Friendora\app\core\App.php(15): App->loadController()
+#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:08:44 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:08:44 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:08:44 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:08:44 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:08:44 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:08:44 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:08:44 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:08:44 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:08:44 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:08:44 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:08:44 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:08:44 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:08:44 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:08:44 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:08:44 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:08:44 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:08:44 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:08:44 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:08:44 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:08:44 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:08:44 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:08:44 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:08:44 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:08:44 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:08:44 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:08:44 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:08:44 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:08:44 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:08:44 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:08:44 Asia/Dhaka] PHP Warning:  require_once(./app/views/footer.view.view.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:08:44 Asia/Dhaka] PHP Fatal error:  Uncaught Error: Failed opening required './app/views/footer.view.view.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Friendora\app\core\Controller.php:8
+Stack trace:
+#0 C:\xampp\htdocs\Friendora\app\views\profile.view.php(391): Profile->loadView('footer.view', Array)
+#1 C:\xampp\htdocs\Friendora\app\core\Controller.php(8): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Friendora\app\controllers\Profile.php(457): Profile->loadView('profile', Array)
+#3 C:\xampp\htdocs\Friendora\app\core\App.php(48): Profile->index()
+#4 C:\xampp\htdocs\Friendora\app\core\App.php(15): App->loadController()
+#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\Friendora\app\core\Controller.php on line 8
+[07-Aug-2025 19:09:04 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:09:04 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:09:04 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:09:04 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:09:04 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:09:04 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:09:04 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:09:04 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:09:04 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:09:04 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:09:04 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:09:04 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:09:04 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:09:04 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:09:04 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:09:04 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:09:04 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:09:04 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:09:04 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:09:04 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:09:04 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:09:04 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:09:04 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:09:04 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:09:04 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:09:04 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:09:04 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:09:04 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:09:04 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:09:04 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\footer.view.php on line 17
+[07-Aug-2025 19:10:39 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:10:39 Asia/Dhaka] Profile User ID: 1
+[07-Aug-2025 19:10:39 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 19:10:39 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:10:39 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:10:39 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:10:39 Asia/Dhaka] Profile ID: 1
+[07-Aug-2025 19:10:39 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Photos query result: 7 photos found
+[07-Aug-2025 19:10:39 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Posts query result: 10 posts found
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:10:39 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[07-Aug-2025 19:10:39 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 30
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1754062235.jpeg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[07-Aug-2025 19:10:39 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[07-Aug-2025 19:10:39 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:10:39 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:10:39 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:10:39 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:10:39 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\footer.view.php on line 17
+[07-Aug-2025 19:10:39 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:10:39 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 19:10:39 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:10:39 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:10:39 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 19:10:39 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:10:39 Asia/Dhaka] Profile User ID: 0
+[07-Aug-2025 19:10:39 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 19:10:39 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:10:39 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:10:39 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:10:39 Asia/Dhaka] Profile query result: No profile found
+[07-Aug-2025 19:13:56 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:13:56 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:13:56 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:13:56 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:13:56 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:13:56 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:13:56 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:13:56 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:13:56 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:13:56 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:13:56 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:13:56 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:13:56 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:13:56 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:13:56 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:13:56 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:13:56 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:13:56 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:13:56 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:13:56 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:13:56 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:13:56 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:13:56 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:13:56 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:13:56 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:13:56 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:13:56 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:13:56 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:13:56 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:13:56 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\footer.view.php on line 17
+[07-Aug-2025 19:19:54 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:19:54 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:19:54 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:19:54 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:19:54 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:19:54 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:19:54 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:19:54 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:19:54 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:19:54 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:19:54 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:19:54 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:19:54 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:19:54 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:19:54 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:19:54 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:19:54 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:19:54 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:19:54 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:19:54 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:19:54 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:19:54 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:19:54 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:19:54 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:19:54 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:19:54 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:19:54 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:19:54 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:19:54 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:19:54 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\footer.view.php on line 17
+[07-Aug-2025 19:20:02 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:20:02 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:20:02 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:20:02 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:20:02 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:20:02 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:20:02 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:20:02 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:20:02 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:20:02 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:20:02 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:20:02 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:20:02 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:20:02 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:20:02 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:20:02 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:20:02 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:20:02 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:20:02 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:20:02 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:20:02 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:20:02 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:20:02 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:20:02 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:20:02 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:20:02 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:02 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:02 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:02 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:02 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\footer.view.php on line 17
+[07-Aug-2025 19:20:11 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:20:11 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:20:11 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:20:11 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:20:11 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:20:11 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:20:11 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:20:11 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:20:11 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:20:11 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:20:11 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:20:11 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:20:11 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:20:11 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:20:11 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:20:11 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:20:11 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:20:11 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:20:11 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:20:11 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:20:11 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:20:11 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:20:11 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:20:11 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:20:11 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:20:11 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:11 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:11 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:11 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:11 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\footer.view.php on line 17
+[07-Aug-2025 19:20:19 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:20:19 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:20:19 Asia/Dhaka] Profile User ID: 3
+[07-Aug-2025 19:20:19 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 19:20:19 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:20:19 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754571669
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:20:19 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:20:19 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:20:19 Asia/Dhaka] Profile ID: 3
+[07-Aug-2025 19:20:19 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:20:19 Asia/Dhaka] Photos query result: 4 photos found
+[07-Aug-2025 19:20:19 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:20:19 Asia/Dhaka] Posts query result: 3 posts found
+[07-Aug-2025 19:20:19 Asia/Dhaka] Post 32 has 1 media items and reaction counts: like=2, haha=0, wow=0, angry=0
+[07-Aug-2025 19:20:19 Asia/Dhaka] Post 30 has 0 media items and reaction counts: like=0, haha=1, wow=0, angry=0
+[07-Aug-2025 19:20:19 Asia/Dhaka] Post 24 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[07-Aug-2025 19:20:19 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:20:19 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 3
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => 
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+    [user_id] => 3
+    [DOB] => 
+    [gender] => 
+)
+
+[07-Aug-2025 19:20:19 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 17
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_3_1753556449.jpeg
+            [caption] => Profile Picture
+            [user_id] => 3
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 18
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_3_1753556465.jpeg
+            [caption] => Cover Photo
+            [user_id] => 3
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 22
+            [url] => http://localhost/Friendora/uploads/posts/post_24_1753560486.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 26
+            [url] => http://localhost/Friendora/uploads/posts/post_32_1753727194.jpeg
+            [caption] => Post image
+            [user_id] => 3
+        )
+
+)
+
+[07-Aug-2025 19:20:19 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[07-Aug-2025 19:20:19 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:20:19 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:19 Asia/Dhaka] PHP Warning:  Attempt to read property "fname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:19 Asia/Dhaka] PHP Warning:  Undefined array key "current_user" in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:19 Asia/Dhaka] PHP Warning:  Attempt to read property "lname" on null in C:\xampp\htdocs\Friendora\app\views\header.view.php on line 107
+[07-Aug-2025 19:20:19 Asia/Dhaka] PHP Warning:  Undefined variable $navbarProfilePic in C:\xampp\htdocs\Friendora\app\views\footer.view.php on line 17
+[07-Aug-2025 19:33:03 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:33:03 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:33:03 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:33:03 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:33:03 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:33:03 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754573580
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:33:03 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:33:03 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:33:03 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:33:03 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:33:03 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:33:03 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:33:03 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:33:03 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:33:03 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:33:03 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:33:03 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:33:03 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:33:03 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:33:03 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:33:03 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:33:03 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:33:03 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:33:03 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:33:03 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:33:16 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:33:16 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:33:16 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:33:16 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:33:16 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:33:16 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754573580
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:33:16 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:33:16 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:33:16 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:33:16 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:33:16 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:33:16 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:33:16 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:33:16 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:33:16 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:33:16 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:33:16 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:33:16 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:33:16 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:33:44 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:33:44 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:33:44 Asia/Dhaka] Profile User ID: 4
+[07-Aug-2025 19:33:44 Asia/Dhaka] Is Own Profile: yes
+[07-Aug-2025 19:33:44 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:33:44 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754573580
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:33:44 Asia/Dhaka] POST request detected. AJAX: no
+[07-Aug-2025 19:33:44 Asia/Dhaka] POST data: Array
+(
+)
+
+[07-Aug-2025 19:33:44 Asia/Dhaka] FILES data: Array
+(
+)
+
+[07-Aug-2025 19:33:44 Asia/Dhaka] Action parameter: not set
+[07-Aug-2025 19:33:44 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[07-Aug-2025 19:33:44 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[07-Aug-2025 19:33:44 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:33:44 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:33:44 Asia/Dhaka] Profile ID: 4
+[07-Aug-2025 19:33:44 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:33:44 Asia/Dhaka] Photos query result: 3 photos found
+[07-Aug-2025 19:33:44 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:33:44 Asia/Dhaka] Posts query result: 1 posts found
+[07-Aug-2025 19:33:44 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:33:44 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:33:44 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[07-Aug-2025 19:33:44 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[07-Aug-2025 19:33:44 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[07-Aug-2025 19:33:44 Asia/Dhaka] === PROFILE DEBUG END ===
+[07-Aug-2025 19:35:12 Asia/Dhaka] === PROFILE DEBUG START ===
+[07-Aug-2025 19:35:12 Asia/Dhaka] Current User ID: 4
+[07-Aug-2025 19:35:12 Asia/Dhaka] Profile User ID: 2
+[07-Aug-2025 19:35:12 Asia/Dhaka] Is Own Profile: no
+[07-Aug-2025 19:35:12 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[07-Aug-2025 19:35:12 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1754573580
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[07-Aug-2025 19:35:12 Asia/Dhaka] === GETTING PROFILE DATA ===
+[07-Aug-2025 19:35:12 Asia/Dhaka] Profile query result: Found profile
+[07-Aug-2025 19:35:12 Asia/Dhaka] Profile ID: 2
+[07-Aug-2025 19:35:12 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[07-Aug-2025 19:35:12 Asia/Dhaka] Photos query result: 4 photos found
+[07-Aug-2025 19:35:12 Asia/Dhaka] === GETTING POSTS DATA ===
+[07-Aug-2025 19:35:12 Asia/Dhaka] Posts query result: 4 posts found
+[07-Aug-2025 19:35:12 Asia/Dhaka] Post 28 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:35:12 Asia/Dhaka] Post 21 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:35:12 Asia/Dhaka] Post 12 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:35:12 Asia/Dhaka] Post 10 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[07-Aug-2025 19:35:12 Asia/Dhaka] === FINAL DATA ===
+[07-Aug-2025 19:35:12 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+    [DOB] => 
+    [gender] => 
+)
+
+[07-Aug-2025 19:35:12 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[07-Aug-2025 19:35:12 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[07-Aug-2025 19:35:12 Asia/Dhaka] === PROFILE DEBUG END ===

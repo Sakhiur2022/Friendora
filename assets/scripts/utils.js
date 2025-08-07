@@ -7,7 +7,7 @@ addEventListener("DOMContentLoaded", () => {
 
 function setupEventListeners() {
   // Upload areas
-  setupUploadAreas()
+  // setupUploadAreas()
 
   // Outside click handlers
   document.addEventListener("click", handleOutsideClick)
