@@ -1,5 +1,9 @@
 let debounceTimer;
 
+document.addEventListener("DOMContentLoaded", () => {
+    setupSearchFunctionality();
+});
+
 // Setup comprehensive search functionality
 function setupSearchFunctionality() {
     // Setup desktop search
@@ -152,7 +156,7 @@ function performSearch(query, type = "desktop") {
                 .map(
                     (user) => `
                 <div class="suggestion-item">
-                        <img src="${user.profile_photo}" class="suggestion-avatar" alt="${user.Full_Name}">
+                        <img src="${user.profile_photo || (window.ROOT || '') + '/assets/images/default_pfp.png'}" class="suggestion-avatar" alt="${user.Full_Name}">
                         <div class="suggestion-info">
                                 <div class="suggestion-name">${createUserLink(user.user_id, user.Full_Name)}</div>
                                 <div class="suggestion-type">Person</div>

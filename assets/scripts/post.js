@@ -119,32 +119,7 @@ function initializePostFunctionality(isOwnProfile, userAvatar, userName, userId)
   }
 }
 
-// Helper functions for reactions
-function getReactionIcon(reactionType) {
-  const icons = {
-    like: 'bi-heart-fill',
-    haha: 'bi-emoji-laughing-fill',
-    wow: 'bi-emoji-surprise-fill',
-    angry: 'bi-emoji-angry-fill'
-  }
-  return icons[reactionType] || 'bi-heart-fill'
-}
 
-function getReactionText(reactionType) {
-  const texts = {
-    like: 'Like',
-    haha: 'Haha',
-    wow: 'Wow',
-    angry: 'Angry'
-  }
-  return texts[reactionType] || 'Like'
-}
-
-// Helper function to create user profile links
-function createUserLink(userId, userName, className = '') {
-  const baseUrl = window.ROOT || '';
-  return `<a href="${baseUrl}/profile/${userId}" class="user-link ${className}">${userName}</a>`;
-}
 
 // Helper function to reload posts for current profile
 function reloadCurrentUserPosts() {
@@ -339,7 +314,36 @@ function displayPosts(posts) {
 
   if (!posts || posts.length === 0) {
     console.log("No posts to display");
-    postsContainer.innerHTML = '<p class="text-center text-muted">No posts yet</p>'
+    
+    // Check if this is the current user's own profile
+    const isOwnProfile = window.currentUserId == window.profileUserId;
+    
+    if (isOwnProfile) {
+      // Message for own profile
+      postsContainer.innerHTML = `
+        <div class="cyber-card text-center py-5">
+          <div class="cyber-glow-container">
+            <i class="bi bi-stars cyber-icon display-1 mb-3"></i>
+            <h4 class="cyber-text-glow mb-3">✨ No Dreams Shared Yet ✨</h4>
+            <p class="text-muted cyber-text-fade">The digital dreamscape awaits your first creation...</p>
+            <div class="cyber-pulse-ring mx-auto mt-4"></div>
+          </div>
+        </div>
+      `
+    } else {
+      // Message for other user's profile
+      const profileUserName = window.profileUser?.fname || 'This user';
+      postsContainer.innerHTML = `
+        <div class="cyber-card text-center py-5">
+          <div class="cyber-glow-container">
+            <i class="bi bi-moon-stars cyber-icon display-1 mb-3"></i>
+            <h4 class="cyber-text-glow mb-3">🌙 ${profileUserName} hasn't shared any dreams yet 🌙</h4>
+            <p class="text-muted cyber-text-fade">Their journey in the digital realm is just beginning...</p>
+            <div class="cyber-pulse-ring mx-auto mt-4"></div>
+          </div>
+        </div>
+      `
+    }
     return
   }
 

@@ -94,17 +94,8 @@
             <div class="nav-item dropdown">
                 <a class="nav-link user-dropdown-toggle" href="#" id="userDropdown" role="button" onclick="toggleUserDropdown()">
                     <?php
-                    // Use current user's profile pic for navbar, not the profile being viewed
-                    $currentUserProfile = $data['current_user'];
-                    $currentUserProfileData = null;
-                    if (isset($data['profile']) && $data['is_own_profile']) {
-                        $currentUserProfileData = $data['profile'];
-                    } else {
-                        // Fetch current user's profile data for navbar
-                        $user_profile_temp = new Profiles;
-                        $currentUserProfileData = $user_profile_temp->first(['user_id' => $data['current_user']->id]);
-                    }
-                    $navbarProfilePic = $currentUserProfileData->pfp ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face';
+                    // Use Utils::getProfilePicture() to get current user's profile pic
+                    $navbarProfilePic = Utils::getProfilePicture();
                     ?>
                     <img src="<?php echo $navbarProfilePic; ?>" class="profile-pic-nav" alt="Profile">
                 </a>
@@ -234,7 +225,7 @@
                     <div class="profile-header">
                         <div class="profile-pic-container">
                             <?php
-                            $profilePicMain = $profile->pfp ?? 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face';
+                            $profilePicMain = $profile->pfp;
                             ?>
                             <img src="<?php echo $profilePicMain; ?>" alt="Profile Picture" class="profile-pic-main" id="profilePic">
                             
@@ -382,18 +373,7 @@
                     <!-- Right Column - Posts -->
                     <div class="col-lg-7">
                         <!-- Create Post Container - Will be populated by post.js if own profile -->
-                        <div id="create-post-container"></div>
-
-                        <!-- Posts Container - This is where posts will be loaded via AJAX -->
-                        <div id="post-container" data-userid="<?= $data['profile_user']->id ?? 0 ?>">
-                            <!-- Posts will be loaded here by post.js -->
-                            <div class="text-center py-4">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="visually-hidden">Loading posts...</span>
-                                </div>
-                                <div class="mt-2 text-muted">Loading posts...</div>
-                            </div>
-                        </div>
+                        <?php $this->loadView("post"); ?>
                     </div>
                 </div>
             </div>
@@ -649,7 +629,7 @@
         window.currentUserId = <?php echo $data['current_user']->id ?? 0; ?>;
         window.profileUserId = <?php echo $data['profile_user']->id ?? 0; ?>;
         window.isOwnProfile = <?php echo json_encode($data['is_own_profile'] ?? false); ?>;
-        window.currentUserProfilePic = "<?= $navbarProfilePic ?>";
+        window.currentUserProfilePic = "<?= Utils::getProfilePicture() ?>";
         window.ROOT = "<?=ROOT?>";
     </script>
 
@@ -659,6 +639,8 @@
     <script src="<?=ROOT?>/assets/scripts/utils.js"></script>
     
     <script src="<?=ROOT?>/assets/scripts/search.js"></script>
+
+    <script src="<?=ROOT?>/assets/scripts/navbar.js"></script>
     
     <!-- 2. Load post.js (contains post-related functions) -->
     <script src="<?=ROOT?>/assets/scripts/post.js"></script>

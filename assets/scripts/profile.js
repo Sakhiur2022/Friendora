@@ -5,10 +5,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize the page
   initializePage()
-  setupEventListeners()
+  setupProfileEventListeners()
   loadDummyData()
-  setupBackgroundMusic()
-  createFloatingParticles()
   initializeProfileOwnership()
   
   // Initialize post functionality using the new modular approach
@@ -21,10 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initializePostFunctionality(isOwn, userAvatar, userName, userId);
   } else {
     console.error('initializePostFunctionality function not available. Make sure post.js is loaded.');
-  }
-
-
-  
+  }  
 })
 
 // Get data from PHP
@@ -32,11 +27,7 @@ const profileData = window.profileData || {}
 const websiteData = window.websiteData || []
 const photosData = window.photosData || []
 const currentUserId = window.currentUserId || 1
-const isOwnProfile = window.isOwnProfile || true
-
-// 🔍 DEBUG: Log received data from PHP
-
-
+const isOwnProfile = window.isOwnProfile || false
 // Profile data
 const profileUser = {
   name: `${profileData.fname || "Alexandra"} ${profileData.lname || "Neon"}`,
@@ -75,75 +66,7 @@ const profileUser = {
   isOwnProfile: isOwnProfile,
   city: profileData.city || "Neo Tokyo", // Add city field for about section
 }
-
-console.log("🔍 DEBUG: Profile User Data:", profileUser);
-
-
-// Dummy notifications data
-const notificationsData = [
-  {
-    id: 1,
-    userId: 2,
-    userName: "Marcus Tech",
-    userAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
-    message: "Marcus Tech liked your post",
-    time: "5 minutes ago",
-    isRead: false,
-    type: "like",
-  },
-  {
-    id: 2,
-    userId: 3,
-    userName: "Luna Digital",
-    userAvatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
-    message: "Luna Digital commented on your photo",
-    time: "1 hour ago",
-    isRead: false,
-    type: "comment",
-  },
-  {
-    id: 3,
-    userId: 4,
-    userName: "Cyber Explorer",
-    userAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
-    message: "Cyber Explorer started following you",
-    time: "2 hours ago",
-    isRead: true,
-    type: "follow",
-  },
-]
-
-
 let currentPhotoIndex = 0
-
-
-
-function getReactionText(reactionType) {
-  const texts = {
-    'like': 'Like',
-    'haha': 'Haha',
-    'wow': 'Wow',
-    'angry': 'Angry'
-  };
-  return texts[reactionType] || 'Like';
-}
-
-function initializePage() {
-  // Add loading animation
-  document.body.classList.add("loading")
-
-  // Simulate loading time
-  setTimeout(() => {
-    document.body.classList.remove("loading")
-    document.body.classList.add("loaded")
-  }, 1000)
-
-  // Add glitch effect to logo
-  const logo = document.querySelector(".cyber-logo")
-  if (logo) {
-    logo.classList.add("glitch-effect")
-  }
-}
 
 function initializeProfileOwnership() {
   if (isOwnProfile) {
@@ -171,22 +94,7 @@ function initializeProfileOwnership() {
   }
 }
 
-function setupEventListeners() {
-  // Upload areas
-  setupUploadAreas()
-
-  // Outside click handlers
-  document.addEventListener("click", handleOutsideClick)
-
-  // Scroll handlers
-  window.addEventListener("scroll", handleNavbarScroll)
-
-  // Hover effects
-  addCardHoverEffects()
-
-  // Setup search functionality for both desktop and mobile
-  setupSearchFunctionality()
-
+function setupProfileEventListeners() {
   // Profile navigation
   document.querySelectorAll(".profile-nav-item").forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -195,19 +103,16 @@ function setupEventListeners() {
       showProfileSection(target)
     })
   })
-
   // Save profile button
   const saveProfileBtn = document.getElementById("saveProfileBtn")
   if (saveProfileBtn) {
     saveProfileBtn.addEventListener("click", saveProfile)
   }
-
   // Edit profile button  
   const editProfileBtn = document.getElementById("editProfileBtn")
   if (editProfileBtn) {
     editProfileBtn.addEventListener("click", openEditProfileModal)
   }
-
   // About section
   const aboutSection = document.getElementById("aboutSection")
   if (aboutSection) {
@@ -221,21 +126,13 @@ function loadDummyData() {
 
   // Load photos grid
   loadPhotosGrid()
-
-  // Populate edit form if available
-  populateEditForm()
 }
 
 function loadAboutSection(user) {
-  console.log("🔍 DEBUG: loadAboutSection() called with user:", user);
-  
   const aboutSection = document.getElementById("aboutSection")
   if (!aboutSection) {
-    console.log("🔍 DEBUG: aboutSection element not found");
     return;
   }
-  
-  console.log("🔍 DEBUG: aboutSection element found:", aboutSection);
 
   const aboutItems = [
     { icon: "bi-geo-alt-fill", label: "Lives in", value: user.city },
@@ -249,7 +146,6 @@ function loadAboutSection(user) {
     { icon: "bi-quote", label: "Favorite Quote", value: user.quotes },
   ]
 
-  console.log("🔍 DEBUG: Generated about items:", aboutItems);
 
   aboutSection.innerHTML = aboutItems
     .map(
@@ -262,23 +158,17 @@ function loadAboutSection(user) {
     `,
     )
     .join("")
-
-  console.log("🔍 DEBUG: aboutSection HTML updated");
-
   // Add animation delay to each item
   const items = aboutSection.querySelectorAll(".about-item")
-  console.log("🔍 DEBUG: Found", items.length, "about items for animation");
   items.forEach((item, index) => {
     item.style.animationDelay = `${index * 0.1}s`
   })
 }
 
 function saveProfile() {
-  console.log("🔍 DEBUG: saveProfile() function called");
   
   const form = document.getElementById("editProfileForm");
   if (!form) {
-    console.log("🔍 DEBUG: Edit profile form not found");
     showNotification("Edit profile form not found", "error");
     return;
   }
@@ -286,14 +176,7 @@ function saveProfile() {
   const formData = new FormData(form);
   formData.append("action", "update_profile");
 
-  console.log("🔍 DEBUG: FormData created for profile save");
-  console.log("🔍 DEBUG: FormData entries:");
-  for (let pair of formData.entries()) {
-    console.log("🔍 DEBUG: -", pair[0], ":", pair[1]);
-  }
-
   const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
-  console.log("🔍 DEBUG: Profile URL for save:", profileUrl);
 
   fetch(profileUrl, {
     method: "POST",
@@ -303,15 +186,12 @@ function saveProfile() {
     },
   })
     .then((response) => {
-      console.log("🔍 DEBUG: Profile save response status:", response.status);
-      console.log("🔍 DEBUG: Profile save response headers:", response.headers);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       return response.text();
     })
     .then((text) => {
-      console.log("🔍 DEBUG: Raw profile save response text:", text);
       
       // Clean backticks from response if present
       let cleanedText = text;
@@ -322,12 +202,9 @@ function saveProfile() {
         }
       }
       
-      console.log("🔍 DEBUG: Cleaned profile save response text:", cleanedText);
       const data = JSON.parse(cleanedText);
-      console.log("🔍 DEBUG: Parsed profile save response data:", data);
       
       if (data.success) {
-        console.log("🔍 DEBUG: Profile save successful");
         updateProfileDisplay(data.user)
         showNotification("Profile updated successfully!", "success")
         // Close modal
@@ -341,12 +218,10 @@ function saveProfile() {
           window.location.reload()
         }, 1000)
       } else {
-        console.log("🔍 DEBUG: Profile save failed:", data.message);
         showNotification("Error updating profile: " + data.message, "error")
       }
     })
     .catch((error) => {
-      console.error("🔍 DEBUG: Profile save error:", error);
       showNotification("Error saving profile", "error")
     })
 }
@@ -473,34 +348,25 @@ function removeProfilePreview() {
 }
 
 function uploadCoverPhoto() {
-  console.log("🔍 DEBUG: uploadCoverPhoto() function called");
+
   
   const input = document.getElementById("coverPhotoInput")
   const file = input.files[0]
 
   if (!file) {
-    console.log("🔍 DEBUG: No file selected for cover photo upload");
     showNotification("Please select a file first", "error")
     return
   }
 
-  console.log("🔍 DEBUG: Selected cover photo file:", file);
-  console.log("🔍 DEBUG: File name:", file.name);
-  console.log("🔍 DEBUG: File size:", file.size);
-  console.log("🔍 DEBUG: File type:", file.type);
 
   const formData = new FormData()
   formData.append("cover_photo", file)
   formData.append("action", "upload_cover")
 
-  console.log("🔍 DEBUG: FormData created for cover photo");
-  console.log("🔍 DEBUG: FormData entries:");
-  for (let pair of formData.entries()) {
-    console.log("🔍 DEBUG: -", pair[0], ":", pair[1]);
-  }
-
+  
+ 
   const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
-  console.log("🔍 DEBUG: Profile URL for cover upload:", profileUrl);
+  
 
   fetch(profileUrl, {
     method: "POST",
@@ -510,16 +376,13 @@ function uploadCoverPhoto() {
     body: formData,
   })
     .then((response) => {
-      console.log("🔍 DEBUG: Cover upload response status:", response.status);
-      console.log("🔍 DEBUG: Cover upload response headers:", response.headers);
+     
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       return response.text();
     })
     .then((text) => {
-      console.log("🔍 DEBUG: Raw cover upload response text:", text);
-
       // Clean backticks from response if present
       let cleanedText = text;
       if (text.startsWith('`')) {
@@ -529,71 +392,47 @@ function uploadCoverPhoto() {
         }
       }
 
-      console.log("🔍 DEBUG: Cleaned cover upload response text:", cleanedText);
       const data = JSON.parse(cleanedText);
-      console.log("🔍 DEBUG: Parsed cover upload response data:", data);
-
+ 
       if (data.success) {
-        console.log("🔍 DEBUG: Cover photo upload successful");
+        
         showNotification("Cover photo uploaded successfully!", "success")
         removeCoverPreview()
         // Update the cover photo display
         const coverImg = document.getElementById("coverPhoto")
         if (coverImg && data.cover_url) {
-          console.log("🔍 DEBUG: Updating cover photo URL to:", data.cover_url);
           coverImg.src = data.cover_url
-        } else if (!coverImg) {
-          console.log("🔍 DEBUG: Cover photo element not found");
-        } else if (!data.cover_url) {
-          console.log("🔍 DEBUG: No cover_url in response data");
-        }
+        } 
         
         // Close modal
         const modal = window.bootstrap.Modal.getInstance(document.getElementById("coverPhotoModal"))
         if (modal) {
-          console.log("🔍 DEBUG: Closing cover photo modal");
           modal.hide()
         }
       } else {
-        console.log("🔍 DEBUG: Cover photo upload failed:", data.message);
         showNotification("Error uploading cover photo: " + data.message, "error")
       }
     })
     .catch((error) => {
-      console.error("🔍 DEBUG: Cover photo upload error:", error);
       showNotification("Upload failed", "error")
     })
 }
 
-function uploadProfilePhoto() {
-  console.log("🔍 DEBUG: uploadProfilePhoto() function called");
-  
+function uploadProfilePhoto() {  
   const input = document.getElementById("profilePhotoInput")
   const file = input.files[0]
 
   if (!file) {
-    console.log("🔍 DEBUG: No file selected for profile photo upload");
+  
     showNotification("Please select a file first", "error")
     return
   }
 
-  console.log("🔍 DEBUG: Selected profile photo file:", file);
-  console.log("🔍 DEBUG: File name:", file.name);
-  console.log("🔍 DEBUG: File size:", file.size);
-  console.log("🔍 DEBUG: File type:", file.type);
-
   const formData = new FormData()
   formData.append("profile_photo", file)
-  formData.append("action", "upload_profile")
+  formData.append("action", "upload_profile") 
 
-  console.log("🔍 DEBUG: FormData created for profile photo");
-  console.log("🔍 DEBUG: FormData entries:");
-  for (let pair of formData.entries()) {
-    console.log("🔍 DEBUG: -", pair[0], ":", pair[1]);
-  }
-
-  const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile';
-  console.log("🔍 DEBUG: Profile URL for profile upload:", profileUrl);
+  const profileUrl = window.ROOT ? `${window.ROOT}/profile` : './profile'; 
 
   fetch(profileUrl, {
     method: "POST",
@@ -603,15 +442,13 @@ function uploadProfilePhoto() {
     body: formData,
   })
     .then((response) => {
-      console.log("🔍 DEBUG: Profile upload response status:", response.status);
-      console.log("🔍 DEBUG: Profile upload response headers:", response.headers);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       return response.text();
     })
     .then((text) => {
-      console.log("🔍 DEBUG: Raw profile upload response text:", text);
+
       
       // Clean backticks from response if present
       let cleanedText = text;
@@ -622,21 +459,20 @@ function uploadProfilePhoto() {
         }
       }
       
-      console.log("🔍 DEBUG: Cleaned profile upload response text:", cleanedText);
+  
       const data = JSON.parse(cleanedText);
-      console.log("🔍 DEBUG: Parsed profile upload response data:", data);
+  
       
       if (data.success) {
-        console.log("🔍 DEBUG: Profile photo upload successful");
+    
         showNotification("Profile photo updated successfully!", "success")
         removeProfilePreview()
         
         // Update all profile images on the page
         const profileImages = document.querySelectorAll("#profilePic, .profile-pic-nav, .user-dropdown-avatar")
-        console.log("🔍 DEBUG: Found", profileImages.length, "profile images to update");
+      
         profileImages.forEach((img, index) => {
           if (data.profile_url) {
-            console.log(`🔍 DEBUG: Updating profile image ${index + 1} URL to:`, data.profile_url);
             img.src = data.profile_url
           }
         })
@@ -647,12 +483,10 @@ function uploadProfilePhoto() {
           modal.hide()
         }
       } else {
-        console.log("🔍 DEBUG: Profile photo upload failed:", data.message);
         showNotification("Error uploading profile photo: " + data.message, "error")
       }
     })
     .catch((error) => {
-      console.error("🔍 DEBUG: Profile photo upload error:", error);
       showNotification("Upload failed", "error")
     })
 }
@@ -672,39 +506,9 @@ function openEditProfileModal() {
   modal.show()
 }
 
-function loadNotifications() {
-  const notificationsList = document.getElementById("notificationsList")
-  const notificationCount = document.getElementById("notificationCount")
-
-  if (!notificationsList) return
-
-  // Update notification count
-  const unreadCount = notificationsData.filter((n) => !n.isRead).length
-  if (notificationCount) {
-    notificationCount.textContent = unreadCount
-    notificationCount.style.display = unreadCount > 0 ? "flex" : "none"
-  }
-
-  notificationsList.innerHTML = notificationsData
-    .map(
-      (notification) => `
-        <li class="notification-item ${!notification.isRead ? "unread" : ""}" onclick="handleNotificationClick(${notification.id})">
-            <img src="${notification.userAvatar}" class="notification-avatar" alt="User">
-            <div class="notification-content">
-                <p>${generateNotificationMessage(notification)}</p>
-                <small>${notification.time}</small>
-            </div>
-        </li>
-    `,
-    )
-    .join("")
-}
-
 function loadPhotosGrid() {
   const photosGrid = document.getElementById("photosGrid")
   if (!photosGrid) return
-
-  console.log("Loading photos grid. Photos data:", photosData); // Debug log
 
   // Use PHP photos data if available
   if (photosData && photosData.length > 0) {
@@ -714,7 +518,6 @@ function loadPhotosGrid() {
         (photo, index) => {
           // Handle different possible URL field names
           const photoUrl = photo.url || photo.photo_url || photo.image_url || 'https://via.placeholder.com/150';
-          console.log("Photo object:", photo, "Using URL:", photoUrl); // Debug log
           return `
           <img src="${photoUrl}" alt="Photo" class="photo-item" onclick="openPhotoModal('${photoUrl}', ${index})">
           `;
@@ -725,87 +528,6 @@ function loadPhotosGrid() {
     photosGrid.innerHTML = '<p class="text-muted">No photos yet</p>'
   }
 }
-
-function populateEditForm() {
-  // Form fields are already populated by PHP in the view
-  // This function can be used for additional JavaScript-based population if needed
-}
-
-
-
-// Mobile Menu Functions
-function toggleMobileMenu() {
-  const mobileMenu = document.getElementById("mobileMenu")
-  const hamburger = document.querySelector(".cyber-hamburger")
-
-  if (mobileMenu && hamburger) {
-    const isOpen = mobileMenu.classList.contains("show")
-
-    if (isOpen) {
-      mobileMenu.classList.remove("show")
-      hamburger.classList.remove("active")
-      document.body.style.overflow = ""
-    } else {
-      mobileMenu.classList.add("show")
-      hamburger.classList.add("active")
-      document.body.style.overflow = "hidden"
-      // Setup mobile search when menu opens
-      setupMobileSearchEvents()
-    }
-  }
-}
-
-// User Dropdown Functions
-function toggleUserDropdown() {
-  const container = document.getElementById("userDropdownContainer")
-  const mobileContainer = document.getElementById("mobileUserDropdownContainer")
-
-  closeAllDropdowns()
-
-  if (window.innerWidth < 992) {
-    if (mobileContainer) {
-      const isVisible = mobileContainer.classList.contains("show")
-      mobileContainer.classList.toggle("show", !isVisible)
-    }
-  } else {
-    if (container) {
-      const isVisible = container.classList.contains("show")
-      container.classList.toggle("show", !isVisible)
-    }
-  }
-}
-
-function toggleNotificationDropdown() {
-  const container = document.getElementById("notificationDropdownContainer")
-  if (container) {
-    const isVisible = container.classList.contains("show")
-    closeAllDropdowns()
-    if (!isVisible) {
-      container.classList.add("show")
-      loadNotifications()
-    }
-  }
-}
-
-function closeAllDropdowns() {
-  const dropdowns = ["notificationDropdownContainer", "userDropdownContainer", "mobileUserDropdownContainer"]
-  dropdowns.forEach((id) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.classList.remove("show")
-    }
-  })
-}
-
-function handleLogout() {
-  if (confirm("Are you sure you want to log out?")) {
-    showNotification("Logging out...", "info", "Goodbye!")
-    setTimeout(() => {
-      window.location.href = "/logout"
-    }, 2000)
-  }
-}
-
 // Updated Search Functions to handle both desktop and mobile
 // now the code is in search.js
 
@@ -842,8 +564,6 @@ function loadPhotoGallery() {
   const mainImg = document.getElementById("galleryMainImage")
   const thumbnails = document.getElementById("galleryThumbnails")
   const counter = document.getElementById("photoCounter")
-
-  console.log("Loading photo gallery. Current index:", currentPhotoIndex, "Photos:", photosData); // Debug log
 
   if (mainImg && thumbnails && counter) {
     const photos = photosData.length > 0 ? photosData : []
@@ -905,105 +625,11 @@ function openPhotoModal(photoUrl, index) {
 }
 
 // Notification Functions
-function handleNotificationClick(notificationId) {
-  const notification = notificationsData.find((n) => n.id === notificationId)
-  if (notification && !notification.isRead) {
-    notification.isRead = true
 
-    const notificationElement = document.querySelector(`[onclick="handleNotificationClick(${notificationId})"]`)
-    if (notificationElement) {
-      notificationElement.classList.remove("unread")
-    }
-
-    const unreadCount = notificationsData.filter((n) => !n.isRead).length
-    const countElement = document.getElementById("notificationCount")
-    if (countElement) {
-      countElement.textContent = unreadCount
-      countElement.style.display = unreadCount > 0 ? "flex" : "none"
-    }
-  }
-
-  showNotification("Notification clicked!", "info")
-}
-
-function markAllAsRead() {
-  notificationsData.forEach((notification) => {
-    notification.isRead = true
-  })
-
-  const notificationItems = document.querySelectorAll(".notification-item")
-  notificationItems.forEach((item) => {
-    item.classList.remove("unread")
-  })
-
-  const countElement = document.getElementById("notificationCount")
-  if (countElement) {
-    countElement.style.display = "none"
-  }
-
-  showNotification("All notifications marked as read", "success")
-}
-
-function toggleMobileNotifications() {
-  const notificationsSection = document.getElementById("mobileNotificationsSection")
-
-  if (notificationsSection) {
-    const isVisible = notificationsSection.style.display !== "none"
-    notificationsSection.style.display = isVisible ? "none" : "block"
-
-    if (!isVisible) {
-      loadMobileNotifications()
-    }
-  }
-}
-
-function loadMobileNotifications() {
-  const mobileNotificationsList = document.getElementById("mobileNotificationsList")
-  const mobileNotificationCount = document.getElementById("mobileNotificationCount")
-
-  if (!mobileNotificationsList) return
-
-  const unreadCount = notificationsData.filter((n) => !n.isRead).length
-  if (mobileNotificationCount) {
-    mobileNotificationCount.textContent = unreadCount
-    mobileNotificationCount.style.display = unreadCount > 0 ? "flex" : "none"
-  }
-
-  mobileNotificationsList.innerHTML = notificationsData
-    .map(
-      (notification) => `
-        <div class="notification-item ${!notification.isRead ? "unread" : ""}" onclick="handleNotificationClick(${notification.id})">
-            <img src="${notification.userAvatar}" class="notification-avatar" alt="User">
-            <div class="notification-content">
-                <p>${generateNotificationMessage(notification)}</p>
-                <small>${notification.time}</small>
-            </div>
-        </div>
-    `,
-    )
-    .join("")
-}
 
 // Utility Functions
 // they are in utils.js
 
-// Window resize handler
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 992) {
-    const mobileMenu = document.getElementById("mobileMenu")
-    const hamburger = document.querySelector(".cyber-hamburger")
-    if (mobileMenu && mobileMenu.classList.contains("show")) {
-      mobileMenu.classList.remove("show")
-      hamburger.classList.remove("active")
-      document.body.style.overflow = ""
-    }
-
-    const mobileContainer = document.getElementById("mobileUserDropdownContainer")
-    if (mobileContainer) {
-      mobileContainer.classList.remove("show")
-    }
-  }
-})
 
 // Keyboard shortcuts
 document.addEventListener("keydown", (e) => {

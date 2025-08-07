@@ -8,7 +8,7 @@ class Session
 
     private function startSession()
     {
-         if (session_status() === PHP_SESSION_NONE) {
+         if (session_status() === PHP_SESSION_NONE && $_SERVER['SERVER_NAME'] === 'localhost') {
             ini_set('session.use_only_cookies', 1);
             ini_set('session.use_strict_mode', 1);
 
@@ -32,6 +32,9 @@ class Session
                     $_SESSION['last_regeneration'] = time();
                 }
             }
+        }
+        else if (session_status() === PHP_SESSION_NONE) {
+            session_start();
         }
         return true;
     }

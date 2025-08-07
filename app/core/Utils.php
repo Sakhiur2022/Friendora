@@ -1,7 +1,4 @@
 <?php
-
-
-
 class Utils{
     public static function show($stuff){
         echo "<pre>";
@@ -201,6 +198,24 @@ public static function user($key = ''){
         return $row ->$key;
     }
     return $row;
+}
+
+public static function getProfilePicture() {
+    $session = new Session();
+    
+    // Always get the current user's profile picture from database
+    if ($session->is_loggedIn()) {
+        $user_profile = new Profiles();
+        $current_user_id = self::user('id');
+        $profileData = $user_profile->first(['user_id' => $current_user_id]);
+        
+        if ($profileData && !empty($profileData->pfp)) {
+            return $profileData->pfp;
+        }
+    }
+    
+    // Return default if no profile picture found or user not logged in
+    return ROOT . '/assets/images/default_pfp.svg'; // Use SVG default
 }
 
     public static function profileUrl($user_id = null) {

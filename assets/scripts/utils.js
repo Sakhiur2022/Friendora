@@ -1,3 +1,42 @@
+addEventListener("DOMContentLoaded", () => {
+    initializePage();
+    setupEventListeners();
+    setupBackgroundMusic();
+    createFloatingParticles();
+});
+
+function setupEventListeners() {
+  // Upload areas
+  setupUploadAreas()
+
+  // Outside click handlers
+  document.addEventListener("click", handleOutsideClick)
+
+  // Scroll handlers
+  window.addEventListener("scroll", handleNavbarScroll)
+
+  // Hover effects
+  addCardHoverEffects()
+}
+
+function initializePage() {
+  // Add loading animation
+  document.body.classList.add("loading")
+
+  // Simulate loading time
+  setTimeout(() => {
+    document.body.classList.remove("loading")
+    document.body.classList.add("loaded")
+  }, 1000)
+
+  // Add glitch effect to logo
+  const logo = document.querySelector(".cyber-logo")
+  if (logo) {
+    logo.classList.add("glitch-effect")
+  }
+}
+
+
 function handleOutsideClick(e) {
   if (!e.target.closest(".search-container")) {
     hideSearchSuggestions()
@@ -199,12 +238,28 @@ function generateNotificationMessage(notification) {
 }
 
 // Helper functions for reactions (kept for compatibility with existing UI)
+// Helper functions for reactions
 function getReactionIcon(reactionType) {
   const icons = {
     like: 'bi-heart-fill',
-    haha: 'bi-emoji-laughing-fill', 
+    haha: 'bi-emoji-laughing-fill',
     wow: 'bi-emoji-surprise-fill',
     angry: 'bi-emoji-angry-fill'
-  };
-  return icons[reactionType] || 'bi-heart-fill';
+  }
+  return icons[reactionType] || 'bi-heart-fill'
 }
+
+function getReactionText(reactionType) {
+  const texts = {
+    like: 'Like',
+    haha: 'Haha',
+    wow: 'Wow',
+    angry: 'Angry'
+  }
+  return texts[reactionType] || 'Like'
+}
+
+
+
+
+

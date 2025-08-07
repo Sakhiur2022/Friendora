@@ -414,10 +414,29 @@ class Profile {
             }
         }
 
-        //sete DOB and gender for profileData
+        // Handle profile data based on whose profile we're viewing
         if ($profileData) {
-            $profileData->DOB = Utils::user('DOB') ?? '';    
-            $profileData->gender = Utils::user('gender') ?? '';
+            // Only set DOB and gender from current user if viewing own profile
+            if ($is_own_profile) {
+                $profileData->DOB = Utils::user('DOB') ?? '';
+                $profileData->gender = Utils::user('gender') ?? '';
+            } else {
+                // For other users, get their DOB and gender from the profileUser data
+                $profileData->DOB = $profileUser->DOB ?? '';
+                $profileData->gender = $profileUser->gender ?? '';
+            }
+            
+            // Ensure pfp is always set to a valid image
+            if (empty($profileData->pfp)) {
+                $profileData->pfp = ROOT . '/assets/images/default_pfp.png';
+            }
+        } else {
+            // If no profile data, create a default object
+            $profileData = (object)[
+                'pfp' => ROOT . '/assets/images/default_pfp.svg',
+                'DOB' => $is_own_profile ? (Utils::user('DOB') ?? '') : ($profileUser->DOB ?? ''),
+                'gender' => $is_own_profile ? (Utils::user('gender') ?? '') : ($profileUser->gender ?? '')
+            ];
         }
 
         // Debug logging
@@ -434,7 +453,7 @@ class Profile {
         $data['websites'] = $websiteData;
         $data['photos'] = $userPhotos;
         $data['posts'] = $userPosts;
-        
+
         $this->loadView("profile", $data);
     }
 
