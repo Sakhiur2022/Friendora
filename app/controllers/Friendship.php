@@ -155,44 +155,58 @@ class Friendship{
   public function get_friends($user_id = null) {
     $ses = new Session;
     if (!$ses->is_loggedIn()) {
-      echo json_encode([]);
-      return;
+        echo json_encode(['total_friends' => 0, 'friends' => []]);
+        return;
     }
     
     if ($user_id === null) {
-      $user_id = $ses->user('id');
+        $user_id = $ses->user('id');
     }
     
     $friend_requests = new Friend_requests;
-    $query = "
-        SELECT 
-            fr.receiver_id AS friend_id,
-            CONCAT(u.fname, ' ', IFNULL(u.lname, '')) AS friend_name,
-            p.pfp AS profile_pic,
-            0 AS mutual_friends
-        FROM friend_requests fr
-        JOIN users u ON u.id = fr.receiver_id
-        LEFT JOIN profile p ON p.user_id = fr.receiver_id
-        WHERE fr.sender_id = :user_id AND fr.status = 'accepted'
-        
-        UNION
-        
-        SELECT 
-            fr.sender_id AS friend_id,
-            CONCAT(u.fname, ' ', IFNULL(u.lname, '')) AS friend_name,
-            p.pfp AS profile_pic,
-            0 AS mutual_friends
-        FROM friend_requests fr
-        JOIN users u ON u.id = fr.sender_id
-        LEFT JOIN profile p ON p.user_id = fr.sender_id
-        WHERE fr.receiver_id = :user_id2 AND fr.status = 'accepted'
-        
-        ORDER BY friend_name
-    ";
-    $friends = $friend_requests->query($query, ['user_id' => $user_id, 'user_id2' => $user_id]);
+
+    // Try stored procedure first
+    $friends = $friend_requests->query("CALL get_friends(:user_id)", ['user_id' => $user_id]);
     
+  
+
+    $friend_requests->query("CALL get_total_friends(:user_id, @total)", ['user_id' => $user_id]);
+    $total_result = $friend_requests->query("SELECT @total AS total_friends");
+    $total_friends = $total_result[0]->total_friends ?? 0;
+
+    // // Debug output
+    // file_put_contents('friend_debug.txt', "User ID: " . $user_id . "\n", FILE_APPEND | LOCK_EX);
+    // file_put_contents('friend_debug.txt', "Friends result: " . print_r($friends, true) . "\n", FILE_APPEND | LOCK_EX);
+    // file_put_contents('friend_debug.txt', "Total friends: " . $total_friends . "\n", FILE_APPEND | LOCK_EX);
+  
+    
+   
+    // Convert objects to arrays if needed
+    $friendsArray = [];
+    if ($friends) {
+        if (is_array($friends)) {
+            // Convert each object in array to array
+            foreach ($friends as $friend) {
+                if (is_object($friend)) {
+                    $friendsArray[] = (array)$friend;
+                } else {
+                    $friendsArray[] = $friend;
+                }
+            }
+        } else if (is_object($friends)) {
+            // Single object, convert to array with one element
+            $friendsArray = [(array)$friends];
+        }
+    }
+  
+
+
     header('Content-Type: application/json');
-    echo json_encode($friends ?: []);
-  }
+    echo json_encode([
+        'total_friends' => (int)$total_friends,
+        'friends' => $friendsArray
+    ]);
+}
+
 
 }

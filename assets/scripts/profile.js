@@ -678,13 +678,19 @@ async function loadFriendsGrid() {
       throw new Error("Server returned non-JSON response");
     }
     
-    const friends = await response.json();
+    const data = await response.json();
     
-    if (friends.length === 0) {
+    console.log("Received friends data:", data);
+    
+    if (!data.friends || data.friends.length === 0) {
       friendsGrid.innerHTML = '<p class="text-muted">No friends yet</p>';
     } else {
       // Show first 6 friends
-      const displayFriends = friends.slice(0, 6);
+      const friends = data.friends;
+      
+      // Ensure friends is an array
+      const friendsArray = Array.isArray(friends) ? friends : (friends ? [friends] : []);
+      const displayFriends = friendsArray.slice(0, 6);
       friendsGrid.innerHTML = displayFriends.map(friend => `
         <div class="friend-item" onclick="window.location.href='${window.location.origin}/Friendora/profile/${friend.friend_id}'">
           <img src="${friend.profile_pic || '/Friendora/assets/images/default_pfp.png'}" class="friend-avatar" alt="${friend.friend_name}">
@@ -747,12 +753,17 @@ async function loadFriendsModal() {
       throw new Error("Server returned non-JSON response");
     }
     
-    const friends = await response.json();
+    const data = await response.json();
     
-    if (friends.length === 0) {
+    console.log("Received friends modal data:", data);
+    
+    if (!data.friends || data.friends.length === 0) {
       friendsModalList.innerHTML = '<div class="text-center text-muted">No friends yet</div>';
     } else {
-      friendsModalList.innerHTML = friends.map(friend => `
+      const friends = data.friends;
+      // Ensure friends is an array
+      const friendsArray = Array.isArray(friends) ? friends : (friends ? [friends] : []);
+      friendsModalList.innerHTML = friendsArray.map(friend => `
         <div class="friends-modal-item" onclick="window.location.href='${window.location.origin}/Friendora/profile/${friend.friend_id}'">
           <img src="${friend.profile_pic || '/Friendora/assets/images/default_pfp.png'}" class="friends-modal-avatar" alt="${friend.friend_name}">
           <div class="friends-modal-info">

@@ -72,3 +72,79 @@ BEGIN
        OR (sender_id = p_user2 AND receiver_id = p_user1);
 END$$
 DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE get_friends(IN p_user_id INT)
+BEGIN
+    -- Temporary table: all friends of current user
+    CREATE TEMPORARY TABLE IF NOT EXISTS temp_user_friends AS
+    SELECT 
+        CASE 
+            WHEN sender_id = p_user_id THEN receiver_id
+            ELSE sender_id
+        END AS friend_id
+    FROM friend_requests
+    WHERE (sender_id = p_user_id OR receiver_id = p_user_id)
+      AND status = 'accepted';
+
+    -- Temporary table: all friend pairs for mutual friend calculation
+    CREATE TEMPORARY TABLE IF NOT EXISTS temp_all_friends AS
+    SELECT 
+        sender_id,
+        receiver_id
+    FROM friend_requests
+    WHERE status = 'accepted';
+
+    -- Main select
+    SELECT 
+        u.id AS friend_id,
+        CONCAT(u.fname, ' ', IFNULL(u.lname, '')) AS friend_name,
+        p.pfp AS profile_pic,
+
+        -- Mutual friends count
+        (
+            SELECT COUNT(*)
+            FROM temp_all_friends f1
+            JOIN temp_all_friends f2 ON
+                (
+                    (f1.sender_id = f2.sender_id AND f1.receiver_id != f2.receiver_id AND f2.receiver_id = temp_user_friends.friend_id)
+                    OR
+                    (f1.receiver_id = f2.receiver_id AND f1.sender_id != f2.sender_id AND f2.sender_id = temp_user_friends.friend_id)
+                )
+            WHERE 
+                (f1.sender_id = p_user_id OR f1.receiver_id = p_user_id)
+        ) AS mutual_friends,
+
+        -- Total friends count for the friend
+        (
+            SELECT COUNT(*)
+            FROM friend_requests fr3
+            WHERE (fr3.sender_id = temp_user_friends.friend_id OR fr3.receiver_id = temp_user_friends.friend_id)
+              AND fr3.status = 'accepted'
+        ) AS total_friends
+
+    FROM temp_user_friends
+    JOIN users u ON u.id = temp_user_friends.friend_id
+    LEFT JOIN profile p ON p.user_id = u.id
+    ORDER BY friend_name;
+
+    -- Cleanup
+    DROP TEMPORARY TABLE IF EXISTS temp_user_friends;
+    DROP TEMPORARY TABLE IF EXISTS temp_all_friends;
+END $$
+
+DELIMITER ;
+
+
+DELIMITER $$
+
+CREATE PROCEDURE get_total_friends(IN p_user_id INT, OUT total_friends INT)
+BEGIN
+    SELECT COUNT(*) INTO total_friends
+    FROM friend_requests
+    WHERE status = 'accepted'
+      AND (sender_id = p_user_id OR receiver_id = p_user_id);
+END $$
+
+DELIMITER ;

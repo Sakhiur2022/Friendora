@@ -19,24 +19,31 @@ Trait Database {
         return $this->connection;
     }
 
-    public function query($sql, $data = []) {
-        if (!$this->connection) {
-            $this->connect();
-        }
-        $statement = $this->connection->prepare($sql);
-        $check = $statement->execute($data);
-        
-        if ($check) {
-            // For SELECT queries, return the results
-            if (stripos(trim($sql), 'SELECT') === 0) {
-                $result = $statement->fetchAll(PDO::FETCH_OBJ);
-                return is_array($result) && count($result) > 0 ? $result : [];
-            } else {
-                // For INSERT, UPDATE, DELETE queries, return true on success
-                return true;
-            }
-        } else {
-            return false;
-        }
+  public function query($sql, $data = []) {
+    if (!$this->connection) {
+        $this->connect();
     }
+    $statement = $this->connection->prepare($sql);
+    $check = $statement->execute($data);
+
+    if ($check) {
+        $trimmed = strtolower(trim($sql));
+
+        // For SELECT or CALL queries, return the results
+        if (str_starts_with($trimmed, 'select') || str_starts_with($trimmed, 'call')) {
+            $result = $statement->fetchAll(PDO::FETCH_OBJ);
+
+            // Free any remaining result sets to avoid "Commands out of sync" errors
+            while ($statement->nextRowset()) { /* skip */ }
+
+            return is_array($result) && count($result) > 0 ? $result : [];
+        } else {
+            // For INSERT, UPDATE, DELETE queries, return true on success
+            return true;
+        }
+    } else {
+        return false;
+    }
+}
+
 }

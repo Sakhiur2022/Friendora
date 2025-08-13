@@ -215,7 +215,7 @@ public static function getProfilePicture() {
     }
     
     // Return default if no profile picture found or user not logged in
-    return ROOT . '/assets/images/default_pfp.svg'; // Use SVG default
+    return ROOT . '/assets/images/default_pfp.png'; // Use PNG default
 }
 
     public static function profileUrl($user_id = null) {
