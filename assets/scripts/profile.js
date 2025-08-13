@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setupProfileEventListeners()
   loadDummyData()
   initializeProfileOwnership()
+  checkFriendshipStatus()
+  loadFriendsGrid()
   
   // Initialize post functionality using the new modular approach
   if (typeof initializePostFunctionality === 'function') {
@@ -532,20 +534,237 @@ function loadPhotosGrid() {
 // now the code is in search.js
 
 // Profile Action Functions
-function followUser() {
-  const followBtn = document.getElementById("followBtn")
-  const followBtnText = document.getElementById("followBtnText")
+async function checkFriendshipStatus() {
+  if (isOwnProfile) return;
+  
+  const profileUserId = window.profileUserId;
+  if (!profileUserId) return;
+  
+  try {
+    const response = await fetch(`${window.location.origin}/Friendora/friendship/get_friendship_status/${profileUserId}`);
+    
+    // Check if response is ok
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    // Check if response is actually JSON
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("Expected JSON but got:", text);
+      throw new Error("Server returned non-JSON response");
+    }
+    
+    const result = await response.json();
+    updateFriendshipButton(result.status);
+  } catch (error) {
+    console.error("Failed to check friendship status:", error);
+  }
+}
 
-  const isFollowing = followBtnText.textContent === "Following"
+function updateFriendshipButton(status) {
+  const friendshipBtn = document.getElementById("friendshipBtn");
+  const friendshipBtnText = document.getElementById("friendshipBtnText");
+  const friendshipIcon = document.getElementById("friendshipIcon");
+  
+  if (!friendshipBtn || !friendshipBtnText || !friendshipIcon) return;
+  
+  switch (status) {
+    case 'friends':
+      friendshipBtnText.textContent = "Friends";
+      friendshipIcon.className = "bi bi-person-check-fill me-2";
+      friendshipBtn.className = "btn cyber-btn-success";
+      break;
+    case 'pending_sent':
+      friendshipBtnText.textContent = "Request Sent";
+      friendshipIcon.className = "bi bi-clock me-2";
+      friendshipBtn.className = "btn cyber-btn-secondary";
+      friendshipBtn.disabled = true;
+      break;
+    case 'pending_received':
+      friendshipBtnText.textContent = "Accept Request";
+      friendshipIcon.className = "bi bi-person-plus-fill me-2";
+      friendshipBtn.className = "btn cyber-btn-primary";
+      break;
+    case 'not_friends':
+    default:
+      friendshipBtnText.textContent = "Add Friend";
+      friendshipIcon.className = "bi bi-person-plus me-2";
+      friendshipBtn.className = "btn cyber-btn-primary";
+      friendshipBtn.disabled = false;
+      break;
+  }
+}
 
-  if (isFollowing) {
-    followBtnText.textContent = "Follow"
-    followBtn.classList.remove("following")
-    showNotification("Unfollowed user", "info")
-  } else {
-    followBtnText.textContent = "Following"
-    followBtn.classList.add("following")
-    showNotification("Now following user!", "success")
+async function handleFriendshipAction() {
+  const friendshipBtn = document.getElementById("friendshipBtn");
+  const friendshipBtnText = document.getElementById("friendshipBtnText");
+  const profileUserId = window.profileUserId;
+  
+  if (!profileUserId) return;
+  
+  const currentStatus = friendshipBtnText.textContent;
+  
+  try {
+    let response;
+    let message;
+    
+    switch (currentStatus) {
+      case 'Add Friend':
+        response = await fetch(`${window.location.origin}/Friendora/friendship/send_request/${profileUserId}`, {
+          method: 'POST'
+        });
+        message = "Friend request sent!";
+        break;
+        
+      case 'Accept Request':
+        response = await fetch(`${window.location.origin}/Friendora/friendship/accept_request/${profileUserId}`, {
+          method: 'POST'
+        });
+        message = "Friend request accepted!";
+        break;
+        
+      case 'Friends':
+        if (confirm('Are you sure you want to unfriend this user?')) {
+          response = await fetch(`${window.location.origin}/Friendora/friendship/unfriend/${profileUserId}`, {
+            method: 'POST'
+          });
+          message = "User unfriended";
+        } else {
+          return;
+        }
+        break;
+        
+      default:
+        return;
+    }
+    
+    const result = await response.json();
+    
+    if (result.status === 'success') {
+      showNotification(message, "success");
+      // Refresh friendship status
+      setTimeout(() => checkFriendshipStatus(), 500);
+    } else {
+      showNotification(result.message || "Action failed", "error");
+    }
+  } catch (error) {
+    console.error("Error handling friendship action:", error);
+    showNotification("Failed to perform action", "error");
+  }
+}
+
+async function loadFriendsGrid() {
+  const friendsGrid = document.getElementById("friendsGrid");
+  if (!friendsGrid) return;
+  
+  const profileUserId = window.profileUserId || window.currentUserId;
+  if (!profileUserId) return;
+  
+  try {
+    const response = await fetch(`${window.location.origin}/Friendora/friendship/get_friends/${profileUserId}`);
+    
+    // Check if response is ok
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    // Check if response is actually JSON
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("Expected JSON but got:", text);
+      throw new Error("Server returned non-JSON response");
+    }
+    
+    const friends = await response.json();
+    
+    if (friends.length === 0) {
+      friendsGrid.innerHTML = '<p class="text-muted">No friends yet</p>';
+    } else {
+      // Show first 6 friends
+      const displayFriends = friends.slice(0, 6);
+      friendsGrid.innerHTML = displayFriends.map(friend => `
+        <div class="friend-item" onclick="window.location.href='${window.location.origin}/Friendora/profile/${friend.friend_id}'">
+          <img src="${friend.profile_pic || '/Friendora/assets/images/default_pfp.png'}" class="friend-avatar" alt="${friend.friend_name}">
+          <span class="friend-name">${friend.friend_name}</span>
+        </div>
+      `).join('');
+    }
+  } catch (error) {
+    console.error("Failed to load friends:", error);
+    friendsGrid.innerHTML = '<p class="text-muted">Failed to load friends</p>';
+  }
+}
+
+function openFriendsModal() {
+  const modal = new window.bootstrap.Modal(document.getElementById("friendsModal"));
+  loadFriendsModal();
+  setupFriendsSearch();
+  modal.show();
+}
+
+function setupFriendsSearch() {
+  const searchInput = document.getElementById("friendsSearchInput");
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      const friendItems = document.querySelectorAll('.friends-modal-item');
+      
+      friendItems.forEach(item => {
+        const friendName = item.querySelector('.friends-modal-name').textContent.toLowerCase();
+        if (friendName.includes(searchTerm)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  }
+}
+
+async function loadFriendsModal() {
+  const friendsModalList = document.getElementById("friendsModalList");
+  if (!friendsModalList) return;
+  
+  const profileUserId = window.profileUserId || window.currentUserId;
+  if (!profileUserId) return;
+  
+  try {
+    const response = await fetch(`${window.location.origin}/Friendora/friendship/get_friends/${profileUserId}`);
+    
+    // Check if response is ok
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    // Check if response is actually JSON
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("Expected JSON but got:", text);
+      throw new Error("Server returned non-JSON response");
+    }
+    
+    const friends = await response.json();
+    
+    if (friends.length === 0) {
+      friendsModalList.innerHTML = '<div class="text-center text-muted">No friends yet</div>';
+    } else {
+      friendsModalList.innerHTML = friends.map(friend => `
+        <div class="friends-modal-item" onclick="window.location.href='${window.location.origin}/Friendora/profile/${friend.friend_id}'">
+          <img src="${friend.profile_pic || '/Friendora/assets/images/default_pfp.png'}" class="friends-modal-avatar" alt="${friend.friend_name}">
+          <div class="friends-modal-info">
+            <h6 class="friends-modal-name">${friend.friend_name}</h6>
+            <p class="friends-modal-meta">${friend.mutual_friends || 0} mutual friends</p>
+          </div>
+        </div>
+      `).join('');
+    }
+  } catch (error) {
+    console.error("Failed to load friends:", error);
+    friendsModalList.innerHTML = '<div class="text-center text-muted">Failed to load friends</div>';
   }
 }
 

@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 class Friend_requests
 {
     use Model;
@@ -11,13 +7,9 @@ class Friend_requests
     public $errors = [];
 
     protected $allowedColumns = [
-        'id',
         'sender_id',
         'receiver_id',
-        'sent_at',
-        'responded_at',
-        'status',
-        
+        'status'
     ];
 
     public function getErrors()
@@ -27,15 +19,7 @@ class Friend_requests
 
     public function createTable()
     {
-        $sql =  "CREATE TABLE if not EXISTS `friend_requests` (
-  `sender_id` int(10) NOT NULL,
-  `receiver_id` int(10) NOT NULL,
-  `sent_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `responded_at` datetime NOT NULL,
-  `status` enum('pending','accepted','rejected','cancelled') NOT NULL DEFAULT 'pending',
-  PRIMARY KEY (`sender_id`,`receiver_id`),
-  KEY `reciever_id` (`receiver_id`)
-) . ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci"
+        $sql =  "CREATE TABLE IF NOT EXISTS friend_requests ( sender_id INT NOT NULL, receiver_id INT NOT NULL, sent_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, responded_at DATETIME DEFAULT NULL, status ENUM('pending','accepted','rejected') NOT NULL DEFAULT 'pending', PRIMARY KEY (sender_id, receiver_id), CONSTRAINT fk_fr_sender FOREIGN KEY (sender_id) REFERENCES users(id) ON DELETE CASCADE, CONSTRAINT fk_fr_receiver FOREIGN KEY (receiver_id) REFERENCES users(id) ON DELETE CASCADE, CONSTRAINT chk_sender_receiver CHECK (sender_id <> receiver_id) ) ENGINE=InnoDB;"
  ;
         $this->query($sql);
     }

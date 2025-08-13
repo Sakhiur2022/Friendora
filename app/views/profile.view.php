@@ -61,9 +61,9 @@
                                 <i class="bi bi-pencil me-2"></i>Edit Profile
                             </button>
                             <?php else: // Other user's profile ?>
-                            <button class="btn cyber-btn-primary" id="followBtn" onclick="followUser()" style="display: block;">
-                                <i class="bi bi-person-plus me-2"></i>
-                                <span id="followBtnText">Follow</span>
+                            <button class="btn cyber-btn-primary" id="friendshipBtn" onclick="handleFriendshipAction()" style="display: block;">
+                                <i class="bi bi-person-plus me-2" id="friendshipIcon"></i>
+                                <span id="friendshipBtnText">Add Friend</span>
                             </button>
                             <button class="btn cyber-btn-secondary" id="messageBtn" onclick="messageUser()" style="display: block;">
                                 <i class="bi bi-chat-dots me-2"></i>Message
@@ -165,6 +165,23 @@
                                     ?>
                                     <p class="text-muted">No photos yet</p>
                                     <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Friends Card -->
+                        <div class="cyber-card friends-card mt-3">
+                            <div class="card-header">
+                                <h5><i class="bi bi-people me-2"></i>Friends</h5>
+                                <a href="#" class="text-decoration-none" onclick="openFriendsModal()">See All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="friends-grid" id="friendsGrid">
+                                    <!-- Friends will be populated by JavaScript -->
+                                    <div class="loading-friends">
+                                        <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                                        Loading friends...
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -364,6 +381,32 @@
                 <div class="modal-footer">
                     <button type="button" class="btn cyber-btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn cyber-btn-primary" id="saveProfileBtn">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Friends Modal -->
+    <div class="modal fade" id="friendsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content cyber-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">Friends</h5>
+                    <button type="button" class="btn-close cyber-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="friends-list-container">
+                        <div class="friends-search mb-3">
+                            <input type="text" class="form-control cyber-input" placeholder="Search friends..." id="friendsSearchInput">
+                        </div>
+                        <div class="friends-list" id="friendsModalList">
+                            <!-- Friends will be populated here -->
+                            <div class="loading-friends text-center">
+                                <div class="spinner-border" role="status"></div>
+                                <p class="mt-2">Loading friends...</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -8,8 +8,8 @@ class  Notifications
     public $errors = [];
 
     protected $allowedColumns = [
-        'user_id ',
-        'action_by ',
+        'user_id',
+        'action_by',
         'type',
         'content',
         'related_post_id',

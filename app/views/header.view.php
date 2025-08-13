@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="<?=ROOT?>/assets/styles/profile.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/friend.css">
 </head>
 <body>
     <!-- Background Music -->
@@ -60,9 +61,30 @@
             <a class="nav-link cyber-nav-icon" href="<?=ROOT?>/home" title="Home">
                 <i class="bi bi-house-fill"></i>
             </a>
-            <a class="nav-link cyber-nav-icon" href="#" title="Friends">
-                <i class="bi bi-person-fill"></i>
-            </a>
+            
+            <!-- Friends Dropdown -->
+            <div class="nav-item dropdown">
+                <a class="nav-link cyber-nav-icon dropdown-toggle" href="#" id="friendsDropdown" role="button" onclick="toggleFriendsDropdown()" title="Friends">
+                    <i class="bi bi-person-fill"></i>
+                    <span class="friend-request-badge" id="friendRequestBadge" style="display: none;">0</span>
+                </a>
+                <div class="friends-dropdown-container" id="friendsDropdownContainer">
+                    <div class="friends-dropdown-content">
+                        <div class="friends-dropdown-header">
+                            <h6>Friend Requests</h6>
+                            <button class="btn btn-link btn-sm" onclick="markAllFriendRequestsAsSeen()" title="Mark all as seen">
+                                <i class="bi bi-check2-all"></i>
+                            </button>
+                        </div>
+                        <div class="friends-dropdown-body">
+                            <ul class="friends-list" id="friendRequestsList">
+                                <li class="no-friends-message">No pending friend requests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <a class="nav-link cyber-nav-icon" href="#" title="Messages">
                 <i class="bi bi-chat-dots-fill"></i>
                 <span class="notification-badge">3</span>
@@ -93,16 +115,13 @@
             <!-- User Dropdown -->
             <div class="nav-item dropdown">
                 <a class="nav-link user-dropdown-toggle" href="#" id="userDropdown" role="button" onclick="toggleUserDropdown()">
-                    <?php
-                    // Use Utils::getProfilePicture() to get current user's profile pic
-                    $navbarProfilePic = Utils::getProfilePicture();
-                    ?>
-                    <img src="<?php echo $navbarProfilePic; ?>" class="profile-pic-nav" alt="Profile">
+                 
+                    <img src="<?= Utils::getProfilePicture(); ?>" class="profile-pic-nav" alt="Profile">
                 </a>
                 <div class="user-dropdown-container" id="userDropdownContainer">
                     <div class="user-dropdown">
                         <div class="user-dropdown-header">
-                            <img src="<?= $navbarProfilePic ?>" class="user-dropdown-avatar" alt="Profile">
+                            <img src="<?= Utils::getProfilePicture(); ?>" class="user-dropdown-avatar" alt="Profile">
                             <div class="user-dropdown-info">
                                 <h6><?= Utils::user('fname') . " " . Utils::user('lname') ?></h6>
                                 <p><a href="<?= Utils::profileUrl() ?>" style="color: inherit; text-decoration: none;">See your profile</a></p>
@@ -134,7 +153,7 @@
         <!-- Mobile User Icon -->
         <div class="d-lg-none">
             <a class="nav-link user-dropdown-toggle" href="#" onclick="toggleUserDropdown()">
-                <img src="<?php echo  $navbarProfilePic; ?>" class="profile-pic-nav" alt="Profile">
+                <img src="<?=Utils::getProfilePicture(); ?>" class="profile-pic-nav" alt="Profile">
             </a>
         </div>
     </div>
@@ -169,9 +188,10 @@
                     <i class="bi bi-house-fill"></i>
                     <span>Home</span>
                 </a>
-                <a class="mobile-nav-item" href="#">
+                <a class="mobile-nav-item" href="#" onclick="toggleMobileFriends()">
                     <i class="bi bi-person-fill"></i>
                     <span>Friends</span>
+                    <span class="friend-request-badge mobile" id="mobileFriendRequestBadge" style="display: none;">0</span>
                 </a>
                 <a class="mobile-nav-item" href="#">
                     <i class="bi bi-chat-dots-fill"></i>
@@ -194,6 +214,19 @@
                 <div class="mobile-notifications-list" id="mobileNotificationsList">
                     <!-- Mobile notifications will be populated here -->
                 </div>
+            </div>
+
+            <!-- Mobile Friends Section -->
+            <div class="mobile-friends-section" id="mobileFriendsSection" style="display: none;">
+                <div class="mobile-section-header">
+                    <h6>Friend Requests</h6>
+                    <button class="btn btn-link btn-sm" onclick="markAllFriendRequestsAsSeen()">
+                        <i class="bi bi-check2-all"></i>
+                    </button>
+                </div>
+                <ul class="mobile-friends-list" id="mobileFriendRequestsList">
+                    <li class="no-friends-message">No pending friend requests</li>
+                </ul>
             </div>
         </div>
     </div>
