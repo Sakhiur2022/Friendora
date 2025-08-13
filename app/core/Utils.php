@@ -225,4 +225,80 @@ public static function getProfilePicture() {
         return ROOT . '/profile/' . $user_id;
     }
 
+    public static function timeAgo($datetime) {
+
+    $time = time() - strtotime($datetime);
+
+    $minutes = floor($time / 60);
+    $hours = floor($time / 3600);
+    $days = floor($time / 86400);
+    $months = floor($time / 2592000);
+    $years = floor($time / 31536000);
+
+   
+
+    if ($time < 60) return 'just now';
+    if ($minutes < 60) return $minutes . ' ' . ($minutes == 1 ? 'minute' : 'minutes') . ' ago';
+    if ($hours < 24) return $hours . ' ' . ($hours == 1 ? 'hour' : 'hours') . ' ago';
+    if ($days < 30) return $days . ' ' . ($days == 1 ? 'day' : 'days') . ' ago';
+    if ($months < 12) return $months . ' ' . ($months == 1 ? 'month' : 'months') . ' ago';
+
+    return $years . ' ' . ($years == 1 ? 'year' : 'years') . ' ago';
+}
+
+public static function get_friends($user_id = null, $output_json = true) {
+    $ses = new Session;
+    if (!$ses->is_loggedIn()) {
+        $result = ['total_friends' => 0, 'friends' => []];
+        if ($output_json) {
+            echo json_encode($result);
+            return;
+        }
+        return $result;
+    }
+    
+    if ($user_id === null) {
+        $user_id = $ses->user('id');
+    }    
+    $friend_requests = new Friend_requests;
+
+    $friends = $friend_requests->query("CALL get_friends(:user_id)", ['user_id' => $user_id]); 
+  
+
+    $friend_requests->query("CALL get_total_friends(:user_id, @total)", ['user_id' => $user_id]);
+    $total_result = $friend_requests->query("SELECT @total AS total_friends");
+    $total_friends = $total_result[0]->total_friends ?? 0;    
+   
+    // Convert objects to arrays if needed
+    $friendsArray = [];
+    if ($friends) {
+        if (is_array($friends)) {
+            // Convert each object in array to array
+            foreach ($friends as $friend) {
+                if (is_object($friend)) {
+                    $friendsArray[] = (array)$friend;
+                } else {
+                    $friendsArray[] = $friend;
+                }
+            }
+        } else if (is_object($friends)) {
+            // Single object, convert to array with one element
+            $friendsArray = [(array)$friends];
+        }
+    } 
+    
+    $result = [
+        'total_friends' => (int)$total_friends,
+        'friends' => $friendsArray
+    ];
+    
+    if ($output_json) {
+        header('Content-Type: application/json');
+        echo json_encode($result);
+        return;
+    }
+    
+    return $result;
+}
+
 }

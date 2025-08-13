@@ -209,10 +209,10 @@ function showNotification(message, type = "info", title = null) {
     notification.classList.add("show")
   }, 100)
 
-  // Auto remove after 1 second
+  // Auto remove after 5 seconds
   setTimeout(() => {
     closeNotification(notificationId)
-  }, 1000)
+  }, 5000)
 }
 
 function closeNotification(notificationId) {

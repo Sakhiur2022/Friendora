@@ -6,9 +6,11 @@
     window.currentUserProfilePic = "<?= Utils::getProfilePicture() ?>";
     window.ROOT = "<?= ROOT ?>";
     // Pass PHP data to JS only if defined
-    <?php if (!empty($jsData)) foreach ($jsData as $key => $val): ?>
-        window.<?= $key ?> = <?= json_encode($val) ?>;
-    <?php endforeach; ?>
+    <?php if (!empty($jsData)): ?>
+        <?php foreach ($jsData as $key => $val): ?>
+            window.<?= $key ?> = <?= json_encode($val) ?>;
+        <?php endforeach; ?>
+    <?php endif; ?>
 </script>
 
 <script src="<?= ROOT ?>/assets/scripts/utils.js"></script>

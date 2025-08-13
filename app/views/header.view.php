@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="<?=ROOT?>/assets/styles/profile.css">
     <link rel="stylesheet" href="<?=ROOT?>/assets/styles/friend.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/messenger.css">
 </head>
 <body>
     <!-- Background Music -->
