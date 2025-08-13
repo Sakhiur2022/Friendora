@@ -113,7 +113,7 @@
     position: absolute;
     top: 0.2rem;
     right: 0.2rem;
-    background: #ff0066;
+    background: var(--cyber-secondary);
     color: #fff;
     border-radius: 50%;
     width: 18px;
@@ -122,9 +122,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1;
     text-align: center;
-    font-weight: bold;
+    animation: 2s infinite pulse;
 }
 
 .friend-request-badge.mobile {
@@ -140,7 +139,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1;
     text-align: center;
     font-weight: bold;
 }
@@ -453,4 +451,17 @@
 .friends-dropdown-body::-webkit-scrollbar-thumb:hover,
 .friends-list-container::-webkit-scrollbar-thumb:hover {
     background: #0099cc;
+}
+
+/* Pulse Animation for Friend Request Badge */
+@keyframes pulse-badge {
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px var(--cyber-secondary);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px var(--cyber-secondary), 0 0 25px var(--cyber-secondary);
+    }
 }
