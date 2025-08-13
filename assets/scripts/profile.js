@@ -574,10 +574,10 @@ function updateFriendshipButton(status) {
     case 'friends':
       friendshipBtnText.textContent = "Friends";
       friendshipIcon.className = "bi bi-person-check-fill me-2";
-      friendshipBtn.className = "btn cyber-btn-success";
+      friendshipBtn.className = "btn cyber-btn-primary";
       break;
     case 'pending_sent':
-      friendshipBtnText.textContent = "Request Sent";
+      friendshipBtnText.textContent = "Pending";
       friendshipIcon.className = "bi bi-clock me-2";
       friendshipBtn.className = "btn cyber-btn-secondary";
       friendshipBtn.disabled = true;

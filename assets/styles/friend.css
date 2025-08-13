@@ -111,10 +111,10 @@
 /* Friend Request Badge */
 .friend-request-badge {
     position: absolute;
-    top: -5px;
-    right: -5px;
+    top: 0.2rem;
+    right: 0.2rem;
     background: #ff0066;
-    color: white;
+    color: #fff;
     border-radius: 50%;
     width: 18px;
     height: 18px;
@@ -122,19 +122,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1;
+    text-align: center;
     font-weight: bold;
-    box-shadow: 0 2px 4px rgba(255, 0, 102, 0.5);
-    animation: pulse 2s infinite;
 }
 
 .friend-request-badge.mobile {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin-left: 0.5rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    background: #ff0066;
+    color: #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* Mobile Friends Section */
+.mobile-nav-item {
+    position: relative;
+}
+
 .mobile-friends-section {
     padding: 1rem;
     border-top: 1px solid rgba(0, 212, 255, 0.3);
