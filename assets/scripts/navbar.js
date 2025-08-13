@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function fetchNotifications() {
   try {
-    const response = await fetch(`${window.location.origin}/Friendora/notification/fetch_all`);
+    const response = await fetch(`${window.ROOT}/notification/fetch_all`);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -23,7 +23,7 @@ async function fetchNotifications() {
 
 async function fetchFriendRequests() {
   try {
-    const response = await fetch(`${window.location.origin}/Friendora/friendship/get_friend_requests`);
+    const response = await fetch(`${window.ROOT}/friendship/get_friend_requests`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -36,7 +36,7 @@ async function fetchFriendRequests() {
 }
 
 function generateNotificationMessage(notification) {
-    const userLink = `<a href="${window.location.origin}/Friendora/profile/${notification.action_by}" class="notification-user-link">${notification.userName}</a>`;
+    const userLink = `<a href="${window.ROOT}/profile/${notification.action_by}" class="notification-user-link">${notification.userName}</a>`;
     return `${userLink} ${notification.content}` || 'New notification';
 }
 
@@ -127,7 +127,7 @@ function toggleMobileFriends() {
 
 async function acceptFriendRequest(senderId) {
   try {
-    const response = await fetch(`${window.location.origin}/Friendora/friendship/accept_request/${senderId}`, {
+    const response = await fetch(`${window.ROOT}/friendship/accept_request/${senderId}`, {
       method: 'POST'
     });
     const result = await response.json();
@@ -146,7 +146,7 @@ async function acceptFriendRequest(senderId) {
 
 async function rejectFriendRequest(senderId) {
   try {
-    const response = await fetch(`${window.location.origin}/Friendora/friendship/reject_request/${senderId}`, {
+    const response = await fetch(`${window.ROOT}/friendship/reject_request/${senderId}`, {
       method: 'POST'
     });
     const result = await response.json();

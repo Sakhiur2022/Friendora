@@ -491,6 +491,32 @@
   }
 }
 
+/* Mobile Sidebar Toggle */
+.mobile-sidebar-toggle {
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(120, 119, 198, 0.1);
+  border: 1px solid rgba(120, 119, 198, 0.3);
+  color: var(--cyber-text);
+  transition: all 0.3s ease;
+}
+
+.mobile-sidebar-toggle:hover {
+  background: rgba(120, 119, 198, 0.2);
+  border-color: var(--cyber-primary);
+  transform: translateY(-2px);
+}
+
+.chat-welcome .mobile-sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .messenger-container {
@@ -499,11 +525,13 @@
   }
 
   .messenger-sidebar {
-    width: 100%;
+    width: 300px;
     position: absolute;
-    left: -100%;
+    left: -300px;
     transition: left 0.3s ease;
-    z-index: 10;
+    z-index: 100;
+    height: 100%;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   }
 
   .messenger-sidebar.show {
@@ -512,6 +540,15 @@
 
   .messenger-chat {
     width: 100%;
+  }
+
+  .chat-header {
+    padding: 15px 20px;
+  }
+
+  .chat-contact-info {
+    flex: 1;
+    margin-left: 10px;
   }
 
   .message-content {
@@ -528,6 +565,26 @@
 
   .welcome-content p {
     font-size: 16px;
+  }
+
+  /* Add overlay when sidebar is open */
+  .messenger-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 50;
+  }
+
+  .messenger-sidebar.show + .messenger-chat::after {
+    opacity: 1;
+    visibility: visible;
   }
 }
 

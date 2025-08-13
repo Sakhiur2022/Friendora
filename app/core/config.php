@@ -9,7 +9,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost' ) {
     define('DB_DRIVER', 'mysql');
 } 
 else {
-    define('ROOT', 'http://friendora.atwebpages.com');
+    define('ROOT', '//friendora.atwebpages.com');
     define('DB_HOST', 'fdb1034.awardspace.net');
     define('DB_NAME', '4664450_friendora');
     define('DB_USER', '4664450_friendora');

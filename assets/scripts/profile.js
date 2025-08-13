@@ -541,7 +541,7 @@ async function checkFriendshipStatus() {
   if (!profileUserId) return;
   
   try {
-    const response = await fetch(`${window.location.origin}/Friendora/friendship/get_friendship_status/${profileUserId}`);
+    const response = await fetch(`${window.ROOT}/friendship/get_friendship_status/${profileUserId}`);
     
     // Check if response is ok
     if (!response.ok) {
@@ -612,14 +612,14 @@ async function handleFriendshipAction() {
     
     switch (currentStatus) {
       case 'Add Friend':
-        response = await fetch(`${window.location.origin}/Friendora/friendship/send_request/${profileUserId}`, {
+        response = await fetch(`${window.ROOT}/friendship/send_request/${profileUserId}`, {
           method: 'POST'
         });
         message = "Friend request sent!";
         break;
         
       case 'Accept Request':
-        response = await fetch(`${window.location.origin}/Friendora/friendship/accept_request/${profileUserId}`, {
+        response = await fetch(`${window.ROOT}/friendship/accept_request/${profileUserId}`, {
           method: 'POST'
         });
         message = "Friend request accepted!";
@@ -627,7 +627,7 @@ async function handleFriendshipAction() {
         
       case 'Friends':
         if (confirm('Are you sure you want to unfriend this user?')) {
-          response = await fetch(`${window.location.origin}/Friendora/friendship/unfriend/${profileUserId}`, {
+          response = await fetch(`${window.ROOT}/friendship/unfriend/${profileUserId}`, {
             method: 'POST'
           });
           message = "User unfriended";
@@ -663,7 +663,7 @@ async function loadFriendsGrid() {
   if (!profileUserId) return;
   
   try {
-    const response = await fetch(`${window.location.origin}/Friendora/friendship/get_friends/${profileUserId}`);
+    const response = await fetch(`${window.ROOT}/friendship/get_friends/${profileUserId}`);
     
     // Check if response is ok
     if (!response.ok) {
@@ -704,8 +704,8 @@ async function loadFriendsGrid() {
       const friendsArray = Array.isArray(friends) ? friends : (friends ? [friends] : []);
       const displayFriends = friendsArray.slice(0, 6);
       friendsGrid.innerHTML = displayFriends.map(friend => `
-        <div class="friend-item" onclick="window.location.href='${window.location.origin}/Friendora/profile/${friend.friend_id}'">
-          <img src="${friend.profile_pic || '/Friendora/assets/images/default_pfp.png'}" class="friend-avatar" alt="${friend.friend_name}">
+        <div class="friend-item" onclick="window.location.href='${window.ROOT}/profile/${friend.friend_id}'">
+          <img src="${friend.profile_pic || '${window.ROOT}/assets/images/default_pfp.png'}" class="friend-avatar" alt="${friend.friend_name}">
           <span class="friend-name">${friend.friend_name}</span>
         </div>
       `).join('');
@@ -750,7 +750,7 @@ async function loadFriendsModal() {
   if (!profileUserId) return;
   
   try {
-    const response = await fetch(`${window.location.origin}/Friendora/friendship/get_friends/${profileUserId}`);
+    const response = await fetch(`${window.ROOT}/friendship/get_friends/${profileUserId}`);
     
     // Check if response is ok
     if (!response.ok) {
@@ -776,7 +776,7 @@ async function loadFriendsModal() {
       // Ensure friends is an array
       const friendsArray = Array.isArray(friends) ? friends : (friends ? [friends] : []);
       friendsModalList.innerHTML = friendsArray.map(friend => `
-        <div class="friends-modal-item" onclick="window.location.href='${window.location.origin}/Friendora/profile/${friend.friend_id}'">
+        <div class="friends-modal-item" onclick="window.location.href='${window.ROOT}/profile/${friend.friend_id}'">
           <img src="${friend.profile_pic || '/Friendora/assets/images/default_pfp.png'}" class="friends-modal-avatar" alt="${friend.friend_name}">
           <div class="friends-modal-info">
             <h6 class="friends-modal-name">${friend.friend_name}</h6>

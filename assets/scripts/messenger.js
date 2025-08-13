@@ -52,6 +52,18 @@ class MessengerSystem {
         this.markAsRead(this.currentContactId)
       }
     })
+
+    // Close sidebar when clicking outside (mobile)
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        const sidebar = document.querySelector('.messenger-sidebar');
+        const toggleBtn = e.target.closest('.mobile-sidebar-toggle');
+        
+        if (!sidebar.contains(e.target) && !toggleBtn && sidebar.classList.contains('show')) {
+          sidebar.classList.remove('show');
+        }
+      }
+    })
   }
 
   async sendMessage() {
@@ -282,6 +294,16 @@ class MessengerSystem {
   async loadInbox() {
     try {
       const response = await fetch(`${window.ROOT}/messenger/get_inbox`)
+      
+      // Check if response is JSON
+      const contentType = response.headers.get('content-type')
+      if (!contentType || !contentType.includes('application/json')) {
+        // Return raw HTML if not JSON
+        const html = await response.text()
+        console.log('Received HTML response:', html)
+        return html
+      }
+      
       const result = await response.json()
 
       if (result.status === "success") {
@@ -289,28 +311,32 @@ class MessengerSystem {
       }
     } catch (error) {
       console.error("Error loading inbox:", error)
+      // If JSON parsing fails, try to get raw response
+      try {
+        const response = await fetch(`${window.ROOT}/messenger/get_inbox`)
+        const html = await response.text()
+        console.log('Fallback - received HTML response:', html)
+        return html
+      } catch (fallbackError) {
+        console.error("Fallback error:", fallbackError)
+      }
     }
   }
 
   updateContactsWithMessages(messages) {
-    // Group messages by contact
-    const contactMessages = {}
+    // Messages are already grouped by conversation in PHP controller
+    const currentUserId = window.currentUserId || (this.Utils ? this.Utils.user("id") : 1)
+    
+    // Update contact items directly - no need to group again
     messages.forEach((message) => {
-      const contactId = message.sender_id
-      if (!contactMessages[contactId] || new Date(message.sent_at) > new Date(contactMessages[contactId].sent_at)) {
-        contactMessages[contactId] = message
-      }
-    })
-
-    // Update contact items
-    Object.keys(contactMessages).forEach((contactId) => {
+      // Determine the contact ID (the other person in the conversation)
+      const contactId = message.sender_id == currentUserId ? message.receiver_id : message.sender_id
       const contactItem = document.querySelector(`[data-contact-id="${contactId}"]`)
       if (contactItem) {
         const lastMessageEl = contactItem.querySelector(".contact-last-message")
         const timeEl = contactItem.querySelector(".contact-time")
         const unreadBadge = contactItem.querySelector(".unread-badge")
 
-        const message = contactMessages[contactId]
         if (lastMessageEl) {
           lastMessageEl.textContent = message.content.substring(0, 30) + (message.content.length > 30 ? "..." : "")
         }
@@ -366,8 +392,10 @@ class MessengerSystem {
         // Immediately mark as read since the conversation is open
         this.markAsRead(message.sender_id)
       } else {
-        // Show notification for new message
-        this.showNotification(`New message from ${message.fname} ${message.lname}`, "info")
+        // Only show notification for unread messages
+        if (message.status !== "read") {
+          this.showNotification(`New message from ${message.fname} ${message.lname}`, "info")
+        }
       }
     })
   }
@@ -488,18 +516,36 @@ class MessengerSystem {
       clearTimeout(this.typingTimeout)
     }
   }
+
+  // Mobile sidebar toggle functionality
+  toggleSidebar() {
+    const sidebar = document.querySelector('.messenger-sidebar');
+    sidebar.classList.toggle('show');
+  }
 }
 
 // Global functions for onclick events
 function openConversation(contactId) {
   if (window.messengerSystem) {
     window.messengerSystem.openConversation(contactId)
+    
+    // Close sidebar on mobile after selecting a contact
+    if (window.innerWidth <= 768) {
+      const sidebar = document.querySelector('.messenger-sidebar');
+      sidebar.classList.remove('show');
+    }
   }
 }
 
 function sendMessage() {
   if (window.messengerSystem) {
     window.messengerSystem.sendMessage()
+  }
+}
+
+function toggleSidebar() {
+  if (window.messengerSystem) {
+    window.messengerSystem.toggleSidebar()
   }
 }
 

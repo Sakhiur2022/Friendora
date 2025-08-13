@@ -88,8 +88,24 @@ class Messenger {
             $user_inbox = new User_inbox;
             $user_inbox->createTable(); // Ensure view exists
             
-            // Get user's inbox using the view
-            $messages = $user_inbox->where(['receiver_id' => $user_id]);
+            // Get all latest messages from the view where user is involved
+            $query = "SELECT * FROM user_inbox WHERE receiver_id = ? OR sender_id = ?";
+            $all_messages = $user_inbox->query($query, [$user_id, $user_id]);
+            
+            // Group by conversation (other participant) to get unique conversations
+            $conversations = [];
+            foreach ($all_messages as $message) {
+                $other_user_id = ($message['sender_id'] == $user_id) ? $message['receiver_id'] : $message['sender_id'];
+                
+                // Keep only the latest message per conversation
+                if (!isset($conversations[$other_user_id]) || 
+                    strtotime($message['sent_at']) > strtotime($conversations[$other_user_id]['sent_at'])) {
+                    $conversations[$other_user_id] = $message;
+                }
+            }
+            
+            // Convert back to indexed array
+            $messages = array_values($conversations);
             
             echo json_encode([
                 'status' => 'success',

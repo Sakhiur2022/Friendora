@@ -46,6 +46,10 @@
     <!-- Chat Area -->
     <div class="messenger-chat">
         <div class="chat-welcome" id="chatWelcome">
+            <button class="btn cyber-btn-ghost mobile-sidebar-toggle d-md-none" onclick="toggleSidebar()" title="Show Contacts">
+                <i class="bi bi-people-fill"></i>
+                <span>Show Contacts</span>
+            </button>
             <div class="welcome-content">
                 <div class="cyber-logo-large">
                     <i class="bi bi-hexagon-fill"></i>
@@ -59,6 +63,9 @@
         <div class="chat-container" id="chatContainer" style="display: none;">
             <!-- Chat Header -->
             <div class="chat-header" id="chatHeader">
+                <button class="btn cyber-btn-ghost mobile-sidebar-toggle d-md-none" onclick="toggleSidebar()" title="Toggle Contacts">
+                    <i class="bi bi-list"></i>
+                </button>
                 <div class="chat-contact-info">
                     <img src="<?=ROOT?>/assets/images/default_pfp.png" class="chat-contact-avatar" id="chatContactAvatar" alt="">
                     <div class="chat-contact-details">
@@ -116,3 +123,36 @@
 $scripts = ['messenger'];
 $this->loadView('footer', ["scripts" => $scripts, "jsData" => $jsData ?? ['currentUserId' => Utils::user('id')]]); 
 ?>
+
+<script>
+// Mobile sidebar toggle functionality
+function toggleSidebar() {
+  const sidebar = document.querySelector('.messenger-sidebar');
+  sidebar.classList.toggle('show');
+}
+
+// Close sidebar when clicking on a contact (mobile)
+function openConversation(contactId) {
+  if (window.messengerSystem) {
+    window.messengerSystem.openConversation(contactId);
+    
+    // Close sidebar on mobile after selecting a contact
+    if (window.innerWidth <= 768) {
+      const sidebar = document.querySelector('.messenger-sidebar');
+      sidebar.classList.remove('show');
+    }
+  }
+}
+
+// Close sidebar when clicking outside (mobile)
+document.addEventListener('click', function(e) {
+  if (window.innerWidth <= 768) {
+    const sidebar = document.querySelector('.messenger-sidebar');
+    const toggleBtn = e.target.closest('.mobile-sidebar-toggle');
+    
+    if (!sidebar.contains(e.target) && !toggleBtn && sidebar.classList.contains('show')) {
+      sidebar.classList.remove('show');
+    }
+  }
+});
+</script>

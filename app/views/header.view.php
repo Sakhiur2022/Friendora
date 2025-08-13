@@ -28,7 +28,7 @@
         </button>
 
         <!-- Logo -->
-        <a class="navbar-brand cyber-logo" href="#">
+        <a class="navbar-brand cyber-logo" href="<?=ROOT?>/profile">
             <i class="bi bi-hexagon-fill me-2"></i>
             Friendora
         </a>
@@ -85,8 +85,8 @@
                     </div>
                 </div>
             </div>
-            
-            <a class="nav-link cyber-nav-icon" href="#" title="Messages">
+
+            <a class="nav-link cyber-nav-icon" href="<?=ROOT?>/messenger" title="Messages">
                 <i class="bi bi-chat-dots-fill"></i>
                 <span class="notification-badge">3</span>
             </a>
@@ -194,7 +194,7 @@
                     <span>Friends</span>
                     <span class="friend-request-badge mobile" id="mobileFriendRequestBadge" style="display: none;">0</span>
                 </a>
-                <a class="mobile-nav-item" href="#">
+                <a class="mobile-nav-item" href="<?=ROOT?>/messenger">
                     <i class="bi bi-chat-dots-fill"></i>
                     <span>Messages</span>
                     <span class="notification-badge">3</span>

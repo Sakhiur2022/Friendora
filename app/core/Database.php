@@ -5,16 +5,19 @@ defined('ROOT_PATH') OR exit('Access denied you hacker!');
 Trait Database {
     private $connection;   
 
-    private function connect() {
-        try {
-            $dsn = DB_DRIVER . ":host=" . DB_HOST . ";dbname=" . DB_NAME;
-            $this->connection = new PDO($dsn, DB_USER, DB_PASS);
-            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            die("Database connection failed: " . $e->getMessage());
-        }
-    }
+   private function connect() {
+    try {
+        $dsn = DB_DRIVER . ":host=" . DB_HOST . ";dbname=" . DB_NAME;
+        $this->connection = new PDO($dsn, DB_USER, DB_PASS);
+        $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        // Set MySQL session timezone to match PHP
+        $this->connection->exec("SET time_zone = '+06:00'"); // Dhaka time
+
+    } catch (PDOException $e) {
+        die("Database connection failed: " . $e->getMessage());
+    }
+}
     public function getConnection() {
         return $this->connection;
     }
