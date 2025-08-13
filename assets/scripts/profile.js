@@ -682,6 +682,18 @@ async function loadFriendsGrid() {
     
     console.log("Received friends data:", data);
     
+    // Update friends count in profile stats
+    const friendsCountElement = document.getElementById("friendsCount");
+    if (friendsCountElement && data.total_friends !== undefined) {
+      if(data.total_friends === 0) {
+        friendsCountElement.textContent = "No Friends yet";
+      } else if (data.total_friends === 1) {
+        friendsCountElement.textContent = "1 Friend";
+      } else {
+        friendsCountElement.textContent = data.total_friends + " Friends";
+      }
+    }
+    
     if (!data.friends || data.friends.length === 0) {
       friendsGrid.innerHTML = '<p class="text-muted">No friends yet</p>';
     } else {

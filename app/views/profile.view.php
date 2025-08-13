@@ -43,11 +43,9 @@
                             
                             <div class="profile-stats">
                                 <span class="stat-item">
-                                    <strong>1.2K</strong> Friends
+                                    <strong id="friendsCount">0</strong> 
                                 </span>
-                                <span class="stat-item">
-                                    <strong>847</strong> Following
-                                </span>
+                              
                             </div>
                         </div>
 
