@@ -197,8 +197,7 @@ class Friendship{
             // Single object, convert to array with one element
             $friendsArray = [(array)$friends];
         }
-    }
-  
+    } 
 
 
     header('Content-Type: application/json');
