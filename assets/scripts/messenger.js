@@ -324,19 +324,28 @@ class MessengerSystem {
   }
 
   updateContactsWithMessages(messages) {
-    // Messages are already grouped by conversation in PHP controller
+    // Group messages by contact (the other person in the conversation)
+    const contactMessages = {}
     const currentUserId = window.currentUserId || (this.Utils ? this.Utils.user("id") : 1)
     
-    // Update contact items directly - no need to group again
     messages.forEach((message) => {
       // Determine the contact ID (the other person in the conversation)
       const contactId = message.sender_id == currentUserId ? message.receiver_id : message.sender_id
+      
+      if (!contactMessages[contactId] || new Date(message.sent_at) > new Date(contactMessages[contactId].sent_at)) {
+        contactMessages[contactId] = message
+      }
+    })
+
+    // Update contact items
+    Object.keys(contactMessages).forEach((contactId) => {
       const contactItem = document.querySelector(`[data-contact-id="${contactId}"]`)
       if (contactItem) {
         const lastMessageEl = contactItem.querySelector(".contact-last-message")
         const timeEl = contactItem.querySelector(".contact-time")
         const unreadBadge = contactItem.querySelector(".unread-badge")
 
+        const message = contactMessages[contactId]
         if (lastMessageEl) {
           lastMessageEl.textContent = message.content.substring(0, 30) + (message.content.length > 30 ? "..." : "")
         }

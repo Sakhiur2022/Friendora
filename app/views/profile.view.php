@@ -216,7 +216,7 @@
                                 <img id="coverPreviewImg" alt="Cover Preview">
                                 <div class="preview-actions">
                                     <button type="button" class="btn cyber-btn-secondary" onclick="removeCoverPreview()">Remove</button>
-                                    <button type="button" class="btn cyber-btn-primary" onclick="uploadCoverPhoto()">Upload</button>
+                                    <button type="button" class="btn cyber-btn-primary" onclick="uploadCoverPhoto(event)">Upload</button>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +247,7 @@
                                 <img id="profilePreviewImg" alt="Profile Preview">
                                 <div class="preview-actions">
                                     <button type="button" class="btn cyber-btn-secondary" onclick="removeProfilePreview()">Remove</button>
-                                    <button type="button" class="btn cyber-btn-primary" onclick="uploadProfilePhoto()">Upload</button>
+                                    <button type="button" class="btn cyber-btn-primary" onclick="uploadProfilePhoto(event)">Upload</button>
                                 </div>
                             </div>
                         </div>

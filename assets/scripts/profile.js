@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize the page
   initializePage()
   setupProfileEventListeners()
+  setupUploadAreas() // Add this to set up photo upload functionality
   loadDummyData()
   initializeProfileOwnership()
   checkFriendshipStatus()
@@ -257,7 +258,12 @@ function setupUploadAreas() {
   if (coverUploadArea && coverPhotoInput) {
     coverUploadArea.addEventListener("dragover", handleDragOver)
     coverUploadArea.addEventListener("drop", (e) => handleDrop(e, "cover"))
-    coverUploadArea.addEventListener("click", () => coverPhotoInput.click())
+    coverUploadArea.addEventListener("click", (e) => {
+      // Don't trigger file input if clicking on action buttons
+      if (!e.target.closest('.preview-actions') && !e.target.closest('button')) {
+        coverPhotoInput.click()
+      }
+    })
     coverPhotoInput.addEventListener("change", (e) => handleFileSelect(e, "cover"))
   }
 
@@ -268,7 +274,12 @@ function setupUploadAreas() {
   if (profileUploadArea && profilePhotoInput) {
     profileUploadArea.addEventListener("dragover", handleDragOver)
     profileUploadArea.addEventListener("drop", (e) => handleDrop(e, "profile"))
-    profileUploadArea.addEventListener("click", () => profilePhotoInput.click())
+    profileUploadArea.addEventListener("click", (e) => {
+      // Don't trigger file input if clicking on action buttons
+      if (!e.target.closest('.preview-actions') && !e.target.closest('button')) {
+        profilePhotoInput.click()
+      }
+    })
     profilePhotoInput.addEventListener("change", (e) => handleFileSelect(e, "profile"))
   }
 }
@@ -349,8 +360,11 @@ function removeProfilePreview() {
   }
 }
 
-function uploadCoverPhoto() {
-
+function uploadCoverPhoto(event) {
+  if (event) {
+    event.preventDefault()
+    event.stopPropagation()
+  }
   
   const input = document.getElementById("coverPhotoInput")
   const file = input.files[0]
@@ -420,7 +434,12 @@ function uploadCoverPhoto() {
     })
 }
 
-function uploadProfilePhoto() {  
+function uploadProfilePhoto(event) {
+  if (event) {
+    event.preventDefault()
+    event.stopPropagation()
+  }
+  
   const input = document.getElementById("profilePhotoInput")
   const file = input.files[0]
 
@@ -912,3 +931,11 @@ function closePhotoModal() {
 }
 
 console.log("🌟 Friendora Profile Page Loaded - Welcome to the Digital Dreamscape! 🌟")
+
+// Make modal functions available globally
+window.openCoverPhotoModal = openCoverPhotoModal;
+window.openProfilePhotoModal = openProfilePhotoModal;
+window.uploadCoverPhoto = uploadCoverPhoto;
+window.uploadProfilePhoto = uploadProfilePhoto;
+window.removeCoverPreview = removeCoverPreview;
+window.removeProfilePreview = removeProfilePreview;
