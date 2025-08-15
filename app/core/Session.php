@@ -39,6 +39,17 @@ class Session
         return true;
     }
 
+    /**
+    
+     * $session->set('fname', 'ken');
+     *
+     * // Setting multiple session variables
+     * $session->set([
+     *     'fname' => 'ken',
+     *      'lname' => 'kaneki',
+     *      'email' => 'ken@example.com'
+     * ]);
+     */
     public function set($keyOrArray, $value = ''){
         $this->startSession();
         if (is_array($keyOrArray)) {

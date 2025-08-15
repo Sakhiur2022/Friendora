@@ -42,7 +42,7 @@ class Notification
 
         $notifications = $notificationModel->query($sql, ['user_id' => $userId]);
 
-        // Add a 'time' field similar to the old static data
+       
         if (is_array($notifications)) {
             foreach ($notifications as $key => $notification) {
                 $notifications[$key]->time = $this->time_ago($notification->created_at);

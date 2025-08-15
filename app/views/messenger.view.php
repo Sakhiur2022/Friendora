@@ -120,8 +120,9 @@
 </div>
 
 <?php 
+$jsData = [];
 $scripts = ['messenger'];
-$this->loadView('footer', ["scripts" => $scripts, "jsData" => $jsData ?? ['currentUserId' => Utils::user('id')]]); 
+$this->loadView('footer', ["scripts" => $scripts, "jsData" => $jsData]); 
 ?>
 
 <script>

@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <hr class="dropdown-divider">
-                        <a class="user-dropdown-item" href="settings.php">
+                        <a class="user-dropdown-item" href="<?=ROOT?>/settings">
                             <i class="bi bi-gear-fill"></i>
                             <span>Settings & Privacy</span>
                         </a>

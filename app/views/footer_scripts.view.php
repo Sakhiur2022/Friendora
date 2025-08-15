@@ -4,6 +4,7 @@
 <script>
     
     window.currentUserProfilePic = "<?= Utils::getProfilePicture() ?>";
+    window.currentUserId = "<?= Utils::user('id') ?>";
     window.ROOT = "<?= ROOT ?>";
     // Pass PHP data to JS only if defined
     <?php if (!empty($jsData)): ?>

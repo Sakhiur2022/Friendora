@@ -32,6 +32,11 @@ trait Model
         return $this->query($sql, $data);
     }
 
+    // Example usage:
+    // $model->update(['fname' => $new_fname], Utils::user('id'));
+    // This will generate SQL:
+    // UPDATE tableName SET fname = :fname WHERE id = :id
+    
     public function update($data, $id, $columnToUpdate = 'id') {
         // Ensure only allowed columns are inserted
         if(!empty($this->allowedColumns)) {

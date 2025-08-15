@@ -418,7 +418,7 @@ $jsData = [
     'websiteData' => $websites ?? [],
     'photosData' => $photos ?? [],
     'postsData' => $posts ?? [],
-    'currentUserId' => $data['current_user']->id ?? 0,
+    // 'currentUserId' => $data['current_user']->id ?? 0,
     'profileUserId' => $data['profile_user']->id ?? 0,
     'isOwnProfile' => $data['is_own_profile'] ?? false,
 ];
