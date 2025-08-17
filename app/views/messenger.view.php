@@ -30,7 +30,7 @@
                             <div class="contact-name"><?= $friend['friend_name'] ?></div>
                             <div class="contact-last-message">Click to start conversation</div>
                         </div>
-                        <div class="unread-badge" style="display: none;">0</div>
+                        <div class="unread-badge text-center" style="display: none;">0</div>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>

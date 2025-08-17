@@ -101,6 +101,22 @@ class Notification
         echo json_encode(['success' => true, 'message' => 'Notification marked as read']);
     }
 
+    //
+    public function count_unread_message(){
+        header('Content-Type: application/json');
+        $ses = new Session;
+        if (!$ses->is_loggedIn()) {
+            echo json_encode(['error' => 'Not logged in']);
+            http_response_code(403);
+            return;
+        }
+
+        $notificationModel = new Notifications;
+        $result = $notificationModel->query('CALL count_unread_message(:user_id)', ['user_id' => Utils::user('id')]);
+
+        echo json_encode(['unread_count' => $result ? (int)$result[0]->{'COUNT(*)'} : 0]);
+    }
+
     // Helper function to generate "time ago" string
     private function time_ago($datetime, $full = false)
     {

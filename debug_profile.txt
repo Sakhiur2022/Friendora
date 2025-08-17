@@ -18601,3 +18601,3834 @@
 )
 
 [15-Aug-2025 22:40:14 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 21:14:51 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 21:14:51 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 21:14:51 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 21:14:51 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 21:14:51 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 21:14:51 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755357286
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 21:14:51 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 21:14:51 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 21:14:51 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 21:14:51 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 21:14:51 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 21:14:51 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 21:14:51 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 21:14:51 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 21:14:51 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 21:14:51 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 21:14:51 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 21:14:51 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 21:14:51 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:14:51 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 21:14:51 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 21:14:51 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 21:14:51 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 21:14:51 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 21:18:19 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 21:18:19 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 21:18:19 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 21:18:19 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 21:18:19 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 21:18:19 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755357286
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+    [user] => Jargan
+)
+
+[16-Aug-2025 21:18:19 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 21:18:19 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 21:18:19 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 21:18:19 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 21:18:19 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 21:18:19 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 21:18:19 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:18:19 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 21:18:19 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 21:18:19 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 21:18:19 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 21:18:19 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 21:20:57 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 21:20:57 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 21:20:57 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 21:20:57 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 21:20:57 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 21:20:57 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755357286
+    [user] => Jargan
+    [fname] => Jargan
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Jargan
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 21:20:57 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 21:20:57 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 21:20:57 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 21:20:57 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 21:20:57 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 21:20:57 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 21:20:57 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 21:20:57 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 21:20:57 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 21:20:57 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 21:20:57 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 21:20:57 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 21:20:57 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:20:57 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 21:20:57 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 21:20:57 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 21:20:57 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 21:20:57 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 21:21:15 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 21:21:15 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 21:21:15 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 21:21:15 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 21:21:15 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 21:21:15 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755357286
+    [user] => Jargan
+    [fname] => Kafka
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Jargan
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 21:21:15 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 21:21:15 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 21:21:15 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 21:21:15 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 21:21:15 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 21:21:15 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 21:21:15 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 21:21:15 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 21:21:15 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 21:21:15 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 21:21:15 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 21:21:15 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:00:10 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:00:10 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 22:00:10 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 22:00:10 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:00:10 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 22:00:10 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755360007
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 22:00:10 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:00:10 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:00:10 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:00:10 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:00:10 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:00:10 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:00:10 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:00:10 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:00:10 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 22:00:10 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:00:10 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 22:00:10 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:00:10 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:00:10 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:00:10 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 22:00:10 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 22:00:10 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 22:00:10 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:01:41 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:01:41 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 22:01:41 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 22:01:41 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:01:41 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 22:01:41 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755360007
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 22:01:41 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:01:41 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:01:41 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:01:41 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:01:41 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:01:41 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:01:41 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:01:41 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:01:41 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 22:01:41 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:01:41 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 22:01:41 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:01:41 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:01:41 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:01:41 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 22:01:41 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 22:01:41 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 22:01:41 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:02:12 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:02:12 Asia/Dhaka] Current User ID: 4
+[16-Aug-2025 22:02:12 Asia/Dhaka] Profile User ID: 4
+[16-Aug-2025 22:02:12 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:02:12 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[16-Aug-2025 22:02:12 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755360126
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[16-Aug-2025 22:02:12 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:02:12 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:02:12 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:02:12 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:02:12 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:02:12 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:02:12 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:02:12 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:02:12 Asia/Dhaka] Profile ID: 4
+[16-Aug-2025 22:02:12 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:02:12 Asia/Dhaka] Photos query result: 3 photos found
+[16-Aug-2025 22:02:12 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:02:12 Asia/Dhaka] Posts query result: 1 posts found
+[16-Aug-2025 22:02:12 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:12 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:02:12 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[16-Aug-2025 22:02:12 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[16-Aug-2025 22:02:12 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[16-Aug-2025 22:02:12 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:02:39 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:02:39 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 22:02:39 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 22:02:39 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:02:39 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 22:02:39 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755360007
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 22:02:39 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:02:39 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:02:39 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:02:39 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:02:39 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:02:39 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:02:39 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:02:39 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:02:39 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 22:02:39 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:02:39 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 22:02:39 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:02:39 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:02:39 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:02:39 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 22:02:39 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 22:02:39 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 22:02:39 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:03:24 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:03:24 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 22:03:24 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 22:03:24 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:03:24 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 22:03:24 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755360007
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 22:03:24 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:03:24 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:03:24 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:03:24 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:03:24 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:03:24 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:03:24 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:03:24 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:03:24 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 22:03:24 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:03:24 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 22:03:24 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:03:24 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:03:24 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:03:24 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 22:03:24 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 22:03:24 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 22:03:24 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:08:56 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:08:56 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 22:08:56 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 22:08:56 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:08:56 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 22:08:56 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755360007
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 22:08:56 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:08:56 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:08:56 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:08:56 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:08:56 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:08:56 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:08:56 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:08:56 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:08:56 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 22:08:56 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:08:56 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 22:08:56 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:08:56 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:08:56 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:08:56 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 22:08:56 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 22:08:56 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 22:08:56 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:34:59 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:34:59 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 22:34:59 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 22:34:59 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:34:59 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 22:34:59 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755362095
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 22:34:59 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:34:59 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:34:59 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:34:59 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:34:59 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:34:59 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:34:59 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:34:59 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:34:59 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 22:34:59 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:34:59 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 22:34:59 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:34:59 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:34:59 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:34:59 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 22:34:59 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 22:34:59 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 22:34:59 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:35:19 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:35:19 Asia/Dhaka] Current User ID: 4
+[16-Aug-2025 22:35:19 Asia/Dhaka] Profile User ID: 4
+[16-Aug-2025 22:35:19 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:35:19 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[16-Aug-2025 22:35:19 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755361927
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[16-Aug-2025 22:35:19 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:35:19 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:35:19 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:35:19 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:35:19 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:35:19 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:35:19 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:35:19 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:35:19 Asia/Dhaka] Profile ID: 4
+[16-Aug-2025 22:35:19 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:35:19 Asia/Dhaka] Photos query result: 3 photos found
+[16-Aug-2025 22:35:19 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:35:19 Asia/Dhaka] Posts query result: 1 posts found
+[16-Aug-2025 22:35:19 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[16-Aug-2025 22:35:19 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:35:19 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[16-Aug-2025 22:35:19 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[16-Aug-2025 22:35:19 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[16-Aug-2025 22:35:19 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 22:36:51 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 22:36:51 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 22:36:51 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 22:36:51 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 22:36:51 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 22:36:51 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755362095
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 22:36:51 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 22:36:51 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 22:36:51 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 22:36:51 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 22:36:51 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 22:36:51 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 22:36:51 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 22:36:51 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 22:36:51 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 22:36:51 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 22:36:51 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 22:36:51 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 22:36:51 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 22:36:51 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 22:36:51 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 22:36:51 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 22:36:51 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 22:36:51 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 23:06:13 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 23:06:13 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 23:06:13 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 23:06:13 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 23:06:13 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 23:06:13 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755363896
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 23:06:13 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 23:06:13 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 23:06:13 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 23:06:13 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 23:06:13 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 23:06:13 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 23:06:13 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 23:06:13 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 23:06:13 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 23:06:13 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 23:06:13 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 23:06:13 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 23:06:13 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:06:13 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 23:06:13 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 23:06:13 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 23:06:13 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 23:06:13 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 23:14:40 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 23:14:40 Asia/Dhaka] Current User ID: 4
+[16-Aug-2025 23:14:40 Asia/Dhaka] Profile User ID: 4
+[16-Aug-2025 23:14:40 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 23:14:40 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[16-Aug-2025 23:14:40 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755363729
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[16-Aug-2025 23:14:40 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 23:14:40 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 23:14:40 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 23:14:40 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 23:14:40 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 23:14:40 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 23:14:40 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 23:14:40 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 23:14:40 Asia/Dhaka] Profile ID: 4
+[16-Aug-2025 23:14:40 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 23:14:40 Asia/Dhaka] Photos query result: 3 photos found
+[16-Aug-2025 23:14:40 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 23:14:40 Asia/Dhaka] Posts query result: 1 posts found
+[16-Aug-2025 23:14:40 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[16-Aug-2025 23:14:40 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 23:14:40 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[16-Aug-2025 23:14:40 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[16-Aug-2025 23:14:40 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[16-Aug-2025 23:14:40 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 23:37:25 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 23:37:25 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 23:37:25 Asia/Dhaka] Profile User ID: 1
+[16-Aug-2025 23:37:25 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 23:37:25 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 23:37:25 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755365697
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 23:37:25 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 23:37:25 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 23:37:25 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 23:37:25 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 23:37:25 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 23:37:25 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 23:37:25 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 23:37:25 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 23:37:25 Asia/Dhaka] Profile ID: 1
+[16-Aug-2025 23:37:25 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 23:37:25 Asia/Dhaka] Photos query result: 7 photos found
+[16-Aug-2025 23:37:25 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 23:37:25 Asia/Dhaka] Posts query result: 11 posts found
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:25 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 23:37:25 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[16-Aug-2025 23:37:25 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[16-Aug-2025 23:37:25 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[16-Aug-2025 23:37:25 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 23:37:43 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 23:37:43 Asia/Dhaka] Current User ID: 1
+[16-Aug-2025 23:37:43 Asia/Dhaka] Profile User ID: 4
+[16-Aug-2025 23:37:43 Asia/Dhaka] Is Own Profile: no
+[16-Aug-2025 23:37:43 Asia/Dhaka] Current User Email: kafka@gmail.com
+[16-Aug-2025 23:37:43 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755365697
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[16-Aug-2025 23:37:43 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 23:37:43 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 23:37:43 Asia/Dhaka] Profile ID: 4
+[16-Aug-2025 23:37:43 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 23:37:43 Asia/Dhaka] Photos query result: 3 photos found
+[16-Aug-2025 23:37:43 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 23:37:43 Asia/Dhaka] Posts query result: 1 posts found
+[16-Aug-2025 23:37:43 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[16-Aug-2025 23:37:43 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 23:37:43 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[16-Aug-2025 23:37:43 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[16-Aug-2025 23:37:43 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[16-Aug-2025 23:37:43 Asia/Dhaka] === PROFILE DEBUG END ===
+[16-Aug-2025 23:40:45 Asia/Dhaka] === PROFILE DEBUG START ===
+[16-Aug-2025 23:40:45 Asia/Dhaka] Current User ID: 4
+[16-Aug-2025 23:40:45 Asia/Dhaka] Profile User ID: 4
+[16-Aug-2025 23:40:45 Asia/Dhaka] Is Own Profile: yes
+[16-Aug-2025 23:40:45 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[16-Aug-2025 23:40:45 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755365529
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[16-Aug-2025 23:40:45 Asia/Dhaka] POST request detected. AJAX: no
+[16-Aug-2025 23:40:45 Asia/Dhaka] POST data: Array
+(
+)
+
+[16-Aug-2025 23:40:45 Asia/Dhaka] FILES data: Array
+(
+)
+
+[16-Aug-2025 23:40:45 Asia/Dhaka] Action parameter: not set
+[16-Aug-2025 23:40:45 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[16-Aug-2025 23:40:45 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[16-Aug-2025 23:40:45 Asia/Dhaka] === GETTING PROFILE DATA ===
+[16-Aug-2025 23:40:45 Asia/Dhaka] Profile query result: Found profile
+[16-Aug-2025 23:40:45 Asia/Dhaka] Profile ID: 4
+[16-Aug-2025 23:40:45 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[16-Aug-2025 23:40:45 Asia/Dhaka] Photos query result: 3 photos found
+[16-Aug-2025 23:40:45 Asia/Dhaka] === GETTING POSTS DATA ===
+[16-Aug-2025 23:40:45 Asia/Dhaka] Posts query result: 1 posts found
+[16-Aug-2025 23:40:45 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[16-Aug-2025 23:40:45 Asia/Dhaka] === FINAL DATA ===
+[16-Aug-2025 23:40:45 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[16-Aug-2025 23:40:45 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[16-Aug-2025 23:40:45 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[16-Aug-2025 23:40:45 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 19:37:50 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 19:37:50 Asia/Dhaka] Current User ID: 1
+[17-Aug-2025 19:37:50 Asia/Dhaka] Profile User ID: 1
+[17-Aug-2025 19:37:50 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 19:37:50 Asia/Dhaka] Current User Email: kafka@gmail.com
+[17-Aug-2025 19:37:50 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755437867
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[17-Aug-2025 19:37:50 Asia/Dhaka] POST request detected. AJAX: no
+[17-Aug-2025 19:37:50 Asia/Dhaka] POST data: Array
+(
+)
+
+[17-Aug-2025 19:37:50 Asia/Dhaka] FILES data: Array
+(
+)
+
+[17-Aug-2025 19:37:50 Asia/Dhaka] Action parameter: not set
+[17-Aug-2025 19:37:50 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[17-Aug-2025 19:37:50 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[17-Aug-2025 19:37:50 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 19:37:50 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 19:37:50 Asia/Dhaka] Profile ID: 1
+[17-Aug-2025 19:37:50 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 19:37:50 Asia/Dhaka] Photos query result: 7 photos found
+[17-Aug-2025 19:37:50 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 19:37:50 Asia/Dhaka] Posts query result: 11 posts found
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:37:50 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 19:37:50 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[17-Aug-2025 19:37:50 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[17-Aug-2025 19:37:50 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[17-Aug-2025 19:37:50 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 19:38:12 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 19:38:12 Asia/Dhaka] Current User ID: 4
+[17-Aug-2025 19:38:12 Asia/Dhaka] Profile User ID: 4
+[17-Aug-2025 19:38:12 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 19:38:12 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[17-Aug-2025 19:38:12 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755437886
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[17-Aug-2025 19:38:12 Asia/Dhaka] POST request detected. AJAX: no
+[17-Aug-2025 19:38:12 Asia/Dhaka] POST data: Array
+(
+)
+
+[17-Aug-2025 19:38:12 Asia/Dhaka] FILES data: Array
+(
+)
+
+[17-Aug-2025 19:38:12 Asia/Dhaka] Action parameter: not set
+[17-Aug-2025 19:38:12 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[17-Aug-2025 19:38:12 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[17-Aug-2025 19:38:12 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 19:38:12 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 19:38:12 Asia/Dhaka] Profile ID: 4
+[17-Aug-2025 19:38:12 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 19:38:12 Asia/Dhaka] Photos query result: 3 photos found
+[17-Aug-2025 19:38:12 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 19:38:12 Asia/Dhaka] Posts query result: 1 posts found
+[17-Aug-2025 19:38:12 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[17-Aug-2025 19:38:12 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 19:38:12 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[17-Aug-2025 19:38:12 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[17-Aug-2025 19:38:12 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[17-Aug-2025 19:38:12 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 19:53:02 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 19:53:02 Asia/Dhaka] Current User ID: 1
+[17-Aug-2025 19:53:02 Asia/Dhaka] Profile User ID: 1
+[17-Aug-2025 19:53:02 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 19:53:02 Asia/Dhaka] Current User Email: kafka@gmail.com
+[17-Aug-2025 19:53:02 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755437867
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[17-Aug-2025 19:53:02 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 19:53:02 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 19:53:02 Asia/Dhaka] Profile ID: 1
+[17-Aug-2025 19:53:02 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 19:53:02 Asia/Dhaka] Photos query result: 7 photos found
+[17-Aug-2025 19:53:02 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 19:53:02 Asia/Dhaka] Posts query result: 11 posts found
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 19:53:02 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 19:53:02 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[17-Aug-2025 19:53:02 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[17-Aug-2025 19:53:02 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[17-Aug-2025 19:53:02 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 20:10:17 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 20:10:17 Asia/Dhaka] Current User ID: 4
+[17-Aug-2025 20:10:17 Asia/Dhaka] Profile User ID: 4
+[17-Aug-2025 20:10:17 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 20:10:17 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[17-Aug-2025 20:10:17 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755439686
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[17-Aug-2025 20:10:17 Asia/Dhaka] POST request detected. AJAX: no
+[17-Aug-2025 20:10:17 Asia/Dhaka] POST data: Array
+(
+)
+
+[17-Aug-2025 20:10:17 Asia/Dhaka] FILES data: Array
+(
+)
+
+[17-Aug-2025 20:10:17 Asia/Dhaka] Action parameter: not set
+[17-Aug-2025 20:10:17 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[17-Aug-2025 20:10:17 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[17-Aug-2025 20:10:17 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 20:10:17 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 20:10:17 Asia/Dhaka] Profile ID: 4
+[17-Aug-2025 20:10:17 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 20:10:17 Asia/Dhaka] Photos query result: 3 photos found
+[17-Aug-2025 20:10:17 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 20:10:17 Asia/Dhaka] Posts query result: 1 posts found
+[17-Aug-2025 20:10:17 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:17 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 20:10:17 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[17-Aug-2025 20:10:17 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[17-Aug-2025 20:10:17 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[17-Aug-2025 20:10:17 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 20:10:37 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 20:10:37 Asia/Dhaka] Current User ID: 1
+[17-Aug-2025 20:10:37 Asia/Dhaka] Profile User ID: 1
+[17-Aug-2025 20:10:37 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 20:10:37 Asia/Dhaka] Current User Email: kafka@gmail.com
+[17-Aug-2025 20:10:37 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755439670
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[17-Aug-2025 20:10:37 Asia/Dhaka] POST request detected. AJAX: no
+[17-Aug-2025 20:10:37 Asia/Dhaka] POST data: Array
+(
+)
+
+[17-Aug-2025 20:10:37 Asia/Dhaka] FILES data: Array
+(
+)
+
+[17-Aug-2025 20:10:37 Asia/Dhaka] Action parameter: not set
+[17-Aug-2025 20:10:37 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[17-Aug-2025 20:10:37 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[17-Aug-2025 20:10:37 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 20:10:37 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 20:10:37 Asia/Dhaka] Profile ID: 1
+[17-Aug-2025 20:10:37 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 20:10:37 Asia/Dhaka] Photos query result: 7 photos found
+[17-Aug-2025 20:10:37 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 20:10:37 Asia/Dhaka] Posts query result: 11 posts found
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:10:37 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 20:10:37 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[17-Aug-2025 20:10:37 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[17-Aug-2025 20:10:37 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[17-Aug-2025 20:10:37 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 20:54:34 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 20:54:34 Asia/Dhaka] Current User ID: 1
+[17-Aug-2025 20:54:34 Asia/Dhaka] Profile User ID: 1
+[17-Aug-2025 20:54:34 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 20:54:34 Asia/Dhaka] Current User Email: kafka@gmail.com
+[17-Aug-2025 20:54:34 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755442467
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[17-Aug-2025 20:54:34 Asia/Dhaka] POST request detected. AJAX: no
+[17-Aug-2025 20:54:34 Asia/Dhaka] POST data: Array
+(
+)
+
+[17-Aug-2025 20:54:34 Asia/Dhaka] FILES data: Array
+(
+)
+
+[17-Aug-2025 20:54:34 Asia/Dhaka] Action parameter: not set
+[17-Aug-2025 20:54:34 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[17-Aug-2025 20:54:34 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[17-Aug-2025 20:54:34 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 20:54:34 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 20:54:34 Asia/Dhaka] Profile ID: 1
+[17-Aug-2025 20:54:34 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 20:54:34 Asia/Dhaka] Photos query result: 7 photos found
+[17-Aug-2025 20:54:34 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 20:54:34 Asia/Dhaka] Posts query result: 11 posts found
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:54:34 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 20:54:34 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[17-Aug-2025 20:54:34 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[17-Aug-2025 20:54:34 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[17-Aug-2025 20:54:34 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 20:55:20 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 20:55:20 Asia/Dhaka] Current User ID: 4
+[17-Aug-2025 20:55:20 Asia/Dhaka] Profile User ID: 4
+[17-Aug-2025 20:55:20 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 20:55:20 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[17-Aug-2025 20:55:20 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755442511
+    [USER] => stdClass Object
+        (
+            [id] => 4
+            [fname] => Sakhiur
+            [minit] => 
+            [lname] => Rahman
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2002-11-13
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-07-27 01:03:04
+        )
+
+)
+
+[17-Aug-2025 20:55:20 Asia/Dhaka] POST request detected. AJAX: no
+[17-Aug-2025 20:55:20 Asia/Dhaka] POST data: Array
+(
+)
+
+[17-Aug-2025 20:55:20 Asia/Dhaka] FILES data: Array
+(
+)
+
+[17-Aug-2025 20:55:20 Asia/Dhaka] Action parameter: not set
+[17-Aug-2025 20:55:20 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[17-Aug-2025 20:55:20 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[17-Aug-2025 20:55:20 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 20:55:20 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 20:55:20 Asia/Dhaka] Profile ID: 4
+[17-Aug-2025 20:55:20 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 20:55:20 Asia/Dhaka] Photos query result: 3 photos found
+[17-Aug-2025 20:55:20 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 20:55:20 Asia/Dhaka] Posts query result: 1 posts found
+[17-Aug-2025 20:55:20 Asia/Dhaka] Post 23 has 1 media items and reaction counts: like=1, haha=0, wow=0, angry=0
+[17-Aug-2025 20:55:20 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 20:55:20 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 4
+    [hometown] => Dhaka
+    [country] => Bangladesh
+    [shortBio] => A young soul trying to find peace
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+    [socialQuote] => Discipline isn't built on comfort—it's forged in silence, when no one’s watching, and quitting whispers loudest.
+    [lifeEvent] => Born, Taken dinner, Watched anime
+    [religion] => Islam
+    [polViews] => Dr. Yunus all the way
+    [lang] => English, Bangla
+    [professional] => Sleeper
+    [work] => Home
+    [highschool] => Faizur Rahman
+    [college] => City College
+    [university] => North South University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+    [user_id] => 4
+    [DOB] => 2002-11-13
+    [gender] => male
+)
+
+[17-Aug-2025 20:55:20 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 19
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_4_1753556732.jpeg
+            [caption] => Profile Picture
+            [user_id] => 4
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 20
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_4_1753556740.jpeg
+            [caption] => Cover Photo
+            [user_id] => 4
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 21
+            [url] => http://localhost/Friendora/uploads/posts/post_23_1753557000.jpeg
+            [caption] => Post image
+            [user_id] => 4
+        )
+
+)
+
+[17-Aug-2025 20:55:20 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 4
+            [url] => www.kubernaticaina.com
+        )
+
+)
+
+[17-Aug-2025 20:55:20 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 20:56:28 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 20:56:28 Asia/Dhaka] Current User ID: 1
+[17-Aug-2025 20:56:28 Asia/Dhaka] Profile User ID: 1
+[17-Aug-2025 20:56:28 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 20:56:28 Asia/Dhaka] Current User Email: kafka@gmail.com
+[17-Aug-2025 20:56:28 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755442467
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[17-Aug-2025 20:56:28 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 20:56:28 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 20:56:28 Asia/Dhaka] Profile ID: 1
+[17-Aug-2025 20:56:28 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 20:56:28 Asia/Dhaka] Photos query result: 7 photos found
+[17-Aug-2025 20:56:28 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 20:56:28 Asia/Dhaka] Posts query result: 11 posts found
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 33 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 29 has 0 media items and reaction counts: like=2, haha=0, wow=1, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 19 has 1 media items and reaction counts: like=0, haha=0, wow=1, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 18 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 17 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 15 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 14 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 13 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 8 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 4 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] Post 1 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:28 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 20:56:28 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 1
+    [hometown] => Barishal
+    [country] => Bangladesh
+    [shortBio] => Ok this is my bio, I love watching anime and reading webtoons
+    [city] => Dhaka
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+    [socialQuote] => In the digital realm, we are all architects of our own reality. I love anime
+    [lifeEvent] => Graduated VR University (2018), Joined DreamScape Studios (2019), Won Cyber Art Award (2023)
+    [religion] => Digital Spiritualism
+    [polViews] => Progressive Futurist
+    [lang] => English, Japanese, Bangla
+    [professional] => Cybertech
+    [work] => DreamScape Studios
+    [highschool] => Digital Arts Academy
+    [college] => Cyber Tech Institute
+    [university] => Virtual Reality University
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+    [user_id] => 1
+    [DOB] => 1995-07-07
+    [gender] => female
+)
+
+[17-Aug-2025 20:56:28 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [url] => uploads/covers/cover_1_1753523936.png
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [url] => uploads/covers/cover_1_1753524901.jpeg
+            [caption] => Cover photo
+            [user_id] => 1
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544566.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1753544577.png
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 9
+            [url] => http://localhost/Friendora/uploads/posts/post_19_1753551302.jpeg
+            [caption] => Post image
+            [user_id] => 1
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 29
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_1_1754062227.jpeg
+            [caption] => Cover Photo
+            [user_id] => 1
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 34
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_1_1755155157.jpg
+            [caption] => Profile Picture
+            [user_id] => 1
+        )
+
+)
+
+[17-Aug-2025 20:56:28 Asia/Dhaka] Websites Data: Array
+(
+    [0] => stdClass Object
+        (
+            [profile_id] => 1
+            [url] => https://alexandra-dreams.cyber, https://sakhiur.com
+        )
+
+)
+
+[17-Aug-2025 20:56:28 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 20:56:32 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 20:56:32 Asia/Dhaka] Current User ID: 1
+[17-Aug-2025 20:56:32 Asia/Dhaka] Profile User ID: 2
+[17-Aug-2025 20:56:32 Asia/Dhaka] Is Own Profile: no
+[17-Aug-2025 20:56:32 Asia/Dhaka] Current User Email: kafka@gmail.com
+[17-Aug-2025 20:56:32 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755442467
+    [USER] => stdClass Object
+        (
+            [id] => 1
+            [fname] => Kafka
+            [minit] => S
+            [lname] => Hunter
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 1995-07-07
+            [gender] => female
+            [email] => kafka@gmail.com
+            [created_at] => 2025-07-25 20:08:05
+        )
+
+)
+
+[17-Aug-2025 20:56:32 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 20:56:32 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 20:56:32 Asia/Dhaka] Profile ID: 2
+[17-Aug-2025 20:56:32 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 20:56:32 Asia/Dhaka] Photos query result: 4 photos found
+[17-Aug-2025 20:56:32 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 20:56:32 Asia/Dhaka] Posts query result: 4 posts found
+[17-Aug-2025 20:56:32 Asia/Dhaka] Post 28 has 0 media items and reaction counts: like=0, haha=1, wow=0, angry=0
+[17-Aug-2025 20:56:32 Asia/Dhaka] Post 21 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:32 Asia/Dhaka] Post 12 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:32 Asia/Dhaka] Post 10 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:56:32 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 20:56:32 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+    [DOB] => 2015-08-05
+    [gender] => 
+)
+
+[17-Aug-2025 20:56:32 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[17-Aug-2025 20:56:32 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[17-Aug-2025 20:56:32 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 20:59:59 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 20:59:59 Asia/Dhaka] Current User ID: 2
+[17-Aug-2025 20:59:59 Asia/Dhaka] Profile User ID: 2
+[17-Aug-2025 20:59:59 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 20:59:59 Asia/Dhaka] Current User Email: ken@gmail.com
+[17-Aug-2025 20:59:59 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755442511
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2015-08-05
+            [gender] => 
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[17-Aug-2025 20:59:59 Asia/Dhaka] POST request detected. AJAX: no
+[17-Aug-2025 20:59:59 Asia/Dhaka] POST data: Array
+(
+)
+
+[17-Aug-2025 20:59:59 Asia/Dhaka] FILES data: Array
+(
+)
+
+[17-Aug-2025 20:59:59 Asia/Dhaka] Action parameter: not set
+[17-Aug-2025 20:59:59 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[17-Aug-2025 20:59:59 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[17-Aug-2025 20:59:59 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 20:59:59 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 20:59:59 Asia/Dhaka] Profile ID: 2
+[17-Aug-2025 20:59:59 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 20:59:59 Asia/Dhaka] Photos query result: 4 photos found
+[17-Aug-2025 20:59:59 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 20:59:59 Asia/Dhaka] Posts query result: 4 posts found
+[17-Aug-2025 20:59:59 Asia/Dhaka] Post 28 has 0 media items and reaction counts: like=0, haha=1, wow=0, angry=0
+[17-Aug-2025 20:59:59 Asia/Dhaka] Post 21 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:59:59 Asia/Dhaka] Post 12 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:59:59 Asia/Dhaka] Post 10 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 20:59:59 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 20:59:59 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+    [DOB] => 2015-08-05
+    [gender] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2015-08-05
+            [gender] => 
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[17-Aug-2025 20:59:59 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[17-Aug-2025 20:59:59 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[17-Aug-2025 20:59:59 Asia/Dhaka] === PROFILE DEBUG END ===
+[17-Aug-2025 21:01:13 Asia/Dhaka] === PROFILE DEBUG START ===
+[17-Aug-2025 21:01:13 Asia/Dhaka] Current User ID: 2
+[17-Aug-2025 21:01:13 Asia/Dhaka] Profile User ID: 2
+[17-Aug-2025 21:01:13 Asia/Dhaka] Is Own Profile: yes
+[17-Aug-2025 21:01:13 Asia/Dhaka] Current User Email: ken@gmail.com
+[17-Aug-2025 21:01:13 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1755442511
+    [USER] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2015-08-05
+            [gender] => 
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[17-Aug-2025 21:01:13 Asia/Dhaka] POST request detected. AJAX: no
+[17-Aug-2025 21:01:13 Asia/Dhaka] POST data: Array
+(
+)
+
+[17-Aug-2025 21:01:13 Asia/Dhaka] FILES data: Array
+(
+)
+
+[17-Aug-2025 21:01:13 Asia/Dhaka] Action parameter: not set
+[17-Aug-2025 21:01:13 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[17-Aug-2025 21:01:13 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[17-Aug-2025 21:01:13 Asia/Dhaka] === GETTING PROFILE DATA ===
+[17-Aug-2025 21:01:13 Asia/Dhaka] Profile query result: Found profile
+[17-Aug-2025 21:01:13 Asia/Dhaka] Profile ID: 2
+[17-Aug-2025 21:01:13 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[17-Aug-2025 21:01:13 Asia/Dhaka] Photos query result: 4 photos found
+[17-Aug-2025 21:01:13 Asia/Dhaka] === GETTING POSTS DATA ===
+[17-Aug-2025 21:01:13 Asia/Dhaka] Posts query result: 4 posts found
+[17-Aug-2025 21:01:13 Asia/Dhaka] Post 28 has 0 media items and reaction counts: like=0, haha=1, wow=0, angry=0
+[17-Aug-2025 21:01:13 Asia/Dhaka] Post 21 has 1 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 21:01:13 Asia/Dhaka] Post 12 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 21:01:13 Asia/Dhaka] Post 10 has 0 media items and reaction counts: like=0, haha=0, wow=0, angry=0
+[17-Aug-2025 21:01:13 Asia/Dhaka] === FINAL DATA ===
+[17-Aug-2025 21:01:13 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 2
+    [hometown] => Nippon
+    [country] => 
+    [shortBio] => Anime fan and webtoon reader
+    [city] => Jakarta
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+    [user_id] => 2
+    [DOB] => 2015-08-05
+    [gender] => stdClass Object
+        (
+            [id] => 2
+            [fname] => Ken
+            [minit] => G
+            [lname] => Kaneki
+            [pwd] => HNkukc.t2n:RgD!
+            [DOB] => 2015-08-05
+            [gender] => 
+            [email] => ken@gmail.com
+            [created_at] => 2025-07-26 21:50:51
+        )
+
+)
+
+[17-Aug-2025 21:01:13 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 6
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_2_1753545089.jpg
+            [caption] => Profile Picture
+            [user_id] => 2
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 7
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753545108.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 13
+            [url] => http://localhost/Friendora/uploads/posts/post_21_1753553754.jpeg
+            [caption] => Post image
+            [user_id] => 2
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 14
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_2_1753553856.jpeg
+            [caption] => Cover Photo
+            [user_id] => 2
+        )
+
+)
+
+[17-Aug-2025 21:01:13 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[17-Aug-2025 21:01:13 Asia/Dhaka] === PROFILE DEBUG END ===

@@ -49,7 +49,7 @@ class Messenger {
         
         try {
             $messages = new Messages;
-            $messages->createTable(); // Ensure table exists
+            $messages->createTable(); 
             
             // Insert message using the model
             $result = $messages->insert([
@@ -146,6 +146,7 @@ class Messenger {
         }
     }
     
+    
     public function mark_as_read($sender_id = null) {
         header('Content-Type: application/json');
         
@@ -170,15 +171,49 @@ class Messenger {
         try {
             $messages = new Messages;
             
-            // Update messages to read status
-            $result = $messages->updateAll(
-                ['status' => 'read'], 
-                $receiver_id, 
-                'receiver_id',
-                "AND sender_id = $sender_id AND status != 'read'"
-            );
+            // Update messages to read status - using proper parameterized query
+            $query = "UPDATE messages SET status = 'read' 
+                      WHERE receiver_id = ? AND sender_id = ? AND status != 'read'";
+            
+            $result = $messages->query($query, [$receiver_id, $sender_id]);
             
             echo json_encode(['status' => 'success', 'message' => 'Messages marked as read']);
+        } catch (Exception $e) {
+            echo json_encode(['status' => 'error', 'message' => 'Database error: ' . $e->getMessage()]);
+        }
+    }
+    
+    public function get_conversation_status($contact_id = null) {
+        header('Content-Type: application/json');
+        
+        $ses = new Session;
+        if (!$ses->is_loggedIn()) {
+            echo json_encode(['status' => 'error', 'message' => 'Not authenticated']);
+            return;
+        }
+        
+        if (!$contact_id) {
+            echo json_encode(['status' => 'error', 'message' => 'Contact ID required']);
+            return;
+        }
+        
+        $user_id = Utils::user('id');
+        
+        try {
+            $messages = new Messages;
+            
+            // Get conversation status - only messages sent BY current user TO the contact
+            $query = "SELECT sender_id, content, sent_at, status
+                      FROM messages 
+                      WHERE sender_id = :user_id AND receiver_id = :contact_id
+                      ORDER BY sent_at ASC";
+            
+            $conversation = $messages->query($query, ['user_id' => $user_id, 'contact_id' => $contact_id]);
+            
+            echo json_encode([
+                'status' => 'success',
+                'messages' => $conversation ?: []
+            ]);
         } catch (Exception $e) {
             echo json_encode(['status' => 'error', 'message' => 'Database error: ' . $e->getMessage()]);
         }
@@ -199,15 +234,16 @@ class Messenger {
         try {
             $messages = new Messages;
             
-            // Poll for new messages since last poll time
+            // Use messages_log table for efficient polling
             $query = "SELECT m.*, u.fname, u.lname, p.pfp 
-                      FROM messages m
+                      FROM messages_log ml
+                      JOIN messages m ON ml.message_id = m.message_id
                       LEFT JOIN users u ON m.sender_id = u.id
                       LEFT JOIN profile p ON p.user_id = u.id
-                      WHERE m.sent_at > ? AND m.receiver_id = ?
-                      ORDER BY m.sent_at DESC";
+                      WHERE ml.action_at > ? AND m.receiver_id = ? AND m.sender_id != ? AND ml.action = 'insert'
+                      ORDER BY ml.action_at DESC";
             
-            $new_messages = $messages->query($query, [$last_poll_time, $user_id]);
+            $new_messages = $messages->query($query, [$last_poll_time, $user_id, $user_id]);
             
             echo json_encode([
                 'status' => 'success',

@@ -4,7 +4,34 @@ let friendRequestsData = [];
 document.addEventListener("DOMContentLoaded", () => {
   fetchNotifications();
   fetchFriendRequests();
+  fetchUnreadMessagesCount();
+
+  setInterval(() => {
+    fetchNotifications();
+    fetchFriendRequests();
+    fetchUnreadMessagesCount();
+  }, 15000);
 });
+
+async function fetchUnreadMessagesCount() {
+  try {
+    const response = await fetch(
+      `${window.ROOT}/notification/count_unread_message`
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const rawResponse = await response.text();
+    try {
+      const data = JSON.parse(rawResponse);
+      updateUnreadMessagesCount(data.unread_count);
+    } catch (error) {
+      console.error("Failed to parse unread messages count: ", rawResponse);
+    }
+  } catch (error) {
+    console.error("Failed to fetch unread messages count:", error);
+  }
+}
 
 async function fetchNotifications() {
   try {
@@ -23,7 +50,9 @@ async function fetchNotifications() {
 
 async function fetchFriendRequests() {
   try {
-    const response = await fetch(`${window.ROOT}/friendship/get_friend_requests`);
+    const response = await fetch(
+      `${window.ROOT}/friendship/get_friend_requests`
+    );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -36,103 +65,114 @@ async function fetchFriendRequests() {
 }
 
 function generateNotificationMessage(notification) {
-    const userLink = `<a href="${window.ROOT}/profile/${notification.action_by}" class="notification-user-link">${notification.userName}</a>`;
-    return `${userLink} ${notification.content}` || 'New notification';
+  const userLink = `<a href="${window.ROOT}/profile/${notification.action_by}" class="notification-user-link">${notification.userName}</a>`;
+  return `${userLink} ${notification.content}` || "New notification";
 }
-
-
-
 
 // Mobile Menu Functions
 function toggleMobileMenu() {
-  const mobileMenu = document.getElementById("mobileMenu")
-  const hamburger = document.querySelector(".cyber-hamburger")
+  const mobileMenu = document.getElementById("mobileMenu");
+  const hamburger = document.querySelector(".cyber-hamburger");
 
   if (mobileMenu && hamburger) {
-    const isOpen = mobileMenu.classList.contains("show")
+    const isOpen = mobileMenu.classList.contains("show");
 
     if (isOpen) {
-      mobileMenu.classList.remove("show")
-      hamburger.classList.remove("active")
-      document.body.style.overflow = ""
+      mobileMenu.classList.remove("show");
+      hamburger.classList.remove("active");
+      document.body.style.overflow = "";
     } else {
-      mobileMenu.classList.add("show")
-      hamburger.classList.add("active")
-      document.body.style.overflow = "hidden"
+      mobileMenu.classList.add("show");
+      hamburger.classList.add("active");
+      document.body.style.overflow = "hidden";
       // Setup mobile search when menu opens
-      setupMobileSearchEvents()
+      setupMobileSearchEvents();
     }
   }
 }
 
 // User Dropdown Functions
 function toggleUserDropdown() {
-  const container = document.getElementById("userDropdownContainer")
-  const mobileContainer = document.getElementById("mobileUserDropdownContainer")
+  const container = document.getElementById("userDropdownContainer");
+  const mobileContainer = document.getElementById(
+    "mobileUserDropdownContainer"
+  );
 
-  closeAllDropdowns()
+  closeAllDropdowns();
 
   if (window.innerWidth < 992) {
     if (mobileContainer) {
-      const isVisible = mobileContainer.classList.contains("show")
-      mobileContainer.classList.toggle("show", !isVisible)
+      const isVisible = mobileContainer.classList.contains("show");
+      mobileContainer.classList.toggle("show", !isVisible);
     }
   } else {
     if (container) {
-      const isVisible = container.classList.contains("show")
-      container.classList.toggle("show", !isVisible)
+      const isVisible = container.classList.contains("show");
+      container.classList.toggle("show", !isVisible);
     }
   }
 }
 
 function toggleNotificationDropdown() {
-  const container = document.getElementById("notificationDropdownContainer")
+  const container = document.getElementById("notificationDropdownContainer");
   if (container) {
-    const isVisible = container.classList.contains("show")
-    closeAllDropdowns()
+    const isVisible = container.classList.contains("show");
+    closeAllDropdowns();
     if (!isVisible) {
-      container.classList.add("show")
-      loadNotifications()
+      container.classList.add("show");
+      loadNotifications();
     }
   }
 }
 
 function toggleFriendsDropdown() {
-  const container = document.getElementById("friendsDropdownContainer")
+  const container = document.getElementById("friendsDropdownContainer");
   if (container) {
-    const isVisible = container.classList.contains("show")
-    closeAllDropdowns()
+    const isVisible = container.classList.contains("show");
+    closeAllDropdowns();
     if (!isVisible) {
-      container.classList.add("show")
-      fetchFriendRequests() // Refresh data when opening
+      container.classList.add("show");
+      fetchFriendRequests(); // Refresh data when opening
     }
   }
 }
 
 function toggleMobileFriends() {
-  const friendsSection = document.getElementById("mobileFriendsSection")
+  const friendsSection = document.getElementById("mobileFriendsSection");
   if (friendsSection) {
-    const isVisible = friendsSection.style.display === "block"
+    const isVisible = friendsSection.style.display === "block";
     // Hide other mobile sections
-    document.getElementById("mobileNotificationsSection").style.display = "none"
-    
+    document.getElementById("mobileNotificationsSection").style.display =
+      "none";
+
     if (isVisible) {
-      friendsSection.style.display = "none"
+      friendsSection.style.display = "none";
     } else {
-      friendsSection.style.display = "block"
-      fetchFriendRequests() // Refresh data when opening
+      friendsSection.style.display = "block";
+      fetchFriendRequests(); // Refresh data when opening
     }
+  }
+}
+
+async function updateUnreadMessagesCount(count) {
+  const badge = document.getElementById("unreadMessagesBadge");
+  if (badge) {
+    badge.textContent = count > 0 ? count : "";
+    badge.style.display = count > 0 ? "block" : "none";
   }
 }
 
 async function acceptFriendRequest(senderId) {
   try {
-    const response = await fetch(`${window.ROOT}/friendship/accept_request/${senderId}`, {
-      method: 'POST'
-    });
+    const response = await fetch(
+      `${window.ROOT}/friendship/accept_request/${senderId}`,
+      {
+        method: "POST",
+      }
+    );
     const result = await response.json();
-    
-    if (result.status === 'success') {
+
+    if (result.status === "success") {
       showNotification("Friend request accepted!", "success");
       fetchFriendRequests(); // Refresh the list
     } else {
@@ -146,12 +186,15 @@ async function acceptFriendRequest(senderId) {
 
 async function rejectFriendRequest(senderId) {
   try {
-    const response = await fetch(`${window.ROOT}/friendship/reject_request/${senderId}`, {
-      method: 'POST'
-    });
+    const response = await fetch(
+      `${window.ROOT}/friendship/reject_request/${senderId}`,
+      {
+        method: "POST",
+      }
+    );
     const result = await response.json();
-    
-    if (result.status === 'success') {
+
+    if (result.status === "success") {
       showNotification("Friend request rejected", "info");
       fetchFriendRequests(); // Refresh the list
     } else {
@@ -166,118 +209,150 @@ async function rejectFriendRequest(senderId) {
 function markAllFriendRequestsAsSeen() {
   // This function can be implemented later if needed
   // for now, we'll just hide the badge
-  const badges = document.querySelectorAll('.friend-request-badge');
-  badges.forEach(badge => badge.style.display = 'none');
+  const badges = document.querySelectorAll(".friend-request-badge");
+  badges.forEach((badge) => (badge.style.display = "none"));
 }
 
 function loadFriendRequests() {
-  const friendRequestsList = document.getElementById("friendRequestsList")
-  const friendRequestBadge = document.getElementById("friendRequestBadge")
+  const friendRequestsList = document.getElementById("friendRequestsList");
+  const friendRequestBadge = document.getElementById("friendRequestBadge");
 
-  if (!friendRequestsList) return
+  if (!friendRequestsList) return;
 
   // Update badge count
-  const requestCount = friendRequestsData.length
+  const requestCount = friendRequestsData.length;
   if (friendRequestBadge) {
     if (requestCount > 0) {
-      friendRequestBadge.textContent = requestCount
-      friendRequestBadge.style.display = "block"
+      friendRequestBadge.textContent = requestCount;
+      friendRequestBadge.style.display = "block";
     } else {
-      friendRequestBadge.style.display = "none"
+      friendRequestBadge.style.display = "none";
     }
   }
 
   // Populate friend requests list
   if (requestCount === 0) {
-    friendRequestsList.innerHTML = '<li class="no-friends-message">No pending friend requests</li>'
+    friendRequestsList.innerHTML =
+      '<li class="no-friends-message">No pending friend requests</li>';
   } else {
     friendRequestsList.innerHTML = friendRequestsData
       .map(
         (request) => `
         <li class="friend-request-item">
             <div class="friend-request-content">
-                <img src="${request.pfp || '/Friendora/assets/images/default_pfp.png'}" class="friend-request-avatar" alt="User">
+                <img src="${
+                  request.pfp || "/Friendora/assets/images/default_pfp.png"
+                }" class="friend-request-avatar" alt="User">
                 <div class="friend-request-info">
-                    <p class="friend-request-name">${request.fname} ${request.lname}</p>
+                    <p class="friend-request-name">${request.fname} ${
+          request.lname
+        }</p>
                     <div class="friend-request-actions">
-                        <button class="btn btn-sm cyber-btn-primary" onclick="acceptFriendRequest(${request.sender_id})">Accept</button>
-                        <button class="btn btn-sm cyber-btn-secondary" onclick="rejectFriendRequest(${request.sender_id})">Reject</button>
+                        <button class="btn btn-sm cyber-btn-primary" onclick="acceptFriendRequest(${
+                          request.sender_id
+                        })">Accept</button>
+                        <button class="btn btn-sm cyber-btn-secondary" onclick="rejectFriendRequest(${
+                          request.sender_id
+                        })">Reject</button>
                     </div>
                 </div>
             </div>
         </li>
-    `,
+    `
       )
-      .join("")
+      .join("");
   }
 }
 
 function loadMobileFriendRequests() {
-  const mobileFriendRequestsList = document.getElementById("mobileFriendRequestsList")
-  const mobileFriendRequestBadge = document.getElementById("mobileFriendRequestBadge")
+  const mobileFriendRequestsList = document.getElementById(
+    "mobileFriendRequestsList"
+  );
+  const mobileFriendRequestBadge = document.getElementById(
+    "mobileFriendRequestBadge"
+  );
 
-  if (!mobileFriendRequestsList) return
+  if (!mobileFriendRequestsList) return;
 
-  const requestCount = friendRequestsData.length
+  const requestCount = friendRequestsData.length;
   if (mobileFriendRequestBadge) {
     if (requestCount > 0) {
-      mobileFriendRequestBadge.textContent = requestCount
-      mobileFriendRequestBadge.style.display = "block"
+      mobileFriendRequestBadge.textContent = requestCount;
+      mobileFriendRequestBadge.style.display = "block";
     } else {
-      mobileFriendRequestBadge.style.display = "none"
+      mobileFriendRequestBadge.style.display = "none";
     }
   }
 
   if (requestCount === 0) {
-    mobileFriendRequestsList.innerHTML = '<li class="no-friends-message">No pending friend requests</li>'
+    mobileFriendRequestsList.innerHTML =
+      '<li class="no-friends-message">No pending friend requests</li>';
   } else {
     mobileFriendRequestsList.innerHTML = friendRequestsData
       .map(
         (request) => `
         <li class="friend-request-item mobile">
             <div class="friend-request-content">
-                <img src="${request.pfp || '/Friendora/assets/images/default_pfp.png'}" class="friend-request-avatar" alt="User">
+                <img src="${
+                  request.pfp || "/Friendora/assets/images/default_pfp.png"
+                }" class="friend-request-avatar" alt="User">
                 <div class="friend-request-info">
-                    <p class="friend-request-name">${request.fname} ${request.lname}</p>
+                    <p class="friend-request-name">${request.fname} ${
+          request.lname
+        }</p>
                     <div class="friend-request-actions">
-                        <button class="btn btn-sm cyber-btn-primary" onclick="acceptFriendRequest(${request.sender_id})">Accept</button>
-                        <button class="btn btn-sm cyber-btn-secondary" onclick="rejectFriendRequest(${request.sender_id})">Reject</button>
+                        <button class="btn btn-sm cyber-btn-primary" onclick="acceptFriendRequest(${
+                          request.sender_id
+                        })">Accept</button>
+                        <button class="btn btn-sm cyber-btn-secondary" onclick="rejectFriendRequest(${
+                          request.sender_id
+                        })">Reject</button>
                     </div>
                 </div>
             </div>
         </li>
-    `,
+    `
       )
-      .join("")
+      .join("");
   }
 }
 
 function closeAllDropdowns() {
-  const dropdowns = ["notificationDropdownContainer", "userDropdownContainer", "mobileUserDropdownContainer", "friendsDropdownContainer"]
+  const dropdowns = [
+    "notificationDropdownContainer",
+    "userDropdownContainer",
+    "mobileUserDropdownContainer",
+    "friendsDropdownContainer",
+  ];
   dropdowns.forEach((id) => {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     if (element) {
-      element.classList.remove("show")
+      element.classList.remove("show");
     }
-  })
+  });
 }
 
 function handleLogout() {
   if (confirm("Are you sure you want to log out?")) {
-    showNotification("Logging out...", "info", "Goodbye!")
+    showNotification("Logging out...", "info", "Goodbye!");
     setTimeout(() => {
-      window.location.href = "/logout"
-    }, 2000)
+      window.location.href = "/logout";
+    }, 2000);
   }
 }
 
 async function handleNotificationClick(notificationId) {
-  const notification = notificationsData.find((n) => n.notification_id === notificationId);
+  const notification = notificationsData.find(
+    (n) => n.notification_id === notificationId
+  );
   if (notification && !notification.is_read) {
     try {
-      const response = await fetch(`${window.location.origin}/Friendora/notification/mark_as_read/${notificationId}`, {
-        method: 'POST',
-      });
+      const response = await fetch(
+        `${window.location.origin}/Friendora/notification/mark_as_read/${notificationId}`,
+        {
+          method: "POST",
+        }
+      );
       if (response.ok) {
         notification.is_read = 1;
         updateNotificationUI();
@@ -290,9 +365,12 @@ async function handleNotificationClick(notificationId) {
 
 async function markAllAsRead() {
   try {
-    const response = await fetch(`${window.location.origin}/Friendora/notification/mark_all_as_read`, {
-      method: 'POST',
-    });
+    const response = await fetch(
+      `${window.location.origin}/Friendora/notification/mark_all_as_read`,
+      {
+        method: "POST",
+      }
+    );
     if (response.ok) {
       notificationsData.forEach((notification) => {
         notification.is_read = 1;
@@ -311,89 +389,104 @@ function updateNotificationUI() {
   loadMobileNotifications();
 }
 
-
 function toggleMobileNotifications() {
-  const notificationsSection = document.getElementById("mobileNotificationsSection")
+  const notificationsSection = document.getElementById(
+    "mobileNotificationsSection"
+  );
 
   if (notificationsSection) {
-    const isVisible = notificationsSection.style.display !== "none"
-    notificationsSection.style.display = isVisible ? "none" : "block"
+    const isVisible = notificationsSection.style.display !== "none";
+    notificationsSection.style.display = isVisible ? "none" : "block";
 
     if (!isVisible) {
-      loadMobileNotifications()
+      loadMobileNotifications();
     }
   }
 }
 
 function loadMobileNotifications() {
-  const mobileNotificationsList = document.getElementById("mobileNotificationsList")
-  const mobileNotificationCount = document.getElementById("mobileNotificationCount")
+  const mobileNotificationsList = document.getElementById(
+    "mobileNotificationsList"
+  );
+  const mobileNotificationCount = document.getElementById(
+    "mobileNotificationCount"
+  );
 
-  if (!mobileNotificationsList) return
+  if (!mobileNotificationsList) return;
 
-  const unreadCount = notificationsData.filter((n) => !n.is_read).length
+  const unreadCount = notificationsData.filter((n) => !n.is_read).length;
   if (mobileNotificationCount) {
-    mobileNotificationCount.textContent = unreadCount
-    mobileNotificationCount.style.display = unreadCount > 0 ? "flex" : "none"
+    mobileNotificationCount.textContent = unreadCount;
+    mobileNotificationCount.style.display = unreadCount > 0 ? "flex" : "none";
   }
 
   mobileNotificationsList.innerHTML = notificationsData
     .map(
       (notification) => `
-        <div class="notification-item ${!notification.is_read ? "unread" : ""}" onclick="handleNotificationClick(${notification.notification_id})">
-            <img src="${notification.userAvatar}" class="notification-avatar" alt="User">
+        <div class="notification-item ${
+          !notification.is_read ? "unread" : ""
+        }" onclick="handleNotificationClick(${notification.notification_id})">
+            <img src="${
+              notification.userAvatar
+            }" class="notification-avatar" alt="User">
             <div class="notification-content">
                 <p>${generateNotificationMessage(notification)}</p>
                 <small>${notification.time}</small>
             </div>
         </div>
-    `,
+    `
     )
-    .join("")
+    .join("");
 }
 
 function loadNotifications() {
-  const notificationsList = document.getElementById("notificationsList")
-  const notificationCount = document.getElementById("notificationCount")
+  const notificationsList = document.getElementById("notificationsList");
+  const notificationCount = document.getElementById("notificationCount");
 
-  if (!notificationsList) return
+  if (!notificationsList) return;
 
   // Update notification count
-  const unreadCount = notificationsData.filter((n) => !n.is_read).length
+  const unreadCount = notificationsData.filter((n) => !n.is_read).length;
   if (notificationCount) {
-    notificationCount.textContent = unreadCount
-    notificationCount.style.display = unreadCount > 0 ? "flex" : "none"
+    notificationCount.textContent = unreadCount;
+    notificationCount.style.display = unreadCount > 0 ? "flex" : "none";
   }
 
   notificationsList.innerHTML = notificationsData
     .map(
       (notification) => `
-        <li class="notification-item ${!notification.is_read ? "unread" : ""}" onclick="handleNotificationClick(${notification.notification_id})">
-            <img src="${notification.userAvatar}" class="notification-avatar" alt="User">
+        <li class="notification-item ${
+          !notification.is_read ? "unread" : ""
+        }" onclick="handleNotificationClick(${notification.notification_id})">
+            <img src="${
+              notification.userAvatar
+            }" class="notification-avatar" alt="User">
             <div class="notification-content">
                 <p>${generateNotificationMessage(notification)}</p>
                 <small>${notification.time}</small>
             </div>
         </li>
-    `,
+    `
     )
-    .join("")
+    .join("");
 }
 
 // Window resize handler
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 992) {
-    const mobileMenu = document.getElementById("mobileMenu")
-    const hamburger = document.querySelector(".cyber-hamburger")
+    const mobileMenu = document.getElementById("mobileMenu");
+    const hamburger = document.querySelector(".cyber-hamburger");
     if (mobileMenu && mobileMenu.classList.contains("show")) {
-      mobileMenu.classList.remove("show")
-      hamburger.classList.remove("active")
-      document.body.style.overflow = ""
+      mobileMenu.classList.remove("show");
+      hamburger.classList.remove("active");
+      document.body.style.overflow = "";
     }
 
-    const mobileContainer = document.getElementById("mobileUserDropdownContainer")
+    const mobileContainer = document.getElementById(
+      "mobileUserDropdownContainer"
+    );
     if (mobileContainer) {
-      mobileContainer.classList.remove("show")
+      mobileContainer.classList.remove("show");
     }
   }
-})
+});

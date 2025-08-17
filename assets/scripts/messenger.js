@@ -5,12 +5,7 @@ class MessengerSystem {
     this.pollInterval = null;
     this.typingTimeout = null;
     this.isTyping = false;
-    this.loadedMessages = new Set(); // Track loaded message IDs to prevent duplicates
-    this.Utils = window.Utils || { user: () => 1 }; // Declare Utils variable
-    this.showNotification =
-      window.showNotification ||
-      ((message, type) => console.log(`Notification (${type}): ${message}`)); // Declare showNotification variable
-
+    this.loadedMessages = new Set();
     this.init();
   }
 
@@ -50,7 +45,7 @@ class MessengerSystem {
     // Window focus events for read status
     window.addEventListener("focus", () => {
       if (this.currentContactId) {
-        this.markAsRead(this.currentContactId);
+        this.markReceivedMessagesAsRead(this.currentContactId);
       }
     });
 
@@ -112,7 +107,8 @@ class MessengerSystem {
         // Add message to UI immediately with correct field names
         this.addMessageToUI({
           content: message,
-          sender_id: window.currentUserId || this.Utils.user("id"),
+          sender_id: window.currentUserId,
+          receiver_id: this.currentContactId, // Add receiver_id for consistent duplicate detection
           sent_at: new Date().toISOString(),
           status: "sent", // Set initial status
           is_own: true,
@@ -120,6 +116,14 @@ class MessengerSystem {
 
         // Scroll to bottom
         this.scrollToBottom();
+
+        // Update your own sidebar to show the sent message
+        this.updateYourSidebarWithSentMessage({
+          content: message,
+          receiver_id: this.currentContactId,
+          sent_at: new Date().toISOString(),
+          status: "sent",
+        });
 
         this.showNotification("Message sent!", "success");
       } else {
@@ -171,8 +175,8 @@ class MessengerSystem {
     // Load conversation
     await this.loadConversation(contactId);
 
-    // Mark messages as read
-    await this.markAsRead(contactId);
+    // Mark messages as read ONLY if there are messages FROM this contact TO you
+    await this.markReceivedMessagesAsRead(contactId);
 
     // Focus message input
     document.getElementById("messageInput").focus();
@@ -211,28 +215,37 @@ class MessengerSystem {
 
   addMessageToUI(message) {
     const messagesList = document.getElementById("messagesList");
-    const currentUserId =
-      window.currentUserId || (this.Utils ? this.Utils.user("id") : 1);
+    const currentUserId = window.currentUserId;
 
-    // Create unique message identifier
-    const messageId =
+    // Create multiple possible message identifiers to catch duplicates
+    const messageId1 =
       message.message_id ||
-      `${message.sender_id}_${message.content}_${message.sent_at}`;
+      `${message.sender_id}_${message.receiver_id || this.currentContactId}_${
+        message.content
+      }_${message.sent_at}`;
+    const messageId2 = `${message.sender_id}_${message.content}_${message.sent_at}`;
+    const messageId3 = `${message.content}_${message.sent_at}_${message.sender_id}`;
 
-    // Check if message is already loaded
-    if (this.loadedMessages.has(messageId)) {
-      console.log("Duplicate message prevented:", messageId);
+    // Check if any variant is already loaded
+    if (
+      this.loadedMessages.has(messageId1) ||
+      this.loadedMessages.has(messageId2) ||
+      this.loadedMessages.has(messageId3)
+    ) {
+      console.log("Duplicate message prevented:", messageId1);
       return;
     }
 
-    // Add to loaded messages set
-    this.loadedMessages.add(messageId);
+    // Add all variants to loaded messages set
+    this.loadedMessages.add(messageId1);
+    this.loadedMessages.add(messageId2);
+    this.loadedMessages.add(messageId3);
 
     const isOwn = message.sender_id == currentUserId;
 
     const messageElement = document.createElement("div");
     messageElement.className = `message ${isOwn ? "own" : "other"}`;
-    messageElement.dataset.messageId = messageId; // Add data attribute for tracking
+    messageElement.dataset.messageId = messageId1; // Add data attribute for tracking
 
     // Use sent_at field from Messages table
     const time = new Date(
@@ -248,8 +261,10 @@ class MessengerSystem {
                 <div class="message-text">${this.escapeHtml(
                   message.content || message.message
                 )}</div>
-                <div class="message-time">${time}</div>
-                ${isOwn ? this.getMessageStatusIcon(message.status) : ""}
+                <div class="message-footer" style="display: flex; align-items: center; justify-content: flex-end; margin-top: 4px; font-size: 12px; color: #8696a0;">
+                    <span class="message-time text-white">${time}</span>
+                    ${isOwn ? this.getMessageStatusIcon(message.status) : ""}
+                </div>
             </div>
         `;
 
@@ -264,17 +279,18 @@ class MessengerSystem {
   getMessageStatusIcon(status) {
     switch (status) {
       case "sent":
-        return '<div class="message-status"><i class="bi bi-check" title="Sent"></i></div>';
+        return '<div class="message-status" style="margin-left: 8px;"><i class="bi bi-check" style="color: #8696a0; font-size: 14px;" title="Sent"></i></div>';
       case "delivered":
-        return '<div class="message-status"><i class="bi bi-check2" title="Delivered"></i></div>';
+        return '<div class="message-status" style="margin-left: 8px;"><i class="bi bi-check-all" style="color: #8696a0; font-size: 14px;" title="Delivered"></i></div>';
       case "read":
-        return '<div class="message-status"><i class="bi bi-check2-all text-primary" title="Read"></i></div>';
+        return '<div class="message-status" style="margin-left: 8px;"><i class="bi bi-check-all" style="color: #00d4ff; font-size: 14px;" title="Read"></i></div>';
       default:
-        return '<div class="message-status"><i class="bi bi-clock" title="Sending..."></i></div>';
+        return '<div class="message-status" style="margin-left: 8px;"><i class="bi bi-clock" style="color: #8696a0; font-size: 12px;" title="Sending..."></i></div>';
     }
   }
 
-  async markAsRead(senderId) {
+  async markAsRead(contactId) {
+    // This marks messages FROM contactId TO you as read
     try {
       const response = await fetch(`${window.ROOT}/messenger/mark_as_read`, {
         method: "POST",
@@ -282,17 +298,28 @@ class MessengerSystem {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          sender_id: senderId,
+          sender_id: contactId,
         }),
       });
 
       const result = await response.json();
       if (result.status === "success") {
         // Update UI to remove unread badge for this contact
-        this.updateContactReadStatus(senderId);
+        this.updateContactReadStatus(contactId);
       }
     } catch (error) {
       console.error("Error marking messages as read:", error);
+    }
+  }
+
+  async markReceivedMessagesAsRead(contactId) {
+    // Only mark messages as read if they were sent TO you FROM contactId
+    const hasUnreadMessages = document.querySelector(
+      `[data-contact-id="${contactId}"] .unread-badge[style*="block"]`
+    );
+
+    if (hasUnreadMessages) {
+      await this.markAsRead(contactId);
     }
   }
 
@@ -308,8 +335,34 @@ class MessengerSystem {
       }
     }
 
-    // Also reload inbox to get updated message statuses
-    this.loadInbox();
+    // Don't reload inbox here - it causes sent messages to show in friend's sidebar immediately
+    // this.loadInbox();
+  }
+
+  updateYourSidebarWithSentMessage(message) {
+    // Only update YOUR sidebar when YOU send a message
+    const contactItem = document.querySelector(
+      `[data-contact-id="${message.receiver_id}"]`
+    );
+    if (contactItem) {
+      const lastMessageEl = contactItem.querySelector(".contact-last-message");
+      const timeEl = contactItem.querySelector(".contact-time");
+
+      if (lastMessageEl) {
+        lastMessageEl.textContent =
+          message.content.substring(0, 30) +
+          (message.content.length > 30 ? "..." : "");
+      }
+      if (timeEl) {
+        timeEl.textContent = this.formatTime(message.sent_at);
+      }
+
+      // Move contact to top of YOUR list
+      const contactsList = document.getElementById("contactsList");
+      if (contactsList) {
+        contactsList.insertBefore(contactItem, contactsList.firstChild);
+      }
+    }
   }
 
   async loadInbox() {
@@ -347,8 +400,7 @@ class MessengerSystem {
   updateContactsWithMessages(messages) {
     // Group messages by contact (the other person in the conversation)
     const contactMessages = {};
-    const currentUserId =
-      window.currentUserId || (this.Utils ? this.Utils.user("id") : 1);
+    const currentUserId = window.currentUserId;
 
     messages.forEach((message) => {
       // Determine the contact ID (the other person in the conversation)
@@ -402,7 +454,8 @@ class MessengerSystem {
   startPolling() {
     this.pollInterval = setInterval(() => {
       this.pollNewMessages();
-    }, 3000); // Poll every 3 seconds
+      this.pollMessageStatusUpdates(); // Also check for status updates
+    }, 10000); // Poll every 10 seconds - less aggressive due to trigger-based logging
   }
 
   async pollNewMessages() {
@@ -425,8 +478,69 @@ class MessengerSystem {
     }
   }
 
+  async pollMessageStatusUpdates() {
+    // Only check status updates if we have an open conversation
+    if (!this.currentContactId) return;
+
+    try {
+      const response = await fetch(
+        `${window.ROOT}/messenger/get_conversation_status/${this.currentContactId}`
+      );
+      const result = await response.json();
+
+      if (result.status === "success") {
+        this.updateMessageStatuses(result.messages);
+      }
+    } catch (error) {
+      console.error("Error polling message status updates:", error);
+    }
+  }
+
+  updateMessageStatuses(messages) {
+    const currentUserId = window.currentUserId;
+
+    // Update the status icons of existing messages sent by current user
+    messages.forEach((message) => {
+      if (message.sender_id == currentUserId) {
+        // Find messages by content and approximate time
+        const messageElements = document.querySelectorAll(".message.own");
+        messageElements.forEach((messageEl) => {
+          const messageText =
+            messageEl.querySelector(".message-text")?.textContent;
+          if (messageText === message.content) {
+            const messageFooter = messageEl.querySelector(".message-footer");
+            if (messageFooter) {
+              const iconHtml = this.getMessageStatusIcon(message.status);
+              const iconMatch = iconHtml.match(
+                /<div class="message-status"[^>]*>.*?<\/div>/
+              );
+              if (iconMatch) {
+                // Remove existing status icon if any
+                const existingStatus =
+                  messageFooter.querySelector(".message-status");
+                if (existingStatus) {
+                  existingStatus.remove();
+                }
+                // Add new status icon
+                messageFooter.insertAdjacentHTML("beforeend", iconMatch[0]);
+              }
+            }
+          }
+        });
+      }
+    });
+  }
+
   handleNewMessages(newMessages) {
+    const currentUserId = window.currentUserId;
+
     newMessages.forEach((message) => {
+      // Skip if this is our own message (shouldn't happen with fixed polling, but safety check)
+      if (message.sender_id == currentUserId) {
+        console.log("Skipping own message from polling:", message);
+        return;
+      }
+
       // Update contact list
       this.updateContactWithNewMessage(message);
 
@@ -441,7 +555,7 @@ class MessengerSystem {
       } else {
         // Only show notification for unread messages
         if (message.status !== "read") {
-          this.showNotification(
+          showNotification(
             `New message from ${message.fname} ${message.lname}`,
             "info"
           );

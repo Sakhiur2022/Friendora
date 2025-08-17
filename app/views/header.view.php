@@ -88,7 +88,7 @@
 
             <a class="nav-link cyber-nav-icon" href="<?=ROOT?>/messenger" title="Messages">
                 <i class="bi bi-chat-dots-fill"></i>
-                <span class="notification-badge">3</span>
+                <span class="notification-badge text-center" id="unreadMessagesBadge">3</span>
             </a>
             
             <!-- Enhanced Notification Dropdown -->
