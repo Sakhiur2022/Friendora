@@ -1,0 +1,20 @@
+[17-Aug-2025 21:31:56 Asia/Dhaka] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Full_Name' in 'field list' in C:\xampp\htdocs\Friendora\app\core\Database.php:30
+Stack trace:
+#0 C:\xampp\htdocs\Friendora\app\core\Database.php(30): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Friendora\app\core\Model.php(392): Users_basic->query('SELECT Full_Nam...', Array)
+#2 C:\xampp\htdocs\Friendora\app\controllers\Search.php(34): Users_basic->search('d', 'Full_Name, user...')
+#3 C:\xampp\htdocs\Friendora\app\core\App.php(48): Search->find()
+#4 C:\xampp\htdocs\Friendora\app\core\App.php(15): App->loadController()
+#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\Friendora\app\core\Database.php on line 30
+[17-Aug-2025 21:32:19 Asia/Dhaka] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Full_Name' in 'field list' in C:\xampp\htdocs\Friendora\app\core\Database.php:30
+Stack trace:
+#0 C:\xampp\htdocs\Friendora\app\core\Database.php(30): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Friendora\app\core\Model.php(392): Users_basic->query('SELECT Full_Nam...', Array)
+#2 C:\xampp\htdocs\Friendora\app\controllers\Search.php(34): Users_basic->search('d', 'Full_Name, user...')
+#3 C:\xampp\htdocs\Friendora\app\core\App.php(48): Search->find()
+#4 C:\xampp\htdocs\Friendora\app\core\App.php(15): App->loadController()
+#5 C:\xampp\htdocs\Friendora\index.php(9): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\Friendora\app\core\Database.php on line 30

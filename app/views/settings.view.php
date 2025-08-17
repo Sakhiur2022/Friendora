@@ -133,7 +133,5 @@
     </div>
 </div>
 
-<!-- Floating particles effect -->
-<div class="floating-particles"></div>
 
 <?=$this->loadView("footer",["scripts"=>["settings"]])?>

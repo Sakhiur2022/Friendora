@@ -66,6 +66,10 @@ class Post {
                     echo json_encode($this->getPosts($posts, $user, $profiles, $media, $reacts, $shares));
                     return;
                     
+                case 'get_posts_by_users':
+                    echo json_encode($this->handleGetPostsByUsers($request, $posts, $user, $profiles, $media, $reacts, $shares));
+                    return;
+                    
                 case 'get_comments':
                     echo json_encode($this->getComments($request, $comment, $user, $profiles));
                     return;
@@ -89,6 +93,19 @@ class Post {
         }
         
         $this->loadView("post", $data);
+    }
+    
+    public function getPostsByUsers() {
+        $posts = new Posts;
+        $user = new User;
+        $profiles = new Profiles;
+        $media = new Media;
+        $reacts = new Reacts;
+        $shares = new Shares;
+        $request = new Request;
+        
+        header("Content-Type: application/json");
+        echo json_encode($this->handleGetPostsByUsers($request, $posts, $user, $profiles, $media, $reacts, $shares));
     }
     
     private function createPost($request, $posts, $media, $photos, $image, $reacts, $shares) {
@@ -284,6 +301,37 @@ class Post {
             'orderBy' => 'created_at DESC',
             'limit' => 20
         ]);
+        
+        $postsWithDetails = [];
+        
+        if ($userPosts) {
+            foreach ($userPosts as $post) {
+                $postDetails = $this->getPostById($post->id, $posts, $user, $profiles, $media, $reacts, $shares);
+                if ($postDetails) {
+                    $postsWithDetails[] = $postDetails;
+                }
+            }
+        }
+        
+        return [
+            'success' => true,
+            'posts' => $postsWithDetails
+        ];
+    }
+    
+    private function handleGetPostsByUsers($request, $posts, $user, $profiles, $media, $reacts, $shares) {
+        $input = json_decode(file_get_contents('php://input'), true);
+        $userIds = $input['user_ids'] ?? [];
+        
+        if (empty($userIds) || !is_array($userIds)) {
+            return ['success' => false, 'message' => 'No user IDs provided'];
+        }
+        
+        // Create placeholders for the IN clause
+        $placeholders = str_repeat('?,', count($userIds) - 1) . '?';
+        
+        // Get posts by specified users, ordered by creation date
+        $userPosts = $posts->query("SELECT * FROM post WHERE creator_id IN ($placeholders) ORDER BY created_at DESC LIMIT 50", $userIds);
         
         $postsWithDetails = [];
         

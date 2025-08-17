@@ -41,6 +41,9 @@
     </div>
 </div>
 
+<!-- Floating particles effect -->
+<div class="floating-particles"></div>
+
 <?php
 $this->loadView(
     'footer_scripts',

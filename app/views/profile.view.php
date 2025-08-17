@@ -63,8 +63,8 @@
                                 <i class="bi bi-person-plus me-2" id="friendshipIcon"></i>
                                 <span id="friendshipBtnText">Add Friend</span>
                             </button>
-                            <button class="btn cyber-btn-secondary" id="messageBtn" onclick="messageUser()" style="display: block;">
-                                <i class="bi bi-chat-dots me-2"></i>Message
+                            <button class="btn cyber-btn-secondary" id="messageBtn" style="display: block;">
+                                <a href="<?=ROOT?>/messenger" class="link-light text-decoration-none"><i class="bi bi-chat-dots me-2"></i>Message</a>
                             </button>
                             <?php endif; ?>
                         </div>
