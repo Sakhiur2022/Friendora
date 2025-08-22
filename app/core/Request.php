@@ -13,6 +13,7 @@ class Request{
         }
     }
 
+   
     //get value from the POST variable
     public function post($key = '', $default = ''){
         if(empty($key)){

@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/nav.css">
-    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/style.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/nav_404.css">
+    <link rel="stylesheet" href="<?=ROOT?>/assets/styles/404.css">
+  
 </head>
 <body class="error-404">
     <!-- Navbar -->
@@ -74,9 +75,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Navigation JavaScript -->
-    <script src="<?=ROOT?>/assets/scripts/nav.js"></script>
+    <script src="<?=ROOT?>/assets/scripts/nav_error_404.js"></script>
     
     <!-- Main JavaScript -->
-    <script src="<?=ROOT?>/assets/scripts/main.js"></script>
+    <script src="<?=ROOT?>/assets/scripts/error_404.js"></script>
 </body>
 </html>

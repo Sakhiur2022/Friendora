@@ -28,7 +28,7 @@
         </button>
 
         <!-- Logo -->
-        <a class="navbar-brand cyber-logo" href="<?=ROOT?>/profile">
+        <a class="navbar-brand cyber-logo" href="<?=ROOT?>/home">
             <i class="bi bi-hexagon-fill me-2"></i>
             Friendora
         </a>
@@ -88,7 +88,7 @@
 
             <a class="nav-link cyber-nav-icon" href="<?=ROOT?>/messenger" title="Messages">
                 <i class="bi bi-chat-dots-fill"></i>
-                <span class="notification-badge text-center" id="unreadMessagesBadge">3</span>
+                <span class="notification-badge text-center" id="unreadMessagesBadge" style="display: none;">0</span>
             </a>
             
             <!-- Enhanced Notification Dropdown -->
@@ -202,7 +202,7 @@
                 <a class="mobile-nav-item" href="#" onclick="toggleMobileNotifications()">
                     <i class="bi bi-bell-fill"></i>
                     <span>Notifications</span>
-                    <span class="notification-badge" id="mobileNotificationCount">7</span>
+                    <span class="notification-badge" id="mobileNotificationCount" style="display: none;">0</span>
                 </a>
             </div>
 
