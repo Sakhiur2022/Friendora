@@ -25961,3 +25961,1846 @@
 )
 
 [17-Aug-2025 23:22:46 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 18:44:26 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:44:26 Asia/Dhaka] Current User ID: 8
+[24-Aug-2025 18:44:26 Asia/Dhaka] Profile User ID: 8
+[24-Aug-2025 18:44:26 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:44:26 Asia/Dhaka] Current User Email: alaric.drechsler@reinhardt.ac
+[24-Aug-2025 18:44:26 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 8
+            [fname] => Alaric
+            [minit] => V
+            [lname] => Drechsler
+            [pwd] => Drechsler_1997!Wolf
+            [DOB] => 1997-11-14
+            [gender] => male
+            [email] => alaric.drechsler@reinhardt.ac
+            [created_at] => 2025-08-24 18:44:13
+        )
+
+)
+
+[24-Aug-2025 18:44:26 Asia/Dhaka] POST request detected. AJAX: no
+[24-Aug-2025 18:44:26 Asia/Dhaka] POST data: Array
+(
+)
+
+[24-Aug-2025 18:44:26 Asia/Dhaka] FILES data: Array
+(
+)
+
+[24-Aug-2025 18:44:26 Asia/Dhaka] Action parameter: not set
+[24-Aug-2025 18:44:26 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[24-Aug-2025 18:44:26 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[24-Aug-2025 18:44:26 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 18:44:26 Asia/Dhaka] Profile query result: No profile found
+[24-Aug-2025 18:44:26 Asia/Dhaka] No profile found, skipping website data
+[24-Aug-2025 18:44:26 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 18:44:26 Asia/Dhaka] Photos query result: 0 photos found
+[24-Aug-2025 18:44:26 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 18:44:26 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 18:44:26 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 18:44:26 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [pfp] => http://localhost/Friendora/assets/images/default_pfp.svg
+    [DOB] => 1997-11-14
+    [gender] => male
+)
+
+[24-Aug-2025 18:44:26 Asia/Dhaka] Photos Data: Array
+(
+)
+
+[24-Aug-2025 18:44:26 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 18:44:26 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 18:45:07 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:45:07 Asia/Dhaka] Current User ID: 8
+[24-Aug-2025 18:45:07 Asia/Dhaka] Profile User ID: 8
+[24-Aug-2025 18:45:07 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:45:07 Asia/Dhaka] Current User Email: alaric.drechsler@reinhardt.ac
+[24-Aug-2025 18:45:07 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 8
+            [fname] => Alaric
+            [minit] => V
+            [lname] => Drechsler
+            [pwd] => Drechsler_1997!Wolf
+            [DOB] => 1997-11-14
+            [gender] => male
+            [email] => alaric.drechsler@reinhardt.ac
+            [created_at] => 2025-08-24 18:44:13
+        )
+
+)
+
+[24-Aug-2025 18:45:07 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 18:45:07 Asia/Dhaka] POST data: Array
+(
+    [action] => upload_profile
+)
+
+[24-Aug-2025 18:45:07 Asia/Dhaka] FILES data: Array
+(
+    [profile_photo] => Array
+        (
+            [name] => download.jpg
+            [full_path] => download.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php146E.tmp
+            [error] => 0
+            [size] => 63771
+        )
+
+)
+
+[24-Aug-2025 18:45:07 Asia/Dhaka] Action parameter: upload_profile
+[24-Aug-2025 18:45:07 Asia/Dhaka] === PROFILE PHOTO UPLOAD DETECTED ===
+[24-Aug-2025 18:45:07 Asia/Dhaka] === WILL PROCESS AS PROFILE PHOTO UPLOAD ===
+[24-Aug-2025 18:45:07 Asia/Dhaka] === PROFILE PHOTO UPLOAD REQUEST ===
+[24-Aug-2025 18:45:07 Asia/Dhaka] POST action parameter: upload_profile
+[24-Aug-2025 18:45:07 Asia/Dhaka] Profile photo file details: Array
+(
+    [name] => download.jpg
+    [full_path] => download.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php146E.tmp
+    [error] => 0
+    [size] => 63771
+)
+
+[24-Aug-2025 18:45:07 Asia/Dhaka] Calling handleImageUpload for profile photo
+[24-Aug-2025 18:45:07 Asia/Dhaka] === HANDLE IMAGE UPLOAD START ===
+[24-Aug-2025 18:45:07 Asia/Dhaka] Upload type: profile
+[24-Aug-2025 18:45:07 Asia/Dhaka] File details: Array
+(
+    [name] => download.jpg
+    [full_path] => download.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php146E.tmp
+    [error] => 0
+    [size] => 63771
+)
+
+[24-Aug-2025 18:45:07 Asia/Dhaka] File validation passed - no upload errors
+[24-Aug-2025 18:45:07 Asia/Dhaka] Detected file type: image/jpeg
+[24-Aug-2025 18:45:07 Asia/Dhaka] File type validation passed
+[24-Aug-2025 18:45:07 Asia/Dhaka] File size: 0.06 MB
+[24-Aug-2025 18:45:07 Asia/Dhaka] File size validation passed
+[24-Aug-2025 18:45:07 Asia/Dhaka] Upload directory: uploads/profile_photos/
+[24-Aug-2025 18:45:07 Asia/Dhaka] Generated filename: profile_8_1756039507.jpg
+[24-Aug-2025 18:45:07 Asia/Dhaka] Full filepath: uploads/profile_photos/profile_8_1756039507.jpg
+[24-Aug-2025 18:45:07 Asia/Dhaka] Attempting to move uploaded file from: C:\xampp\tmp\php146E.tmp to: uploads/profile_photos/profile_8_1756039507.jpg
+[24-Aug-2025 18:45:07 Asia/Dhaka] File move successful
+[24-Aug-2025 18:45:07 Asia/Dhaka] Resizing profile photo to max width 400px
+[24-Aug-2025 18:45:07 Asia/Dhaka] Upload successful. Final URL: http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+[24-Aug-2025 18:45:07 Asia/Dhaka] Profile photo upload result: Array
+(
+    [success] => 1
+    [message] => Profile photo uploaded successfully
+    [url] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+)
+
+[24-Aug-2025 18:45:07 Asia/Dhaka] Profile photo upload successful, updating database
+[24-Aug-2025 18:45:07 Asia/Dhaka] Profile photo insert result: success
+[24-Aug-2025 18:45:07 Asia/Dhaka] Profile photo added to Photos table. Result: success
+[24-Aug-2025 18:45:07 Asia/Dhaka] Final profile photo response: {"success":true,"message":"Profile photo uploaded successfully","url":"http:\/\/localhost\/Friendora\/uploads\/profile_photos\/profile_8_1756039507.jpg","profile_url":"http:\/\/localhost\/Friendora\/uploads\/profile_photos\/profile_8_1756039507.jpg"}
+[24-Aug-2025 18:45:19 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:45:19 Asia/Dhaka] Current User ID: 8
+[24-Aug-2025 18:45:19 Asia/Dhaka] Profile User ID: 8
+[24-Aug-2025 18:45:19 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:45:19 Asia/Dhaka] Current User Email: alaric.drechsler@reinhardt.ac
+[24-Aug-2025 18:45:19 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 8
+            [fname] => Alaric
+            [minit] => V
+            [lname] => Drechsler
+            [pwd] => Drechsler_1997!Wolf
+            [DOB] => 1997-11-14
+            [gender] => male
+            [email] => alaric.drechsler@reinhardt.ac
+            [created_at] => 2025-08-24 18:44:13
+        )
+
+)
+
+[24-Aug-2025 18:45:19 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 18:45:19 Asia/Dhaka] POST data: Array
+(
+    [action] => upload_cover
+)
+
+[24-Aug-2025 18:45:19 Asia/Dhaka] FILES data: Array
+(
+    [cover_photo] => Array
+        (
+            [name] => download (6).jpg
+            [full_path] => download (6).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php40EE.tmp
+            [error] => 0
+            [size] => 57898
+        )
+
+)
+
+[24-Aug-2025 18:45:19 Asia/Dhaka] Action parameter: upload_cover
+[24-Aug-2025 18:45:19 Asia/Dhaka] === COVER PHOTO UPLOAD DETECTED ===
+[24-Aug-2025 18:45:19 Asia/Dhaka] === WILL PROCESS AS COVER PHOTO UPLOAD ===
+[24-Aug-2025 18:45:19 Asia/Dhaka] === COVER PHOTO UPLOAD REQUEST ===
+[24-Aug-2025 18:45:19 Asia/Dhaka] POST action parameter: upload_cover
+[24-Aug-2025 18:45:19 Asia/Dhaka] Cover photo file details: Array
+(
+    [name] => download (6).jpg
+    [full_path] => download (6).jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php40EE.tmp
+    [error] => 0
+    [size] => 57898
+)
+
+[24-Aug-2025 18:45:19 Asia/Dhaka] Calling handleImageUpload for cover photo
+[24-Aug-2025 18:45:19 Asia/Dhaka] === HANDLE IMAGE UPLOAD START ===
+[24-Aug-2025 18:45:19 Asia/Dhaka] Upload type: cover
+[24-Aug-2025 18:45:19 Asia/Dhaka] File details: Array
+(
+    [name] => download (6).jpg
+    [full_path] => download (6).jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php40EE.tmp
+    [error] => 0
+    [size] => 57898
+)
+
+[24-Aug-2025 18:45:19 Asia/Dhaka] File validation passed - no upload errors
+[24-Aug-2025 18:45:19 Asia/Dhaka] Detected file type: image/jpeg
+[24-Aug-2025 18:45:19 Asia/Dhaka] File type validation passed
+[24-Aug-2025 18:45:19 Asia/Dhaka] File size: 0.06 MB
+[24-Aug-2025 18:45:19 Asia/Dhaka] File size validation passed
+[24-Aug-2025 18:45:19 Asia/Dhaka] Upload directory: uploads/cover_photos/
+[24-Aug-2025 18:45:19 Asia/Dhaka] Generated filename: cover_8_1756039519.jpg
+[24-Aug-2025 18:45:19 Asia/Dhaka] Full filepath: uploads/cover_photos/cover_8_1756039519.jpg
+[24-Aug-2025 18:45:19 Asia/Dhaka] Attempting to move uploaded file from: C:\xampp\tmp\php40EE.tmp to: uploads/cover_photos/cover_8_1756039519.jpg
+[24-Aug-2025 18:45:19 Asia/Dhaka] File move successful
+[24-Aug-2025 18:45:19 Asia/Dhaka] Resizing cover photo to max width 1200px
+[24-Aug-2025 18:45:19 Asia/Dhaka] Upload successful. Final URL: http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+[24-Aug-2025 18:45:19 Asia/Dhaka] Cover photo upload result: Array
+(
+    [success] => 1
+    [message] => Cover photo uploaded successfully
+    [url] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+)
+
+[24-Aug-2025 18:45:19 Asia/Dhaka] Cover photo upload successful, updating database
+[24-Aug-2025 18:45:19 Asia/Dhaka] Profile cover photo update result: success
+[24-Aug-2025 18:45:19 Asia/Dhaka] Cover photo added to Photos table. Result: success
+[24-Aug-2025 18:45:19 Asia/Dhaka] Final cover photo response: {"success":true,"message":"Cover photo uploaded successfully","url":"http:\/\/localhost\/Friendora\/uploads\/cover_photos\/cover_8_1756039519.jpg","cover_url":"http:\/\/localhost\/Friendora\/uploads\/cover_photos\/cover_8_1756039519.jpg"}
+[24-Aug-2025 18:45:27 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:45:27 Asia/Dhaka] Current User ID: 8
+[24-Aug-2025 18:45:27 Asia/Dhaka] Profile User ID: 8
+[24-Aug-2025 18:45:27 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:45:27 Asia/Dhaka] Current User Email: alaric.drechsler@reinhardt.ac
+[24-Aug-2025 18:45:27 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 8
+            [fname] => Alaric
+            [minit] => V
+            [lname] => Drechsler
+            [pwd] => Drechsler_1997!Wolf
+            [DOB] => 1997-11-14
+            [gender] => male
+            [email] => alaric.drechsler@reinhardt.ac
+            [created_at] => 2025-08-24 18:44:13
+        )
+
+)
+
+[24-Aug-2025 18:45:27 Asia/Dhaka] POST request detected. AJAX: no
+[24-Aug-2025 18:45:27 Asia/Dhaka] POST data: Array
+(
+)
+
+[24-Aug-2025 18:45:27 Asia/Dhaka] FILES data: Array
+(
+)
+
+[24-Aug-2025 18:45:27 Asia/Dhaka] Action parameter: not set
+[24-Aug-2025 18:45:27 Asia/Dhaka] === NO MATCHING CONDITION FOUND ===
+[24-Aug-2025 18:45:27 Asia/Dhaka] Request conditions: AJAX=false, is_own_profile=true, has_cover_photo=false, has_profile_photo=false, action=not set
+[24-Aug-2025 18:45:27 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 18:45:27 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 18:45:27 Asia/Dhaka] Profile ID: 7
+[24-Aug-2025 18:45:27 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 18:45:27 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 18:45:27 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 18:45:27 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 18:45:27 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 18:45:27 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 7
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+    [user_id] => 8
+    [DOB] => 1997-11-14
+    [gender] => male
+)
+
+[24-Aug-2025 18:45:27 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 35
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+            [caption] => Profile Picture
+            [user_id] => 8
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 36
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+            [caption] => Cover Photo
+            [user_id] => 8
+        )
+
+)
+
+[24-Aug-2025 18:45:27 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 18:45:27 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 18:47:42 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:47:42 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 18:47:42 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 18:47:42 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:47:42 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 18:47:42 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 18:47:42 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 18:47:42 Asia/Dhaka] Profile query result: No profile found
+[24-Aug-2025 18:47:42 Asia/Dhaka] No profile found, skipping website data
+[24-Aug-2025 18:47:42 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 18:47:42 Asia/Dhaka] Photos query result: 0 photos found
+[24-Aug-2025 18:47:42 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 18:47:42 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 18:47:42 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 18:47:42 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [pfp] => http://localhost/Friendora/assets/images/default_pfp.svg
+    [DOB] => 1999-07-29
+    [gender] => female
+)
+
+[24-Aug-2025 18:47:42 Asia/Dhaka] Photos Data: Array
+(
+)
+
+[24-Aug-2025 18:47:42 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 18:47:42 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 18:48:05 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:48:05 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 18:48:05 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 18:48:05 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:48:05 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 18:48:05 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 18:48:05 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 18:48:05 Asia/Dhaka] POST data: Array
+(
+    [city] => Lunden
+    [hometown] => Lunden
+    [DOB] => 1999-07-29
+    [gender] => female
+    [shortBio] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [work] => 
+    [polViews] => 
+    [religion] => 
+    [country] => 
+    [website] => 
+    [lang] => 
+    [professional] => 
+    [socialQuote] => 
+    [lifeEvent] => 
+    [action] => update_profile
+)
+
+[24-Aug-2025 18:48:05 Asia/Dhaka] FILES data: Array
+(
+)
+
+[24-Aug-2025 18:48:05 Asia/Dhaka] Action parameter: update_profile
+[24-Aug-2025 18:48:05 Asia/Dhaka] === WILL PROCESS AS PROFILE UPDATE ===
+[24-Aug-2025 18:48:05 Asia/Dhaka] === PROFILE UPDATE REQUEST ===
+[24-Aug-2025 18:48:05 Asia/Dhaka] Raw POST data: Array
+(
+    [city] => Lunden
+    [hometown] => Lunden
+    [DOB] => 1999-07-29
+    [gender] => female
+    [shortBio] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [work] => 
+    [polViews] => 
+    [religion] => 
+    [country] => 
+    [website] => 
+    [lang] => 
+    [professional] => 
+    [socialQuote] => 
+    [lifeEvent] => 
+    [action] => update_profile
+)
+
+[24-Aug-2025 18:48:05 Asia/Dhaka] Form data received - Gender: female, DOB: 1999-07-29
+[24-Aug-2025 18:48:05 Asia/Dhaka] User table update result: success
+[24-Aug-2025 18:48:05 Asia/Dhaka] Session updated with new user data - Gender: female, DOB: 1999-07-29
+[24-Aug-2025 18:48:06 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:48:06 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 18:48:06 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 18:48:06 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:48:06 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 18:48:06 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 18:48:06 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 18:48:06 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 18:48:06 Asia/Dhaka] Profile ID: 8
+[24-Aug-2025 18:48:06 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 18:48:06 Asia/Dhaka] Photos query result: 0 photos found
+[24-Aug-2025 18:48:06 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 18:48:06 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 18:48:06 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 18:48:06 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 8
+    [hometown] => Lunden
+    [country] => 
+    [shortBio] => 
+    [city] => Lunden
+    [pfp] => http://localhost/Friendora/assets/images/default_pfp.png
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => 
+    [user_id] => 9
+    [DOB] => 1999-07-29
+    [gender] => female
+)
+
+[24-Aug-2025 18:48:06 Asia/Dhaka] Photos Data: Array
+(
+)
+
+[24-Aug-2025 18:48:06 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 18:48:06 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 18:50:03 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:50:03 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 18:50:03 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 18:50:03 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:50:03 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 18:50:03 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 18:50:03 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 18:50:03 Asia/Dhaka] POST data: Array
+(
+    [action] => upload_profile
+)
+
+[24-Aug-2025 18:50:03 Asia/Dhaka] FILES data: Array
+(
+    [profile_photo] => Array
+        (
+            [name] => pic.png
+            [full_path] => pic.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php99AA.tmp
+            [error] => 0
+            [size] => 134288
+        )
+
+)
+
+[24-Aug-2025 18:50:03 Asia/Dhaka] Action parameter: upload_profile
+[24-Aug-2025 18:50:03 Asia/Dhaka] === PROFILE PHOTO UPLOAD DETECTED ===
+[24-Aug-2025 18:50:03 Asia/Dhaka] === WILL PROCESS AS PROFILE PHOTO UPLOAD ===
+[24-Aug-2025 18:50:04 Asia/Dhaka] === PROFILE PHOTO UPLOAD REQUEST ===
+[24-Aug-2025 18:50:04 Asia/Dhaka] POST action parameter: upload_profile
+[24-Aug-2025 18:50:04 Asia/Dhaka] Profile photo file details: Array
+(
+    [name] => pic.png
+    [full_path] => pic.png
+    [type] => image/png
+    [tmp_name] => C:\xampp\tmp\php99AA.tmp
+    [error] => 0
+    [size] => 134288
+)
+
+[24-Aug-2025 18:50:04 Asia/Dhaka] Calling handleImageUpload for profile photo
+[24-Aug-2025 18:50:04 Asia/Dhaka] === HANDLE IMAGE UPLOAD START ===
+[24-Aug-2025 18:50:04 Asia/Dhaka] Upload type: profile
+[24-Aug-2025 18:50:04 Asia/Dhaka] File details: Array
+(
+    [name] => pic.png
+    [full_path] => pic.png
+    [type] => image/png
+    [tmp_name] => C:\xampp\tmp\php99AA.tmp
+    [error] => 0
+    [size] => 134288
+)
+
+[24-Aug-2025 18:50:04 Asia/Dhaka] File validation passed - no upload errors
+[24-Aug-2025 18:50:04 Asia/Dhaka] Detected file type: image/jpeg
+[24-Aug-2025 18:50:04 Asia/Dhaka] File type validation passed
+[24-Aug-2025 18:50:04 Asia/Dhaka] File size: 0.13 MB
+[24-Aug-2025 18:50:04 Asia/Dhaka] File size validation passed
+[24-Aug-2025 18:50:04 Asia/Dhaka] Upload directory: uploads/profile_photos/
+[24-Aug-2025 18:50:04 Asia/Dhaka] Generated filename: profile_9_1756039804.png
+[24-Aug-2025 18:50:04 Asia/Dhaka] Full filepath: uploads/profile_photos/profile_9_1756039804.png
+[24-Aug-2025 18:50:04 Asia/Dhaka] Attempting to move uploaded file from: C:\xampp\tmp\php99AA.tmp to: uploads/profile_photos/profile_9_1756039804.png
+[24-Aug-2025 18:50:04 Asia/Dhaka] File move successful
+[24-Aug-2025 18:50:04 Asia/Dhaka] Resizing profile photo to max width 400px
+[24-Aug-2025 18:50:04 Asia/Dhaka] Upload successful. Final URL: http://localhost/Friendora/uploads/profile_photos/profile_9_1756039804.png
+[24-Aug-2025 18:50:04 Asia/Dhaka] Profile photo upload result: Array
+(
+    [success] => 1
+    [message] => Profile photo uploaded successfully
+    [url] => http://localhost/Friendora/uploads/profile_photos/profile_9_1756039804.png
+)
+
+[24-Aug-2025 18:50:04 Asia/Dhaka] Profile photo upload successful, updating database
+[24-Aug-2025 18:50:04 Asia/Dhaka] Profile photo update result: success
+[24-Aug-2025 18:50:04 Asia/Dhaka] Profile photo added to Photos table. Result: success
+[24-Aug-2025 18:50:04 Asia/Dhaka] Final profile photo response: {"success":true,"message":"Profile photo uploaded successfully","url":"http:\/\/localhost\/Friendora\/uploads\/profile_photos\/profile_9_1756039804.png","profile_url":"http:\/\/localhost\/Friendora\/uploads\/profile_photos\/profile_9_1756039804.png"}
+[24-Aug-2025 18:51:59 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:51:59 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 18:51:59 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 18:51:59 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:51:59 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 18:51:59 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 18:51:59 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 18:51:59 Asia/Dhaka] POST data: Array
+(
+    [action] => upload_profile
+)
+
+[24-Aug-2025 18:51:59 Asia/Dhaka] FILES data: Array
+(
+    [profile_photo] => Array
+        (
+            [name] => download (7).jpg
+            [full_path] => download (7).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5ECB.tmp
+            [error] => 0
+            [size] => 123817
+        )
+
+)
+
+[24-Aug-2025 18:51:59 Asia/Dhaka] Action parameter: upload_profile
+[24-Aug-2025 18:51:59 Asia/Dhaka] === PROFILE PHOTO UPLOAD DETECTED ===
+[24-Aug-2025 18:51:59 Asia/Dhaka] === WILL PROCESS AS PROFILE PHOTO UPLOAD ===
+[24-Aug-2025 18:51:59 Asia/Dhaka] === PROFILE PHOTO UPLOAD REQUEST ===
+[24-Aug-2025 18:51:59 Asia/Dhaka] POST action parameter: upload_profile
+[24-Aug-2025 18:51:59 Asia/Dhaka] Profile photo file details: Array
+(
+    [name] => download (7).jpg
+    [full_path] => download (7).jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php5ECB.tmp
+    [error] => 0
+    [size] => 123817
+)
+
+[24-Aug-2025 18:51:59 Asia/Dhaka] Calling handleImageUpload for profile photo
+[24-Aug-2025 18:51:59 Asia/Dhaka] === HANDLE IMAGE UPLOAD START ===
+[24-Aug-2025 18:51:59 Asia/Dhaka] Upload type: profile
+[24-Aug-2025 18:51:59 Asia/Dhaka] File details: Array
+(
+    [name] => download (7).jpg
+    [full_path] => download (7).jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php5ECB.tmp
+    [error] => 0
+    [size] => 123817
+)
+
+[24-Aug-2025 18:51:59 Asia/Dhaka] File validation passed - no upload errors
+[24-Aug-2025 18:51:59 Asia/Dhaka] Detected file type: image/jpeg
+[24-Aug-2025 18:51:59 Asia/Dhaka] File type validation passed
+[24-Aug-2025 18:51:59 Asia/Dhaka] File size: 0.12 MB
+[24-Aug-2025 18:51:59 Asia/Dhaka] File size validation passed
+[24-Aug-2025 18:51:59 Asia/Dhaka] Upload directory: uploads/profile_photos/
+[24-Aug-2025 18:51:59 Asia/Dhaka] Generated filename: profile_9_1756039920.jpg
+[24-Aug-2025 18:51:59 Asia/Dhaka] Full filepath: uploads/profile_photos/profile_9_1756039920.jpg
+[24-Aug-2025 18:51:59 Asia/Dhaka] Attempting to move uploaded file from: C:\xampp\tmp\php5ECB.tmp to: uploads/profile_photos/profile_9_1756039920.jpg
+[24-Aug-2025 18:51:59 Asia/Dhaka] File move successful
+[24-Aug-2025 18:51:59 Asia/Dhaka] Resizing profile photo to max width 400px
+[24-Aug-2025 18:52:00 Asia/Dhaka] Upload successful. Final URL: http://localhost/Friendora/uploads/profile_photos/profile_9_1756039920.jpg
+[24-Aug-2025 18:52:00 Asia/Dhaka] Profile photo upload result: Array
+(
+    [success] => 1
+    [message] => Profile photo uploaded successfully
+    [url] => http://localhost/Friendora/uploads/profile_photos/profile_9_1756039920.jpg
+)
+
+[24-Aug-2025 18:52:00 Asia/Dhaka] Profile photo upload successful, updating database
+[24-Aug-2025 18:52:00 Asia/Dhaka] Deleted old profile photo file: uploads/profile_photos/profile_9_1756039804.png
+[24-Aug-2025 18:52:00 Asia/Dhaka] Deleted old profile photo record with ID: 37
+[24-Aug-2025 18:52:00 Asia/Dhaka] Profile photo update result: success
+[24-Aug-2025 18:52:00 Asia/Dhaka] Profile photo added to Photos table. Result: success
+[24-Aug-2025 18:52:00 Asia/Dhaka] Final profile photo response: {"success":true,"message":"Profile photo uploaded successfully","url":"http:\/\/localhost\/Friendora\/uploads\/profile_photos\/profile_9_1756039920.jpg","profile_url":"http:\/\/localhost\/Friendora\/uploads\/profile_photos\/profile_9_1756039920.jpg"}
+[24-Aug-2025 18:53:03 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:53:03 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 18:53:03 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 18:53:03 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:53:03 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 18:53:03 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 18:53:03 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 18:53:03 Asia/Dhaka] POST data: Array
+(
+    [action] => upload_cover
+)
+
+[24-Aug-2025 18:53:03 Asia/Dhaka] FILES data: Array
+(
+    [cover_photo] => Array
+        (
+            [name] => YE, MH C.jpg
+            [full_path] => YE, MH C.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php56C9.tmp
+            [error] => 0
+            [size] => 37315
+        )
+
+)
+
+[24-Aug-2025 18:53:03 Asia/Dhaka] Action parameter: upload_cover
+[24-Aug-2025 18:53:03 Asia/Dhaka] === COVER PHOTO UPLOAD DETECTED ===
+[24-Aug-2025 18:53:03 Asia/Dhaka] === WILL PROCESS AS COVER PHOTO UPLOAD ===
+[24-Aug-2025 18:53:03 Asia/Dhaka] === COVER PHOTO UPLOAD REQUEST ===
+[24-Aug-2025 18:53:03 Asia/Dhaka] POST action parameter: upload_cover
+[24-Aug-2025 18:53:03 Asia/Dhaka] Cover photo file details: Array
+(
+    [name] => YE, MH C.jpg
+    [full_path] => YE, MH C.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php56C9.tmp
+    [error] => 0
+    [size] => 37315
+)
+
+[24-Aug-2025 18:53:03 Asia/Dhaka] Calling handleImageUpload for cover photo
+[24-Aug-2025 18:53:03 Asia/Dhaka] === HANDLE IMAGE UPLOAD START ===
+[24-Aug-2025 18:53:03 Asia/Dhaka] Upload type: cover
+[24-Aug-2025 18:53:03 Asia/Dhaka] File details: Array
+(
+    [name] => YE, MH C.jpg
+    [full_path] => YE, MH C.jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php56C9.tmp
+    [error] => 0
+    [size] => 37315
+)
+
+[24-Aug-2025 18:53:03 Asia/Dhaka] File validation passed - no upload errors
+[24-Aug-2025 18:53:03 Asia/Dhaka] Detected file type: image/jpeg
+[24-Aug-2025 18:53:03 Asia/Dhaka] File type validation passed
+[24-Aug-2025 18:53:03 Asia/Dhaka] File size: 0.04 MB
+[24-Aug-2025 18:53:03 Asia/Dhaka] File size validation passed
+[24-Aug-2025 18:53:03 Asia/Dhaka] Upload directory: uploads/cover_photos/
+[24-Aug-2025 18:53:03 Asia/Dhaka] Generated filename: cover_9_1756039983.jpg
+[24-Aug-2025 18:53:03 Asia/Dhaka] Full filepath: uploads/cover_photos/cover_9_1756039983.jpg
+[24-Aug-2025 18:53:03 Asia/Dhaka] Attempting to move uploaded file from: C:\xampp\tmp\php56C9.tmp to: uploads/cover_photos/cover_9_1756039983.jpg
+[24-Aug-2025 18:53:03 Asia/Dhaka] File move successful
+[24-Aug-2025 18:53:03 Asia/Dhaka] Resizing cover photo to max width 1200px
+[24-Aug-2025 18:53:03 Asia/Dhaka] Upload successful. Final URL: http://localhost/Friendora/uploads/cover_photos/cover_9_1756039983.jpg
+[24-Aug-2025 18:53:03 Asia/Dhaka] Cover photo upload result: Array
+(
+    [success] => 1
+    [message] => Cover photo uploaded successfully
+    [url] => http://localhost/Friendora/uploads/cover_photos/cover_9_1756039983.jpg
+)
+
+[24-Aug-2025 18:53:03 Asia/Dhaka] Cover photo upload successful, updating database
+[24-Aug-2025 18:53:03 Asia/Dhaka] Profile cover photo update result: success
+[24-Aug-2025 18:53:03 Asia/Dhaka] Cover photo added to Photos table. Result: success
+[24-Aug-2025 18:53:03 Asia/Dhaka] Final cover photo response: {"success":true,"message":"Cover photo uploaded successfully","url":"http:\/\/localhost\/Friendora\/uploads\/cover_photos\/cover_9_1756039983.jpg","cover_url":"http:\/\/localhost\/Friendora\/uploads\/cover_photos\/cover_9_1756039983.jpg"}
+[24-Aug-2025 18:53:09 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:53:09 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 18:53:09 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 18:53:09 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:53:09 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 18:53:09 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 18:53:09 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 18:53:09 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 18:53:09 Asia/Dhaka] Profile ID: 8
+[24-Aug-2025 18:53:09 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 18:53:09 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 18:53:09 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 18:53:09 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 18:53:09 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 18:53:09 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 8
+    [hometown] => Lunden
+    [country] => 
+    [shortBio] => 
+    [city] => Lunden
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_9_1756039920.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_9_1756039983.jpg
+    [user_id] => 9
+    [DOB] => 1999-07-29
+    [gender] => female
+)
+
+[24-Aug-2025 18:53:09 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 38
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_9_1756039920.jpg
+            [caption] => Profile Picture
+            [user_id] => 9
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 39
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_9_1756039983.jpg
+            [caption] => Cover Photo
+            [user_id] => 9
+        )
+
+)
+
+[24-Aug-2025 18:53:09 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 18:53:09 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 18:53:25 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:53:25 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 18:53:25 Asia/Dhaka] Profile User ID: 8
+[24-Aug-2025 18:53:25 Asia/Dhaka] Is Own Profile: no
+[24-Aug-2025 18:53:25 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 18:53:25 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 18:53:25 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 18:53:25 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 18:53:25 Asia/Dhaka] Profile ID: 7
+[24-Aug-2025 18:53:25 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 18:53:25 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 18:53:25 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 18:53:25 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 18:53:25 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 18:53:25 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 7
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+    [user_id] => 8
+    [DOB] => 1997-11-14
+    [gender] => male
+)
+
+[24-Aug-2025 18:53:25 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 35
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+            [caption] => Profile Picture
+            [user_id] => 8
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 36
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+            [caption] => Cover Photo
+            [user_id] => 8
+        )
+
+)
+
+[24-Aug-2025 18:53:25 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 18:53:25 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 18:53:51 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:53:51 Asia/Dhaka] Current User ID: 8
+[24-Aug-2025 18:53:51 Asia/Dhaka] Profile User ID: 8
+[24-Aug-2025 18:53:51 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 18:53:51 Asia/Dhaka] Current User Email: alaric.drechsler@reinhardt.ac
+[24-Aug-2025 18:53:51 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 8
+            [fname] => Alaric
+            [minit] => V
+            [lname] => Drechsler
+            [pwd] => Drechsler_1997!Wolf
+            [DOB] => 1997-11-14
+            [gender] => male
+            [email] => alaric.drechsler@reinhardt.ac
+            [created_at] => 2025-08-24 18:44:13
+        )
+
+)
+
+[24-Aug-2025 18:53:51 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 18:53:51 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 18:53:51 Asia/Dhaka] Profile ID: 7
+[24-Aug-2025 18:53:51 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 18:53:51 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 18:53:51 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 18:53:51 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 18:53:51 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 18:53:51 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 7
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+    [user_id] => 8
+    [DOB] => 1997-11-14
+    [gender] => male
+)
+
+[24-Aug-2025 18:53:51 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 35
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+            [caption] => Profile Picture
+            [user_id] => 8
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 36
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+            [caption] => Cover Photo
+            [user_id] => 8
+        )
+
+)
+
+[24-Aug-2025 18:53:51 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 18:53:51 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 18:53:56 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 18:53:56 Asia/Dhaka] Current User ID: 8
+[24-Aug-2025 18:53:56 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 18:53:56 Asia/Dhaka] Is Own Profile: no
+[24-Aug-2025 18:53:56 Asia/Dhaka] Current User Email: alaric.drechsler@reinhardt.ac
+[24-Aug-2025 18:53:56 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 8
+            [fname] => Alaric
+            [minit] => V
+            [lname] => Drechsler
+            [pwd] => Drechsler_1997!Wolf
+            [DOB] => 1997-11-14
+            [gender] => male
+            [email] => alaric.drechsler@reinhardt.ac
+            [created_at] => 2025-08-24 18:44:13
+        )
+
+)
+
+[24-Aug-2025 18:53:56 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 18:53:56 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 18:53:56 Asia/Dhaka] Profile ID: 8
+[24-Aug-2025 18:53:56 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 18:53:56 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 18:53:56 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 18:53:56 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 18:53:56 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 18:53:56 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 8
+    [hometown] => Lunden
+    [country] => 
+    [shortBio] => 
+    [city] => Lunden
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_9_1756039920.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_9_1756039983.jpg
+    [user_id] => 9
+    [DOB] => 1999-07-29
+    [gender] => female
+)
+
+[24-Aug-2025 18:53:56 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 38
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_9_1756039920.jpg
+            [caption] => Profile Picture
+            [user_id] => 9
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 39
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_9_1756039983.jpg
+            [caption] => Cover Photo
+            [user_id] => 9
+        )
+
+)
+
+[24-Aug-2025 18:53:56 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 18:53:56 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 19:02:50 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:02:50 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 19:02:50 Asia/Dhaka] Profile User ID: 8
+[24-Aug-2025 19:02:50 Asia/Dhaka] Is Own Profile: no
+[24-Aug-2025 19:02:50 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 19:02:50 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 19:02:50 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 19:02:50 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 19:02:50 Asia/Dhaka] Profile ID: 7
+[24-Aug-2025 19:02:50 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 19:02:50 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 19:02:50 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 19:02:50 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 19:02:50 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 19:02:50 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 7
+    [hometown] => 
+    [country] => 
+    [shortBio] => 
+    [city] => 
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+    [user_id] => 8
+    [DOB] => 1997-11-14
+    [gender] => male
+)
+
+[24-Aug-2025 19:02:50 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 35
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_8_1756039507.jpg
+            [caption] => Profile Picture
+            [user_id] => 8
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 36
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_8_1756039519.jpg
+            [caption] => Cover Photo
+            [user_id] => 8
+        )
+
+)
+
+[24-Aug-2025 19:02:50 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 19:02:50 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 19:02:58 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:02:58 Asia/Dhaka] Current User ID: 9
+[24-Aug-2025 19:02:58 Asia/Dhaka] Profile User ID: 9
+[24-Aug-2025 19:02:58 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 19:02:58 Asia/Dhaka] Current User Email: adrielle.hohenburg@lundenet.org
+[24-Aug-2025 19:02:58 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 9
+            [fname] => Adrielle
+            [minit] => V
+            [lname] => Hohenburg
+            [pwd] => Hohenburg29*Moon
+            [DOB] => 1999-07-29
+            [gender] => female
+            [email] => adrielle.hohenburg@lundenet.org
+            [created_at] => 2025-08-24 18:47:19
+        )
+
+)
+
+[24-Aug-2025 19:02:58 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 19:02:58 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 19:02:58 Asia/Dhaka] Profile ID: 8
+[24-Aug-2025 19:02:58 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 19:02:58 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 19:02:58 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 19:02:58 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 19:02:58 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 19:02:58 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 8
+    [hometown] => Lunden
+    [country] => 
+    [shortBio] => 
+    [city] => Lunden
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_9_1756039920.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_9_1756039983.jpg
+    [user_id] => 9
+    [DOB] => 1999-07-29
+    [gender] => female
+)
+
+[24-Aug-2025 19:02:58 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 38
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_9_1756039920.jpg
+            [caption] => Profile Picture
+            [user_id] => 9
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 39
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_9_1756039983.jpg
+            [caption] => Cover Photo
+            [user_id] => 9
+        )
+
+)
+
+[24-Aug-2025 19:02:58 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 19:02:58 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 19:08:28 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:08:28 Asia/Dhaka] Current User ID: 10
+[24-Aug-2025 19:08:28 Asia/Dhaka] Profile User ID: 10
+[24-Aug-2025 19:08:28 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 19:08:28 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[24-Aug-2025 19:08:28 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 10
+            [fname] => Master
+            [minit] => 
+            [lname] => Wizard
+            [pwd] => Sakhiur@47
+            [DOB] => 2002-10-12
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-08-24 19:07:16
+        )
+
+)
+
+[24-Aug-2025 19:08:28 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 19:08:28 Asia/Dhaka] Profile query result: No profile found
+[24-Aug-2025 19:08:28 Asia/Dhaka] No profile found, skipping website data
+[24-Aug-2025 19:08:28 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 19:08:28 Asia/Dhaka] Photos query result: 0 photos found
+[24-Aug-2025 19:08:28 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 19:08:28 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 19:08:28 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 19:08:28 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [pfp] => http://localhost/Friendora/assets/images/default_pfp.svg
+    [DOB] => 2002-10-12
+    [gender] => male
+)
+
+[24-Aug-2025 19:08:28 Asia/Dhaka] Photos Data: Array
+(
+)
+
+[24-Aug-2025 19:08:28 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 19:08:28 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 19:08:35 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:08:35 Asia/Dhaka] Current User ID: 10
+[24-Aug-2025 19:08:35 Asia/Dhaka] Profile User ID: 10
+[24-Aug-2025 19:08:35 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 19:08:35 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[24-Aug-2025 19:08:35 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 10
+            [fname] => Master
+            [minit] => 
+            [lname] => Wizard
+            [pwd] => Sakhiur@47
+            [DOB] => 2002-10-12
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-08-24 19:07:16
+        )
+
+)
+
+[24-Aug-2025 19:08:35 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 19:08:35 Asia/Dhaka] POST data: Array
+(
+    [action] => upload_profile
+)
+
+[24-Aug-2025 19:08:35 Asia/Dhaka] FILES data: Array
+(
+    [profile_photo] => Array
+        (
+            [name] => download (2).jpg
+            [full_path] => download (2).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9110.tmp
+            [error] => 0
+            [size] => 74955
+        )
+
+)
+
+[24-Aug-2025 19:08:35 Asia/Dhaka] Action parameter: upload_profile
+[24-Aug-2025 19:08:35 Asia/Dhaka] === PROFILE PHOTO UPLOAD DETECTED ===
+[24-Aug-2025 19:08:35 Asia/Dhaka] === WILL PROCESS AS PROFILE PHOTO UPLOAD ===
+[24-Aug-2025 19:08:35 Asia/Dhaka] === PROFILE PHOTO UPLOAD REQUEST ===
+[24-Aug-2025 19:08:35 Asia/Dhaka] POST action parameter: upload_profile
+[24-Aug-2025 19:08:35 Asia/Dhaka] Profile photo file details: Array
+(
+    [name] => download (2).jpg
+    [full_path] => download (2).jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php9110.tmp
+    [error] => 0
+    [size] => 74955
+)
+
+[24-Aug-2025 19:08:35 Asia/Dhaka] Calling handleImageUpload for profile photo
+[24-Aug-2025 19:08:35 Asia/Dhaka] === HANDLE IMAGE UPLOAD START ===
+[24-Aug-2025 19:08:35 Asia/Dhaka] Upload type: profile
+[24-Aug-2025 19:08:35 Asia/Dhaka] File details: Array
+(
+    [name] => download (2).jpg
+    [full_path] => download (2).jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\php9110.tmp
+    [error] => 0
+    [size] => 74955
+)
+
+[24-Aug-2025 19:08:35 Asia/Dhaka] File validation passed - no upload errors
+[24-Aug-2025 19:08:35 Asia/Dhaka] Detected file type: image/jpeg
+[24-Aug-2025 19:08:35 Asia/Dhaka] File type validation passed
+[24-Aug-2025 19:08:35 Asia/Dhaka] File size: 0.07 MB
+[24-Aug-2025 19:08:35 Asia/Dhaka] File size validation passed
+[24-Aug-2025 19:08:35 Asia/Dhaka] Upload directory: uploads/profile_photos/
+[24-Aug-2025 19:08:35 Asia/Dhaka] Generated filename: profile_10_1756040915.jpg
+[24-Aug-2025 19:08:35 Asia/Dhaka] Full filepath: uploads/profile_photos/profile_10_1756040915.jpg
+[24-Aug-2025 19:08:35 Asia/Dhaka] Attempting to move uploaded file from: C:\xampp\tmp\php9110.tmp to: uploads/profile_photos/profile_10_1756040915.jpg
+[24-Aug-2025 19:08:35 Asia/Dhaka] File move successful
+[24-Aug-2025 19:08:35 Asia/Dhaka] Resizing profile photo to max width 400px
+[24-Aug-2025 19:08:36 Asia/Dhaka] Upload successful. Final URL: http://localhost/Friendora/uploads/profile_photos/profile_10_1756040915.jpg
+[24-Aug-2025 19:08:36 Asia/Dhaka] Profile photo upload result: Array
+(
+    [success] => 1
+    [message] => Profile photo uploaded successfully
+    [url] => http://localhost/Friendora/uploads/profile_photos/profile_10_1756040915.jpg
+)
+
+[24-Aug-2025 19:08:36 Asia/Dhaka] Profile photo upload successful, updating database
+[24-Aug-2025 19:08:36 Asia/Dhaka] Profile photo insert result: success
+[24-Aug-2025 19:08:36 Asia/Dhaka] Profile photo added to Photos table. Result: success
+[24-Aug-2025 19:08:36 Asia/Dhaka] Final profile photo response: {"success":true,"message":"Profile photo uploaded successfully","url":"http:\/\/localhost\/Friendora\/uploads\/profile_photos\/profile_10_1756040915.jpg","profile_url":"http:\/\/localhost\/Friendora\/uploads\/profile_photos\/profile_10_1756040915.jpg"}
+[24-Aug-2025 19:08:46 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:08:46 Asia/Dhaka] Current User ID: 10
+[24-Aug-2025 19:08:46 Asia/Dhaka] Profile User ID: 10
+[24-Aug-2025 19:08:46 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 19:08:46 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[24-Aug-2025 19:08:46 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 10
+            [fname] => Master
+            [minit] => 
+            [lname] => Wizard
+            [pwd] => Sakhiur@47
+            [DOB] => 2002-10-12
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-08-24 19:07:16
+        )
+
+)
+
+[24-Aug-2025 19:08:46 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 19:08:46 Asia/Dhaka] POST data: Array
+(
+    [action] => upload_cover
+)
+
+[24-Aug-2025 19:08:46 Asia/Dhaka] FILES data: Array
+(
+    [cover_photo] => Array
+        (
+            [name] => download (5).jpg
+            [full_path] => download (5).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBBDA.tmp
+            [error] => 0
+            [size] => 51166
+        )
+
+)
+
+[24-Aug-2025 19:08:46 Asia/Dhaka] Action parameter: upload_cover
+[24-Aug-2025 19:08:46 Asia/Dhaka] === COVER PHOTO UPLOAD DETECTED ===
+[24-Aug-2025 19:08:46 Asia/Dhaka] === WILL PROCESS AS COVER PHOTO UPLOAD ===
+[24-Aug-2025 19:08:46 Asia/Dhaka] === COVER PHOTO UPLOAD REQUEST ===
+[24-Aug-2025 19:08:46 Asia/Dhaka] POST action parameter: upload_cover
+[24-Aug-2025 19:08:46 Asia/Dhaka] Cover photo file details: Array
+(
+    [name] => download (5).jpg
+    [full_path] => download (5).jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\phpBBDA.tmp
+    [error] => 0
+    [size] => 51166
+)
+
+[24-Aug-2025 19:08:46 Asia/Dhaka] Calling handleImageUpload for cover photo
+[24-Aug-2025 19:08:46 Asia/Dhaka] === HANDLE IMAGE UPLOAD START ===
+[24-Aug-2025 19:08:46 Asia/Dhaka] Upload type: cover
+[24-Aug-2025 19:08:46 Asia/Dhaka] File details: Array
+(
+    [name] => download (5).jpg
+    [full_path] => download (5).jpg
+    [type] => image/jpeg
+    [tmp_name] => C:\xampp\tmp\phpBBDA.tmp
+    [error] => 0
+    [size] => 51166
+)
+
+[24-Aug-2025 19:08:46 Asia/Dhaka] File validation passed - no upload errors
+[24-Aug-2025 19:08:46 Asia/Dhaka] Detected file type: image/jpeg
+[24-Aug-2025 19:08:46 Asia/Dhaka] File type validation passed
+[24-Aug-2025 19:08:46 Asia/Dhaka] File size: 0.05 MB
+[24-Aug-2025 19:08:46 Asia/Dhaka] File size validation passed
+[24-Aug-2025 19:08:46 Asia/Dhaka] Upload directory: uploads/cover_photos/
+[24-Aug-2025 19:08:46 Asia/Dhaka] Generated filename: cover_10_1756040926.jpg
+[24-Aug-2025 19:08:46 Asia/Dhaka] Full filepath: uploads/cover_photos/cover_10_1756040926.jpg
+[24-Aug-2025 19:08:46 Asia/Dhaka] Attempting to move uploaded file from: C:\xampp\tmp\phpBBDA.tmp to: uploads/cover_photos/cover_10_1756040926.jpg
+[24-Aug-2025 19:08:46 Asia/Dhaka] File move successful
+[24-Aug-2025 19:08:46 Asia/Dhaka] Resizing cover photo to max width 1200px
+[24-Aug-2025 19:08:47 Asia/Dhaka] Upload successful. Final URL: http://localhost/Friendora/uploads/cover_photos/cover_10_1756040926.jpg
+[24-Aug-2025 19:08:47 Asia/Dhaka] Cover photo upload result: Array
+(
+    [success] => 1
+    [message] => Cover photo uploaded successfully
+    [url] => http://localhost/Friendora/uploads/cover_photos/cover_10_1756040926.jpg
+)
+
+[24-Aug-2025 19:08:47 Asia/Dhaka] Cover photo upload successful, updating database
+[24-Aug-2025 19:08:47 Asia/Dhaka] Profile cover photo update result: success
+[24-Aug-2025 19:08:47 Asia/Dhaka] Cover photo added to Photos table. Result: success
+[24-Aug-2025 19:08:47 Asia/Dhaka] Final cover photo response: {"success":true,"message":"Cover photo uploaded successfully","url":"http:\/\/localhost\/Friendora\/uploads\/cover_photos\/cover_10_1756040926.jpg","cover_url":"http:\/\/localhost\/Friendora\/uploads\/cover_photos\/cover_10_1756040926.jpg"}
+[24-Aug-2025 19:09:05 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:09:05 Asia/Dhaka] Current User ID: 10
+[24-Aug-2025 19:09:05 Asia/Dhaka] Profile User ID: 10
+[24-Aug-2025 19:09:05 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 19:09:05 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[24-Aug-2025 19:09:05 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 10
+            [fname] => Master
+            [minit] => 
+            [lname] => Wizard
+            [pwd] => Sakhiur@47
+            [DOB] => 2002-10-12
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-08-24 19:07:16
+        )
+
+)
+
+[24-Aug-2025 19:09:05 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 19:09:05 Asia/Dhaka] POST data: Array
+(
+    [city] => Rudwell
+    [hometown] => Linden
+    [DOB] => 2002-10-12
+    [gender] => male
+    [shortBio] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [work] => 
+    [polViews] => 
+    [religion] => 
+    [country] => 
+    [website] => 
+    [lang] => 
+    [professional] => 
+    [socialQuote] => 
+    [lifeEvent] => 
+    [action] => update_profile
+)
+
+[24-Aug-2025 19:09:05 Asia/Dhaka] FILES data: Array
+(
+)
+
+[24-Aug-2025 19:09:05 Asia/Dhaka] Action parameter: update_profile
+[24-Aug-2025 19:09:05 Asia/Dhaka] === WILL PROCESS AS PROFILE UPDATE ===
+[24-Aug-2025 19:09:05 Asia/Dhaka] === PROFILE UPDATE REQUEST ===
+[24-Aug-2025 19:09:05 Asia/Dhaka] Raw POST data: Array
+(
+    [city] => Rudwell
+    [hometown] => Linden
+    [DOB] => 2002-10-12
+    [gender] => male
+    [shortBio] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [work] => 
+    [polViews] => 
+    [religion] => 
+    [country] => 
+    [website] => 
+    [lang] => 
+    [professional] => 
+    [socialQuote] => 
+    [lifeEvent] => 
+    [action] => update_profile
+)
+
+[24-Aug-2025 19:09:05 Asia/Dhaka] Form data received - Gender: male, DOB: 2002-10-12
+[24-Aug-2025 19:09:05 Asia/Dhaka] User table update result: success
+[24-Aug-2025 19:09:05 Asia/Dhaka] Session updated with new user data - Gender: male, DOB: 2002-10-12
+[24-Aug-2025 19:09:06 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:09:06 Asia/Dhaka] Current User ID: 10
+[24-Aug-2025 19:09:06 Asia/Dhaka] Profile User ID: 10
+[24-Aug-2025 19:09:06 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 19:09:06 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[24-Aug-2025 19:09:06 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 10
+            [fname] => Master
+            [minit] => 
+            [lname] => Wizard
+            [pwd] => Sakhiur@47
+            [DOB] => 2002-10-12
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-08-24 19:07:16
+        )
+
+)
+
+[24-Aug-2025 19:09:06 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 19:09:06 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 19:09:06 Asia/Dhaka] Profile ID: 9
+[24-Aug-2025 19:09:06 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 19:09:06 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 19:09:06 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 19:09:06 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 19:09:06 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 19:09:06 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 9
+    [hometown] => Linden
+    [country] => 
+    [shortBio] => 
+    [city] => Rudwell
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_10_1756040915.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_10_1756040926.jpg
+    [user_id] => 10
+    [DOB] => 2002-10-12
+    [gender] => male
+)
+
+[24-Aug-2025 19:09:06 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 40
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_10_1756040915.jpg
+            [caption] => Profile Picture
+            [user_id] => 10
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 41
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_10_1756040926.jpg
+            [caption] => Cover Photo
+            [user_id] => 10
+        )
+
+)
+
+[24-Aug-2025 19:09:06 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 19:09:06 Asia/Dhaka] === PROFILE DEBUG END ===
+[24-Aug-2025 19:10:25 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:10:25 Asia/Dhaka] Current User ID: 10
+[24-Aug-2025 19:10:25 Asia/Dhaka] Profile User ID: 10
+[24-Aug-2025 19:10:25 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 19:10:25 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[24-Aug-2025 19:10:25 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 10
+            [fname] => Master
+            [minit] => 
+            [lname] => Wizard
+            [pwd] => Sakhiur@47
+            [DOB] => 2002-10-12
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-08-24 19:07:16
+        )
+
+)
+
+[24-Aug-2025 19:10:25 Asia/Dhaka] POST request detected. AJAX: yes
+[24-Aug-2025 19:10:25 Asia/Dhaka] POST data: Array
+(
+    [city] => Rudwell
+    [hometown] => Linden
+    [DOB] => 2002-10-12
+    [gender] => male
+    [shortBio] => This the master wizard, if u encounter any drift in this magical world, notify me
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [work] => 
+    [polViews] => 
+    [religion] => 
+    [country] => 
+    [website] => 
+    [lang] => 
+    [professional] => 
+    [socialQuote] => 
+    [lifeEvent] => 
+    [action] => update_profile
+)
+
+[24-Aug-2025 19:10:25 Asia/Dhaka] FILES data: Array
+(
+)
+
+[24-Aug-2025 19:10:25 Asia/Dhaka] Action parameter: update_profile
+[24-Aug-2025 19:10:25 Asia/Dhaka] === WILL PROCESS AS PROFILE UPDATE ===
+[24-Aug-2025 19:10:25 Asia/Dhaka] === PROFILE UPDATE REQUEST ===
+[24-Aug-2025 19:10:25 Asia/Dhaka] Raw POST data: Array
+(
+    [city] => Rudwell
+    [hometown] => Linden
+    [DOB] => 2002-10-12
+    [gender] => male
+    [shortBio] => This the master wizard, if u encounter any drift in this magical world, notify me
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [work] => 
+    [polViews] => 
+    [religion] => 
+    [country] => 
+    [website] => 
+    [lang] => 
+    [professional] => 
+    [socialQuote] => 
+    [lifeEvent] => 
+    [action] => update_profile
+)
+
+[24-Aug-2025 19:10:25 Asia/Dhaka] Form data received - Gender: male, DOB: 2002-10-12
+[24-Aug-2025 19:10:25 Asia/Dhaka] User table update result: success
+[24-Aug-2025 19:10:25 Asia/Dhaka] Session updated with new user data - Gender: male, DOB: 2002-10-12
+[24-Aug-2025 19:10:26 Asia/Dhaka] === PROFILE DEBUG START ===
+[24-Aug-2025 19:10:26 Asia/Dhaka] Current User ID: 10
+[24-Aug-2025 19:10:26 Asia/Dhaka] Profile User ID: 10
+[24-Aug-2025 19:10:26 Asia/Dhaka] Is Own Profile: yes
+[24-Aug-2025 19:10:26 Asia/Dhaka] Current User Email: sakhiur2020@gmail.com
+[24-Aug-2025 19:10:26 Asia/Dhaka] Session data: Array
+(
+    [last_regeneration] => 1756039416
+    [USER] => stdClass Object
+        (
+            [id] => 10
+            [fname] => Master
+            [minit] => 
+            [lname] => Wizard
+            [pwd] => Sakhiur@47
+            [DOB] => 2002-10-12
+            [gender] => male
+            [email] => sakhiur2020@gmail.com
+            [created_at] => 2025-08-24 19:07:16
+        )
+
+)
+
+[24-Aug-2025 19:10:26 Asia/Dhaka] === GETTING PROFILE DATA ===
+[24-Aug-2025 19:10:26 Asia/Dhaka] Profile query result: Found profile
+[24-Aug-2025 19:10:26 Asia/Dhaka] Profile ID: 9
+[24-Aug-2025 19:10:26 Asia/Dhaka] === GETTING PHOTOS DATA ===
+[24-Aug-2025 19:10:26 Asia/Dhaka] Photos query result: 2 photos found
+[24-Aug-2025 19:10:26 Asia/Dhaka] === GETTING POSTS DATA ===
+[24-Aug-2025 19:10:26 Asia/Dhaka] Posts query result: 0 posts found
+[24-Aug-2025 19:10:26 Asia/Dhaka] === FINAL DATA ===
+[24-Aug-2025 19:10:26 Asia/Dhaka] Profile Data: stdClass Object
+(
+    [id] => 9
+    [hometown] => Linden
+    [country] => 
+    [shortBio] => This the master wizard, if u encounter any drift in this magical world, notify me
+    [city] => Rudwell
+    [pfp] => http://localhost/Friendora/uploads/profile_photos/profile_10_1756040915.jpg
+    [socialQuote] => 
+    [lifeEvent] => 
+    [religion] => 
+    [polViews] => 
+    [lang] => 
+    [professional] => 
+    [work] => 
+    [highschool] => 
+    [college] => 
+    [university] => 
+    [coverpic] => http://localhost/Friendora/uploads/cover_photos/cover_10_1756040926.jpg
+    [user_id] => 10
+    [DOB] => 2002-10-12
+    [gender] => male
+)
+
+[24-Aug-2025 19:10:26 Asia/Dhaka] Photos Data: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 40
+            [url] => http://localhost/Friendora/uploads/profile_photos/profile_10_1756040915.jpg
+            [caption] => Profile Picture
+            [user_id] => 10
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 41
+            [url] => http://localhost/Friendora/uploads/cover_photos/cover_10_1756040926.jpg
+            [caption] => Cover Photo
+            [user_id] => 10
+        )
+
+)
+
+[24-Aug-2025 19:10:26 Asia/Dhaka] Websites Data: Array
+(
+)
+
+[24-Aug-2025 19:10:26 Asia/Dhaka] === PROFILE DEBUG END ===

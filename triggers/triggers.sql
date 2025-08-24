@@ -66,5 +66,24 @@ BEGIN
 END$$
 DELIMITER ;
 
+DELIMITER $$
+
+-- Trigger for when a user reacts to a post
+CREATE OR REPLACE TRIGGER `after_share_insert`
+AFTER INSERT ON `shares`
+FOR EACH ROW
+BEGIN
+    DECLARE post_author_id INT;
+    
+    -- Find the author of the post that was shared
+    SELECT `creator_id` INTO post_author_id FROM `post` WHERE `id` = NEW.post_id;
+    
+    -- Insert a notification for the post's author,
+    -- but only if the author is not the one who shared.
+    IF post_author_id != NEW.uid THEN
+        INSERT INTO `notifications` (`user_id`, `action_by`, `type`, `content`, `related_post_id`)
+        VALUES (post_author_id, NEW.uid, 'share','shared your post', NEW.post_id);
+    END IF;
+END$$
 
 

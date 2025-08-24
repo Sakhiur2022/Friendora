@@ -68,7 +68,7 @@ class MessengerSystem {
 
   async sendMessage() {
     if (!this.currentContactId) {
-      this.showNotification("Please select a contact first", "warning");
+      showNotification("Please select a contact first", "warning");
       return;
     }
 
@@ -76,7 +76,7 @@ class MessengerSystem {
     const message = messageInput.value.trim();
 
     if (!message) {
-      this.showNotification("Please enter a message", "warning");
+      showNotification("Please enter a message", "warning");
       return;
     }
 
@@ -125,16 +125,13 @@ class MessengerSystem {
           status: "sent",
         });
 
-        this.showNotification("Message sent!", "success");
+        // showNotification("Message sent!", "success");
       } else {
-        this.showNotification(
-          result.message || "Failed to send message",
-          "error"
-        );
+        showNotification(result.message || "Failed to send message", "error");
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      this.showNotification("Failed to send message", "error");
+      showNotification("Failed to send message", "error");
     } finally {
       sendBtn.innerHTML = originalContent;
       sendBtn.disabled = false;

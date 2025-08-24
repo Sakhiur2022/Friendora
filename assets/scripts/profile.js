@@ -37,23 +37,21 @@ const currentUserId = window.currentUserId || 1;
 const isOwnProfile = window.isOwnProfile || false;
 // Profile data
 const profileUser = {
-  name: `${profileData.fname || "Alexandra"} ${profileData.lname || "Neon"}`,
-  title: profileData.professional || "Senior VR Artist & Dream Architect",
-  bio:
-    profileData.shortBio ||
-    "Creating immersive digital experiences in the cyberpunk realm. Passionate about VR art and exploring the boundaries between reality and dreams.",
+  name: `${profileData.fname || "Neon"} ${profileData.lname || "Ghost"}`,
+  title: profileData.professional || "Unknown",
+  bio: profileData.shortBio || "No bios yet",
   avatar:
     profileData.pfp ||
     "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
   cover:
     "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=400&fit=crop",
-  location: profileData.city || "Neo Tokyo",
+  location: profileData.city || "Unknown",
   followers: 2847,
   following: 458,
   posts: 142,
   badge: "VR Pioneer",
   birthday: profileData.DOB || "1995-03-15",
-  email: profileData.email || "alexandra@dreamscape.cyber",
+  email: profileData.email || "unknown",
   phone: profileData.tel || "+81-90-1234-5678",
   joinDate: "2019-08-12",
   status: "Online",
@@ -69,9 +67,7 @@ const profileUser = {
   religion: profileData.religion || "Digital Spiritualism",
   country: profileData.country || "Japan",
   website:
-    websiteData.length > 0
-      ? websiteData[0].url
-      : "https://alexandra-dreams.cyber",
+    websiteData.length > 0 ? websiteData[0].url : "https://friendora.com/",
   language: profileData.lang || "English, Japanese, Binary",
   professional:
     profileData.professional || "Senior VR Artist & Dream Architect",
