@@ -114,7 +114,7 @@
                                 </button>
                             </div>
                             <div class="col-md-4">
-                                <button class="cyber-btn-ghost w-100" onclick="location.href='<?=ROOT?>/dashboard'">
+                                <button class="cyber-btn-ghost w-100" onclick="location.href='<?=ROOT?>/home'">
                                     <i class="fas fa-home mb-2"></i><br>
                                     Dashboard
                                 </button>

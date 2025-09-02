@@ -53,11 +53,7 @@ const profileUser = {
   birthday: profileData.DOB || "1995-03-15",
   email: profileData.email || "unknown",
   phone: profileData.tel || "+81-90-1234-5678",
-  joinDate: "2019-08-12",
-  status: "Online",
-  interests: ["VR Art", "Cyberpunk", "Digital Dreams", "Neon Aesthetics", "AI"],
-  achievements: ["VR Pioneer", "Dream Architect", "Neon Master"],
-  skills: ["Blender", "Unity", "C#", "JavaScript", "Digital Art"],
+
   hometown: profileData.hometown || "Shibuya",
   gender: profileData.gender || "Female",
   college: profileData.college || "Cyber Tech Institute",
@@ -68,7 +64,7 @@ const profileUser = {
   country: profileData.country || "Japan",
   website:
     websiteData.length > 0 ? websiteData[0].url : "https://friendora.com/",
-  language: profileData.lang || "English, Japanese, Binary",
+  language: profileData.lang || "English, Japanese",
   professional:
     profileData.professional || "Senior VR Artist & Dream Architect",
   quotes:

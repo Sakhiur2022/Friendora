@@ -57,7 +57,7 @@
                 <i class="bi bi-arrow-left me-2"></i>
                 Go Back
             </a>
-            <a href="<?=ROOT?>/dashboard" class="cyber-btn">
+            <a href="<?=ROOT?>/home" class="cyber-btn">
                 <i class="bi bi-speedometer2 me-2"></i>
                 Dashboard
             </a>
@@ -66,16 +66,15 @@
 
     <!-- Background Music -->
     <audio id="bgMusic" loop preload="auto" style="display: none;">
-        <source src="<?=ROOT?>/assets/audio/cyberpunk-ambient.mp3" type="audio/mpeg">
-        <source src="<?=ROOT?>/assets/audio/cyberpunk-ambient.ogg" type="audio/ogg">
+        <source src="<?=ROOT?>/assets/musics/cyberpunk-ambient.mp3" type="audio/mpeg">
+        <source src="<?=ROOT?>/assets/musics/cyberpunk-ambient.ogg" type="audio/ogg">
         Your browser does not support the audio element.
     </audio>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Navigation JavaScript -->
-    <script src="<?=ROOT?>/assets/scripts/nav_error_404.js"></script>
+   
     
     <!-- Main JavaScript -->
     <script src="<?=ROOT?>/assets/scripts/error_404.js"></script>

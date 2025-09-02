@@ -349,7 +349,7 @@ function displayPosts(posts) {
           <div class="cyber-glow-container">
             <i class="bi bi-stars cyber-icon display-1 mb-3"></i>
             <h4 class="cyber-text-glow mb-3">✨ No Dreams Shared Yet ✨</h4>
-            <p class="text-muted cyber-text-fade">The digital dreamscape awaits your first creation...</p>
+            <p class="text-light cyber-text-fade">The digital dreamscape awaits your first creation...</p>
             <div class="cyber-pulse-ring mx-auto mt-4"></div>
           </div>
         </div>
@@ -362,7 +362,7 @@ function displayPosts(posts) {
           <div class="cyber-glow-container">
             <i class="bi bi-moon-stars cyber-icon display-1 mb-3"></i>
             <h4 class="cyber-text-glow mb-3">🌙 ${profileUserName} hasn't shared any dreams yet 🌙</h4>
-            <p class="text-muted cyber-text-fade">Their journey in the digital realm is just beginning...</p>
+            <p class="text-light cyber-text-fade">Their journey in the digital realm is just beginning...</p>
             <div class="cyber-pulse-ring mx-auto mt-4"></div>
           </div>
         </div>
